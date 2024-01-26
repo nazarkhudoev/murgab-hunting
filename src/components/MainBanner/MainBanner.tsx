@@ -1,10 +1,14 @@
 import Link from "next/link";
 
+import "./MainBanner.css";
+
 const MainBanner = () => {
   return (
     <div className="relative main">
-      <div className="px-[85px] pt-[200px] relative z-50">
-        <h1 className="text-[80px] font-bold text-white uppercase">Join the Elite</h1>
+      <div className="px-[85px] pt-[200px] relative z-50 main__banner-home">
+        <h1 className="text-[80px] font-bold text-white uppercase">
+          Join the Elite
+        </h1>
         <p className="text-white text-[39px] font-thin">
           Reserve Your Marco Polo Hunt Now!
         </p>

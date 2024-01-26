@@ -1,0 +1,17 @@
+@media (max-width: 500px) {
+    .main__banner-home {
+        padding-inline: 30px !important;
+    }
+
+    .main__banner-home > h1 {
+        font-size: 50px !important;
+    }
+
+    .main__banner-home > p {
+        font-size: 19px !important;
+    }
+
+    .main__banner-home > div a {
+        font-size: 16px !important;
+    }
+}
