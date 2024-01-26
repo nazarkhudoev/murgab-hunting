@@ -19,7 +19,7 @@ export default function AboutPage() {
         <Team />
       </div> */}
       {/* <AboutConservation /> */}
-      {/* <Contact /> */}
+      <Contact />
     </main>
   );
 }
