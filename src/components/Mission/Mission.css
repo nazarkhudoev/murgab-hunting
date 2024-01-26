@@ -1,0 +1,8 @@
+@media (max-width: 922px) {
+    .mission-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  

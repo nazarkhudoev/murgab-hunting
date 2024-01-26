@@ -1,0 +1,7 @@
+@media (max-width: 922px) {
+  .history-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

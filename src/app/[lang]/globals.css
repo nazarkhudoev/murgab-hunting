@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%); */
+  background-color: #241f13;
+  overflow-x: hidden !important;
+}
+
+html {
+  overflow-x: hidden !important;
+}
+
+.main {
+  min-height: 600px;
+  background-image: url(../../assets/main-bg.png),
+    linear-gradient(91deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+.gradient-main {
+  height: 395px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
+}
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+/* .p-carousel-prev {
+  flex: none !important;
+}
+
+.p-carousel-next {
+  flex: none !important;
+}
+
+.p-carousel-container {
+  max-width: 100% !important;
+}
+
+.p-carousel,
+.p-component,
+.p-carousel-horizontal {
+  max-width: 100% !important;
+}
+
+.p-carousel-content,
+.p-carousel-items-content,
+.p-carousel-items-container {
+  max-width: 100% !important;
+}
+
+.p-carousel-item {
+  width: 280px;
+  max-width: 100%;
+}
+
+.p-carousel-container > button {
+  flex: none !important;
+} */

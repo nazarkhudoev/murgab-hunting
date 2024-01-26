@@ -1,0 +1,50 @@
+/* .navbarList li:not(:last-child) > a {
+  position: relative;
+  transition: all 1s;
+}
+
+.navbarList li:not(:last-child) > a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  height: 1px;
+  width: 0%;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.navbarList li:not(:last-child) > a:hover::before {
+  width: 100%;
+}
+
+.navbarList li:nth-child(8) > a {
+  background-color: #fff;
+  color: #f45914;
+
+  font-weight: 600;
+
+  width: 120px;
+  height: 26px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 6px;
+
+  transition: all 0.3s;
+}
+
+.navbarList li:nth-child(4) > a:hover {
+  background-color: #784622;
+  color: #fff;
+}
+
+@media (max-width: 901px) {
+  .navbar {
+    display: none;
+  }
+} */

@@ -1,0 +1,21 @@
+/* .slick-slide > div {
+  margin: 0 7px;
+}
+.slick-list {
+  margin: 0 -7px;
+}
+.slick-dots {
+  position: static;
+  inset: 0;
+}
+.team-gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 29;
+} */
