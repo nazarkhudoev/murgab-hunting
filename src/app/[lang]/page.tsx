@@ -1,6 +1,4 @@
-import AboutUs from "@/components/AboutUs/AboutUs";
 import Contact from "@/components/Contact/Contact";
-import Demo from "@/components/Demo/Demo";
 import Slider from "@/components/Slider/Slider";
 import { Expedition } from "@/components/Expedition/Expedition";
 import MainBanner from "@/components/MainBanner/MainBanner";
@@ -13,7 +11,6 @@ export default function Home() {
     <main>
       <MainBanner />
       <Statistics />
-      {/* <AboutUs /> */}
       <Slider />
       <Trophies />
       <Expedition />

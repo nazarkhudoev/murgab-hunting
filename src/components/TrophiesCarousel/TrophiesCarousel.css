@@ -1,0 +1,6 @@
+@media (max-width: 940px) {
+    .prev__button,
+    .next__button {
+        display: none;
+    }
+}

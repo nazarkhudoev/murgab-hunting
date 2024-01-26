@@ -1,0 +1,17 @@
+@media (max-width: 670px) {
+  .small__pics {
+    width: 185px;
+    height: 163px;
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+}
+
+@media (max-width: 437px) {
+  .small__pics {
+    width: 155px;
+    height: 133px;
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
+}

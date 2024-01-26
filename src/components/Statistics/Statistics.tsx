@@ -1,8 +1,8 @@
-import "./Statistics.css"
+import "./Statistics.css";
 
 export default function Statistics() {
   return (
-    <div className="relative bottom-[3.5rem] z-10 flex justify-center items-center text-center gap-[100px] text-[#8E7E57]">
+    <div className="statistics-container relative bottom-[3.5rem] z-10 flex justify-center items-start flex-wrap text-center gap-[100px] text-[#8E7E57] px-[50px]">
       <div>
         <h4 className="text-[51px] font-semibold mb-4">5</h4>
         <p>Available Species</p>

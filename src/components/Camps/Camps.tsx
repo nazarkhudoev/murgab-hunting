@@ -9,8 +9,10 @@ import "./Camps.css";
 
 export default function Camps() {
   return (
-    <section className="w-[1200px] max-w-full mx-auto text-white py-6">
-      <h3 className="text-center mb-[50px] text-2xl tracking-[1.5px]">HOT SPRINGS CAMP</h3>
+    <section className="w-[1200px] max-w-full mx-auto text-white py-6 px-5">
+      <h3 className="text-center mb-[50px] text-2xl tracking-[1.5px]">
+        HOT SPRINGS CAMP
+      </h3>
       <p className="font-light">
         {`Perched amidst the high-altitude serenity of the Pamirs, the Hot Springs
         Camp offers a warm haven against the crisp mountain air. Named for the
@@ -21,16 +23,32 @@ export default function Camps() {
         thermal waters, as our staff ensures a comfortable, inviting stay,
         echoing the natural hospitality of Murgab's landscapes.`}
       </p>
-      <div className="flex items-start justify-between mt-5">
+      <div className="flex items-start justify-center flex-wrap gap-4 mt-5 relative ">
         <Image src={Camp1} alt="Camp1" className="w-[530px] h-[530px]" />
         <div>
-          <div className="flex items-center gap-5 mb-5">
-            <Image src={Camp2} alt="Camp1" className="w-[295px] h-[250px]" />
-            <Image src={Camp3} alt="Camp1" className="w-[295px] h-[250px]" />
+          <div className="flex items-center justify-center gap-5 mb-5 relative ">
+            <Image
+              src={Camp2}
+              alt="Camp1"
+              className="max-w-[295px] small__pics "
+            />
+            <Image
+              src={Camp3}
+              alt="Camp1"
+              className="max-w-[295px] small__pics "
+            />
           </div>
-          <div className="flex items-center gap-5">
-            <Image src={Camp5} alt="Camp1" className="w-[295px] h-[250px]" />
-            <Image src={Camp4} alt="Camp1" className="w-[295px] h-[250px]" />
+          <div className="flex items-center justify-center gap-5">
+            <Image
+              src={Camp5}
+              alt="Camp1"
+              className="max-w-[295px] small__pics "
+            />
+            <Image
+              src={Camp4}
+              alt="Camp1"
+              className="max-w-[295px] small__pics "
+            />
           </div>
         </div>
       </div>
