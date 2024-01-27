@@ -120,7 +120,7 @@ const Carousel = () => {
             </button>
           </div>
 
-          <Link className="text-sm" href={"/"}>
+          <Link className="text-sm" href={"/about-us"}>
             READ MORE +
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import Picture from "@/assets/main-bg.png"
+import Picture from "@/assets/Marco_polo_argali_on_Pamir_Mountain.webp"
 
 export interface ITrophie {
   id: string;

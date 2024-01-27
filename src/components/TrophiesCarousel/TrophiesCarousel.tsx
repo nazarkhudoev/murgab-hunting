@@ -57,7 +57,7 @@ export default function TrophiesCarousel() {
                 alt={person.title}
               />
               <h3 className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white uppercase text-lg z-30">
-                {person.title} - {index + 1}
+                Slider - {index + 1}
               </h3>
             </div>
           );

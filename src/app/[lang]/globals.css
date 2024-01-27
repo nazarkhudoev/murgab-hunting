@@ -13,8 +13,8 @@ html {
 }
 
 .main {
-  min-height: 600px;
-  background-image: url(../../assets/main-bg.png),
+  min-height: 90vh;
+  background-image: url(../../assets/Marco_polo_argali_on_Pamir_Mountain.webp),
     linear-gradient(91deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
   background-position: center top;
   background-size: cover;
