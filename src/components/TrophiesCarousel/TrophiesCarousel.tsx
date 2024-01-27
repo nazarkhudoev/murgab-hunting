@@ -8,8 +8,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./TrophiesCarousel.css";
-
-
+import Link from "next/link";
 
 export default function TrophiesCarousel() {
   const settings = {
@@ -43,7 +42,7 @@ export default function TrophiesCarousel() {
       >
         <Image src={PREV_ICON} alt="PREV_ICON" />
       </button>
-      <Slider ref={slider} {...settings} arrows={false} >
+      <Slider ref={slider} {...settings} arrows={false}>
         {trophiesData.map((person: ITrophie, index: number) => {
           return (
             <div
@@ -56,9 +55,15 @@ export default function TrophiesCarousel() {
                 src={person.image}
                 alt={person.title}
               />
-              <h3 className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white uppercase text-lg z-30">
+              <h3 className="absolute bottom-14 left-10 text-white uppercase text-lg z-30">
                 Slider - {index + 1}
               </h3>
+              <Link href={"/"} className="absolute bottom-5 left-10 z-50 flex items-center gap-2">
+                <span className="uppercase text-lg font-semibold text-[dodgerblue]">
+                  read more
+                </span>
+                <span className="text-[dodgerblue]">+</span>
+              </Link>
             </div>
           );
         })}

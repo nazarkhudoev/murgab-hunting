@@ -8,7 +8,16 @@ export default function Contact() {
   return (
     <section id="book" className="contact-section">
       <div className="contact-form-container">
-        <form className="relative z-50">
+        <div
+          className="elfsight-app-c96adae2-50f5-4276-998e-3b21d664dbe4"
+          data-elfsight-app-lazy
+        ></div>
+
+        <div
+          className="elfsight-app-63fbac68-6b51-4102-ad1d-e2c4562b500f"
+          data-elfsight-app-lazy
+        ></div>
+        {/* <form className="relative z-50">
           <h3 className="text-center text-[25px] font-semibold uppercase mb-[30px] tracking-[1.5px]">
             Book your hunt
           </h3>
@@ -53,7 +62,7 @@ export default function Contact() {
             </p>
             <Image src={SocailIcon} alt="SocailIcon" />
           </Link>
-        </div>
+        </div> */}
       </div>
       <div className="gradient absolute left-0 -bottom-[88px]"></div>
     </section>

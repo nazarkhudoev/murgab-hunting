@@ -24,15 +24,6 @@ export default function Home() {
 
         <Videos />
 
-        <div
-          className="elfsight-app-c96adae2-50f5-4276-998e-3b21d664dbe4"
-          data-elfsight-app-lazy
-        ></div>
-
-        <div
-          className="elfsight-app-63fbac68-6b51-4102-ad1d-e2c4562b500f"
-          data-elfsight-app-lazy
-        ></div>
       </section>
       <Contact />
     </main>
