@@ -47,7 +47,7 @@ export default function RootLayout({
         <Header lang={params.lang} />
         {children}
         <Footer />
-        <script
+        {/* <script
           src="https://static.elfsight.com/platform/platform.js"
           data-use-service-core
           defer
@@ -61,7 +61,7 @@ export default function RootLayout({
           src="https://static.elfsight.com/platform/platform.js"
           data-use-service-core
           defer
-        ></script>
+        ></script> */}
       </body>
     </html>
   );

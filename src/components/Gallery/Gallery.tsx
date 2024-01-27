@@ -156,26 +156,13 @@ export default function Gallery() {
         <h1 className="text-center mb-[50px] text-2xl tracking-[1.5px] text-white uppercase">
           Gallery
         </h1>
-        {/* <button onClick={openModal}>Open Modal</button> */}
         <Modal
           shouldCloseOnOverlayClick={true}
           isOpen={modalIsOpen}
-          // onAfterOpen={() => {
-          //   document.body.style.top = `-${window.scrollY}px`;
-          //   document.body.style.position = "fixed";
-          // }}
-          // onAfterClose={() => {
-          //   const scrollY = document.body.style.top;
-          //   document.body.style.position = "";
-          //   document.body.style.top = "";
-          //   window.scrollTo(0, parseInt(scrollY || "0") * -1);
-          // }}
           onRequestClose={closeModal}
           style={customStyles}
           contentLabel="Example Modal"
-          // className={"relative z-[99]"}
         >
-          {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
           {currentImage != "" && (
             <img
               src={currentImage}
@@ -183,8 +170,6 @@ export default function Gallery() {
               className="relative z-[999]"
             />
           )}
-          {/* <button onClick={closeModal}>close</button> */}
-          {/* <div>I am a modal</div> */}
         </Modal>
         <button
           className="absolute top-1/2 -left-6 -translate-y-1/2 z-20 prev__button"
@@ -196,7 +181,6 @@ export default function Gallery() {
           <div>
             <div className="flex items-center justify-between">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery1}
                 alt="Gallery1"
@@ -205,7 +189,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery2}
                 alt="Gallery1"
@@ -214,7 +197,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery3}
                 alt="Gallery1"
@@ -223,7 +205,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery4}
                 alt="Gallery1"
@@ -234,7 +215,6 @@ export default function Gallery() {
             </div>
             <div className="flex items-center justify-between mt-3">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery5}
                 alt="Gallery1"
@@ -243,7 +223,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery6}
                 alt="Gallery1"
@@ -252,7 +231,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery7}
                 alt="Gallery1"
@@ -261,7 +239,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery8}
                 alt="Gallery1"
@@ -274,7 +251,6 @@ export default function Gallery() {
           <div>
             <div className="flex items-center justify-between">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery9}
                 alt="Gallery1"
@@ -283,7 +259,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery10}
                 alt="Gallery1"
@@ -292,7 +267,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery11}
                 alt="Gallery1"
@@ -301,7 +275,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery12}
                 alt="Gallery1"
@@ -312,7 +285,6 @@ export default function Gallery() {
             </div>
             <div className="flex items-center justify-between mt-3">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery13}
                 alt="Gallery1"
@@ -321,7 +293,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery14}
                 alt="Gallery1"
@@ -330,7 +301,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery15}
                 alt="Gallery1"
@@ -339,7 +309,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery16}
                 alt="Gallery1"
@@ -352,7 +321,6 @@ export default function Gallery() {
           <div>
             <div className="flex items-center justify-between">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery17}
                 alt="Gallery1"
@@ -361,7 +329,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery18}
                 alt="Gallery1"
@@ -370,7 +337,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery19}
                 alt="Gallery1"
@@ -379,7 +345,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery20}
                 alt="Gallery1"
@@ -390,7 +355,6 @@ export default function Gallery() {
             </div>
             <div className="flex items-center justify-between mt-3">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery21}
                 alt="Gallery1"
@@ -399,7 +363,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery22}
                 alt="Gallery1"
@@ -408,7 +371,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery23}
                 alt="Gallery1"
@@ -417,7 +379,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery24}
                 alt="Gallery1"
@@ -430,7 +391,6 @@ export default function Gallery() {
           <div>
             <div className="flex items-center justify-between">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery25}
                 alt="Gallery1"
@@ -439,7 +399,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery26}
                 alt="Gallery1"
@@ -448,7 +407,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery27}
                 alt="Gallery1"
@@ -457,7 +415,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery28}
                 alt="Gallery1"
@@ -468,7 +425,6 @@ export default function Gallery() {
             </div>
             <div className="flex items-center justify-between mt-3">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery29}
                 alt="Gallery1"
@@ -477,7 +433,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery30}
                 alt="Gallery1"
@@ -486,7 +441,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery31}
                 alt="Gallery1"
@@ -495,7 +449,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery32}
                 alt="Gallery1"
@@ -508,7 +461,6 @@ export default function Gallery() {
           <div>
             <div className="flex items-center justify-between">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery33}
                 alt="Gallery1"
@@ -517,7 +469,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery34}
                 alt="Gallery1"
@@ -526,7 +477,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery35}
                 alt="Gallery1"
@@ -535,7 +485,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery36}
                 alt="Gallery1"
@@ -546,7 +495,6 @@ export default function Gallery() {
             </div>
             <div className="flex items-center justify-between mt-3">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery37}
                 alt="Gallery1"
@@ -555,7 +503,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery38}
                 alt="Gallery1"
@@ -564,7 +511,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery39}
                 alt="Gallery1"
@@ -573,7 +519,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery40}
                 alt="Gallery1"
@@ -586,7 +531,6 @@ export default function Gallery() {
           <div>
             <div className="flex items-center justify-between">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery41}
                 alt="Gallery1"
@@ -595,7 +539,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery42}
                 alt="Gallery1"
@@ -604,7 +547,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery43}
                 alt="Gallery1"
@@ -613,7 +555,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery44}
                 alt="Gallery1"
@@ -624,7 +565,6 @@ export default function Gallery() {
             </div>
             <div className="flex items-center justify-between mt-3">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery45}
                 alt="Gallery1"
@@ -633,7 +573,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery46}
                 alt="Gallery1"
@@ -642,7 +581,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery47}
                 alt="Gallery1"
@@ -651,7 +589,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery48}
                 alt="Gallery1"
@@ -664,7 +601,6 @@ export default function Gallery() {
           <div>
             <div className="flex items-center justify-between">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery49}
                 alt="Gallery1"
@@ -673,7 +609,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery51}
                 alt="Gallery1"
@@ -682,7 +617,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery52}
                 alt="Gallery1"
@@ -691,7 +625,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery53}
                 alt="Gallery1"
@@ -702,7 +635,6 @@ export default function Gallery() {
             </div>
             <div className="flex items-center justify-between mt-3">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery54}
                 alt="Gallery1"
@@ -711,7 +643,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery55}
                 alt="Gallery1"
@@ -720,7 +651,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery56}
                 alt="Gallery1"
@@ -729,7 +659,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery57}
                 alt="Gallery1"
@@ -742,7 +671,6 @@ export default function Gallery() {
           <div>
             <div className="flex items-center justify-between">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery58}
                 alt="Gallery1"
@@ -751,7 +679,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery59}
                 alt="Gallery1"
@@ -760,7 +687,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery60}
                 alt="Gallery1"
@@ -769,7 +695,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery61}
                 alt="Gallery1"
@@ -780,7 +705,6 @@ export default function Gallery() {
             </div>
             <div className="flex items-center justify-between mt-3">
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery62}
                 alt="Gallery1"
@@ -789,7 +713,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery63}
                 alt="Gallery1"
@@ -798,7 +721,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery64}
                 alt="Gallery1"
@@ -807,7 +729,6 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
-                priority={true}
                 onClick={(e) => openModal(e.target)}
                 src={Gallery65}
                 alt="Gallery1"
@@ -822,7 +743,7 @@ export default function Gallery() {
           className="absolute top-1/2 -right-6 -translate-y-1/2 z-20 next__button"
           onClick={() => slider?.current?.slickNext()}
         >
-          <Image priority={true} src={NEXT_ICON} alt="NEXT_ICON" />
+          <Image src={NEXT_ICON} alt="NEXT_ICON" />
         </button>
       </div>
     </section>
