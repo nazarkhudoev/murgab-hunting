@@ -7,6 +7,7 @@ import Trophies from "@/components/Trophies/Trophies";
 import Camps from "@/components/Camps/Camps";
 import Blog from "@/components/Blog/Blog";
 import Videos from "@/components/Videos/Videos";
+import Gallery from "@/components/Gallery/Gallery";
 
 export default function Home() {
   return (
@@ -17,12 +18,13 @@ export default function Home() {
       <Trophies />
       <Expedition />
       <Camps />
-      <section className="w-[1200px] max-w-full mx-auto px-5">
+      <Gallery />
+      {/* <section className="w-[1200px] max-w-full mx-auto px-5">
         <Blog />
 
         <Videos />
 
-        {/* <div
+        <div
           className="elfsight-app-c96adae2-50f5-4276-998e-3b21d664dbe4"
           data-elfsight-app-lazy
         ></div>
@@ -30,8 +32,8 @@ export default function Home() {
         <div
           className="elfsight-app-63fbac68-6b51-4102-ad1d-e2c4562b500f"
           data-elfsight-app-lazy
-        ></div> */}
-      </section>
+        ></div>
+      </section> */}
       <Contact />
     </main>
   );

@@ -30,24 +30,24 @@ export default function Camps() {
             <Image
               src={Camp2}
               alt="Camp1"
-              className="max-w-[295px] small__pics "
+              className="max-w-[295px] h-[255px] small__pics "
             />
             <Image
               src={Camp3}
               alt="Camp1"
-              className="max-w-[295px] small__pics "
+              className="max-w-[295px] h-[255px] small__pics "
             />
           </div>
           <div className="flex items-center justify-center gap-5">
             <Image
               src={Camp5}
               alt="Camp1"
-              className="max-w-[295px] small__pics "
+              className="max-w-[295px] h-[255px] small__pics "
             />
             <Image
               src={Camp4}
               alt="Camp1"
-              className="max-w-[295px] small__pics "
+              className="max-w-[295px] h-[255px] small__pics "
             />
           </div>
         </div>

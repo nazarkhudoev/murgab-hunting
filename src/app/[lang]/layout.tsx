@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Roboto } from "next/font/google";
+import Head from "next/head";
 
 import "./globals.css";
 
