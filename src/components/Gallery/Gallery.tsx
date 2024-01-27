@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -87,6 +87,10 @@ import Gallery63 from "@/assets/images/gallery/IMG_1002.webp";
 import Gallery64 from "@/assets/images/gallery/IMG_2238.webp";
 import Gallery65 from "@/assets/images/gallery/DSCN8312.webp";
 
+import "./Gallery.css";
+
+import Modal from "react-modal";
+
 export default function Gallery() {
   const settings = {
     dots: true,
@@ -109,11 +113,60 @@ export default function Gallery() {
     ],
   };
 
+  const [currentImage, setCurrentImage] = useState("");
+
   const slider = useRef<any>(null);
 
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      background: "transparent",
+      border: "none",
+    },
+    overlay: {
+      background: "#0000006d",
+    },
+  };
+
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  function openModal(image: any) {
+    setCurrentImage(image.src);
+    setIsOpen(true);
+  }
+
+  //   function afterOpenModal() {
+  //     // references are now sync'd and can be accessed.
+  //     subtitle.style.color = "#f00";
+  //   }
+
+  function closeModal() {
+    setCurrentImage("");
+    setIsOpen(false);
+  }
+
   return (
-    <section className="">
+    <section className="my-[90px]">
       <div className="w-[1150px] max-w-full mx-auto relative">
+        {/* <button onClick={openModal}>Open Modal</button> */}
+        <Modal
+          shouldCloseOnOverlayClick={true}
+          isOpen={modalIsOpen}
+          //   onAfterOpen={afterOpenModal}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
+          {currentImage != "" && <img src={currentImage} alt="currentImage" />}
+          {/* <button onClick={closeModal}>close</button> */}
+          {/* <div>I am a modal</div> */}
+        </Modal>
         <button
           className="absolute top-1/2 -left-6 -translate-y-1/2 z-20 prev__button"
           onClick={() => slider?.current?.slickPrev()}
@@ -123,114 +176,562 @@ export default function Gallery() {
         <Slider ref={slider} {...settings} arrows={false}>
           <div>
             <div className="flex items-center justify-between">
-              <Image src={Gallery1} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery2} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery3} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery4} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery1}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery2}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery3}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery4}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
             <div className="flex items-center justify-between mt-3">
-              <Image src={Gallery5} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery6} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery7} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery8} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery5}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery6}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery7}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery8}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
           </div>
           <div>
             <div className="flex items-center justify-between">
-              <Image src={Gallery9} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery10} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery11} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery12} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery9}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery10}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery11}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery12}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
             <div className="flex items-center justify-between mt-3">
-              <Image src={Gallery13} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery14} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery15} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery16} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery13}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery14}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery15}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery16}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
           </div>
           <div>
             <div className="flex items-center justify-between">
-              <Image src={Gallery17} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery18} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery19} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery20} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery17}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery18}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery19}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery20}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
             <div className="flex items-center justify-between mt-3">
-              <Image src={Gallery21} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery22} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery23} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery24} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery21}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery22}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery23}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery24}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
           </div>
           <div>
             <div className="flex items-center justify-between">
-              <Image src={Gallery25} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery26} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery27} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery28} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery25}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery26}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery27}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery28}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
             <div className="flex items-center justify-between mt-3">
-              <Image src={Gallery29} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery30} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery31} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery32} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery29}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery30}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery31}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery32}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
           </div>
           <div>
             <div className="flex items-center justify-between">
-              <Image src={Gallery33} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery34} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery35} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery36} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery33}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery34}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery35}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery36}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
             <div className="flex items-center justify-between mt-3">
-              <Image src={Gallery37} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery38} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery39} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery40} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery37}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery38}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery39}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery40}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
           </div>
           <div>
             <div className="flex items-center justify-between">
-              <Image src={Gallery41} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery42} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery43} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery44} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery41}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery42}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery43}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery44}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
             <div className="flex items-center justify-between mt-3">
-              <Image src={Gallery45} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery46} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery47} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery48} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery45}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery46}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery47}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery48}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
           </div>
           <div>
             <div className="flex items-center justify-between">
-              <Image src={Gallery49} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery51} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery52} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery53} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery49}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery51}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery52}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery53}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
             <div className="flex items-center justify-between mt-3">
-              <Image src={Gallery54} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery55} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery56} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery57} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery54}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery55}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery56}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery57}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
           </div>
           <div>
             <div className="flex items-center justify-between">
-              <Image src={Gallery58} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery59} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery60} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery61} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery58}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery59}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery60}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery61}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
             <div className="flex items-center justify-between mt-3">
-              <Image src={Gallery62} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery63} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery64} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
-              <Image src={Gallery65} alt="Gallery1" width={280} height={280} className="w-[280px] h-[280px] object-cover" />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery62}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery63}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery64}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
+              <Image
+                onClick={(e) => openModal(e.target)}
+                src={Gallery65}
+                alt="Gallery1"
+                width={280}
+                height={280}
+                className="w-[280px] h-[280px] object-cover"
+              />
             </div>
           </div>
         </Slider>

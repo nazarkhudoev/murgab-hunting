@@ -1,0 +1,16 @@
+.custom__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #0000006d;
+
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}

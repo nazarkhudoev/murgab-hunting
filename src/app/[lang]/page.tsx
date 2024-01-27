@@ -19,7 +19,7 @@ export default function Home() {
       <Expedition />
       <Camps />
       <Gallery />
-      {/* <section className="w-[1200px] max-w-full mx-auto px-5">
+      <section className="w-[1200px] max-w-full mx-auto px-5">
         <Blog />
 
         <Videos />
@@ -33,7 +33,7 @@ export default function Home() {
           className="elfsight-app-63fbac68-6b51-4102-ad1d-e2c4562b500f"
           data-elfsight-app-lazy
         ></div>
-      </section> */}
+      </section>
       <Contact />
     </main>
   );
