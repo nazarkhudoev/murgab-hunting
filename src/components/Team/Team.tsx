@@ -57,7 +57,7 @@ export default function Team() {
         className="absolute top-1/2 left-3 -translate-y-1/2 z-20"
         onClick={() => slider?.current?.slickPrev()}
       >
-        <Image src={PREV_ICON} alt="PREV_ICON" />
+        <Image src={PREV_ICON} alt="PREV_ICON" priority={true} />
       </button>
       <Slider ref={slider} {...settings} arrows={false}>
         {teamData.map((person: ITeam, index: number) => {
@@ -71,6 +71,7 @@ export default function Team() {
                 className="rounded-lg absolute w-full h-full object-cover"
                 src={person.image}
                 alt={person.name}
+                priority={true}
               />
               <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center uppercase z-30 w-[100%]">
                 {person.name}
@@ -86,7 +87,7 @@ export default function Team() {
         className="absolute top-1/2 right-3 -translate-y-1/2 z-20"
         onClick={() => slider?.current?.slickNext()}
       >
-        <Image src={NEXT_ICON} alt="NEXT_ICON" />
+        <Image src={NEXT_ICON} alt="NEXT_ICON" priority={true} />
       </button>
     </div>
   );

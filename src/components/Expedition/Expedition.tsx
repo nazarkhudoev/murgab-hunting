@@ -29,6 +29,7 @@ export function Expedition() {
             alt="Pic"
             width={460}
             height={480}
+            priority={true}
           />
           <div className="divider absolute -right-[50px] top-1/2 -translate-y-[50%] bg-[#C4A174] w-[2px] h-[75%]"></div>
         </div>
@@ -36,7 +37,7 @@ export function Expedition() {
           <div className="wrapper-border flex flex-col justify-start items-start gap-10 py-[15px] px-[30px] mr-[20px]">
             <div>
               <div className="flex items-center gap-3">
-                <Image src={Icon1} alt="Icon1" width={44} height={44} />
+                <Image src={Icon1} alt="Icon1" width={44} height={44} priority={true}/>
                 {/* <div className="w-11 h-11 bg-slate-500 rounded-xl">I</div> */}
                 <p>Invitation Letter</p>
               </div>
@@ -48,7 +49,7 @@ export function Expedition() {
             <div>
               <div className="flex items-center gap-3">
                 {/* <div className="w-11 h-11 bg-slate-500 rounded-xl"></div> */}
-                <Image src={Icon2} alt="Icon1" width={44} height={44} />
+                <Image src={Icon2} alt="Icon1" width={44} height={44} priority={true}/>
                 <p>CITES Permits</p>
               </div>
               <p className="mt-3 font-extralight">
@@ -60,7 +61,7 @@ export function Expedition() {
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <Image src={Icon3} alt="Icon1" width={44} height={44} />
+                <Image src={Icon3} alt="Icon1" width={44} height={44} priority={true}/>
                 <p>Gun Permits</p>
               </div>
               <p className="mt-3 font-extralight">
@@ -70,7 +71,7 @@ export function Expedition() {
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <Image src={Icon4} alt="Icon1" width={44} height={44} />
+                <Image src={Icon4} alt="Icon1" width={44} height={44} priority={true}/>
                 <p>Veterinary Certificates</p>
               </div>
               <p className="mt-3 font-extralight">
@@ -80,7 +81,7 @@ export function Expedition() {
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <Image src={Icon5} alt="Icon1" width={44} height={44} />
+                <Image src={Icon5} alt="Icon1" width={44} height={44} priority={true}/>
                 <p>Animal Permits</p>
               </div>
               <p className="mt-3 font-extralight">
@@ -90,7 +91,7 @@ export function Expedition() {
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <Image src={Icon6} alt="Icon1" width={44} height={44} />
+                <Image src={Icon6} alt="Icon1" width={44} height={44} priority={true}/>
                 <p>Border Pass Permit</p>
               </div>
               <p className="mt-3 font-extralight">
@@ -100,7 +101,7 @@ export function Expedition() {
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <Image src={Icon7} alt="Icon1" width={44} height={44} />
+                <Image src={Icon7} alt="Icon1" width={44} height={44} priority={true}/>
                 <p>Food and Drinks</p>
               </div>
               <p className="mt-3 font-extralight">
@@ -110,7 +111,7 @@ export function Expedition() {
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <Image src={Icon8} alt="Icon1" width={44} height={44} />
+                <Image src={Icon8} alt="Icon1" width={44} height={44} priority={true}/>
                 <p>Round Trip Transportation</p>
               </div>
               <p className="mt-3 font-extralight">
@@ -120,7 +121,7 @@ export function Expedition() {
             </div>
             <div>
               <div className="flex items-center gap-3">
-                <Image src={Icon9} alt="Icon1" width={44} height={44} />
+                <Image src={Icon9} alt="Icon1" width={44} height={44} priority={true}/>
                 <p>Arrival VIP Hall Access</p>
               </div>
               <p className="mt-3 font-extralight">

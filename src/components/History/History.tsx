@@ -12,6 +12,7 @@ export default function History() {
           src={TabImage1}
           alt="TabImage1"
           className="h-[360px] w-[400px] block max-w-full max-h-full"
+          priority={true}
         />
       </div>
       <div className="w-[640px] max-w-full flex flex-col justify-start items-start gap-4 font-extralight text-white">

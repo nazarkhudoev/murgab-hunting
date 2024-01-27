@@ -105,6 +105,7 @@ const Carousel = () => {
                     src={Founder1}
                     alt="Founder1"
                     className="rounded-lg w-[240px] h-[240px] object-cover"
+                    priority={true}
                   />
                 </div>
                 <div>
@@ -122,6 +123,7 @@ const Carousel = () => {
                     src={Founder2}
                     alt="Founder1"
                     className="rounded-lg w-[240px] h-[240px] object-cover"
+                    priority={true}
                   />
                 </div>
                 <div>

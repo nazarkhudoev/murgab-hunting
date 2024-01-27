@@ -7,7 +7,7 @@ export default function Mission() {
   return (
     <div className="flex items-start justify-between gap-7 px-10 mt-5 mission-container">
       <div>
-        <Image src={TabImage2} alt="TabImage1" height={360} width={590} />
+        <Image src={TabImage2} alt="TabImage1" height={360} width={590} priority={true}/>
       </div>
       <div className="w-[360px] max-w-full font-extralight text-lg text-white">
         <p>

@@ -28,6 +28,7 @@ export default function Camps() {
       </p>
       <div className="flex items-start justify-center flex-wrap gap-4 mt-5 relative ">
         <Image
+          priority={true}
           src={Camp1}
           alt="Camp1"
           className="w-[530px] h-[530px] object-cover rounded-[10px] border border-[#8e7e57]"
@@ -35,11 +36,13 @@ export default function Camps() {
         <div>
           <div className="flex items-center justify-center gap-5 mb-5 relative ">
             <Image
+              priority={true}
               src={Camp2}
               alt="Camp1"
               className="max-w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
             />
             <Image
+              priority={true}
               src={Camp3}
               alt="Camp1"
               className="max-w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
@@ -47,11 +50,13 @@ export default function Camps() {
           </div>
           <div className="flex items-center justify-center gap-5">
             <Image
+              priority={true}
               src={Camp5}
               alt="Camp1"
               className="max-w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
             />
             <Image
+              priority={true}
               src={Camp4}
               alt="Camp1"
               className="max-w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "

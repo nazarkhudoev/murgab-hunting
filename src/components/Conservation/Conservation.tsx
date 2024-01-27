@@ -7,7 +7,7 @@ export default function Conservation() {
   return (
     <div className="flex items-start justify-between gap-7 px-10 mt-5 conservation-container">
       <div>
-        <Image src={TabImage3} alt="TabImage1" height={400} width={360} />
+        <Image src={TabImage3} alt="TabImage1" height={400} width={360} priority={true} />
       </div>
       <div className="w-[640px] max-w-full flex flex-col justify-start items-start gap-4 font-extralight text-white">
         <p>

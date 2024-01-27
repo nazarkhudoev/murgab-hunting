@@ -40,7 +40,7 @@ export default function TrophiesCarousel() {
         className="absolute top-1/2 left-4 -translate-y-1/2 z-20 prev__button"
         onClick={() => slider?.current?.slickPrev()}
       >
-        <Image src={PREV_ICON} alt="PREV_ICON" />
+        <Image src={PREV_ICON} alt="PREV_ICON" priority={true}/>
       </button>
       <Slider ref={slider} {...settings} arrows={false}>
         {trophiesData.map((person: ITrophie, index: number) => {
@@ -54,6 +54,7 @@ export default function TrophiesCarousel() {
                 className="rounded-[20px] absolute w-full h-full object-cover border border-[#8E7E57]"
                 src={person.image}
                 alt={person.title}
+                priority={true}
               />
               <h3 className="absolute bottom-14 left-10 text-white uppercase text-lg z-30">
                 {person.title}
@@ -72,7 +73,7 @@ export default function TrophiesCarousel() {
         className="absolute top-1/2 right-4 -translate-y-1/2 z-20 next__button"
         onClick={() => slider?.current?.slickNext()}
       >
-        <Image src={NEXT_ICON} alt="NEXT_ICON" />
+        <Image src={NEXT_ICON} alt="NEXT_ICON" priority={true}/>
       </button>
     </section>
   );
