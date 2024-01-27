@@ -1,5 +1,8 @@
 import { StaticImageData } from "next/image";
 import Picture from "@/assets/Marco_polo_argali_on_Pamir_Mountain.webp"
+import Picture2 from "@/assets/contact.webp"
+import Picture3 from "@/assets/Wolf/Wolf.webp"
+import Picture4 from "@/assets/Yak/Yak.webp"
 
 export interface ITrophie {
   id: string;
@@ -10,27 +13,27 @@ export interface ITrophie {
 
 export const trophiesData: ITrophie[] = [
   {
-    id: Math.floor(Math.random() * Date.now()).toString(16),
+    id: "1",
     image: Picture,
     title: "Shirinbek",
-    url: "/trophie",
+    url: "/marco-polo",
   },
   {
-    id: Math.floor(Math.random() * Date.now()).toString(16),
-    image: Picture,
+    id: "2",
+    image: Picture2,
     title: "Shirinbek",
-    url: "/trophie",
+    url: "/ibex",
   },
   {
-    id: Math.floor(Math.random() * Date.now()).toString(16),
-    image: Picture,
+    id: "3",
+    image: Picture3,
     title: "Shirinbek",
-    url: "/trophie",
+    url: "/yak",
   },
   {
-    id: Math.floor(Math.random() * Date.now()).toString(16),
-    image: Picture,
+    id: "4",
+    image: Picture4,
     title: "Shirinbek",
-    url: "/trophie",
+    url: "/wolf",
   },
 ];

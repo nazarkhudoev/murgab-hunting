@@ -2,7 +2,7 @@
 
 export default function Blog() {
   return (
-    <section id="blog">
+    <section className="mt-[130px]" id="blog">
       <h3 className="text-center text-white text-2xl font-semibold mb-[50px] uppercase tracking-[1.5px]">
         Blog
       </h3>

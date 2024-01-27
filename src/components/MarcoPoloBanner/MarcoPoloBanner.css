@@ -1,0 +1,12 @@
+.marcopolo__banner {
+    min-height: 100vh;
+  /* background-image: url(../../assets/image\ 10.png), */
+  background-image: url(../../assets/Marco_polo_argali_on_Pamir_Mountain.webp),
+    linear-gradient(91deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
+  background-blend-mode: multiply;
+  background-size: cover;
+  padding-top: 200px;
+  padding-inline: 85px;
+  color: #fff;
+
+}

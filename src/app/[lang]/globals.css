@@ -63,6 +63,38 @@ html {
   background-color: transparent !important;
 }
 
+.yottie-widget-feed-section-slide {
+  width: 100% !important;
+  padding-left: 48px !important;
+  padding-right: 48px !important;
+}
+.yottie-widget-video {
+  margin: 0 9px !important;
+}
+.swiper-slide-visible,
+.swiper-slide-active {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.yottie-widget-feed-section-arrow-next {
+  position: absolute !important;
+  display: block !important;
+  z-index: 3 !important;
+  right: -15px !important;
+  box-shadow: none !important;
+}
+.yottie-widget-feed-section-arrow-prev {
+  position: absolute !important;
+  display: block !important;
+  z-index: 3 !important;
+  left: -15px !important;
+  box-shadow: none !important;
+}
+.yottie-widget-feed-section-arrow {
+  box-shadow: none !important;
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

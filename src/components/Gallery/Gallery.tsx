@@ -151,7 +151,7 @@ export default function Gallery() {
   }
 
   return (
-    <section id="gallery" className="my-[90px]">
+    <section id="gallery" className="mt-[150px]">
       <div className="w-[1150px] max-w-full mx-auto relative">
         <h1 className="text-center mb-[50px] text-2xl tracking-[1.5px] text-white uppercase">
           Gallery

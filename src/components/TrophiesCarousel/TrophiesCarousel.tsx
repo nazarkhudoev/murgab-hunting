@@ -58,7 +58,7 @@ export default function TrophiesCarousel() {
               <h3 className="absolute bottom-14 left-10 text-white uppercase text-lg z-30">
                 Slider - {index + 1}
               </h3>
-              <Link href={"/"} className="absolute bottom-5 left-10 z-50 flex items-center gap-2">
+              <Link href={person.url} className="absolute bottom-5 left-10 z-50 flex items-center gap-2">
                 <span className="uppercase text-lg font-semibold text-[dodgerblue]">
                   read more
                 </span>
