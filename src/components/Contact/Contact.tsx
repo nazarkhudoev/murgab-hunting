@@ -8,6 +8,12 @@ export default function Contact() {
   return (
     <section id="book" className="contact-section">
       <div className="contact-form-container">
+        <h3 className="text-center text-[25px] font-semibold uppercase mb-[30px] tracking-[1.5px]">
+          Book your hunt
+        </h3>
+        <p className="text-center font-thin mb-5">
+          Leave us a message and our manager will connect you.
+        </p>
         <div
           className="elfsight-app-c96adae2-50f5-4276-998e-3b21d664dbe4"
           data-elfsight-app-lazy

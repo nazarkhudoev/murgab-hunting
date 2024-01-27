@@ -30,16 +30,37 @@ html {
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
 }
 
-#eapps-instagram-feed-1 .eapps-instagram-feed-posts-item{
-  background: #332B18!important;
-  display: flex!important;
-  flex-direction: column!important;
-  padding: 20px!important;
+#eapps-instagram-feed-1 .eapps-instagram-feed-posts-item {
+  background: #332b18 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 20px !important;
   border-radius: 20px;
 }
 
-#eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-image-wrapper{
-  border-radius: 10px!important;
+#eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-image-wrapper {
+  border-radius: 10px !important;
+}
+.yottie-widget-video-preview-thumbnail {
+  border-radius: 10px !important;
+}
+
+.Window__WindowContent-sc-1wwhwms-1 button {
+  background-color: #fff !important;
+  height: 40px !important;
+}
+.Window__WindowContent-sc-1wwhwms-1 button > span {
+  color: chocolate;
+}
+.dkLpGG {
+  background-color: #332b18 !important;
+  border: 1px solid #fff;
+  border-radius: 20px !important;
+  /* outline: 1px solid #fff;  */
+}
+
+.jqZPlV {
+  background-color: transparent !important;
 }
 
 /* :root {

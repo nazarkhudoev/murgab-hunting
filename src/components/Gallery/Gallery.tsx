@@ -201,7 +201,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -209,7 +209,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -217,7 +217,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -225,7 +225,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
             <div className="flex items-center justify-between mt-3">
@@ -235,7 +235,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -243,7 +243,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -251,7 +251,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -259,7 +259,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
           </div>
@@ -271,7 +271,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -279,7 +279,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -287,7 +287,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -295,7 +295,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
             <div className="flex items-center justify-between mt-3">
@@ -305,7 +305,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -313,7 +313,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -321,7 +321,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -329,7 +329,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
           </div>
@@ -341,7 +341,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -349,7 +349,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -357,7 +357,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -365,7 +365,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
             <div className="flex items-center justify-between mt-3">
@@ -375,7 +375,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -383,7 +383,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -391,7 +391,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -399,7 +399,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
           </div>
@@ -411,7 +411,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -419,7 +419,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -427,7 +427,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -435,7 +435,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
             <div className="flex items-center justify-between mt-3">
@@ -445,7 +445,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -453,7 +453,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -461,7 +461,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -469,7 +469,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
           </div>
@@ -481,7 +481,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -489,7 +489,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -497,7 +497,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -505,7 +505,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
             <div className="flex items-center justify-between mt-3">
@@ -515,7 +515,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -523,7 +523,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -531,7 +531,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -539,7 +539,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
           </div>
@@ -551,7 +551,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -559,7 +559,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -567,7 +567,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -575,7 +575,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
             <div className="flex items-center justify-between mt-3">
@@ -585,7 +585,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -593,7 +593,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -601,7 +601,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -609,7 +609,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
           </div>
@@ -621,7 +621,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -629,7 +629,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -637,7 +637,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -645,7 +645,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
             <div className="flex items-center justify-between mt-3">
@@ -655,7 +655,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -663,7 +663,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -671,7 +671,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -679,7 +679,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
           </div>
@@ -691,7 +691,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -699,7 +699,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -707,7 +707,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -715,7 +715,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
             <div className="flex items-center justify-between mt-3">
@@ -725,7 +725,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -733,7 +733,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -741,7 +741,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
               <Image
                 onClick={(e) => openModal(e.target)}
@@ -749,7 +749,7 @@ export default function Gallery() {
                 alt="Gallery1"
                 width={280}
                 height={280}
-                className="w-[280px] h-[280px] object-cover"
+                className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
           </div>
