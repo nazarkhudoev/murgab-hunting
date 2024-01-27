@@ -23,7 +23,6 @@ export default function Home() {
         <Blog />
 
         <Videos />
-
       </section>
       <Contact />
     </main>
