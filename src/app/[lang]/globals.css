@@ -10,6 +10,8 @@ body {
 
 html {
   overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px !important;
 }
 
 .main {
@@ -26,6 +28,18 @@ html {
   height: 395px;
   width: 100%;
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
+}
+
+#eapps-instagram-feed-1 .eapps-instagram-feed-posts-item{
+  background: #332B18!important;
+  display: flex!important;
+  flex-direction: column!important;
+  padding: 20px!important;
+  border-radius: 20px;
+}
+
+#eapps-instagram-feed-1 .eapps-instagram-feed-posts-item-image-wrapper{
+  border-radius: 10px!important;
 }
 
 /* :root {

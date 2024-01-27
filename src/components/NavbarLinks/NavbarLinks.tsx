@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import styles from "./NavbarLinks.module.css";
 
 interface ILink {
-  id: number;
+  id: string;
   value: string;
   path: string;
 }
@@ -14,37 +14,37 @@ export default function NavbarLinks() {
 
   const links: ILink[] = [
     {
-      id: 1,
+      id: "#about",
       value: "About Us",
       path: "/about-us",
     },
     {
-      id: 2,
+      id: "#trophies",
       value: "Hunting Trophies",
       path: "/hunting-packages",
     },
     {
-      id: 3,
+      id: "#essentials",
       value: "Hunting Esseentials",
       path: "/booking-process",
     },
     {
-      id: 5,
+      id: "#camp",
       value: "Camp",
       path: "/camp",
     },
     {
-      id: 6,
+      id: "#gallery",
       value: "Gallery",
       path: "/camp",
     },
     {
-      id: 7,
+      id: "#blog",
       value: "Blog",
       path: "/camp",
     },
     {
-      id: 4,
+      id: "#book",
       value: "Book",
       path: "/book",
     },
@@ -52,27 +52,27 @@ export default function NavbarLinks() {
 
   const aboutLinks: ILink[] = [
     {
-      id: 1,
+      id: "#history",
       value: "History",
       path: "/history",
     },
     {
-      id: 2,
+      id: "#founders",
       value: "Founders",
       path: "/founders",
     },
     {
-      id: 3,
+      id: "#team",
       value: "Team",
       path: "/team",
     },
     {
-      id: 4,
+      id: "#conservation",
       value: "Conservation",
       path: "/conservation",
     },
     {
-      id: 5,
+      id: "#book",
       value: "Book",
       path: "/book",
     },
@@ -85,26 +85,26 @@ export default function NavbarLinks() {
           ? links.map((link) => {
               return (
                 <li key={link.id}>
-                  <Link
+                  <a
                     className="capitalize text-sm text-white"
                     // href={`${link.path}/${lang}`}
-                    href={`${link.path}`}
+                    href={`${link.id}`}
                   >
                     {link.value}
-                  </Link>
+                  </a>
                 </li>
               );
             })
           : aboutLinks.map((link) => {
               return (
                 <li key={link.id}>
-                  <Link
+                  <a
                     className="capitalize text-sm text-white"
                     // href={`${link.path}/${lang}`}
-                    href={`${link.path}`}
+                    href={`${link.id}`}
                   >
                     {link.value}
-                  </Link>
+                  </a>
                 </li>
               );
             })}

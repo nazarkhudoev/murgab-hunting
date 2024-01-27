@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <section className="contact-section">
+    <section id="book" className="contact-section">
       <div className="contact-form-container">
         <form className="relative z-50">
           <h3 className="text-center text-[25px] font-semibold uppercase mb-[30px] tracking-[1.5px]">

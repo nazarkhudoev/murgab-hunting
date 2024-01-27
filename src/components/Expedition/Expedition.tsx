@@ -14,7 +14,7 @@ import Icon9 from "@/assets/images/expedition/Frame 1713 (8).svg";
 
 export function Expedition() {
   return (
-    <section className="w-[1200px] max-w-full m-auto my-[150px]">
+    <section id="essentials" className="w-[1200px] max-w-full m-auto my-[150px]">
       <h3 className="text-center text-white text-2xl font-semibold mb-[50px] uppercase tracking-[1.5px]">
         Your Expedition Essentials
       </h3>

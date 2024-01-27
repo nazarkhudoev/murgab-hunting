@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -151,19 +151,38 @@ export default function Gallery() {
   }
 
   return (
-    <section className="my-[90px]">
+    <section id="gallery" className="my-[90px]">
       <div className="w-[1150px] max-w-full mx-auto relative">
+        <h1 className="text-center mb-[50px] text-2xl tracking-[1.5px] text-white uppercase">
+          Gallery
+        </h1>
         {/* <button onClick={openModal}>Open Modal</button> */}
         <Modal
           shouldCloseOnOverlayClick={true}
           isOpen={modalIsOpen}
-          //   onAfterOpen={afterOpenModal}
+          // onAfterOpen={() => {
+          //   document.body.style.top = `-${window.scrollY}px`;
+          //   document.body.style.position = "fixed";
+          // }}
+          // onAfterClose={() => {
+          //   const scrollY = document.body.style.top;
+          //   document.body.style.position = "";
+          //   document.body.style.top = "";
+          //   window.scrollTo(0, parseInt(scrollY || "0") * -1);
+          // }}
           onRequestClose={closeModal}
           style={customStyles}
           contentLabel="Example Modal"
+          // className={"relative z-[99]"}
         >
           {/* <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2> */}
-          {currentImage != "" && <img src={currentImage} alt="currentImage" />}
+          {currentImage != "" && (
+            <img
+              src={currentImage}
+              alt="currentImage"
+              className="relative z-[999]"
+            />
+          )}
           {/* <button onClick={closeModal}>close</button> */}
           {/* <div>I am a modal</div> */}
         </Modal>

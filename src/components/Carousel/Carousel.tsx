@@ -10,6 +10,7 @@ import Team from "../Team/Team";
 import { Carousel as CarouselComponent } from "primereact/carousel";
 import Link from "next/link";
 import Demo from "../Demo/Demo";
+import Founders from "../Founders/Founders";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -118,6 +119,12 @@ const Carousel = () => {
             >
               Team
             </button>
+            <button
+              className={`${currentIndex == 4 && "active-tab"}`}
+              onClick={() => navigateToSlide(4)}
+            >
+              Founders
+            </button>
           </div>
 
           <Link className="text-sm" href={"/about-us"}>
@@ -215,6 +222,7 @@ const Carousel = () => {
           </div> */}
           {/* <Demo /> */}
           <Team />
+          <Founders />
         </div>
       </div>
     </div>

@@ -5,12 +5,15 @@ import slickGoTo from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./Slider.css"; // You can create this file for styling
-import Demo from "../Demo/Demo";
 import History from "../History/History";
 import Mission from "../Mission/Mission";
 import Conservation from "../Conservation/Conservation";
 import Link from "next/link";
 import Team from "../Team/Team";
+import Image from "next/image";
+
+import Founder1 from "@/assets/founder1.png";
+import Founder2 from "@/assets/founder-2.png";
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,7 +35,7 @@ const Carousel = () => {
   const sliderRef = useRef<any>();
 
   return (
-    <section className="pt-12">
+    <section id="about" className="pt-12">
       <h3 className="text-center text-white text-2xl font-medium uppercase tracking-[1.5px]">
         ABOUT US
       </h3>
@@ -75,8 +78,17 @@ const Carousel = () => {
             >
               Team
             </button>
+            <button
+              className={`${currentSlide == 4 && "active-tab"}`}
+              onClick={() => {
+                setCurrentSlide(4);
+                sliderRef.current.slickGoTo(4);
+              }}
+            >
+              Founders
+            </button>
           </div>
-          <Link className="text-sm" href={"/"}>
+          <Link className="text-sm" href={"/about-us"}>
             READ MORE +
           </Link>
         </div>
@@ -85,6 +97,44 @@ const Carousel = () => {
           <Mission />
           <Conservation />
           <Team />
+          <section className="py-10 px-[85px] text-white">
+            <div className="flex items-start justify-center gap-7">
+              <div className="flex items-start gap-7 w-[500px] max-w-full">
+                <div>
+                  <Image
+                    src={Founder1}
+                    alt="Founder1"
+                    className="rounded-lg w-[240px] h-[240px] object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-[#8E7E57] text-xl font-medium uppercase">
+                    Bekmurodi <br /> Zafar
+                  </p>
+                  <p className="text-[14px] font-light mt-4">
+                    Professional Hunter
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-7 w-[500px] max-w-full">
+                <div>
+                  <Image
+                    src={Founder2}
+                    alt="Founder1"
+                    className="rounded-lg w-[240px] h-[240px] object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="text-[#8E7E57] text-xl font-medium uppercase">
+                    Bekmurodi <br /> Zafar
+                  </p>
+                  <p className="text-[14px] font-light mt-4">
+                    Professional Hunter
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
         </Slider>
       </div>
     </section>

@@ -9,7 +9,7 @@ import "./Camps.css";
 
 export default function Camps() {
   return (
-    <section className="w-[1200px] max-w-full mx-auto text-white py-6 px-5">
+    <section id="camp" className="w-[1200px] max-w-full mx-auto text-white py-6 px-5">
       <h3 className="text-center mb-[50px] text-2xl tracking-[1.5px]">
         HOT SPRINGS CAMP
       </h3>
