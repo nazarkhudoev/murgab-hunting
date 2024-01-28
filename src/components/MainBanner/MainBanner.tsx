@@ -5,6 +5,7 @@ import "./MainBanner.css";
 const MainBanner = () => {
   return (
     <div className="relative main">
+      <div className="custom__shadow"></div>
       <div className="px-[85px] pt-[200px] relative z-50 main__banner-home">
         <h1 className="text-[80px] font-bold text-white uppercase">
           Join the Elite
