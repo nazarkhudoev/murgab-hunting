@@ -8,15 +8,15 @@ export default function Statistics() {
         <p>Available Species</p>
       </div>
       <div>
-        <h4 className="text-[51px] font-semibold mb-4">20</h4>
+        <h4 className="text-[51px] font-semibold mb-4">+500</h4>
         <p>Conservation Initiatives</p>
       </div>
       <div>
-        <h4 className="text-[51px] font-semibold mb-4">+100</h4>
+        <h4 className="text-[51px] font-semibold mb-4">+1k</h4>
         <p>Satisfied clients</p>
       </div>
       <div>
-        <h4 className="text-[51px] font-semibold mb-4">+100</h4>
+        <h4 className="text-[51px] font-semibold mb-4">+200 km<sup>2</sup></h4>
         <p>Managed Land</p>
       </div>
     </div>

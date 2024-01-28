@@ -29,13 +29,25 @@
 
 @media (max-width: 855px) {
   .expedition-wrapper {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
   }
 
   .expedition__container > div {
     border: none;
     /* border-top: 1px solid #c4a174; */
+  }
+
+  .expedition__container {
+    display: none;
+  }
+
+  .main-expedition-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 570px) {
+  .expedition-wrapper {
+    padding-inline: 16px;
   }
 }

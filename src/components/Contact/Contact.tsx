@@ -14,10 +14,10 @@ export default function Contact() {
         <p className="text-center font-thin mb-5">
           Leave us a message and our manager will connect you.
         </p>
-        <div
+        {/* <div
           className="elfsight-app-c96adae2-50f5-4276-998e-3b21d664dbe4"
           data-elfsight-app-lazy
-        ></div>
+        ></div> */}
 
         <div
           className="elfsight-app-63fbac68-6b51-4102-ad1d-e2c4562b500f"

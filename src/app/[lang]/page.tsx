@@ -24,6 +24,10 @@ export default function Home() {
         <Blog />
       </section>
       <Contact />
+      <div
+        className="elfsight-app-c96adae2-50f5-4276-998e-3b21d664dbe4"
+        data-elfsight-app-lazy
+      ></div>
     </main>
   );
 }

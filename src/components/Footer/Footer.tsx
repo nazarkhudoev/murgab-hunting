@@ -7,7 +7,7 @@ import FacebookIcon from "@/assets/images/footer/Vector (8).svg";
 import InstagramIcon from "@/assets/images/footer/instagram.svg";
 import YoutubeIcon from "@/assets/images/footer/Vector (9).svg";
 
-import "./Footer.css"
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -58,8 +58,16 @@ const Footer = () => {
         </div>
         <div>
           <h5 className="mb-1">Contacts</h5>
-          <p className="text-sm font-thin">example@gmail.com</p>
-          <p className="text-sm font-thin">+992 (00) 000 00-00</p>
+          <p>
+            <a href="mailto:example@gmail.com" className="text-sm font-thin">
+              example@gmail.com
+            </a>
+          </p>
+          <p>
+            <a href="tel:+992 (00) 000 00-00" className="text-sm font-thin">
+              +992 (00) 000 00-00
+            </a>
+          </p>
         </div>
       </div>
     </footer>

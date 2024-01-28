@@ -11,6 +11,7 @@ import Icon6 from "@/assets/images/expedition/Frame 1713 (5).svg";
 import Icon7 from "@/assets/images/expedition/Frame 1713 (6).svg";
 import Icon8 from "@/assets/images/expedition/Frame 1713 (7).svg";
 import Icon9 from "@/assets/images/expedition/Frame 1713 (8).svg";
+import ExpeditionSlider from "../ExpeditionSlider/ExpeditionSlider";
 
 export function Expedition() {
   return (
@@ -24,7 +25,7 @@ export function Expedition() {
       <div className="bg-[#332B18] rounded-[20px] flex items-start justify-between p-[2.25rem] expedition-wrapper">
         <div className="relative">
           <Image
-            className="rounded-[10px]"
+            className="rounded-[10px] border-2 border-[#8E7E57] main-expedition-image"
             src={Pic}
             alt="Pic"
             width={460}
@@ -33,6 +34,7 @@ export function Expedition() {
           />
           <div className="absolute -right-[70px] top-1/2 -translate-y-[50%] bg-[#C4A174] w-[2px] h-[75%]"></div>
         </div>
+        <ExpeditionSlider />
         <div className="expedition__container relative text-white w-[590px] h-[480px] overflow-y-scroll max-w-full px-1 py-1 ml-10">
           <div className="wrapper-border flex flex-col justify-start items-start gap-10 py-[15px] px-[30px] mr-[20px]">
             <div>
@@ -130,7 +132,7 @@ export function Expedition() {
               </p>
             </div>
           </div>
-        </div>
+        E</div>
       </div>
     </section>
   );

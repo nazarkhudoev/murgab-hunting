@@ -1,8 +1,13 @@
 @media (max-width: 922px) {
-    .mission-container {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+  .mission-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
+}
+
+@media (max-width: 570px) {
+  .mission-container {
+    padding-inline: 16px;
+  }
+}

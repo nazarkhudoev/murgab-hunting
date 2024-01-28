@@ -14,15 +14,15 @@ const MainBanner = () => {
           Reserve Your Marco Polo Hunt Now!
         </p>
         <div className="flex items-center gap-7 mt-7">
-          <Link
+          <a
             className="flex items-center justify-center border border-white rounded-[10px] w-[280px] h-[40px] bg-[#FFFFFF] text-[#F45914] font-medium text-xl"
-            href={"/"}
+            href="#book"
           >
-            Join Now
-          </Link>
+            Book Now
+          </a>
           <Link
             className="flex items-center justify-center border-2 border-white rounded-[10px] w-[280px] h-[40px] text-white font-medium text-xl"
-            href={"/"}
+            href={"/about-us"}
           >
             Read More
           </Link>

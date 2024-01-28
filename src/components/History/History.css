@@ -13,3 +13,9 @@
     height: 280px;
   }
 }
+
+@media (max-width: 570px) {
+  .history-container {
+    padding-inline: 16px;
+  }
+}

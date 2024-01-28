@@ -45,6 +45,8 @@
     flex-direction: column;
     gap: 7px;
     cursor: pointer;
+    /* border: 1px solid red; */
+    position: relative;
   }
 
   .line {
@@ -53,5 +55,24 @@
     width: 20px;
     background-color: #fff;
     border-radius: 10px;
+    position: relative;
+    transition: all 0.5s;
+  }
+
+  .top-line {
+    transform: rotate(139deg);
+    top: 8px;
+    left: 0px;
+  }
+
+  .middle-line {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  .bottom-line {
+    transform: rotate(224deg);
+    top: -8px;
+    left: 0px;
   }
 }

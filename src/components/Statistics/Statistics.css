@@ -2,5 +2,12 @@
 @media (max-width: 739px) {
   .statistics-container {
     margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  .statistics-container h4 {
+    font-size: 40px;
   }
 }

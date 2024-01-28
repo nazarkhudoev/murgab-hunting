@@ -8,6 +8,7 @@
   border-radius: 20px;
   /* padding: 20px; */
   padding-top: 30px;
+  position: relative;
 }
 
 .carousel-navigation {
@@ -76,4 +77,35 @@
 
 .slick-dots li {
   margin: 0 -2px !important;
+}
+
+@media (max-width: 570px) {
+  .read-more {
+    position: absolute;
+    bottom: 20px;
+    right: 16px;
+  }
+
+  .carousel-container-123 {
+    padding-bottom: 70px;
+  }
+
+  #founder__wrapper {
+    padding-inline: 16px;
+  }
+
+  .slider__fouders-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .slider__founders {
+    width: 140px;
+    height: 140px;
+  }
+
+  .carousel__navigation-wrapper {
+    padding-inline: 16px;
+  }
 }
