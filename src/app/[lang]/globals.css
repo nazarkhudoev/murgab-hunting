@@ -63,7 +63,14 @@ html {
   background-color: transparent !important;
 }
 
-.yottie-widget-feed-section-slide {
+@media (max-width: 471px) {
+  .custom__container {
+    padding-inline: 0px !important;
+  }
+}
+
+
+/* .yottie-widget-feed-section-slide {
   width: 100% !important;
   padding-left: 48px !important;
   padding-right: 48px !important;
@@ -93,7 +100,7 @@ html {
 }
 .yottie-widget-feed-section-arrow {
   box-shadow: none !important;
-}
+} */
 
 /* :root {
   --foreground-rgb: 0, 0, 0;

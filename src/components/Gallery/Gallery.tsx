@@ -93,21 +93,31 @@ import Modal from "react-modal";
 
 export default function Gallery() {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     swipeToSlide: false,
     responsive: [
       {
         swipeToSlide: true,
-        breakpoint: 940,
+        breakpoint: 740,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        swipeToSlide: true,
+        breakpoint: 540,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
     ],
@@ -152,7 +162,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="mt-[150px]">
-      <div className="w-[1150px] max-w-full mx-auto relative px-[50px]">
+      <div className="w-[1150px] max-w-full mx-auto relative px-[20px]">
         <h1 className="text-center mb-[50px] text-2xl tracking-[1.5px] text-white uppercase">
           Gallery
         </h1>
@@ -172,575 +182,527 @@ export default function Gallery() {
           )}
         </Modal>
         <button
-          className="absolute top-1/2 left-6 -translate-y-1/2 z-20 prev__button"
+          className="absolute top-[55%] -left-5 -translate-y-[50%] z-20 prev__button"
           onClick={() => slider?.current?.slickPrev()}
         >
           <Image src={PREV_ICON} alt="PREV_ICON" priority={true} />
         </button>
         <Slider ref={slider} {...settings} arrows={false}>
-          <div>
-            <div className="gallery__grid">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery1}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery2}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery3}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery4}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-            <div className="gallery__grid mt-3">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery5}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery6}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery7}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery8}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-          </div>
-          <div>
-            <div className="gallery__grid">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery9}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery10}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery11}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery12}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-            <div className="gallery__grid mt-3">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery13}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery14}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery15}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery16}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-          </div>
-          <div>
-            <div className="gallery__grid">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery17}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery18}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery19}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery20}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-            <div className="gallery__grid mt-3">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery21}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery22}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery23}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery24}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-          </div>
-          <div>
-            <div className="gallery__grid">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery25}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery26}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery27}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery28}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-            <div className="gallery__grid mt-3">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery29}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery30}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery31}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery32}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-          </div>
-          <div>
-            <div className="gallery__grid">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery33}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery34}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery35}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery36}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-            <div className="gallery__grid mt-3">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery37}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery38}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery39}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery40}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-          </div>
-          <div>
-            <div className="gallery__grid">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery41}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery42}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery43}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery44}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-            <div className="gallery__grid mt-3">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery45}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery46}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery47}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery48}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-          </div>
-          <div>
-            <div className="gallery__grid">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery49}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery51}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery52}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery53}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-            <div className="gallery__grid mt-3">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery54}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery55}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery56}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery57}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-          </div>
-          <div>
-            <div className="gallery__grid">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery58}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery59}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery60}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery61}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-            <div className="gallery__grid mt-3">
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery62}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery63}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery64}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-              <Image
-                onClick={(e) => openModal(e.target)}
-                src={Gallery65}
-                alt="Gallery1"
-                width={280}
-                height={280}
-                className="w-[280px] h-[280px] object-cover rounded-[10px]"
-              />
-            </div>
-          </div>
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery1}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery2}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery3}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery4}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery5}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery6}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery7}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery8}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery9}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery10}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery11}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery12}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery13}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery14}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery15}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery16}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery17}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery18}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery19}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery20}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery21}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery22}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery23}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery24}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery25}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery26}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery27}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery28}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery29}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery30}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery31}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery32}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery33}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery34}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery35}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery36}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery37}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery38}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery39}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery40}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery41}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery42}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery43}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery44}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery45}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery46}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery47}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery48}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery49}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery51}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery52}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery53}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery54}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery55}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery56}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery57}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery58}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery59}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery60}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery61}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery62}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery63}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery64}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
+          <Image
+            onClick={(e) => openModal(e.target)}
+            src={Gallery65}
+            alt="Gallery1"
+            width={280}
+            height={280}
+            className="w-[280px] h-[280px] object-cover rounded-[10px]"
+          />
         </Slider>
         <button
-          className="absolute top-1/2 right-6 -translate-y-1/2 z-20 next__button"
+          className="absolute top-[55%] -right-5 -translate-y-[50%] z-20 next__button"
           onClick={() => slider?.current?.slickNext()}
         >
           <Image src={NEXT_ICON} alt="NEXT_ICON" />

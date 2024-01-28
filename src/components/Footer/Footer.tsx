@@ -7,10 +7,12 @@ import FacebookIcon from "@/assets/images/footer/Vector (8).svg";
 import InstagramIcon from "@/assets/images/footer/instagram.svg";
 import YoutubeIcon from "@/assets/images/footer/Vector (9).svg";
 
+import "./Footer.css"
+
 const Footer = () => {
   return (
-    <footer className="px-[85px] py-[120px] relative z-30 flex items-start justify-between gap-8 flex-wrap text-white">
-      <div>
+    <footer className="footer__container px-[85px] py-[120px] relative z-30 flex items-start justify-between gap-8 flex-wrap text-white">
+      <div className="footer__logo-container">
         <Image src={Logo} className="w-[80px]" alt="Logo" />
         <span className="font-extralight text-sm">
           © 2024 Murgab Hunting <br /> All rights reserved.

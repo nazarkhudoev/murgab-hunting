@@ -1,0 +1,27 @@
+@media (max-width: 540px) {
+  .footer__container * {
+    text-align: center !important;
+  }
+
+  .footer__container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding-inline: 16px;
+  }
+
+  .footer__container > div {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__logo-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

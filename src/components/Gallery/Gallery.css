@@ -5,18 +5,7 @@
 }
 
 @media (max-width: 1024px) {
-  #gallery {
-    display: none;
-  } 
   
-  /* .gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery__grid img{
-    width: 200px !important;
-    height: 200px!important;
-  } */
 }
 
 .custom__overlay {
