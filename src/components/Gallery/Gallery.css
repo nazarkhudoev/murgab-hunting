@@ -1,3 +1,24 @@
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 1024px) {
+  #gallery {
+    display: none;
+  } 
+  
+  /* .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery__grid img{
+    width: 200px !important;
+    height: 200px!important;
+  } */
+}
+
 .custom__overlay {
   position: absolute;
   left: 0;

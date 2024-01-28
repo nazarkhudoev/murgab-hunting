@@ -34,32 +34,32 @@ export default function Camps() {
           className="w-[530px] h-[530px] object-cover rounded-[10px] border border-[#8e7e57] big-image"
         />
         <div>
-          <div className="flex items-center justify-center gap-5 mb-5 relative ">
+          <div className="flex items-center justify-center gap-5 mb-5 relative w-full">
             <Image
               // priority={true}
               src={Camp2}
               alt="Camp1"
-              className="max-w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
+              className="w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
             />
             <Image
               // priority={true}
               src={Camp3}
               alt="Camp1"
-              className="max-w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
+              className="w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
             />
           </div>
-          <div className="flex items-center justify-center gap-5">
+          <div className="flex items-center justify-center gap-5 w-full">
             <Image
               // priority={true}
               src={Camp5}
               alt="Camp1"
-              className="max-w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
+              className="w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
             />
             <Image
               // priority={true}
               src={Camp4}
               alt="Camp1"
-              className="max-w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
+              className="w-[295px] h-[255px] object-cover rounded-[10px] border border-[#8e7e57] small__pics "
             />
           </div>
         </div>

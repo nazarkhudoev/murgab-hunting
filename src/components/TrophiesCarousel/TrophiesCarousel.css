@@ -1,6 +1,12 @@
 @media (max-width: 940px) {
-    .prev__button,
-    .next__button {
-        display: none;
-    }
+  .prev__button,
+  .next__button {
+    display: none;
+  }
+}
+
+@media (max-width: 671px) {
+  #trophies-carousel {
+    padding-inline: 16px !important;
+  }
 }

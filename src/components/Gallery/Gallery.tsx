@@ -152,7 +152,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="mt-[150px]">
-      <div className="w-[1150px] max-w-full mx-auto relative">
+      <div className="w-[1150px] max-w-full mx-auto relative px-[50px]">
         <h1 className="text-center mb-[50px] text-2xl tracking-[1.5px] text-white uppercase">
           Gallery
         </h1>
@@ -172,14 +172,14 @@ export default function Gallery() {
           )}
         </Modal>
         <button
-          className="absolute top-1/2 -left-6 -translate-y-1/2 z-20 prev__button"
+          className="absolute top-1/2 left-6 -translate-y-1/2 z-20 prev__button"
           onClick={() => slider?.current?.slickPrev()}
         >
           <Image src={PREV_ICON} alt="PREV_ICON" priority={true} />
         </button>
         <Slider ref={slider} {...settings} arrows={false}>
           <div>
-            <div className="flex items-center justify-between">
+            <div className="gallery__grid">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery1}
@@ -213,7 +213,7 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
-            <div className="flex items-center justify-between mt-3">
+            <div className="gallery__grid mt-3">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery5}
@@ -249,7 +249,7 @@ export default function Gallery() {
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between">
+            <div className="gallery__grid">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery9}
@@ -283,7 +283,7 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
-            <div className="flex items-center justify-between mt-3">
+            <div className="gallery__grid mt-3">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery13}
@@ -319,7 +319,7 @@ export default function Gallery() {
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between">
+            <div className="gallery__grid">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery17}
@@ -353,7 +353,7 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
-            <div className="flex items-center justify-between mt-3">
+            <div className="gallery__grid mt-3">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery21}
@@ -389,7 +389,7 @@ export default function Gallery() {
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between">
+            <div className="gallery__grid">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery25}
@@ -423,7 +423,7 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
-            <div className="flex items-center justify-between mt-3">
+            <div className="gallery__grid mt-3">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery29}
@@ -459,7 +459,7 @@ export default function Gallery() {
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between">
+            <div className="gallery__grid">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery33}
@@ -493,7 +493,7 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
-            <div className="flex items-center justify-between mt-3">
+            <div className="gallery__grid mt-3">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery37}
@@ -529,7 +529,7 @@ export default function Gallery() {
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between">
+            <div className="gallery__grid">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery41}
@@ -563,7 +563,7 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
-            <div className="flex items-center justify-between mt-3">
+            <div className="gallery__grid mt-3">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery45}
@@ -599,7 +599,7 @@ export default function Gallery() {
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between">
+            <div className="gallery__grid">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery49}
@@ -633,7 +633,7 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
-            <div className="flex items-center justify-between mt-3">
+            <div className="gallery__grid mt-3">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery54}
@@ -669,7 +669,7 @@ export default function Gallery() {
             </div>
           </div>
           <div>
-            <div className="flex items-center justify-between">
+            <div className="gallery__grid">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery58}
@@ -703,7 +703,7 @@ export default function Gallery() {
                 className="w-[280px] h-[280px] object-cover rounded-[10px]"
               />
             </div>
-            <div className="flex items-center justify-between mt-3">
+            <div className="gallery__grid mt-3">
               <Image
                 onClick={(e) => openModal(e.target)}
                 src={Gallery62}
@@ -740,7 +740,7 @@ export default function Gallery() {
           </div>
         </Slider>
         <button
-          className="absolute top-1/2 -right-6 -translate-y-1/2 z-20 next__button"
+          className="absolute top-1/2 right-6 -translate-y-1/2 z-20 next__button"
           onClick={() => slider?.current?.slickNext()}
         >
           <Image src={NEXT_ICON} alt="NEXT_ICON" />

@@ -35,7 +35,7 @@ export default function TrophiesCarousel() {
   const slider = useRef<any>(null);
 
   return (
-    <section className="relative w-[1270px] max-w-full m-auto px-10">
+    <section id="trophies-carousel" className="relative w-[1270px] max-w-full m-auto px-10">
       <button
         className="absolute top-1/2 left-4 -translate-y-1/2 z-20 prev__button"
         onClick={() => slider?.current?.slickPrev()}

@@ -110,7 +110,7 @@ const Carousel = () => {
                 </div>
                 <div>
                   <p className="text-[#8E7E57] text-xl font-medium uppercase">
-                    Bekmurodi <br /> Zafar
+                    Atobek <br /> Bekmurodov
                   </p>
                   <p className="text-[14px] font-light mt-4">
                     Professional Hunter

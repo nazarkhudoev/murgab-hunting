@@ -31,9 +31,9 @@ export function Expedition() {
             height={480}
             priority={true}
           />
-          <div className="divider absolute -right-[50px] top-1/2 -translate-y-[50%] bg-[#C4A174] w-[2px] h-[75%]"></div>
+          <div className="absolute -right-[70px] top-1/2 -translate-y-[50%] bg-[#C4A174] w-[2px] h-[75%]"></div>
         </div>
-        <div className="expedition__container relative text-white w-[590px] h-[480px] overflow-y-scroll max-w-full px-1 py-1 ml-3">
+        <div className="expedition__container relative text-white w-[590px] h-[480px] overflow-y-scroll max-w-full px-1 py-1 ml-10">
           <div className="wrapper-border flex flex-col justify-start items-start gap-10 py-[15px] px-[30px] mr-[20px]">
             <div>
               <div className="flex items-center gap-3">
