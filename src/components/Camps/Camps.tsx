@@ -31,7 +31,7 @@ export default function Camps() {
           // priority={true}
           src={Camp1}
           alt="Camp1"
-          className="w-[530px] h-[530px] object-cover rounded-[10px] border border-[#8e7e57]"
+          className="w-[530px] h-[530px] object-cover rounded-[10px] border border-[#8e7e57] big-image"
         />
         <div>
           <div className="flex items-center justify-center gap-5 mb-5 relative ">

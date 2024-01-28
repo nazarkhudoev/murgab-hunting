@@ -26,13 +26,13 @@ export const trophiesData: ITrophie[] = [
   },
   {
     id: "3",
-    image: Picture3,
+    image: Picture4,
     title: "Yak",
     url: "/yak",
   },
   {
     id: "4",
-    image: Picture4,
+    image: Picture3,
     title: "Wolf",
     url: "/wolf",
   },

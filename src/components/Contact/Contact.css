@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-left: 85px;
+  padding-inline: 85px;
   padding-top: 50px;
   padding-bottom: 100px;
   position: relative;
@@ -21,6 +21,7 @@
   background: rgba(0, 0, 0, 0.21);
   backdrop-filter: blur(15px);
   width: 550px;
+  max-width: 100%;
   padding: 50px 60px;
 }
 
@@ -28,4 +29,15 @@
   height: 185px;
   width: 100%;
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
+}
+
+@media (max-width: 617px) {
+  .contact-section {
+    padding-inline: 20px;
+  }
+  
+  .contact-form-container {
+    
+    padding-inline: 15px;
+  }
 }

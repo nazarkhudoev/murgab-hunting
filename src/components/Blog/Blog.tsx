@@ -1,5 +1,3 @@
-"use client";
-
 export default function Blog() {
   return (
     <section className="mt-[130px]" id="blog">
