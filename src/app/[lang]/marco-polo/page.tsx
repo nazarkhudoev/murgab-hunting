@@ -4,7 +4,7 @@ export default function MarcoPoloPage() {
   return (
     <main>
       <MarcoPoloBanner />
-      <section className="px-[85px] mt-10">
+      <section id="marcopolo-text-wrapper" className="px-[85px] mt-10">
         <p className="text-white font-extralight">
           The Marco Polo sheep, Pamir mountain sheep or Pamir argali (Ovis ammon
           polii) is one of the subspecies of argali. Its range includes the

@@ -1,8 +1,12 @@
+import "./Efforts.css";
+
 export default function Efforts() {
   return (
-    <div className="w-[1200px] max-w-full mx-auto flex items-start justify-between">
+    <div className="w-[1200px] max-w-full mx-auto px-5 flex items-start justify-between gap-8 efforts__wrapper">
       <div className="w-[360px] max-w-full mt-[80px]">
-        <h5 className="text-[#8E7E57] font-bold">Sustainable Hunting Practices</h5>
+        <h5 className="text-[#8E7E57] font-bold">
+          Sustainable Hunting Practices
+        </h5>
         <p className="mt-3 text-white font-light">
           Our hunting expeditions are meticulously managed to ensure sustainable
           use of wildlife resources. By setting stringent quotas and adhering to
@@ -13,7 +17,9 @@ export default function Efforts() {
         </p>
       </div>
       <div className="w-[360px] max-w-full mt-[80px]">
-        <h5 className="text-[#8E7E57] font-bold">Supporting Local Biodiversity</h5>
+        <h5 className="text-[#8E7E57] font-bold">
+          Supporting Local Biodiversity
+        </h5>
         <p className="mt-3 text-white font-light">
           Our conservation efforts extend beyond hunting. We actively
           participate in wildlife monitoring and habitat conservation

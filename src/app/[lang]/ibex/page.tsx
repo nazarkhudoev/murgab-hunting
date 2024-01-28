@@ -4,7 +4,7 @@ export default function IbexPage() {
   return (
     <main>
       <IbexBanner />
-      <section className="px-[85px] mt-10">
+      <section id="ibex-text-wrapper" className="px-[85px] mt-10">
         <p className="text-white font-extralight">
           Over the last 30 years, trophy hunting for the Siberian ibex has been
           conducted in Tajikistan, mainly in the Pamirs. Annually, between 50

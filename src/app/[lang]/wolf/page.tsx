@@ -4,7 +4,7 @@ export default function WolfPage() {
   return (
     <main>
       <WolfBanner />
-      <section className="px-[85px] mt-10">
+      <section id="wolf-text-wrapper" className="px-[85px] mt-10">
         <p className="text-white font-extralight">
           Wolf hunting in the Pamirs is a complex and dangerous type of hunting
           that requires a high level of preparation and skill from the hunter.

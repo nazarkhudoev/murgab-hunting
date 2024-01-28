@@ -1,0 +1,26 @@
+@media (max-width: 926px) {
+  .founders-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #founders {
+    padding-inline: 16px;
+  }
+}
+
+@media (max-width: 436px) {
+  .founders-wrapper > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .founders-wrapper > div img {
+    width: 200px;
+    height: 200px;
+  }
+}

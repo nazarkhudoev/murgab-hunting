@@ -1,6 +1,8 @@
+import "./SecondaryEfforts.css";
+
 export default function SecondaryEfforts() {
   return (
-    <div className="w-[1200px] max-w-full mx-auto text-white flex items-start justify-between gap-5">
+    <div className="w-[1200px] max-w-full mx-auto px-5 text-white flex items-start justify-between gap-8 secondary__efforts">
       <div className="w-[580px] max-w-full mt-[80px]">
         <h5 className="text-[#8E7E57] font-bold">A Model for Conservation</h5>
         <p className="mt-3 text-white font-light">

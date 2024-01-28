@@ -18,3 +18,17 @@
   left: 0;
   z-index: 77;
 }
+
+@media (max-width: 500px) {
+  .about__banner {
+    padding-inline: 16px;
+  }
+
+  .about__banner h1 {
+    font-size: 50px;
+  }
+
+  .about__banner p {
+    font-size: 15px;
+  }
+}

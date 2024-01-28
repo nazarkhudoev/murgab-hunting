@@ -1,5 +1,5 @@
 .ibex__banner {
-    min-height: 100vh;
+  min-height: 100vh;
   /* background-image: url(../../assets/image\ 10.png), */
   background-image: url(../../assets/contact.webp),
     linear-gradient(91deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
@@ -8,5 +8,19 @@
   padding-top: 200px;
   padding-inline: 85px;
   color: #fff;
+}
 
+@media (max-width: 500px) {
+  .ibex__banner,
+  #ibex-text-wrapper {
+    padding-inline: 16px !important;
+  }
+
+  .ibex__banner > h1 {
+    font-size: 50px !important;
+  }
+
+  .ibex__banner > p {
+    font-size: 19px !important;
+  }
 }

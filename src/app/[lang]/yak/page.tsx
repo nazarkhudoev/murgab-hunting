@@ -4,7 +4,7 @@ export default function YakPage() {
   return (
     <main>
       <YakBanner />
-      <section className="px-[85px] mt-10">
+      <section id="yak-text-wrapper" className="px-[85px] mt-10">
         <p className="text-white font-extralight">
           Hunting yaks in the Pamir Mountains is a unique and thrilling
           adventure. The Pamir region, nestled in the highlands of Central Asia,

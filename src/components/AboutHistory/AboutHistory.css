@@ -1,0 +1,13 @@
+@media (max-width: 1019px) {
+  .about-history-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #history {
+    padding-inline: 16px;
+  }
+}

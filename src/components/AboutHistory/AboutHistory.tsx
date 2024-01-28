@@ -1,15 +1,21 @@
 import Image from "next/image";
 import HistoryImage from "@/assets/images/tabs-images/image1.png";
 
+import "./AboutHistory.css";
+
 export default function AboutHistory() {
   return (
-    <section className="pb-10 pt-[130px] px-[85px] text-white">
+    <section id="history" className="pb-10 pt-[130px] px-[85px] text-white">
       <h3 className="uppercase text-center text-white text-2xl font-semibold tracking-[1.5px]">
         company history and leadership
       </h3>
-      <div className="mt-10 flex items-start justify-between gap-5">
+      <div className="mt-10 flex items-start justify-between gap-5 about-history-container">
         <div>
-          <Image src={HistoryImage} alt="HistoryImage" className="border-2 border-[#8E7E57] rounded-[10px]" />
+          <Image
+            src={HistoryImage}
+            alt="HistoryImage"
+            className="border-2 border-[#8E7E57] rounded-[10px]"
+          />
         </div>
         <div className="w-[730px] max-w-full">
           <p className="font-light">

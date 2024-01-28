@@ -1,0 +1,7 @@
+@media (max-width: 926px) {
+  .efforts__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
