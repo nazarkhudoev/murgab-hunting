@@ -35,23 +35,10 @@ export default function RootLayout({
 }) {
   return (
     <html className={roboto.className} lang={params.lang}>
-      <Head>
-        <link
-          rel="icon"
-          href="../../assets/logo.svg"
-          type="image/<generated>"
-          sizes="<generated>"
-        />
-      </Head>
       <body>
         <Header lang={params.lang} />
         {children}
         <Footer />
-        {/* <script
-          src="https://static.elfsight.com/platform/platform.js"
-          data-use-service-core
-          defer
-        ></script>
         <script
           src="https://static.elfsight.com/platform/platform.js"
           data-use-service-core
@@ -61,7 +48,12 @@ export default function RootLayout({
           src="https://static.elfsight.com/platform/platform.js"
           data-use-service-core
           defer
-        ></script> */}
+        ></script>
+        <script
+          src="https://static.elfsight.com/platform/platform.js"
+          data-use-service-core
+          defer
+        ></script>
       </body>
     </html>
   );

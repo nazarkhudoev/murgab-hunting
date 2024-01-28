@@ -17,7 +17,7 @@ export default function Conservation() {
           hunting tourism, providing bespoke expeditionary services in the
           majestic Gornobadakhshan Autonomous Region.
         </p>
-        <p>
+        <p className="extra__text">
           With a rich legacy spearheaded by our founder, Bekmurodi Zafar, we
           cater to the discerning hunter seeking not just a hunt, but an
           expedition—a story to be told for generations. Our core team, a cadre
@@ -26,7 +26,7 @@ export default function Conservation() {
           resilient mountain goats is not only successful but also sustainable
           and respectful to the natural splendor of the region.
         </p>
-        <p>
+        <p className="extra__text">
           Murgab Hunting is not just about the pursuit of game; it’s about
           embracing the rugged beauty of the Pamirs, the thrill of the chase,
           and the preservation of hunting traditions. We invite you to join us,

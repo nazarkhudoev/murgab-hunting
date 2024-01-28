@@ -4,5 +4,9 @@
       justify-content: center;
       align-items: center;
     }
+
+    .extra__text {
+      display: none;
+    }
   }
   

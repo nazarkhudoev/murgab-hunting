@@ -19,10 +19,10 @@ export default function Home() {
       <Expedition />
       <Camps />
       <Gallery />
-      {/* <section className="w-[1290px] max-w-full mx-auto px-5">
+      <section className="w-[1290px] max-w-full mx-auto px-5">
         <Videos />
         <Blog />
-      </section> */}
+      </section>
       <Contact />
     </main>
   );

@@ -1,8 +1,8 @@
-import Image from "next/image";
+// import Image from "next/image";
 import "./Contact.css";
-import ArrowIcon from "@/assets/images/Icon.svg";
-import SocailIcon from "@/assets/images/social.svg";
-import Link from "next/link";
+// import ArrowIcon from "@/assets/images/Icon.svg";
+// import SocailIcon from "@/assets/images/social.svg";
+// import Link from "next/link";
 
 export default function Contact() {
   return (
