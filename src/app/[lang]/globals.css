@@ -24,6 +24,12 @@ html {
   background-blend-mode: multiply;
 }
 
+@media (max-width: 500px) {
+  .main {
+    background-position: -500px top;
+  }
+}
+
 .gradient-main {
   height: 395px;
   width: 100%;
@@ -68,7 +74,6 @@ html {
     padding-inline: 0px !important;
   }
 }
-
 
 /* .yottie-widget-feed-section-slide {
   width: 100% !important;

@@ -5,6 +5,7 @@
 
   .main__banner-home > h1 {
     font-size: 50px !important;
+    margin-top: -64px;
   }
 
   .main__banner-home > p {
