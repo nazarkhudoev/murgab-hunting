@@ -16,6 +16,10 @@
     padding-inline: 16px !important;
   }
 
+  .ibex__banner {
+    background-position: -780px top;
+  }
+
   .ibex__banner > h1 {
     font-size: 50px !important;
   }

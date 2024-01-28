@@ -21,6 +21,7 @@
 
 @media (max-width: 500px) {
   .about__banner {
+    background-position: -780px top;
     padding-inline: 16px;
   }
 
