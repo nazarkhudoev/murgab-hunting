@@ -10,7 +10,7 @@ export default function History() {
         <Image
           src={TabImage1}
           alt="TabImage1"
-          className="h-[360px] w-[400px] block max-w-full rounded-[10px] max-h-full history__pic"
+          className="h-[360px] w-[400px] object-cover block max-w-full rounded-[10px] max-h-full history__pic"
           priority={true}
         />
       </div>
