@@ -18,12 +18,12 @@ const Footer = () => {
           © 2024 Murgab Hunting <br /> All rights reserved.
         </span>
       </div>
-      <div className="flex flex-col justify-start items-start gap-3 text-white">
+      <div className="flex flex-col justify-start items-start gap-3 text-white footer__links-container-1">
         <Link href={"/"}>About Us</Link>
         <Link href={"/"}>Hunting Trophies</Link>
         <Link href={"/"}>Expedition Essentials</Link>
       </div>
-      <div className="flex flex-col justify-start items-start gap-3 text-white">
+      <div className="flex flex-col justify-start items-start gap-3 text-white footer__links-container-2">
         <Link href={"/"}>Camp</Link>
         <Link href={"/"}>Gallery</Link>
         <Link href={"/"}>Blog</Link>

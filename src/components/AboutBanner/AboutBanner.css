@@ -21,7 +21,13 @@
 
 @media (max-width: 500px) {
   .about__banner {
-    background-position: -780px top;
+    background-image: url(../../assets/contact.webp),
+      linear-gradient(
+        91deg,
+        rgba(0, 0, 0, 0.43) 150%,
+        rgba(217, 217, 217, 0) 10%
+      );
+    background-position: -760px top;
     padding-inline: 16px;
   }
 

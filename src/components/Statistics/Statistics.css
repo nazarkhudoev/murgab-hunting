@@ -4,10 +4,14 @@
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
+    padding-inline: 16px;
   }
 
   .statistics-container h4 {
-    font-size: 40px;
+    font-size: 30px;
+  }
+
+  .statistics-container p {
+    font-size: 12px;
   }
 }
