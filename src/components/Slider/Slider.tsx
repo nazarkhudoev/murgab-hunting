@@ -87,7 +87,7 @@ const Carousel = () => {
               Founders
             </button>
           </div>
-          <Link className="text-sm read-more" href={"/about-us"}>
+          <Link className="text-sm read-more text-white" href={"/about-us"}>
             READ MORE +
           </Link>
         </div>
