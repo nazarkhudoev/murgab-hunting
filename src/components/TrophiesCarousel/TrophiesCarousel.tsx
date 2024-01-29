@@ -49,18 +49,18 @@ export default function TrophiesCarousel() {
               className="w-[150px] h-[350px] rounded-[20px] relative object-cover"
               key={person.id}
             >
-              <div className="team-gradient rounded-[20px]"></div>
+              <div className="trophie-gradient rounded-[20px]"></div>
               <Image
-                className="rounded-[20px] absolute w-full h-full object-cover border border-[#8E7E57]"
+                className="rounded-[20px] absolute w-full h-full object-cover border border-[#8E7E57] trophie__image"
                 src={person.image}
                 alt={person.title}
                 priority={true}
               />
-              <h3 className="absolute bottom-14 left-10 text-white font-bold capitalize text-lg z-30">
+              <h3 className="absolute bottom-10 left-8 text-white font-bold capitalize text-[28px] z-30">
                 {person.title}
               </h3>
-              <Link href={person.url} className="absolute bottom-5 left-10 z-50 flex items-center gap-2">
-                <span className="uppercase text-lg font-semibold text-[dodgerblue]">
+              <Link href={person.url} className="absolute bottom-5 left-8 z-50 flex items-center gap-2">
+                <span className="uppercase font-bold text-[dodgerblue]">
                   read more
                 </span>
                 <span className="text-[dodgerblue]">+</span>

@@ -18,8 +18,8 @@ html {
   min-height: 90vh;
   background-image: url(../../assets/main-bg-1.webp),
     linear-gradient(70deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
-  background-position: center top;
-  background-size: cover;
+  background-position: center center;
+  background-size: 120%;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
 }
@@ -27,6 +27,7 @@ html {
 @media (max-width: 500px) {
   .main {
     background-position: -650px top;
+    background-size: cover;
   }
 }
 

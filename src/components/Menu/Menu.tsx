@@ -77,22 +77,22 @@ export default function Menu() {
         {pathname == "/en/about-us" && (
           <>
             <div className="flex items-center gap-1">
-              <a onClick={() => setIsActive(false)} href={"#video"}>
+              <a onClick={() => setIsActive(false)} href={"#history"}>
                 History
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <a onClick={() => setIsActive(false)} href={"#video"}>
+              <a onClick={() => setIsActive(false)} href={"#founders"}>
                 Founders
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <a onClick={() => setIsActive(false)} href={"#video"}>
-                Tean
+              <a onClick={() => setIsActive(false)} href={"#team"}>
+                Team
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <a onClick={() => setIsActive(false)} href={"#blog"}>
+              <a onClick={() => setIsActive(false)} href={"#conservation"}>
                 Conservation
               </a>
             </div>
