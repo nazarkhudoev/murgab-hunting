@@ -32,54 +32,52 @@ export default function Menu() {
         {pathname == "/en" && (
           <>
             <div className="flex items-center gap-1">
-              <CiCircleInfo size={15} />
+              {/* <CiCircleInfo size={15} /> */}
               <a onClick={() => setIsActive(false)} href={"#about"}>
                 About Us
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <TfiCup size={15} />
+              {/* <TfiCup size={15} /> */}
               <a onClick={() => setIsActive(false)} href={"#trophies"}>
                 Hunting Trophies
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <CiSquareMore size={15} />
+              {/* <CiSquareMore size={15} /> */}
               <a onClick={() => setIsActive(false)} href={"#essentials"}>
                 Hunting Essentials
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <GiGoblinCamp size={15} />
+              {/* <GiGoblinCamp size={15} /> */}
               <a onClick={() => setIsActive(false)} href={"#camp"}>
                 Camp
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <RiGalleryLine size={15} />
+              {/* <RiGalleryLine size={15} /> */}
               <a onClick={() => setIsActive(false)} href={"#gallery"}>
                 Gallery
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <RiGalleryLine size={15} />
+              {/* <RiGalleryLine size={15} /> */}
               <a onClick={() => setIsActive(false)} href={"#video"}>
                 Video
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <FaRegFolder size={15} />
+              {/* <FaRegFolder size={15} /> */}
               <a onClick={() => setIsActive(false)} href={"#blog"}>
                 Blog
               </a>
             </div>
-            <div className="divider">
-              <div className="flex items-center gap-1">
-                <PiSignInFill />
-                <a onClick={() => setIsActive(false)} href={"#book"}>
-                  Join Now
-                </a>
-              </div>
+            <div className="flex items-center gap-1 book__link">
+              {/* <PiSignInFill /> */}
+              <a onClick={() => setIsActive(false)} href={"#book"}>
+                Book
+              </a>
             </div>
           </>
         )}
