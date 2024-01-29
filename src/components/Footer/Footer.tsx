@@ -51,7 +51,7 @@ const Footer = () => {
           </Link>
           <Link
             className="bg-white flex items-center justify-center w-7 h-7 p-1 rounded-full"
-            href={"/"}
+            href={"https://www.youtube.com/@MurgabHunting"}
           >
             <Image src={YoutubeIcon} alt="" />
           </Link>
@@ -59,13 +59,16 @@ const Footer = () => {
         <div>
           <h5 className="mb-1">Contacts</h5>
           <p>
-            <a href="mailto:example@gmail.com" className="text-sm font-thin">
-              example@gmail.com
+            <a
+              href="mailto:shirinbek0494@gmail.com"
+              className="text-sm font-thin"
+            >
+              shirinbek0494@gmail.com
             </a>
           </p>
           <p>
-            <a href="tel:+992 (00) 000 00-00" className="text-sm font-thin">
-              +992 (00) 000 00-00
+            <a href="tel:+992887743399" className="text-sm font-thin">
+              +992887743399
             </a>
           </p>
         </div>
