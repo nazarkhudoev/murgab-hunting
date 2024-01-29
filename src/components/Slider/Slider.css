@@ -108,4 +108,8 @@
   .carousel__navigation-wrapper {
     padding-inline: 16px;
   }
+
+  .carousel-navigation {
+    justify-content: center;
+  }
 }

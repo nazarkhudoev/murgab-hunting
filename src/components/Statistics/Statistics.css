@@ -14,4 +14,10 @@
   .statistics-container p {
     font-size: 12px;
   }
+  .statistic__item {
+    flex-direction: column;
+  }
+  .small__item {
+    margin-left: 15px;
+  }
 }

@@ -16,9 +16,9 @@ export default function Statistics() {
         <p>Satisfied clients</p>
       </div>
       <div>
-        <h4 className="text-[51px] font-semibold mb-4 flex flex-col justify-center items-center text-center">
+        <h4 className="text-[51px] font-semibold mb-4 statistic__item flex justify-center items-center text-center gap-2">
           <span>+200</span>
-          <span className="text-xs ml-5">
+          <span className="text-sm small__item">
             km<sup>2</sup>
           </span>
         </h4>
