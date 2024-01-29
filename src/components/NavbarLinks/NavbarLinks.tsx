@@ -39,6 +39,11 @@ export default function NavbarLinks() {
       path: "/camp",
     },
     {
+      id: "#video",
+      value: "Video",
+      path: "/video",
+    },
+    {
       id: "#blog",
       value: "Blog",
       path: "/camp",

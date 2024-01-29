@@ -48,6 +48,10 @@ export default function Menu() {
           <a onClick={() => setIsActive(false)} href={"#gallery"}>Gallery</a>
         </div>
         <div className="flex items-center gap-1">
+          <RiGalleryLine size={15} />
+          <a onClick={() => setIsActive(false)} href={"#video"}>Video</a>
+        </div>
+        <div className="flex items-center gap-1">
           <FaRegFolder size={15} />
           <a onClick={() => setIsActive(false)} href={"#blog"}>Blog</a>
         </div>
