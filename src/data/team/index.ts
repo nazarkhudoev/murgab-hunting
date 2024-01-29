@@ -24,7 +24,7 @@ export const teamData: ITeam[] = [
     id: "1",
     image: TeamImage2,
     name: "Rahmon Gulayozov",
-    job: "Professional Hunter",
+    job: "Driver",
   },
   {
     id: "1",

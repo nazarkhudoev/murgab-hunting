@@ -2,13 +2,6 @@
 import "./Menu.css";
 import { useState } from "react";
 
-import { CiCircleInfo } from "react-icons/ci";
-import { TfiCup } from "react-icons/tfi";
-import { CiSquareMore } from "react-icons/ci";
-import { GiGoblinCamp } from "react-icons/gi";
-import { RiGalleryLine } from "react-icons/ri";
-import { FaRegFolder } from "react-icons/fa";
-import { PiSignInFill } from "react-icons/pi";
 import { usePathname } from "next/navigation";
 
 export default function Menu() {
@@ -84,36 +77,29 @@ export default function Menu() {
         {pathname == "/en/about-us" && (
           <>
             <div className="flex items-center gap-1">
-              <RiGalleryLine size={15} />
               <a onClick={() => setIsActive(false)} href={"#video"}>
                 History
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <RiGalleryLine size={15} />
               <a onClick={() => setIsActive(false)} href={"#video"}>
                 Founders
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <RiGalleryLine size={15} />
               <a onClick={() => setIsActive(false)} href={"#video"}>
                 Tean
               </a>
             </div>
             <div className="flex items-center gap-1">
-              <FaRegFolder size={15} />
               <a onClick={() => setIsActive(false)} href={"#blog"}>
                 Conservation
               </a>
             </div>
-            <div className="divider">
-              <div className="flex items-center gap-1">
-                <PiSignInFill />
-                <a onClick={() => setIsActive(false)} href={"#book"}>
-                  Book
-                </a>
-              </div>
+            <div className="flex items-center gap-1 book__link">
+              <a onClick={() => setIsActive(false)} href={"#book"}>
+                Book
+              </a>
             </div>
           </>
         )}

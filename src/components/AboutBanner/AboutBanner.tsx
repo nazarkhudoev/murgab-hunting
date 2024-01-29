@@ -6,7 +6,7 @@ export default function AboutBanner() {
       <div className="about__banner">
         <h1 className="text-6xl uppercase font-bold tracking-[1.5px]">About</h1>
         <h1 className="text-6xl uppercase font-bold mt-2 tracking-[1.5px]">Murgab</h1>
-        <div className="mt-[80px] relative z-[99]">
+        <div className="mt-[80px] relative z-[79]">
           <p>{`Welcome to Murgab Hunting, a premier destination for sport hunting tourism and expeditionary`}</p>
           <p>
             {`services in the heart of the Gorno-Badakhshan Autonomous Region, Tajikistan. Since our `}

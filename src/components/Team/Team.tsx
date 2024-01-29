@@ -52,7 +52,7 @@ export default function Team() {
   const slider = useRef<any>(null);
 
   return (
-    <div className="relative overflow-visible mt-5 pl-9 pr-9">
+    <div className="relative overflow-visible mt-5 pl-9 pr-9 pb-3">
       <button
         className="absolute top-1/2 left-3 -translate-y-1/2 z-20"
         onClick={() => slider?.current?.slickPrev()}
@@ -68,7 +68,7 @@ export default function Team() {
             >
               <div className="team-gradient rounded-lg"></div>
               <Image
-                className="rounded-lg absolute w-full h-full object-cover"
+                className="rounded-lg absolute w-full h-full border-2 border-[#8E7E57] object-cover"
                 src={person.image}
                 alt={person.name}
                 priority={true}

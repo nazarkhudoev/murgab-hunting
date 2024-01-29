@@ -1,5 +1,6 @@
 .menu {
   position: relative;
+  z-index: 999 !important;
   display: none;
 }
 
@@ -20,12 +21,13 @@
     color: #fff;
     opacity: 0;
     position: absolute;
+    z-index: 999 !important;
     right: -200px;
-   
+
     top: 52px;
     width: 250px;
-    height: 448px;
-    padding: 10px 15px;
+    /* height: 448px; */
+    padding: 30px 15px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     pointer-events: none;
