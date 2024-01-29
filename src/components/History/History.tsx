@@ -23,13 +23,13 @@ export default function History() {
           majestic Gornobadakhshan Autonomous Region.
         </p>
         <p className="extra__text">
-          With a rich legacy spearheaded by our founder, Bekmurodi Zafar, we
-          cater to the discerning hunter seeking not just a hunt, but an
-          expedition—a story to be told for generations. Our core team, a cadre
-          of former athletes, seasoned explorers, and professional hunters,
-          ensures that your quest for the elusive Marco Polo sheep and the
-          resilient mountain goats is not only successful but also sustainable
-          and respectful to the natural splendor of the region.
+          With a rich legacy spearheaded by our founders, Atobek Bekmurodov and
+          Bekmurodi Zafar, we cater to the discerning hunter seeking not just a
+          hunt, but an expedition—a story to be told for generations. Our core
+          team, a cadre of former athletes, seasoned explorers, and professional
+          hunters, ensures that your quest for the elusive Marco Polo sheep and
+          the resilient mountain goats is not only successful but also
+          sustainable and respectful to the natural splendor of the region.
         </p>
         <p className="extra__text">
           Murgab Hunting is not just about the pursuit of game; it’s about

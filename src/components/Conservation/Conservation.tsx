@@ -7,30 +7,36 @@ export default function Conservation() {
   return (
     <div className="flex items-start justify-between gap-7 px-10 mt-5 conservation-container">
       <div>
-        <Image src={TabImage3} alt="TabImage1" height={400} width={360} priority={true} />
+        <Image
+          src={TabImage3}
+          alt="TabImage1"
+          height={400}
+          width={360}
+          priority={true}
+        />
       </div>
       <div className="w-[640px] max-w-full flex flex-col justify-start items-start gap-4 font-extralight text-white">
         <p>
-          Murgab Hunting stands as the epitome of the ultimate hunting
-          adventure, offering an unparalleled experience in the remote
-          wilderness of Tajikistan. Founded in 1989, we specialize in sport
-          hunting tourism, providing bespoke expeditionary services in the
-          majestic Gornobadakhshan Autonomous Region.
+          At Murgab Hunting, we firmly believe in and practice the principle
+          that responsible hunting serves as a vital tool for wildlife
+          conservation. Our approach harmonizes the passion for hunting with a
+          deep commitment to preserving the natural heritage of Tajikistan’s
+          Pamir Mountains.
         </p>
         <p className="extra__text">
-          With a rich legacy spearheaded by our founder, Bekmurodi Zafar, we
-          cater to the discerning hunter seeking not just a hunt, but an
-          expedition—a story to be told for generations. Our core team, a cadre
-          of former athletes, seasoned explorers, and professional hunters,
-          ensures that your quest for the elusive Marco Polo sheep and the
-          resilient mountain goats is not only successful but also sustainable
-          and respectful to the natural splendor of the region.
+          Our hunting expeditions are meticulously managed to ensure sustainable
+          use of wildlife resources. By setting stringent quotas and adhering to
+          strict hunting seasons, we help maintain healthy populations of Marco
+          Polo sheep and Pamirian Ibex. Our practices are guided by scientific
+          data and conservation principles, ensuring that hunting contributes
+          positively to wildlife management.
         </p>
         <p className="extra__text">
-          Murgab Hunting is not just about the pursuit of game; it’s about
-          embracing the rugged beauty of the Pamirs, the thrill of the chase,
-          and the preservation of hunting traditions. We invite you to join us,
-          where hunting is an art and every expedition is an odyssey.
+          Our conservation efforts extend beyond hunting. We actively
+          participate in wildlife monitoring and habitat conservation
+          initiatives. The fees generated from hunting expeditions are
+          reinvested into conservation programs, which include habitat
+          restoration, anti-poaching measures, and wildlife research.
         </p>
       </div>
     </div>
