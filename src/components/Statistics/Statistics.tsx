@@ -14,19 +14,16 @@ export default function Statistics() {
       <div>
         <h4 className="text-[51px] font-semibold mb-4 statistic__item text-center">
           <span>+1</span>
-          <sub className="font-bold text-[15px] relative bottom-[2px] ml-1">
+          <sub className="font-bold text-[35px] relative bottom-[2px] ml-1">
             k
           </sub>
         </h4>
-        {/* <h4 className="text-[51px] font-semibold mb-4">
-          +1 <sub>k</sub>
-        </h4> */}
         <p>Satisfied clients</p>
       </div>
       <div>
         <h4 className="text-[51px] font-semibold mb-4 statistic__item text-center">
           <span>+200</span>
-          <sub className="font-bold text-[15px] relative bottom-[2px] ml-2">
+          <sub className="font-bold text-[35px] relative bottom-[2px] ml-2">
             km<sup>2</sup>
           </sub>
         </h4>

@@ -3,7 +3,7 @@ import SecondaryEfforts from "../SecondaryEfforts/SecondaryEfforts";
 
 export default function AboutConservation() {
   return (
-    <section className="mb-[100px]">
+    <section id="conservation" className="mb-[100px]">
       <div className="w-[1200px] max-w-full mx-auto text-white">
         <div className="text-center">
           <h3 className="text-2xl font-semibold uppercase mb-[80px] tracking-[1.5px]">

@@ -16,6 +16,11 @@
   .statistics-container p {
     font-size: 12px;
   }
+
+  .statistic__item sub {
+    font-size: 15px;
+  }
+  
   /* .statistic__item {
     flex-direction: column;
   } */

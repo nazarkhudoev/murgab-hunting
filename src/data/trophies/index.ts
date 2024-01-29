@@ -21,7 +21,7 @@ export const trophiesData: ITrophie[] = [
   {
     id: "2",
     image: Picture2,
-    title: "Ibex Siberian ",
+    title: "Ibex Pamirian",
     url: "/ibex",
   },
   {

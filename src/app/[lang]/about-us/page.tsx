@@ -11,7 +11,7 @@ export default function AboutPage() {
       <AboutBanner />
       <AboutHistory />
       <Founders />
-      <div className="w-[1200px] max-w-full mx-auto mb-[150px] mt-[200px]">
+      <div id="team" className="w-[1200px] max-w-full mx-auto mb-[150px] mt-[200px]">
         <h3 className="text-center text-white font-semibold text-2xl uppercase mb-[80px] tracking-[1.5px]">
           TEAM
         </h3>
