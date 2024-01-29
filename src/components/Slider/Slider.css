@@ -87,7 +87,7 @@
   }
 
   .carousel-container-123 {
-    padding-bottom: 70px;
+    padding-bottom: 20px;
   }
 
   #founder__wrapper {
@@ -111,5 +111,9 @@
 
   .carousel-navigation {
     justify-content: center;
+  }
+
+  #about {
+    padding-top: 30px;
   }
 }

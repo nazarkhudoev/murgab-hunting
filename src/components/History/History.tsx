@@ -1,4 +1,4 @@
-import TabImage1 from "@/assets/images/tabs-images/image1.png";
+import TabImage1 from "@/assets/Photo.jpg";
 import Image from "next/image";
 
 import "./History.css";
@@ -10,7 +10,7 @@ export default function History() {
         <Image
           src={TabImage1}
           alt="TabImage1"
-          className="h-[360px] w-[400px] block max-w-full max-h-full history__pic"
+          className="h-[360px] w-[400px] block max-w-full rounded-[10px] max-h-full history__pic"
           priority={true}
         />
       </div>

@@ -35,14 +35,14 @@ const Carousel = () => {
 
   return (
     <section id="about" className="pt-12">
-      <h3 className="text-center text-white text-2xl font-medium uppercase tracking-[1.5px]">
+      <h3 className="text-center text-white text-2xl font-medium uppercase tracking-[1.5px] about-header">
         ABOUT US
       </h3>
       <div className="carousel-container-123">
-        <div className="carousel__navigation-wrapper flex items-center justify-between text-white mb-5 px-10">
+        <div className="carousel__navigation-wrapper flex items-center justify-between text-[#8E7E57] mb-5 px-10">
           <div className="carousel-navigation">
             <button
-              className={`${currentSlide == 0 && "active-tab"}`}
+              className={`${currentSlide == 0 && "active-tab text-white"}`}
               onClick={() => {
                 setCurrentSlide(0);
                 sliderRef.current.slickGoTo(0);
@@ -51,7 +51,7 @@ const Carousel = () => {
               History
             </button>
             <button
-              className={`${currentSlide == 1 && "active-tab"}`}
+              className={`${currentSlide == 1 && "active-tab text-white"}`}
               onClick={() => {
                 setCurrentSlide(1);
                 sliderRef.current.slickGoTo(1);
@@ -60,7 +60,7 @@ const Carousel = () => {
               Mission
             </button>
             <button
-              className={`${currentSlide == 2 && "active-tab"}`}
+              className={`${currentSlide == 2 && "active-tab text-white"}`}
               onClick={() => {
                 setCurrentSlide(2);
                 sliderRef.current.slickGoTo(2);
@@ -69,7 +69,7 @@ const Carousel = () => {
               Conservation
             </button>
             <button
-              className={`${currentSlide == 3 && "active-tab"}`}
+              className={`${currentSlide == 3 && "active-tab text-white"}`}
               onClick={() => {
                 setCurrentSlide(3);
                 sliderRef.current.slickGoTo(3);
@@ -78,7 +78,7 @@ const Carousel = () => {
               Team
             </button>
             <button
-              className={`${currentSlide == 4 && "active-tab"}`}
+              className={`${currentSlide == 4 && "active-tab text-white"}`}
               onClick={() => {
                 setCurrentSlide(4);
                 sliderRef.current.slickGoTo(4);
