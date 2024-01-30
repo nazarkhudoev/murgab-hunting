@@ -46,12 +46,12 @@ export default function TrophiesCarousel() {
         {trophiesData.map((person: ITrophie, index: number) => {
           return (
             <div
-              className="w-[150px] h-[350px] rounded-[20px] relative object-cover"
+              className="w-[150px] h-[350px] rounded-[20px] relative object-cover outline-none border border-[#8E7E57]"
               key={person.id}
             >
               <div className="trophie-gradient rounded-[20px]"></div>
               <Image
-                className="rounded-[20px] absolute w-full h-full object-cover border border-[#8E7E57] trophie__image"
+                className="rounded-[20px] absolute w-full h-full object-cover trophie__image outline-none"
                 src={person.image}
                 alt={person.title}
                 priority={true}

@@ -1,0 +1,36 @@
+.argali-brukey__banner {
+  min-height: 100vh;
+  /* background-image: url(../../assets/image\ 10.png), */
+  background-image: url(../../assets/Argali-Brukey_WEB.jpg),
+    linear-gradient(91deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
+  background-blend-mode: multiply;
+  background-size: cover;
+  padding-top: 200px;
+  padding-inline: 85px;
+  color: #fff;
+}
+
+.gradient-argali-brukey {
+  height: 100px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
+}
+
+@media (max-width: 500px) {
+  .argali-brukey__banner,
+  #argali-brukey-text-wrapper {
+    padding-inline: 16px !important;
+  }
+
+  .argali-brukey__banner {
+    background-position: -780px top;
+  }
+
+  .argali-brukey__banner > h1 {
+    font-size: 50px !important;
+  }
+
+  .argali-brukey__banner > p {
+    font-size: 19px !important;
+  }
+}

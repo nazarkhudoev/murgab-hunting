@@ -1,8 +1,9 @@
 import { StaticImageData } from "next/image";
-import Picture from "@/assets/Marco_polo_argali_on_Pamir_Mountain.webp";
-import Picture2 from "@/assets/contact.webp";
-import Picture3 from "@/assets/Wolf/Wolf.webp";
-import Picture4 from "@/assets/Yak/Yak.webp";
+import Picture from "@/assets/Hunt_Cards/Marco_Polo_Card.png";
+import Picture2 from "@/assets/Hunt_Cards/Ibex_Card.png";
+import Picture3 from "@/assets/Hunt_Cards/Wolf_Card.png";
+import Picture4 from "@/assets/Hunt_Cards/Yak_Card.png";
+import Picture5 from "@/assets/Hunt_Cards/Argali_Brukey_Card.png";
 
 export interface ITrophie {
   id: string;
@@ -23,6 +24,12 @@ export const trophiesData: ITrophie[] = [
     image: Picture2,
     title: "Ibex Pamirian",
     url: "/ibex",
+  },
+  {
+    id: "5",
+    image: Picture5,
+    title: "Argali Brukey",
+    url: "/argali-brukey",
   },
   {
     id: "3",
