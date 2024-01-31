@@ -11,11 +11,11 @@ export default function IbexBanner() {
       </h1>
       <div className="flex items-center gap-10">
         <div className="text-[#C5C5C5] mt-[160px]">
-          <h3 className="text-5xl font-semibold">5</h3>
+          <h3 className="text-5xl font-semibold">+5 k</h3>
           <p className="mt-2">Total Number</p>
         </div>
         <div className="text-[#C5C5C5] mt-[160px]">
-          <h3 className="text-5xl font-semibold">20</h3>
+          <h3 className="text-5xl font-semibold">2,5 k</h3>
           <p className="mt-2">Trophies</p>
         </div>
       </div>
