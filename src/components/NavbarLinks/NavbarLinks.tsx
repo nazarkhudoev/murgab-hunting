@@ -34,7 +34,7 @@ export default function NavbarLinks() {
       path: "/camp",
     },
     {
-      id: "#gallery",
+      id: "#gallerySection",
       value: "Gallery",
       path: "/camp",
     },

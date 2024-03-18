@@ -5,12 +5,18 @@ import "./Mission.css";
 
 export default function Mission() {
   return (
-    <div className="flex items-start justify-between gap-7 px-10 mt-5 mission-container">
-      <div>
-        <Image src={TabImage2} alt="TabImage1" height={360} width={590} priority={true}/>
-      </div>
-      <div className="w-[360px] max-w-full font-extralight text-white">
-        <p>
+    <div className="flex items-end justify-center gap-7 px-10 my-5 mx-10 rounded-[10px] mission-container">
+      {/* <div>
+        <Image
+          src={TabImage2}
+          alt="TabImage1"
+          height={360}
+          width={590}
+          priority={true}
+        />
+      </div> */}
+      <div className="max-w-full  text-white">
+        <p className="font-extralight mb-6">
           {`Murgab Hunting's mission is to offer ethical and sustainable
                   hunting experiences in Tajikistan's Pamir Mountains, focusing on
                   conservation, community engagement, and the preservation of

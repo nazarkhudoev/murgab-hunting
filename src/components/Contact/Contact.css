@@ -1,6 +1,8 @@
 .contact-section {
   min-height: 700px;
-  max-width: 1690px;
+  /* max-width: 1690px; */
+  width: 1400px;
+  max-width: 100%;
   margin: auto;
   /* background-image: url(../../assets/main-bg.png); */
   background-image: url(../../assets/contact.webp);

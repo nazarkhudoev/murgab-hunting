@@ -1,6 +1,28 @@
+"use client";
+import MarcoPoloBanner from "@/components/MarcoPoloBanner/MarcoPoloBanner";
+
+import Fancybox from "@/components/Fancybox/Fancybox";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { gallery } from "@/data/gallery";
+import Link from "next/link";
+import Image from "next/image";
+
 import YakBanner from "@/components/YakBanner/YakBanner";
 
 export default function YakPage() {
+  const filteredData = gallery.filter(
+    (item) => item.trophie_status === "yak"
+  );
   return (
     <main>
       <YakBanner />
@@ -17,10 +39,10 @@ export default function YakPage() {
         </p>
         <p className="text-white font-extralight mt-5">
           The experience of tracking these magnificent beasts is not just about
-          the hunt itself; it&apos;s a journey through a rich tapestry of cultural
-          heritage and natural wonders. As hunters traverse the vast expanses of
-          the Pamirs, they encounter not only the wildlife but also the
-          indigenous people who have lived in harmony with the land for
+          the hunt itself; it&apos;s a journey through a rich tapestry of
+          cultural heritage and natural wonders. As hunters traverse the vast
+          expanses of the Pamirs, they encounter not only the wildlife but also
+          the indigenous people who have lived in harmony with the land for
           centuries. These communities possess a deep understanding of the
           mountains and the life that inhabits them, often serving as guides and
           sharing their invaluable knowledge.
@@ -32,6 +54,47 @@ export default function YakPage() {
           ecosystem, ensuring that the yak populations remain robust and the
           natural beauty of the Pamirs is preserved for future generations.
         </p>
+        <Fancybox
+          options={{
+            Carousel: {
+              infinite: false,
+            },
+          }}
+        >
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            {filteredData.map((image) => {
+              return (
+                <SwiperSlide key={image.id}>
+                  <Link
+                    className="gallery_link-item"
+                    data-fancybox="gallery"
+                    href={image.fullscreen_src}
+                  >
+                    <Image
+                      // width={100}
+                      // height={100}
+                      // style={{
+                      //   width: "200px",
+                      //   height: "200px",
+                      // }}
+                      src={image.src}
+                      alt=""
+                      className="gallery_image-item"
+                    />
+                  </Link>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </Fancybox>
       </section>
     </main>
   );

@@ -11,7 +11,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="footer__container px-[85px] py-[120px] relative z-30 flex items-start justify-between gap-8 flex-wrap text-white">
+    <footer className="footer__container px-[85px] py-[120px] w-[1400px] max-w-full mx-auto relative z-30 flex items-start justify-between gap-8 flex-wrap text-white">
       <div className="footer__logo-container">
         <Image src={Logo} className="w-[80px]" alt="Logo" />
         <span className="font-extralight text-sm">

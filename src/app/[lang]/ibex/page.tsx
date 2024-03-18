@@ -1,6 +1,28 @@
+"use client";
+import MarcoPoloBanner from "@/components/MarcoPoloBanner/MarcoPoloBanner";
+
+import Fancybox from "@/components/Fancybox/Fancybox";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import { gallery } from "@/data/gallery";
+import Link from "next/link";
+import Image from "next/image";
+
 import IbexBanner from "@/components/IbexBanner/IbexBanner";
 
 export default function IbexPage() {
+  const filteredData = gallery.filter(
+    (item) => item.trophie_status === "ibex" || item.trophie_status === "ibex-marcopolo"
+  );
   return (
     <main>
       <IbexBanner />
@@ -30,6 +52,47 @@ export default function IbexPage() {
           &quot;belt,&quot; a dark stripe along the spine, is clearly visible on
           the back.
         </p>
+        <Fancybox
+          options={{
+            Carousel: {
+              infinite: false,
+            },
+          }}
+        >
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            {filteredData.map((image) => {
+              return (
+                <SwiperSlide key={image.id}>
+                  <Link
+                    className="gallery_link-item"
+                    data-fancybox="gallery"
+                    href={image.fullscreen_src}
+                  >
+                    <Image
+                      // width={100}
+                      // height={100}
+                      // style={{
+                      //   width: "200px",
+                      //   height: "200px",
+                      // }}
+                      src={image.src}
+                      alt=""
+                      className="gallery_image-item"
+                    />
+                  </Link>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </Fancybox>
       </section>
     </main>
   );

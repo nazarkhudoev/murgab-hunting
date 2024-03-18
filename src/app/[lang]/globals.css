@@ -15,13 +15,18 @@ html {
 }
 
 .main {
-  min-height: 90vh;
+  min-height: 600px;
+  /* max-height: 100%; */
   background-image: url(../../assets/main-bg-1.webp),
     linear-gradient(70deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
   background-position: center center;
-  background-size: 120%;
+  /* background-size: 120%; */
+  background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
+  width: 1400px;
+  max-width: 100%;
+  margin-inline: auto;
 }
 
 @media (max-width: 500px) {
@@ -164,3 +169,36 @@ body {
 .p-carousel-container > button {
   flex: none !important;
 } */
+
+.swiper {
+  width: 100% !important;
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+.swiper-slide {
+  background-position: center !important;
+  background-size: cover !important;
+  width: 300px !important;
+  height: 300px !important;
+}
+
+.swiper-slide img {
+  display: block !important;
+  width: 100% !important;
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none !important;
+}
+
+.swiper-pagination-bullets {
+  display: none;
+}
+
+.gallery_link-item {
+  /* width: 300px !important; */
+  outline: none;
+  user-select: none;
+}

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.35",
     "@formatjs/intl-localematcher": "^0.5.2",
     "negotiator": "^0.6.3",
     "next": "14.0.4",
@@ -17,7 +18,8 @@
     "react-icons": "^5.0.1",
     "react-modal": "^3.16.1",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.0.7"
   },
   "devDependencies": {
     "@types/negotiator": "^0.6.3",

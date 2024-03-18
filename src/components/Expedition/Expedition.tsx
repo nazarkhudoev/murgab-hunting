@@ -22,171 +22,174 @@ export function Expedition() {
       <h3 className="text-center text-white text-2xl font-semibold mb-[50px] uppercase tracking-[1.5px]">
         Your Expedition Essentials
       </h3>
-      <div className="bg-[#332B18] rounded-[20px] flex items-start justify-between p-[2.25rem] expedition-wrapper">
+      <div className="bg-[#332B18] rounded-[20px] flex items-end justify-between p-[2.25rem] expedition-wrapper">
         <div className="relative">
           <Image
             className="rounded-[10px] border-2 border-[#8E7E57] main-expedition-image"
             src={Pic}
             alt="Pic"
-            width={460}
-            height={480}
+            width={600}
+            height={600}
             priority={true}
           />
-          <div className="absolute -right-[55px] top-1/2 -translate-y-[50%] bg-[#C4A174] w-[2px] h-[90%]"></div>
+          {/* <div className="absolute -right-[55px] top-1/2 -translate-y-[50%] bg-[#C4A174] w-[2px] h-[90%]"></div> */}
         </div>
         <ExpeditionSlider />
-        <div className="expedition__container relative text-white w-[590px] h-[480px] overflow-y-scroll max-w-full px-1 py-1 ml-10">
-          <div className="wrapper-border flex flex-col justify-start items-start gap-10 py-[15px] px-[30px] mr-[20px]">
-            <div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src={Icon1}
-                  alt="Icon1"
-                  width={44}
-                  height={44}
-                  priority={true}
-                />
-                {/* <div className="w-11 h-11 bg-slate-500 rounded-xl">I</div> */}
-                <p>Invitation Letter</p>
+        <section>
+          <h3 className="text-center text-[#8E7E57] text-[18px] font-semibold mb-4">We care of</h3>
+          <div className="expedition__container border-2 border-[#8E7E57] h-[480px] overflow-y-scroll rounded-[10px] relative text-white w-[590px] max-w-full px-1 py-1 ml-10">
+            <div className="wrapper-border flex flex-col justify-start items-start gap-10  py-[15px] px-[30px] mr-[20px]">
+              <div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={Icon1}
+                    alt="Icon1"
+                    width={44}
+                    height={44}
+                    priority={true}
+                  />
+                  {/* <div className="w-11 h-11 bg-slate-500 rounded-xl">I</div> */}
+                  <p>Invitation Letter</p>
+                </div>
+                <p className="mt-3 font-extralight">
+                  Essential for travel and visa arrangements, this official
+                  letter confirms your participation in the hunting expedition
+                </p>
               </div>
-              <p className="mt-3 font-extralight">
-                Essential for travel and visa arrangements, this official letter
-                confirms your participation in the hunting expedition
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3">
-                {/* <div className="w-11 h-11 bg-slate-500 rounded-xl"></div> */}
-                <Image
-                  src={Icon2}
-                  alt="Icon1"
-                  width={44}
-                  height={44}
-                  priority={true}
-                />
-                <p>CITES Permits</p>
+              <div>
+                <div className="flex items-center gap-3">
+                  {/* <div className="w-11 h-11 bg-slate-500 rounded-xl"></div> */}
+                  <Image
+                    src={Icon2}
+                    alt="Icon1"
+                    width={44}
+                    height={44}
+                    priority={true}
+                  />
+                  <p>CITES Permits</p>
+                </div>
+                <p className="mt-3 font-extralight">
+                  Necessary for international hunters, these permits ensure that
+                  the export of any trophies complies with the Convention on
+                  International Trade in Endangered Species of Wild Fauna and
+                  Flora.
+                </p>
               </div>
-              <p className="mt-3 font-extralight">
-                Necessary for international hunters, these permits ensure that
-                the export of any trophies complies with the Convention on
-                International Trade in Endangered Species of Wild Fauna and
-                Flora.
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src={Icon3}
-                  alt="Icon1"
-                  width={44}
-                  height={44}
-                  priority={true}
-                />
-                <p>Gun Permits</p>
+              <div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={Icon3}
+                    alt="Icon1"
+                    width={44}
+                    height={44}
+                    priority={true}
+                  />
+                  <p>Gun Permits</p>
+                </div>
+                <p className="mt-3 font-extralight">
+                  We handle the necessary paperwork for the legal use of
+                  firearms during the hunt.
+                </p>
               </div>
-              <p className="mt-3 font-extralight">
-                We handle the necessary paperwork for the legal use of firearms
-                during the hunt.
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src={Icon4}
-                  alt="Icon1"
-                  width={44}
-                  height={44}
-                  priority={true}
-                />
-                <p>Veterinary Certificates</p>
+              <div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={Icon4}
+                    alt="Icon1"
+                    width={44}
+                    height={44}
+                    priority={true}
+                  />
+                  <p>Veterinary Certificates</p>
+                </div>
+                <p className="mt-3 font-extralight">
+                  Certifying the health and legal acquisition of the hunted
+                  animal, required for transport of the trophies.
+                </p>
               </div>
-              <p className="mt-3 font-extralight">
-                Certifying the health and legal acquisition of the hunted
-                animal, required for transport of the trophies.
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src={Icon5}
-                  alt="Icon1"
-                  width={44}
-                  height={44}
-                  priority={true}
-                />
-                <p>Animal Permits</p>
+              <div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={Icon5}
+                    alt="Icon1"
+                    width={44}
+                    height={44}
+                    priority={true}
+                  />
+                  <p>Animal Permits</p>
+                </div>
+                <p className="mt-3 font-extralight">
+                  Official permits for the specific species you will be hunting,
+                  ensuring compliance with wildlife regulations.
+                </p>
               </div>
-              <p className="mt-3 font-extralight">
-                Official permits for the specific species you will be hunting,
-                ensuring compliance with wildlife regulations.
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src={Icon6}
-                  alt="Icon1"
-                  width={44}
-                  height={44}
-                  priority={true}
-                />
-                <p>Border Pass Permit</p>
+              <div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={Icon6}
+                    alt="Icon1"
+                    width={44}
+                    height={44}
+                    priority={true}
+                  />
+                  <p>Border Pass Permit</p>
+                </div>
+                <p className="mt-3 font-extralight">
+                  For ease of access to hunting areas near borders, this permit
+                  is crucial for hassle-free movement.
+                </p>
               </div>
-              <p className="mt-3 font-extralight">
-                For ease of access to hunting areas near borders, this permit is
-                crucial for hassle-free movement.
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src={Icon7}
-                  alt="Icon1"
-                  width={44}
-                  height={44}
-                  priority={true}
-                />
-                <p>Food and Drinks</p>
+              <div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={Icon7}
+                    alt="Icon1"
+                    width={44}
+                    height={44}
+                    priority={true}
+                  />
+                  <p>Food and Drinks</p>
+                </div>
+                <p className="mt-3 font-extralight">
+                  All meals and beverages are provided, ensuring a comfortable
+                  and well-nourished experience throughout your stay.
+                </p>
               </div>
-              <p className="mt-3 font-extralight">
-                All meals and beverages are provided, ensuring a comfortable and
-                well-nourished experience throughout your stay.
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src={Icon8}
-                  alt="Icon1"
-                  width={44}
-                  height={44}
-                  priority={true}
-                />
-                <p>Round Trip Transportation</p>
+              <div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={Icon8}
+                    alt="Icon1"
+                    width={44}
+                    height={44}
+                    priority={true}
+                  />
+                  <p>Round Trip Transportation</p>
+                </div>
+                <p className="mt-3 font-extralight">
+                  From Dushanbe to the hunting camp, we ensure comfortable and
+                  reliable transportation for our clients.
+                </p>
               </div>
-              <p className="mt-3 font-extralight">
-                From Dushanbe to the hunting camp, we ensure comfortable and
-                reliable transportation for our clients.
-              </p>
-            </div>
-            <div>
-              <div className="flex items-center gap-3">
-                <Image
-                  src={Icon9}
-                  alt="Icon1"
-                  width={44}
-                  height={44}
-                  priority={true}
-                />
-                <p>Arrival VIP Hall Access</p>
+              <div>
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={Icon9}
+                    alt="Icon1"
+                    width={44}
+                    height={44}
+                    priority={true}
+                  />
+                  <p>Arrival VIP Hall Access</p>
+                </div>
+                <p className="mt-3 font-extralight">
+                  For a smooth and premium experience upon arrival at Dushanbe,
+                  ensuring a hassle-free start to your adventure.
+                </p>
               </div>
-              <p className="mt-3 font-extralight">
-                For a smooth and premium experience upon arrival at Dushanbe,
-                ensuring a hassle-free start to your adventure.
-              </p>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </section>
   );

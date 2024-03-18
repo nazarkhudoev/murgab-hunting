@@ -1,3 +1,10 @@
+.mission-container {
+  background-image: url("../../assets/images/tabs-images/mission.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
 @media (max-width: 922px) {
   .mission-container {
     flex-direction: column;

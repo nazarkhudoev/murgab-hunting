@@ -34,7 +34,7 @@ export default function RootLayout({
   params: { lang: Locale };
 }) {
   return (
-    <html className={roboto.className} lang={params.lang}>
+    <html lang={params.lang}>
       <body>
         <Header lang={params.lang} />
         {children}

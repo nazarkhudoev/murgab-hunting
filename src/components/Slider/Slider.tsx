@@ -13,6 +13,7 @@ import Image from "next/image";
 
 import Founder1 from "@/assets/founder1.png";
 import Founder2 from "@/assets/founder-2.png";
+import Founder3 from "@/assets/founder-3.png";
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -97,42 +98,51 @@ const Carousel = () => {
           <Conservation />
           <Team />
           <section id="founder__wrapper" className="py-10 px-[85px] text-white">
-            <div className="flex items-start justify-center gap-7 slider__fouders-wrapper">
-              <div className="flex items-start gap-7 w-[500px] max-w-full">
-                <div>
-                  <Image
-                    src={Founder1}
-                    alt="Founder1"
-                    className="rounded-lg w-[240px] h-[240px] object-cover slider__founders"
-                    priority={true}
-                  />
-                </div>
-                <div>
-                  <p className="text-[#8E7E57] text-xl font-medium uppercase">
-                    Atobek <br /> Bekmurodov
-                  </p>
-                  <p className="text-[14px] font-light mt-4">
-                    Professional Hunter
-                  </p>
-                </div>
+            <div className="flex items-start justify-center gap-10 slider__fouders-wrapper">
+              <div className="w-[260px] h-[340px] rounded-lg relative object-cover team__card">
+                <div className="team-gradient rounded-lg"></div>
+                <Image
+                  className="rounded-lg absolute w-full h-full border-2 border-[#8E7E57] object-cover"
+                  src={Founder1}
+                  alt={"Founder1"}
+                  priority={true}
+                />
+                <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center uppercase z-30 w-[100%]">
+                  Atobek  Bekmurodov
+                </h3>
+                <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-light capitalize text-center text-xs z-30 min-w-[250px]">
+                  Professional Hunter
+                </p>
               </div>
-              <div className="flex items-start gap-7 w-[500px] max-w-full">
-                <div>
-                  <Image
-                    src={Founder2}
-                    alt="Founder1"
-                    className="rounded-lg w-[240px] h-[240px] object-cover slider__founders"
-                    priority={true}
-                  />
-                </div>
-                <div>
-                  <p className="text-[#8E7E57] text-xl font-medium uppercase">
-                    Bekmurodi <br /> Zafar
-                  </p>
-                  <p className="text-[14px] font-light mt-4">
-                    Professional Hunter
-                  </p>
-                </div>
+              <div className="w-[260px] h-[340px] rounded-lg relative object-cover team__card">
+                <div className="team-gradient rounded-lg"></div>
+                <Image
+                  className="rounded-lg absolute w-full h-full border-2 border-[#8E7E57] object-cover"
+                  src={Founder2}
+                  alt={"Founder1"}
+                  priority={true}
+                />
+                <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center uppercase z-30 w-[100%]">
+                  Bekmurodi Zafar
+                </h3>
+                <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-light capitalize text-center text-xs z-30 min-w-[250px]">
+                  Professional Hunter
+                </p>
+              </div>
+              <div className="w-[260px] h-[340px] rounded-lg relative object-cover team__card">
+                <div className="team-gradient rounded-lg"></div>
+                <Image
+                  className="rounded-lg absolute w-full h-full border-2 border-[#8E7E57] object-cover"
+                  src={Founder3}
+                  alt={"Founder1"}
+                  priority={true}
+                />
+                <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center uppercase z-30 w-[100%]">
+                  BEKMURODI AYDIBEK
+                </h3>
+                <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-light capitalize text-center text-xs z-30 min-w-[250px]">
+                  Professional Hunter
+                </p>
               </div>
             </div>
           </section>

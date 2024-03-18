@@ -2,6 +2,35 @@
   min-width: 0 !important;
 }
 
+.camp_container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.camps_navigation button {
+  position: relative;
+}
+
+.camps_navigation button::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+.camps_navigation button:hover::before {
+  width: 100%;
+}
+
+.camps_navigation button.active-tab::before {
+  width: 100%;
+}
+
 /* @media (max-width: 1195px) {
   .big-image {
     width: 610px;
