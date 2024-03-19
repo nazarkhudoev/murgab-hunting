@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useState } from "react";
 
-
 import "./Gallery.css";
 import Fancybox from "../Fancybox/Fancybox";
 
@@ -53,7 +52,7 @@ export default function Gallery() {
                     <Image
                       src={image.src}
                       alt=""
-                      className="gallery_image-item"
+                      className="gallery_image-item rounded-lg"
                     />
                   </Link>
                 </SwiperSlide>

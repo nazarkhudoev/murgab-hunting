@@ -7,6 +7,7 @@
   align-items: center !important;
   justify-content: space-between !important;
 }
+
 .camps_navigation button {
   position: relative;
 }
@@ -29,6 +30,12 @@
 
 .camps_navigation button.active-tab::before {
   width: 100%;
+}
+
+@media (max-width: 1157px) {
+  .camp_container {
+    flex-direction: column;
+  }
 }
 
 /* @media (max-width: 1195px) {

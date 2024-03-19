@@ -24,6 +24,10 @@
 }
 
 @media (max-width: 855px) {
+  .flex-container-1 {
+    margin-top: 20px;
+  }
+  
   .expedition-wrapper {
     display: block;
   }

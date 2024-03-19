@@ -80,7 +80,7 @@ export default function MarcoPoloPage() {
                       // }}
                       src={image.src}
                       alt=""
-                      className="gallery_image-item"
+                      className="gallery_image-item rounded-lg"
                     />
                   </Link>
                 </SwiperSlide>

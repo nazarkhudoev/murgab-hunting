@@ -63,7 +63,7 @@ export default function Camps() {
         echoing the natural hospitality of Murgab's landscapes.`}
       </p>
       <div className="bg-[#332B18] rounded-[15px] p-[40px] mt-5">
-        <div className="flex items-center gap-7 mb-7 text-[#8E7E57] camps_navigation">
+        <div className="flex items-center flex-wrap gap-7 mb-7 text-[#8E7E57] camps_navigation">
           <button
             className={`${currentSlide == 0 && "active-tab text-white"}`}
             onClick={() => {
@@ -103,7 +103,7 @@ export default function Camps() {
         </div>
         <div>
           <Slider arrows={false} ref={slider} {...settings}>
-            <div className="camp_container flex gap-[20px]">
+            <div className="camp_container flex items-start gap-[20px]">
               <Image
                 src={Camp1}
                 alt="Picture 1"

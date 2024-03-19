@@ -24,7 +24,7 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-  width: 1400px;
+  /* width: 1400px; */
   max-width: 100%;
   margin-inline: auto;
 }

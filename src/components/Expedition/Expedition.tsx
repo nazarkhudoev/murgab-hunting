@@ -19,9 +19,17 @@ export function Expedition() {
       id="essentials"
       className="w-[1200px] max-w-full m-auto my-[150px]"
     >
-      <h3 className="text-center text-white text-2xl font-semibold mb-[50px] uppercase tracking-[1.5px]">
-        Your Expedition Essentials
-      </h3>
+      <div>
+        <h3 className="text-center text-white text-2xl font-semibold mb-3 uppercase tracking-[1.5px]">
+          Your Expedition Essentials
+        </h3>
+        <p className="mb-[50px] text-white">
+          We ensure a hassle-free experience by taking care of all necessary
+          permits and formalities for you. Relax and focus on the adventure
+          ahead, knowing that all the details are handled with precision and
+          care by our dedicated team.
+        </p>
+      </div>
       <div className="bg-[#332B18] rounded-[20px] flex items-end justify-between p-[2.25rem] expedition-wrapper">
         <div className="relative">
           <Image
@@ -34,9 +42,11 @@ export function Expedition() {
           />
           {/* <div className="absolute -right-[55px] top-1/2 -translate-y-[50%] bg-[#C4A174] w-[2px] h-[90%]"></div> */}
         </div>
-        <ExpeditionSlider />
-        <section>
-          <h3 className="text-center text-[#8E7E57] text-[18px] font-semibold mb-4">We care of</h3>
+        {/* <ExpeditionSlider /> */}
+        <section className="flex-container-1">
+          <h3 className="text-center text-[#8E7E57] text-[18px] font-semibold mb-4 expedition__main-title">
+            We care of
+          </h3>
           <div className="expedition__container border-2 border-[#8E7E57] h-[480px] overflow-y-scroll rounded-[10px] relative text-white w-[590px] max-w-full px-1 py-1 ml-10">
             <div className="wrapper-border flex flex-col justify-start items-start gap-10  py-[15px] px-[30px] mr-[20px]">
               <div>
@@ -190,6 +200,7 @@ export function Expedition() {
             </div>
           </div>
         </section>
+        <ExpeditionSlider />
       </div>
     </section>
   );

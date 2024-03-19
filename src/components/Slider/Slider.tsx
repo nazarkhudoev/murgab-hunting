@@ -27,6 +27,45 @@ const Carousel = () => {
     beforeChange: (current: any, next: any) => setCurrentSlide(next),
   };
 
+  const founder_settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1107,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 843,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 582,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
+
+  const slider = useRef<any>(null);
+
   // const handleButtonClick = (index: any) => {
   //   setCurrentSlide(index);
   //   console.log("Clicked " + index);
@@ -98,7 +137,8 @@ const Carousel = () => {
           <Conservation />
           <Team />
           <section id="founder__wrapper" className="py-10 px-[85px] text-white">
-            <div className="flex items-start justify-center gap-10 slider__fouders-wrapper">
+            {/* <div className="flex items-start justify-center gap-10 slider__fouders-wrapper"> */}
+            <Slider ref={slider} {...founder_settings} arrows={false}>
               <div className="w-[260px] h-[340px] rounded-lg relative object-cover team__card">
                 <div className="team-gradient rounded-lg"></div>
                 <Image
@@ -108,7 +148,7 @@ const Carousel = () => {
                   priority={true}
                 />
                 <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center uppercase z-30 w-[100%]">
-                  Atobek  Bekmurodov
+                  Atobek Bekmurodov
                 </h3>
                 <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-light capitalize text-center text-xs z-30 min-w-[250px]">
                   Professional Hunter
@@ -144,7 +184,8 @@ const Carousel = () => {
                   Professional Hunter
                 </p>
               </div>
-            </div>
+            </Slider>
+            {/* </div> */}
           </section>
         </Slider>
       </div>
