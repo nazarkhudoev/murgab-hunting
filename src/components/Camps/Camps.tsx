@@ -62,7 +62,7 @@ export default function Camps() {
         thermal waters, as our staff ensures a comfortable, inviting stay,
         echoing the natural hospitality of Murgab's landscapes.`}
       </p>
-      <div className="bg-[#332B18] rounded-[15px] p-[40px] mt-5">
+      <div className="bg-[#332B18] rounded-[15px] p-[40px] mt-5 camp_wrapper">
         <div className="flex items-center flex-wrap gap-7 mb-7 text-[#8E7E57] camps_navigation">
           <button
             className={`${currentSlide == 0 && "active-tab text-white"}`}

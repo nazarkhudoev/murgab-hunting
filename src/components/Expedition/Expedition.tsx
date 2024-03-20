@@ -23,7 +23,7 @@ export function Expedition() {
         <h3 className="text-center text-white text-2xl font-semibold mb-3 uppercase tracking-[1.5px]">
           Your Expedition Essentials
         </h3>
-        <p className="mb-[50px] text-white">
+        <p className="mb-[50px] mx-4 text-white">
           We ensure a hassle-free experience by taking care of all necessary
           permits and formalities for you. Relax and focus on the adventure
           ahead, knowing that all the details are handled with precision and
