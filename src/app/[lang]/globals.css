@@ -75,11 +75,14 @@ html {
   background-color: transparent !important;
 }
 
+
+
 @media (max-width: 471px) {
   .custom__container {
     padding-inline: 0px !important;
   }
 }
+
 
 /* .yottie-widget-feed-section-slide {
   width: 100% !important;
