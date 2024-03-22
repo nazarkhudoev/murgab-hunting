@@ -85,7 +85,7 @@ export default function NavbarLinks() {
 
   return (
     <nav className={`${styles.navbar}`}>
-      <ul className={`flex items-center gap-[60px] ${styles.navbarList}`}>
+      <ul className={`flex items-center gap-[38px] ${styles.navbarList}`}>
         {pathname != "/en/about-us"
           ? links.map((link) => {
               return (
