@@ -1,7 +1,7 @@
 .argali-brukey__banner {
   min-height: 100vh;
   /* background-image: url(../../assets/image\ 10.png), */
-  background-image: url(../../assets/Argali-Brukey_WEB.jpg),
+  background-image: url(../../assets/Argali-Brukey_WEB.webp),
     linear-gradient(91deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
   background-blend-mode: multiply;
   background-size: cover;
