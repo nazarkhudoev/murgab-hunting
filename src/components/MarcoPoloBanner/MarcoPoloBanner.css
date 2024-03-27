@@ -11,7 +11,7 @@
 }
 
 .gradient-marcopolo {
-  height: 100px;
+  height: 140px;
   width: 100%;
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
 }
@@ -23,9 +23,27 @@
   }
 
   .marcopolo__banner {
-    background-position: -780px top;
+    background-position: -1170px -200px;
   }
 
+  .marcopolo__banner h1:nth-child(1) {
+    width: 180px;
+    position: relative;
+    top: 150px;
+  }
+
+  .marcopolo__banner h1:nth-child(2) {
+    position: relative;
+    top: 150px;
+  }
+
+  .animal_statistics {
+    margin-top: 230px;
+  }
+
+  .animal_statistics > div {
+    margin-top: 20px;
+  }
 
   .marcopolo__banner > h1 {
     font-size: 50px !important;
@@ -33,5 +51,9 @@
 
   .marcopolo__banner > p {
     font-size: 19px !important;
+  }
+
+  .gradient-marcopolo {
+    height: 740px;
   }
 }

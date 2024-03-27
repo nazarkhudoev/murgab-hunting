@@ -74,7 +74,7 @@ const Carousel = () => {
   const sliderRef = useRef<any>();
 
   return (
-    <section id="about" className="pt-12">
+    <section id="about" className="pt-[100px] relative z-999">
       <h3 className="text-center text-white text-2xl font-medium uppercase tracking-[1.5px] about-header">
         ABOUT US
       </h3>
@@ -97,7 +97,7 @@ const Carousel = () => {
                 sliderRef.current.slickGoTo(1);
               }}
             >
-              Mission
+              Founders
             </button>
             <button
               className={`${currentSlide == 2 && "active-tab text-white"}`}
@@ -106,7 +106,7 @@ const Carousel = () => {
                 sliderRef.current.slickGoTo(2);
               }}
             >
-              Conservation
+              Mission
             </button>
             <button
               className={`${currentSlide == 3 && "active-tab text-white"}`}
@@ -115,7 +115,7 @@ const Carousel = () => {
                 sliderRef.current.slickGoTo(3);
               }}
             >
-              Team
+              Conservation
             </button>
             <button
               className={`${currentSlide == 4 && "active-tab text-white"}`}
@@ -124,7 +124,7 @@ const Carousel = () => {
                 sliderRef.current.slickGoTo(4);
               }}
             >
-              Founders
+              Team
             </button>
           </div>
           <Link className="text-sm read-more text-white" href={"/about-us"}>
@@ -133,10 +133,10 @@ const Carousel = () => {
         </div>
         <Slider {...settings} arrows={false} swipe={false} ref={sliderRef}>
           <History />
-          <Mission />
-          <Conservation />
-          <Team />
-          <section id="founder__wrapper" className="py-10 px-[85px] text-white">
+          <section
+            id="founder__wrapper"
+            className="py-10 px-[158px] text-white"
+          >
             {/* <div className="flex items-start justify-center gap-10 slider__fouders-wrapper"> */}
             <Slider ref={slider} {...founder_settings} arrows={false}>
               <div className="w-[260px] h-[340px] rounded-lg relative object-cover team__card">
@@ -187,6 +187,9 @@ const Carousel = () => {
             </Slider>
             {/* </div> */}
           </section>
+          <Mission />
+          <Conservation />
+          <Team />
         </Slider>
       </div>
     </section>

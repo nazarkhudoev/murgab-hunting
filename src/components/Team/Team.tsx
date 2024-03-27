@@ -52,13 +52,16 @@ export default function Team() {
   const slider = useRef<any>(null);
 
   return (
-    <div className="relative overflow-visible mt-5 pl-9 pr-9 pb-3">
-      <button
+    <div
+      id="team__container-slider"
+      className="relative overflow-visible mt-5 pl-9 pr-9 pb-3"
+    >
+      {/* <button
         className="absolute top-1/2 left-3 -translate-y-1/2 z-20"
         onClick={() => slider?.current?.slickPrev()}
       >
         <Image src={PREV_ICON} alt="PREV_ICON" priority={true} />
-      </button>
+      </button> */}
       <Slider ref={slider} {...settings} arrows={false}>
         {teamData.map((person: ITeam, index: number) => {
           return (
@@ -83,12 +86,12 @@ export default function Team() {
           );
         })}
       </Slider>
-      <button
+      {/* <button
         className="absolute top-1/2 right-3 -translate-y-1/2 z-20"
         onClick={() => slider?.current?.slickNext()}
       >
         <Image src={NEXT_ICON} alt="NEXT_ICON" priority={true} />
-      </button>
+      </button> */}
     </div>
   );
 }

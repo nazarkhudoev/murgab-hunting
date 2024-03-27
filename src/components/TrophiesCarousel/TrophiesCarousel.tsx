@@ -35,18 +35,21 @@ export default function TrophiesCarousel() {
   const slider = useRef<any>(null);
 
   return (
-    <section id="trophies-carousel" className="relative w-[1270px] max-w-full m-auto px-10">
+    <section
+      id="trophies-carousel"
+      className="relative w-[1270px] max-w-full m-auto px-10"
+    >
       <button
         className="absolute top-1/2 left-4 -translate-y-1/2 z-20 prev__button"
         onClick={() => slider?.current?.slickPrev()}
       >
-        <Image src={PREV_ICON} alt="PREV_ICON" priority={true}/>
+        <Image src={PREV_ICON} alt="PREV_ICON" priority={true} />
       </button>
       <Slider ref={slider} {...settings} arrows={false}>
         {trophiesData.map((person: ITrophie, index: number) => {
           return (
             <div
-              className="w-[150px] h-[350px] rounded-[20px] relative object-cover outline-none border border-[#8E7E57]"
+              className="w-[150px] h-[350px] rounded-[20px] relative object-cover outline-none border border-[#8E7E57] trophie__card-item"
               key={person.id}
             >
               <div className="trophie-gradient rounded-[20px]"></div>
@@ -59,7 +62,10 @@ export default function TrophiesCarousel() {
               <h3 className="absolute bottom-10 left-8 text-white font-bold capitalize text-[28px] z-30">
                 {person.title}
               </h3>
-              <Link href={person.url} className="absolute bottom-5 left-8 z-50 flex items-center gap-2">
+              <Link
+                href={person.url}
+                className="absolute bottom-5 left-8 z-50 flex items-center gap-2"
+              >
                 <span className="uppercase font-bold text-[dodgerblue]">
                   read more
                 </span>
@@ -73,7 +79,7 @@ export default function TrophiesCarousel() {
         className="absolute top-1/2 right-4 -translate-y-1/2 z-20 next__button"
         onClick={() => slider?.current?.slickNext()}
       >
-        <Image src={NEXT_ICON} alt="NEXT_ICON" priority={true}/>
+        <Image src={NEXT_ICON} alt="NEXT_ICON" priority={true} />
       </button>
     </section>
   );

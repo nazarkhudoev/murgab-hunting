@@ -8,8 +8,12 @@
   padding-top: 200px;
   padding-inline: 85px;
   color: #fff;
+  /* max-w-full w-[1400px] mx-auto */
+  /* width: 1400px;
+  max-width: 100%;
+  margin-inline: auto; */
 }
-.banner-gradient {
+.about-gradient {
   height: 300px;
   width: 100%;
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
@@ -27,8 +31,20 @@
         rgba(0, 0, 0, 0.43) 150%,
         rgba(217, 217, 217, 0) 10%
       );
-    background-position: -760px top;
+    background-position: -700px -70px;
     padding-inline: 16px;
+  }
+
+  .about-gradient {
+    height: 500px;
+    background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 40.29%);
+    bottom: -45px;
+    z-index: 77;
+  }
+
+  .about__text {
+    text-align: justify;
+    margin-top: 50px;
   }
 
   .about__banner h1 {
@@ -37,5 +53,13 @@
 
   .about__banner p {
     font-size: 15px;
+    text-align: justify;
+    /* text-justify: auto; */
+  }
+
+  .about__text-container {
+    margin-top: 200px;
+    position: relative;
+    z-index: 78;
   }
 }

@@ -13,7 +13,7 @@
   padding-top: 50px;
   padding-bottom: 100px;
   position: relative;
-  margin-top: 135px;
+  margin-top: 200px;
 }
 
 .contact-form-container {
@@ -25,10 +25,12 @@
   width: 550px;
   max-width: 100%;
   padding: 50px 60px;
+  position: relative;
+  z-index: 999;
 }
 
 .gradient {
-  height: 185px;
+  height: 944px;
   width: 100%;
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
 }

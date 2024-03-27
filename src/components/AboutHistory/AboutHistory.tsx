@@ -5,7 +5,7 @@ import "./AboutHistory.css";
 
 export default function AboutHistory() {
   return (
-    <section id="history" className="pb-10 pt-[130px] px-[85px] text-white">
+    <section id="history" className="pb-10 pt-[130px] w-[1400px] max-w-[100%] mx-auto px-[120px] text-white">
       <h3 className="uppercase text-center text-white text-2xl font-semibold tracking-[1.5px]">
         company history and leadership
       </h3>

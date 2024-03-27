@@ -1,8 +1,9 @@
 /* Carousel.css */
 .carousel-container-123 {
   max-width: 1200px;
+  height: 507px;
   margin-inline: auto;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   margin-top: 50px;
   background-color: #332b18;
   border-radius: 20px;
@@ -75,6 +76,11 @@
   color: #f45914 !important;
 }
 
+#founder__wrapper .slick-slider .slick-list .slick-track .slick-slide {
+  /* width: 280px !important; */
+  margin: 0 0px;
+}
+
 .slick-dots li {
   margin: 0 -2px !important;
 }
@@ -82,16 +88,18 @@
 @media (max-width: 570px) {
   .read-more {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     right: 16px;
   }
 
   .carousel-container-123 {
     padding-bottom: 50px;
+    height: 640px;
   }
 
   #founder__wrapper {
     padding-inline: 16px;
+    padding-top: 20px;
   }
 
   .slider__fouders-wrapper {
@@ -111,15 +119,31 @@
 
   .carousel-navigation {
     justify-content: center;
+    gap: 20px 50px;
   }
 
   #about {
-    padding-top: 30px;
+    padding-top: 60px;
+  }
+  #founder__wrapper .slick-slider .slick-list .slick-track .slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #founder__wrapper
+    .slick-slider
+    .slick-list
+    .slick-track
+    .slick-slide
+    .team__card {
+    width: 321px !important;
+    height: 401px !important;
   }
 }
 
 @media (max-width: 460px) {
-  .carousel-navigation button:nth-child(4){
+  .carousel-navigation button:nth-child(4) {
     /* margin-left: 30px; */
   }
 }

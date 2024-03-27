@@ -4,6 +4,8 @@
   gap: 10px;
 }
 
+
+
 .custom__overlay {
   position: absolute;
   left: 0;
@@ -43,4 +45,13 @@
 
 .gallery__navigation-filter button.active-tab::before {
   width: 100%;
+}
+
+#gallerySection .swiper {
+  padding-top: 30px !important;
+  padding-bottom: 0px !important;
+}
+
+#gallerySection .swiper .swiper-slide{
+  margin-right: 20px !important;
 }

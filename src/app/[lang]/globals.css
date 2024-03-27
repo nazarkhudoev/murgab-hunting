@@ -29,12 +29,7 @@ html {
   margin-inline: auto;
 }
 
-@media (max-width: 500px) {
-  .main {
-    background-position: -650px top;
-    background-size: cover;
-  }
-}
+
 
 .gradient-main {
   height: 395px;
@@ -80,6 +75,19 @@ html {
 @media (max-width: 471px) {
   .custom__container {
     padding-inline: 0px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    background-position: -730px -40px;
+    background-size: 398%;
+  }
+  
+  .gradient-main {
+    height: 429px;
+    bottom: -250px;
+    background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 40.29%);
   }
 }
 

@@ -1,0 +1,7 @@
+@media (max-width: 500px) {
+  .ibex_text {
+    text-align: justify;
+    position: relative;
+    bottom: 130px;
+  }
+}

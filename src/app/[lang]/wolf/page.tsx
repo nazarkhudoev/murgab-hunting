@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "./wolf.css";
 
 // import './styles.css';
 
@@ -27,7 +28,7 @@ export default function WolfPage() {
     <main>
       <WolfBanner />
       <section id="wolf-text-wrapper" className="px-[85px] mt-10">
-        <p className="text-white font-extralight">
+        <p className="text-white font-extralight wolf__text-container">
           Wolf hunting in the Pamirs is a complex and dangerous type of hunting
           that requires a high level of preparation and skill from the hunter.
           Wolves are intelligent and cautious animals that can become aggressive
@@ -35,16 +36,26 @@ export default function WolfPage() {
           conducted in the mountains, where wolves live in packs. Hunters must
           be in good physical condition to navigate the challenging mountain
           trails. They must also be armed with powerful weapons, such as a rifle
-          with a scope, to make an accurate shot. The hunt for wolves in the
-          Pamirs typically begins with locating the pack. Hunters can use
-          various methods to search, such as observing the mountains with
-          binoculars or using tracking dogs. Once the pack is spotted, hunters
-          must approach it carefully to avoid startling the animals. When a
-          hunter gets close to the pack, they must select a suitable target.
-          They should aim to shoot the animal in vital organs, such as the heart
-          or lungs, to ensure a quick and humane kill. After the wolf is killed,
-          the hunter must transport the carcass to a safe location. This can be
-          challenging, as a wolf&apos;s carcass can weigh up to 50 kilograms.
+          with a scope, to make an accurate shot.
+          <br />
+          <br />
+          The hunt for wolves in the Pamirs typically begins with locating the
+          pack. Hunters can use various methods to search, such as observing the
+          mountains with binoculars or using tracking dogs. Once the pack is
+          spotted, hunters must approach it carefully to avoid startling the
+          animals.
+          <br />
+          <br />
+          When a hunter gets close to the pack, they must select a suitable
+          target. They should aim to shoot the animal in vital organs, such as
+          the heart or lungs, to ensure a quick and humane kill.
+          <br />
+          <br />
+          After the wolf is killed, the hunter must transport the carcass to a
+          safe location. This can be challenging, as a wolfs carcass can weigh
+          up to 50 kilograms.
+          <br />
+          <br />
           Wolf hunting in the Pamirs is a complex and dangerous pursuit, but it
           can also be very rewarding. Trophies from wolf hunting, such as the
           pelt and head, are highly prized by hunters around the world.

@@ -20,8 +20,9 @@
   }
 
   .main__banner-home > h1 {
-    font-size: 64px;
+    font-size: 54px;
     margin-top: -74px;
+    line-height: 64px;
   }
 
   .main__banner-home > p {
@@ -38,5 +39,11 @@
 
   .main__banner-home > div a {
     font-size: 16px;
+  }
+
+  .main__banner-home > p {
+    margin-top: 40px;
+    line-height: 38px;
+    font-size: 32px;
   }
 }

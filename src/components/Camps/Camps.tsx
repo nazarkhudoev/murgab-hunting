@@ -52,7 +52,7 @@ export default function Camps() {
       <h3 className="text-center mb-[50px] text-2xl tracking-[1.5px]">
         HOT SPRINGS CAMP
       </h3>
-      <p className="font-light">
+      <p className="font-thin text-justify mx-10">
         {`Perched amidst the high-altitude serenity of the Pamirs, the Hot Springs
         Camp offers a warm haven against the crisp mountain air. Named for the
         natural thermal springs nearby, our camp provides a cozy respite where
@@ -62,8 +62,8 @@ export default function Camps() {
         thermal waters, as our staff ensures a comfortable, inviting stay,
         echoing the natural hospitality of Murgab's landscapes.`}
       </p>
-      <div className="bg-[#332B18] rounded-[15px] p-[40px] mt-5 camp_wrapper">
-        <div className="flex items-center flex-wrap gap-7 mb-7 text-[#8E7E57] camps_navigation">
+      <div className="bg-[#332B18] rounded-[15px] p-[40px] mt-[50px] camp_wrapper">
+        <div className="flex items-center flex-wrap gap-7 mb-7 text-[#8E7E57] camps_navigation text-sm font-light">
           <button
             className={`${currentSlide == 0 && "active-tab text-white"}`}
             onClick={() => {
@@ -107,7 +107,7 @@ export default function Camps() {
               <Image
                 src={Camp1}
                 alt="Picture 1"
-                className="border border-[#8E7E57] rounded-[5px] w-[535px]"
+                className="border border-[#8E7E57] rounded-[5px] w-[550px]"
               />
               <div>
                 <div className="flex items-start mb-[20px] gap-5">
@@ -140,7 +140,7 @@ export default function Camps() {
               <Image
                 src={Camp1}
                 alt="Picture 1"
-                className="border border-[#8E7E57] rounded-[5px] w-[535px]"
+                className="border border-[#8E7E57] rounded-[5px] w-[550px]"
               />
               <div>
                 <div className="flex items-start mb-[20px] gap-5">
@@ -173,7 +173,7 @@ export default function Camps() {
               <Image
                 src={Camp9}
                 alt="Picture 1"
-                className="border border-[#8E7E57] rounded-[5px] w-[535px]"
+                className="border border-[#8E7E57] rounded-[5px] w-[550px]"
               />
               <div>
                 <div className="flex items-start mb-[20px] gap-5">
@@ -206,7 +206,7 @@ export default function Camps() {
               <Image
                 src={Camp14}
                 alt="Picture 1"
-                className="border border-[#8E7E57] rounded-[5px] w-[535px]"
+                className="border border-[#8E7E57] rounded-[5px] w-[550px]"
               />
               <div>
                 <div className="flex items-start mb-[20px] gap-5">

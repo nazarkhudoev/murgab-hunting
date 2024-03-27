@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-inline: 16px;
-    row-gap: 20px;
+    row-gap: 30px;
     column-gap: 0px;
   }
 
@@ -17,8 +17,14 @@
     font-size: 12px;
   }
 
+  .statistic__item {
+    vertical-align: bottom;
+  }
+
   .statistic__item sub {
-    font-size: 15px;
+    font-size: 22px;
+    position: relative;
+    top: 0.3px;
   }
   
   /* .statistic__item {

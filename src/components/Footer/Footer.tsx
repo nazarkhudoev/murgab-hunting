@@ -13,9 +13,9 @@ const Footer = () => {
   return (
     <footer className="footer__container px-[85px] py-[120px] w-[1400px] max-w-full mx-auto relative z-30 flex items-start justify-between gap-8 flex-wrap text-white">
       <div className="footer__logo-container">
-        <Image src={Logo} className="w-[80px]" alt="Logo" />
-        <span className="font-extralight text-sm">
-          © 2024 Murgab Hunting <br /> All rights reserved.
+        <Image src={Logo} className="w-[80px] mb-[20px]" alt="Logo" />
+        <span className="inline-block w-[150px] font-extralight text-sm leading-[19px]">
+          © 2024 Murgab Hunting All rights reserved.
         </span>
       </div>
       <div className="flex flex-col justify-start items-start gap-3 text-white footer__links-container-1">
@@ -66,9 +66,9 @@ const Footer = () => {
               shirinbek0494@gmail.com
             </a>
           </p>
-          <p>
+          <p className="relative bottom-1">
             <a href="tel:+992887743399" className="text-sm font-thin">
-              +992887743399
+              +992 88 774-33-99
             </a>
           </p>
         </div>

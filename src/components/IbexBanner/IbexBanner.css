@@ -10,6 +10,13 @@
   color: #fff;
 }
 
+.gradient-ibex {
+  height: 140px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
+}
+
+
 @media (max-width: 500px) {
   .ibex__banner,
   #ibex-text-wrapper {
@@ -23,7 +30,7 @@
         rgba(0, 0, 0, 0.43) 150%,
         rgba(217, 217, 217, 0) 10%
       );
-    background-position: -760px top;
+    background-position: -710px -100px;
   }
 
   .ibex__banner > h1 {
@@ -32,5 +39,25 @@
 
   .ibex__banner > p {
     font-size: 19px !important;
+  }
+
+  .ibex__banner h1:nth-child(1) {
+    width: 180px;
+    position: relative;
+    top: 150px;
+  }
+
+  .ibex__banner h1:nth-child(2) {
+    position: relative;
+    top: 150px;
+  }
+
+  .ibex_statistics {
+    position: relative;
+    top: 90px;
+  }
+
+  .gradient-ibex {
+    height: 540px;
   }
 }

@@ -1,0 +1,17 @@
+.wolf__text-container {
+  text-align: justify;
+  position: relative;
+  z-index: 999;
+}
+
+@media (max-width: 500px) {
+  #wolf-text-wrapper {
+    /* padding-inline: 16px !important; */
+    position: relative;
+    z-index: 999;
+  }
+
+  .wolf__text-container {
+    bottom: 130px;
+  }
+}

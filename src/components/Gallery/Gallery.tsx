@@ -42,9 +42,9 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallerySection" className="mt-[150px]">
+    <section id="gallerySection" className="mt-[200px]">
       <div className="w-[1150px] max-w-full mx-auto relative px-[20px]">
-        <h1 className="text-center mb-[20px] text-2xl tracking-[1.5px] text-white uppercase">
+        <h1 className="text-center mb-[50px] text-2xl tracking-[1.5px] text-white uppercase">
           Gallery
         </h1>
         <div className="text-[#8E7E57] flex justify-center items-center gap-8 gallery__navigation-filter">

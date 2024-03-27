@@ -13,6 +13,7 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "./ibex.css"
 import { gallery } from "@/data/gallery";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,7 +28,7 @@ export default function IbexPage() {
     <main>
       <IbexBanner />
       <section id="ibex-text-wrapper" className="px-[85px] mt-10">
-        <p className="text-white font-extralight">
+        <p className="text-white font-extralight ibex_text">
           Over the last 30 years, trophy hunting for the Siberian ibex has been
           conducted in Tajikistan, mainly in the Pamirs. Annually, between 50
           and 100 trophies are obtained. Some of these trophies have been

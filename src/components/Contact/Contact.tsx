@@ -70,7 +70,7 @@ export default function Contact() {
           </Link>
         </div> */}
       </div>
-      <div className="gradient absolute left-0 -bottom-[88px]"></div>
+      <div className="gradient absolute left-0 -bottom-[350px]"></div>
     </section>
   );
 }

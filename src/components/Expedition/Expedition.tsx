@@ -17,13 +17,13 @@ export function Expedition() {
   return (
     <section
       id="essentials"
-      className="w-[1200px] max-w-full m-auto my-[150px]"
+      className="w-[1200px] max-w-full m-auto my-[200px]"
     >
       <div>
-        <h3 className="text-center text-white text-2xl font-semibold mb-3 uppercase tracking-[1.5px]">
+        <h3 className="text-center text-white text-2xl font-semibold mb-[25px] uppercase tracking-[1.5px]">
           Your Expedition Essentials
         </h3>
-        <p className="mb-[50px] mx-4 text-white">
+        <p className="mb-[60px] mx-10 text-white font-thin">
           We ensure a hassle-free experience by taking care of all necessary
           permits and formalities for you. Relax and focus on the adventure
           ahead, knowing that all the details are handled with precision and

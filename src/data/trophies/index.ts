@@ -3,7 +3,7 @@ import Picture from "@/assets/Hunt_Cards/Marco_Polo_Card.png";
 import Picture2 from "@/assets/Hunt_Cards/Ibex_Card.png";
 import Picture3 from "@/assets/Hunt_Cards/Wolf_Card.png";
 import Picture4 from "@/assets/Hunt_Cards/Yak_Card.png";
-import Picture5 from "@/assets/Hunt_Cards/Argali_Brukey_Card.png";
+import Picture5 from "@/assets/argali-new (1).png";
 
 export interface ITrophie {
   id: string;

@@ -10,12 +10,19 @@
   }
 
   .history__pic {
-    height: 280px;
+    height: 250px;
   }
 }
 
 @media (max-width: 570px) {
   .history-container {
     padding-inline: 16px;
+  }
+
+  .history__main-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
   }
 }
