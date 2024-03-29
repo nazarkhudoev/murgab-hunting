@@ -90,6 +90,7 @@
     position: absolute;
     bottom: 30px;
     right: 16px;
+    z-index: 9999;
   }
 
   .carousel-container-123 {

@@ -20,7 +20,7 @@ export function Expedition() {
       className="w-[1200px] max-w-full m-auto my-[200px]"
     >
       <div>
-        <h3 className="text-center text-white text-2xl font-semibold mb-[25px] uppercase tracking-[1.5px]">
+        <h3 className="text-center text-white text-2xl font-semibold mb-[25px] mx-2 uppercase tracking-[1.5px]">
           Your Expedition Essentials
         </h3>
         <p className="mb-[60px] mx-10 text-white font-thin">

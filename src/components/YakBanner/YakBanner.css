@@ -10,6 +10,12 @@
   color: #fff;
 }
 
+.gradient-yak {
+  height: 140px;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
+}
+
 @media (max-width: 500px) {
   .yak__banner,
   #yak-text-wrapper {
@@ -17,11 +23,23 @@
   }
 
   .yak__banner {
-    background-position: -780px top;
+    background-position: -730px -90px;
+    background-image: url(../../assets/Yak/Yak.webp),
+      linear-gradient(
+        91deg,
+        rgba(0, 0, 0, 0.43) 100%,
+        rgba(217, 217, 217, 0) 100%
+      );
+  }
+
+  .gradient-yak {
+    height: 640px;
   }
 
   .yak__banner > h1 {
     font-size: 50px !important;
+    position: relative;
+    top: 150px;
   }
 
   .yak__banner > p {

@@ -1,0 +1,6 @@
+@media (max-width: 500px) {
+  .yak__text-wrapper {
+    position: relative;
+    bottom: 180px;
+  }
+}

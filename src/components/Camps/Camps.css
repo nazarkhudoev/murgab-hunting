@@ -42,6 +42,10 @@
   .camp_wrapper {
     padding: 16px;
   }
+
+  .camp__description {
+    margin-inline: 10px;
+  }
 }
 
 /* @media (max-width: 1195px) {

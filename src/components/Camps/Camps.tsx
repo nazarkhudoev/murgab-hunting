@@ -52,7 +52,7 @@ export default function Camps() {
       <h3 className="text-center mb-[50px] text-2xl tracking-[1.5px]">
         HOT SPRINGS CAMP
       </h3>
-      <p className="font-thin text-justify mx-10">
+      <p className="font-thin text-justify mx-10 camp__description">
         {`Perched amidst the high-altitude serenity of the Pamirs, the Hot Springs
         Camp offers a warm haven against the crisp mountain air. Named for the
         natural thermal springs nearby, our camp provides a cozy respite where
