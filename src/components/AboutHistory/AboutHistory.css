@@ -10,4 +10,8 @@
   #history {
     padding-inline: 16px;
   }
+
+  .history__text-image {
+    height: 250px;
+  }
 }

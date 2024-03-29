@@ -14,7 +14,7 @@ export default function AboutHistory() {
           <Image
             src={HistoryImage}
             alt="HistoryImage"
-            className="border-2 border-[#8E7E57] w-[400px] h-[367px] object-cover max-w-full rounded-[10px]"
+            className="border-2 border-[#8E7E57] w-[400px] h-[367px] object-cover max-w-full rounded-[10px] history__text-image"
           />
         </div>
         <div className="w-[730px] max-w-full">
