@@ -40,9 +40,8 @@
     padding-inline: 16px;
     margin-top: 100px;
   }
-  
+
   .contact-form-container {
-    
     padding-inline: 15px;
   }
 }
@@ -65,6 +64,13 @@
   margin-top: 200px;
 }
 
+@media (max-width: 500px) {
+  #ibex-page .contact-section {
+    padding-inline: 16px;
+    margin-top: 100px;
+  }
+}
+
 #marco-polo-page .contact-section {
   min-height: 700px;
   /* max-width: 1690px; */
@@ -81,6 +87,13 @@
   padding-bottom: 100px;
   position: relative;
   margin-top: 200px;
+}
+
+@media (max-width: 500px) {
+  #marco-polo-page .contact-section {
+    padding-inline: 16px;
+    margin-top: 100px;
+  }
 }
 
 #yak-page .contact-section {
@@ -101,6 +114,13 @@
   margin-top: 200px;
 }
 
+@media (max-width: 500px) {
+  #yak-page .contact-section {
+    padding-inline: 16px;
+    margin-top: 100px;
+  }
+}
+
 #brukey-page .contact-section {
   min-height: 700px;
   /* max-width: 1690px; */
@@ -119,6 +139,13 @@
   margin-top: 200px;
 }
 
+@media (max-width: 500px) {
+  #brukey-page .contact-section {
+    padding-inline: 16px;
+    margin-top: 100px;
+  }
+}
+
 #wolf-page .contact-section {
   min-height: 700px;
   /* max-width: 1690px; */
@@ -135,4 +162,11 @@
   padding-bottom: 100px;
   position: relative;
   margin-top: 200px;
+}
+
+@media (max-width: 500px) {
+  #wolf-page .contact-section {
+    padding-inline: 16px;
+    margin-top: 100px;
+  }
 }
