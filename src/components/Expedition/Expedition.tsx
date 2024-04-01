@@ -20,10 +20,10 @@ export function Expedition() {
       className="w-[1200px] max-w-full m-auto my-[200px]"
     >
       <div>
-        <h3 className="text-center text-white text-2xl font-semibold mb-[25px] mx-2 uppercase tracking-[1.5px]">
+        <h3 className="text-center text-white text-2xl font-medium mb-[25px] mx-2 uppercase tracking-[1.5px]">
           Your Expedition Essentials
         </h3>
-        <p className="mb-[60px] mx-10 text-white font-thin">
+        <p className="mb-[60px] mx-10 text-white font-thin expedition__description-text">
           We ensure a hassle-free experience by taking care of all necessary
           permits and formalities for you. Relax and focus on the adventure
           ahead, knowing that all the details are handled with precision and
@@ -44,7 +44,7 @@ export function Expedition() {
         </div>
         {/* <ExpeditionSlider /> */}
         <section className="flex-container-1">
-          <h3 className="text-center text-[#8E7E57] text-[18px] font-semibold mb-4 expedition__main-title">
+          <h3 className="text-center uppercase text-[#8E7E57] text-[18px] font-semibold mb-4 expedition__main-title">
             We care of
           </h3>
           <div className="expedition__container border-2 border-[#8E7E57] h-[480px] overflow-y-scroll rounded-[10px] relative text-white w-[590px] max-w-full px-1 py-1 ml-10">

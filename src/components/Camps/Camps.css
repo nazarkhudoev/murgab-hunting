@@ -39,12 +39,26 @@
 }
 
 @media (max-width: 600px) {
+  #camp {
+    padding-inline: 6px;
+  }
+  
   .camp_wrapper {
     padding: 16px;
   }
 
   .camp__description {
     margin-inline: 10px;
+    font-size: 12px;
+  }
+
+  .camps_navigation {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    grid-template-columns: 130px 130px;
   }
 }
 

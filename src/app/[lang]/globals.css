@@ -29,8 +29,6 @@ html {
   margin-inline: auto;
 }
 
-
-
 .gradient-main {
   height: 395px;
   width: 100%;
@@ -70,8 +68,6 @@ html {
   background-color: transparent !important;
 }
 
-
-
 @media (max-width: 471px) {
   .custom__container {
     padding-inline: 0px !important;
@@ -80,17 +76,16 @@ html {
 
 @media (max-width: 500px) {
   .main {
-    background-position: -730px -40px;
+    background-position: -680px -30px;
     background-size: 398%;
   }
-  
+
   .gradient-main {
     height: 529px;
     bottom: -290px;
     background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 40.29%);
   }
 }
-
 
 /* .yottie-widget-feed-section-slide {
   width: 100% !important;
@@ -192,6 +187,12 @@ body {
   background-size: cover !important;
   width: 300px !important;
   height: 300px !important;
+}
+
+@media (max-width: 500px) {
+  .swiper-slide {
+    height: auto !important;
+  }
 }
 
 .swiper-slide img {

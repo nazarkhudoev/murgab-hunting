@@ -10,6 +10,8 @@
     flex-direction: column;
     padding-inline: 16px;
     gap: 0px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .footer__container > div {
@@ -27,10 +29,10 @@
   }
 
   .footer__links-container-1 {
-    margin-top: 20px;
+    margin-top: 50px;
   }
   .footer__links-container-2 {
     margin-top: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
   }
 }

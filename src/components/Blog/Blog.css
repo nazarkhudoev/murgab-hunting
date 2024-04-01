@@ -2,4 +2,8 @@
   #blog {
     margin-top: 100px;
   }
+
+  .blog__title {
+    margin-bottom: 50px;
+  }
 }

@@ -27,7 +27,7 @@
   .flex-container-1 {
     margin-top: 20px;
   }
-  
+
   .expedition-wrapper {
     display: block;
   }
@@ -54,5 +54,22 @@
   #essentials {
     margin-top: 100px;
     margin-bottom: 100px;
+  }
+
+  #essentials > div > h3 {
+    font-size: 21px;
+  }
+
+  .expedition__description-text {
+    margin-inline: 16px;
+    text-align: justify;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 12px;
+  }
+
+  .expedition__main-title {
+    font-size: 12px;
+    font-weight: bold;
   }
 }

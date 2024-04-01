@@ -16,5 +16,15 @@
   .mission-container {
     padding-inline: 16px;
     margin-inline: 16px;
+    height: 250px;
+    width: 335px;
+  }
+
+  .mission__text-container {
+    position: relative;
+    top: 220px;
+    right: 10px;
+    text-align: justify;
+    width: 320px;
   }
 }

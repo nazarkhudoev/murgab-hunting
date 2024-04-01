@@ -15,8 +15,8 @@ export default function Mission() {
           priority={true}
         />
       </div> */}
-      <div className="max-w-full  text-white">
-        <p className="font-extralight mb-11">
+      <div className="max-w-full text-white">
+        <p className="font-extralight mb-11 mission__text-container">
           {`Murgab Hunting's mission is to offer ethical and sustainable
                   hunting experiences in Tajikistan's Pamir Mountains, focusing on
                   conservation, community engagement, and the preservation of

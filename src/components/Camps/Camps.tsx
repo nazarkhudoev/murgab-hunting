@@ -49,7 +49,7 @@ export default function Camps() {
       id="camp"
       className="w-[1200px] max-w-full mx-auto text-white py-6 px-5"
     >
-      <h3 className="text-center mb-[50px] text-2xl tracking-[1.5px]">
+      <h3 className="text-center font-medium mb-[50px] text-2xl tracking-[1.5px]">
         HOT SPRINGS CAMP
       </h3>
       <p className="font-thin text-justify mx-10 camp__description">
@@ -63,7 +63,7 @@ export default function Camps() {
         echoing the natural hospitality of Murgab's landscapes.`}
       </p>
       <div className="bg-[#332B18] rounded-[15px] p-[40px] mt-[50px] camp_wrapper">
-        <div className="flex items-center flex-wrap gap-7 mb-7 text-[#8E7E57] camps_navigation text-sm font-light">
+        <div className="flex items-center flex-wrap gap-7 mb-7 text-[#8E7E57] camps_navigation text-sm font-semibold">
           <button
             className={`${currentSlide == 0 && "active-tab text-white"}`}
             onClick={() => {

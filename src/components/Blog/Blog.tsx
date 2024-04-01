@@ -3,7 +3,7 @@ import "./Blog.css";
 export default function Blog() {
   return (
     <section className="mt-[200px]" id="blog">
-      <h3 className="text-center text-white text-2xl font-semibold mb-[100px] uppercase tracking-[1.5px]">
+      <h3 className="text-center text-white text-2xl font-semibold mb-[100px] uppercase tracking-[1.5px] blog__title">
         Blog
       </h3>
       <div

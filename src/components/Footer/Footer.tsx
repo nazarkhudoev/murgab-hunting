@@ -45,7 +45,7 @@ const Footer = () => {
           </Link>
           <Link
             className="bg-white flex items-center justify-center w-7 h-7 p-1 rounded-full"
-            href={"/"}
+            href={"https://www.instagram.com/murgabhunting/"}
           >
             <Image src={InstagramIcon} alt="" />
           </Link>
