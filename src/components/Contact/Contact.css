@@ -46,3 +46,93 @@
     padding-inline: 15px;
   }
 }
+
+#ibex-page .contact-section {
+  min-height: 700px;
+  /* max-width: 1690px; */
+  width: 1400px;
+  max-width: 100%;
+  margin: auto;
+  /* background-image: url(../../assets/main-bg.png); */
+  background-image: url(../../assets/Wolf/Wolf.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-inline: 85px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: 200px;
+}
+
+#marco-polo-page .contact-section {
+  min-height: 700px;
+  /* max-width: 1690px; */
+  width: 1400px;
+  max-width: 100%;
+  margin: auto;
+  /* background-image: url(../../assets/main-bg.png); */
+  background-image: url(../../assets/Yak/Yak.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-inline: 85px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: 200px;
+}
+
+#yak-page .contact-section {
+  min-height: 700px;
+  /* max-width: 1690px; */
+  width: 1400px;
+  max-width: 100%;
+  margin: auto;
+  /* background-image: url(../../assets/main-bg.png); */
+  background-image: url(../../assets/Marco_polo_argali_on_Pamir_Mountain.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-inline: 85px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: 200px;
+}
+
+#brukey-page .contact-section {
+  min-height: 700px;
+  /* max-width: 1690px; */
+  width: 1400px;
+  max-width: 100%;
+  margin: auto;
+  /* background-image: url(../../assets/main-bg.png); */
+  background-image: url(../../assets/contact.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-inline: 85px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: 200px;
+}
+
+#wolf-page .contact-section {
+  min-height: 700px;
+  /* max-width: 1690px; */
+  width: 1400px;
+  max-width: 100%;
+  margin: auto;
+  /* background-image: url(../../assets/main-bg.png); */
+  background-image: url(../../assets/Argali-Brukey_WEB.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-inline: 85px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  position: relative;
+  margin-top: 200px;
+}

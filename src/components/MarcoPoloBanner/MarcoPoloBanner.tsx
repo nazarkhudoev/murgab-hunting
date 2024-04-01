@@ -10,28 +10,28 @@ export default function MarcoPoloBanner() {
         Argali
       </h1>
       <div className="flex items-start flex-wrap gap-10 relative z-[99] animal_statistics">
-        <div className="text-[#8E7E57] mt-[160px]">
-          <h3 className="text-[31px] font-bold"> +27k</h3>
+        <div className="text-[#8E7E57] mt-[160px] relative z-[99]">
+          <h3 className="text-[51px] font-bold"> +27k</h3>
           <p className="mt-2">Total Number</p>
         </div>
-        <div className="text-[#8E7E57] mt-[160px]">
-          <h3 className="text-[31px] font-bold">+2k</h3>
+        <div className="text-[#8E7E57] mt-[160px] relative z-[99]">
+          <h3 className="text-[51px] font-bold">+2k</h3>
           <p className="mt-2">Trophies</p>
         </div>
-        <div className="text-[#8E7E57] mt-[160px]">
-          <h3 className="text-[31px] font-bold">5 k (20%)</h3>
+        <div className="text-[#8E7E57] mt-[160px] relative z-[99]">
+          <h3 className="text-[51px] font-bold">5 k (20%)</h3>
           <p className="mt-2">Young Animals (0-3)</p>
         </div>
-        <div className="text-[#8E7E57] mt-[160px]">
-          <h3 className="text-[31px] font-bold">3 k (11%)</h3>
+        <div className="text-[#8E7E57] mt-[160px] relative z-[99]">
+          <h3 className="text-[51px] font-bold">3 k (11%)</h3>
           <p className="mt-2">Adult Males ({">"}3)</p>
         </div>
-        <div className="text-[#8E7E57] mt-[160px]">
-          <h3 className="text-[31px] font-bold">3 k (11%)</h3>
+        <div className="text-[#8E7E57] mt-[160px] relative z-[99]">
+          <h3 className="text-[51px] font-bold">3 k (11%)</h3>
           <p className="mt-2">Adult Males ({">"}3)</p>
         </div>
-        <div className="text-[#8E7E57] mt-[160px]">
-          <h3 className="text-[31px] font-bold">7 k (23.9%)</h3>
+        <div className="text-[#8E7E57] mt-[160px] relative z-[99]">
+          <h3 className="text-[51px] font-bold">7 k (23.9%)</h3>
           <p className="mt-2">Adult Females ({">"}8)</p>
         </div>
       </div>

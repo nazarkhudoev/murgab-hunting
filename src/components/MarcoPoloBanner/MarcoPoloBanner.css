@@ -2,7 +2,11 @@
   min-height: 100vh;
   /* background-image: url(../../assets/image\ 10.png), */
   background-image: url(../../assets/Marco_polo_argali_on_Pamir_Mountain.webp),
-    linear-gradient(91deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
+    linear-gradient(
+      91deg,
+      rgba(0, 0, 0, 0.43) 100%,
+      rgba(217, 217, 217, 0) 100%
+    );
   background-blend-mode: multiply;
   background-size: cover;
   padding-top: 200px;
@@ -16,29 +20,72 @@
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
 }
 
+@media (max-width: 1467px) {
+  .animal_statistics {
+    display: grid;
+    grid-template-columns: repeat(3, 260px);
+    justify-items: start;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+    gap: 30px;
+    position: relative;
+    top: 100px;
+  }
+
+  .animal_statistics div {
+    margin-top: 0px;
+  }
+
+  .animal_statistics div p {
+    margin-top: 0;
+  }
+
+  .gradient-marcopolo {
+    height: 540px;
+    bottom: -190px;
+  }
+
+  #marcopolo-text-wrapper {
+    margin-top: 200px;
+  }
+}
+
 @media (max-width: 500px) {
+  .animal_statistics {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    justify-items: center;
+    gap: 15px;
+  }
+
+  .animal_statistics div > h3 {
+    font-size: 38px;
+  }
+
   .marcopolo__banner,
   #marcopolo-text-wrapper {
     padding-inline: 16px !important;
   }
 
   .marcopolo__banner {
-    background-position: -1170px -200px;
+    background-position: -900px -150px;
   }
 
   .marcopolo__banner h1:nth-child(1) {
     width: 180px;
     position: relative;
-    top: 150px;
+    top: 100px;
+    line-height: 60px;
   }
 
   .marcopolo__banner h1:nth-child(2) {
     position: relative;
-    top: 150px;
+    top: 90px;
   }
 
   .animal_statistics {
-    margin-top: 230px;
+    margin-top: 100px;
   }
 
   .animal_statistics > div {
@@ -54,6 +101,26 @@
   }
 
   .gradient-marcopolo {
-    height: 740px;
+    height: 1000px;
+    bottom: -250px;
+    /* background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%); */
+  }
+}
+
+@media (max-width: 450px) {
+  .marcopolo__banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .animal_statistics {
+    grid-template-columns: repeat(2, 150px);
+    align-self: center;
+  }
+
+  .animal_statistics div > h3 {
+    font-size: 28px;
   }
 }

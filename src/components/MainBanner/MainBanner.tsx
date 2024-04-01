@@ -6,7 +6,7 @@ const MainBanner = () => {
   return (
     <div className="relative main">
       <div className="custom__shadow"></div>
-      <div className="px-[85px] pt-[180px] max-w-full w-[1400px] mx-auto relative z-50 main__banner-home">
+      <div className="pt-[180px] w-[1200px] mx-auto relative z-50 main__banner-home">
         <h1 className="text-[80px] font-bold text-white uppercase">
           Join the Elite
         </h1>

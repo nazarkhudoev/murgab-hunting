@@ -13,19 +13,24 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import "./marco-polo.css";
+
 import { gallery } from "@/data/gallery";
 import Link from "next/link";
 import Image from "next/image";
+import Contact from "@/components/Contact/Contact";
 
 export default function MarcoPoloPage() {
   const filteredData = gallery.filter(
-    (item) => item.trophie_status === "marcopolo" || item.trophie_status === "ibex-marcopolo"
+    (item) =>
+      item.trophie_status === "marcopolo" ||
+      item.trophie_status === "ibex-marcopolo"
   );
   return (
-    <main>
+    <main id="marco-polo-page">
       <MarcoPoloBanner />
       <section id="marcopolo-text-wrapper" className="px-[85px] mt-10">
-        <p className="text-white font-extralight">
+        <p className="text-white font-extralight relative z-[99]">
           The Marco Polo sheep, Pamir mountain sheep or Pamir argali (Ovis ammon
           polii) is one of the subspecies of argali. Its range includes the
           south of the Kyrgyz Republic, a narrow strip in the western Xinjiang
@@ -47,6 +52,9 @@ export default function MarcoPoloPage() {
           large-scale population censuses of this species have been conducted in
           the country.
         </p>
+        <h3 className="text-white text-center text-[28px] font-medium uppercase mt-[150px]">
+          Gallery
+        </h3>
         <Fancybox
           options={{
             Carousel: {
@@ -72,12 +80,6 @@ export default function MarcoPoloPage() {
                     href={image.fullscreen_src}
                   >
                     <Image
-                      // width={100}
-                      // height={100}
-                      // style={{
-                      //   width: "200px",
-                      //   height: "200px",
-                      // }}
                       src={image.src}
                       alt=""
                       className="gallery_image-item rounded-lg"
@@ -89,6 +91,7 @@ export default function MarcoPoloPage() {
           </Swiper>
         </Fancybox>
       </section>
+      <Contact />
     </main>
   );
 }

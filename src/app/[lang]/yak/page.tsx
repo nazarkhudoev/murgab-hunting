@@ -20,11 +20,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 import YakBanner from "@/components/YakBanner/YakBanner";
+import Contact from "@/components/Contact/Contact";
 
 export default function YakPage() {
   const filteredData = gallery.filter((item) => item.trophie_status === "yak");
   return (
-    <main>
+    <main id="yak-page">
       <YakBanner />
       <section id="yak-text-wrapper" className="px-[85px] mt-10">
         <div className="yak__text-wrapper">
@@ -98,6 +99,7 @@ export default function YakPage() {
           </Swiper>
         </Fancybox>
       </section>
+      <Contact />
     </main>
   );
 }

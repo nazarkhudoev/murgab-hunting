@@ -21,11 +21,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 import WolfBanner from "@/components/WolfBanner/WolfBanner";
+import Contact from "@/components/Contact/Contact";
 
 export default function WolfPage() {
   const filteredData = gallery.filter((item) => item.trophie_status === "wolf");
   return (
-    <main>
+    <main id="wolf-page">
       <WolfBanner />
       <section id="wolf-text-wrapper" className="px-[85px] mt-10">
         <p className="text-white font-extralight wolf__text-container">
@@ -135,6 +136,7 @@ export default function WolfPage() {
           })}
         </Swiper> */}
       </section>
+      <Contact />
     </main>
   );
 }

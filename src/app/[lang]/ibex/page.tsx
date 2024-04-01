@@ -19,13 +19,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 import IbexBanner from "@/components/IbexBanner/IbexBanner";
+import Contact from "@/components/Contact/Contact";
 
 export default function IbexPage() {
   const filteredData = gallery.filter(
     (item) => item.trophie_status === "ibex" || item.trophie_status === "ibex-marcopolo"
   );
   return (
-    <main>
+    <main id="ibex-page">
       <IbexBanner />
       <section id="ibex-text-wrapper" className="px-[85px] mt-10">
         <p className="text-white font-extralight ibex_text">
@@ -95,6 +96,7 @@ export default function IbexPage() {
           </Swiper>
         </Fancybox>
       </section>
+      <Contact />
     </main>
   );
 }

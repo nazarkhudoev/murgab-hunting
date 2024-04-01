@@ -7,7 +7,7 @@ export default function IbexBanner() {
         ibex
       </h1>
       <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] relative z-[93]">
-        siberian
+        pamirian
       </h1>
       <div className="flex items-center gap-10 relative z-[99] ibex_statistics">
         <div className="text-[#8E7E57] mt-[160px]">

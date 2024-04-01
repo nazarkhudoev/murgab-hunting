@@ -3,7 +3,7 @@ import Contact from "@/components/Contact/Contact";
 
 export default function ArgaliBrukeyPage() {
   return (
-    <main>
+    <main id="brukey-page">
       <ArgaliBrukeyBanner />
       <section id="argali-brukey-text-wrapper" className="px-[85px] mt-10">
         <p className="text-white font-extralight">
