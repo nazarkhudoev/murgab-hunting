@@ -17,7 +17,6 @@
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
 }
 
-
 @media (max-width: 500px) {
   .ibex__banner,
   #ibex-text-wrapper {
@@ -31,14 +30,15 @@
         rgba(0, 0, 0, 0.43) 150%,
         rgba(217, 217, 217, 0) 10%
       );
-    background-position: -710px -80px;
+    /* background-position: -710px -80px; */
+    background-position: -450px -30px;
   }
 
-  .ibex__banner > h1 {
+  .ibex__banner h1 {
     font-size: 50px !important;
   }
 
-  .ibex__banner > p {
+  .ibex__banner p {
     font-size: 19px !important;
   }
 
@@ -60,5 +60,13 @@
 
   .gradient-ibex {
     height: 540px;
+  }
+
+  .ibex_statistics div > h3 {
+    font-size: 28px;
+  }
+
+  #ibex-text-wrapper {
+    margin-top: 10rem;
   }
 }

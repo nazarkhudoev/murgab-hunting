@@ -53,8 +53,6 @@
 }
 
 @media (max-width: 500px) {
-  
-  
   .animal_statistics {
     display: grid;
     grid-template-columns: repeat(2, 200px);

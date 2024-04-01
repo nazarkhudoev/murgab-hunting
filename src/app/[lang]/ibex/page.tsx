@@ -14,6 +14,7 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./ibex.css"
+
 import { gallery } from "@/data/gallery";
 import Link from "next/link";
 import Image from "next/image";
