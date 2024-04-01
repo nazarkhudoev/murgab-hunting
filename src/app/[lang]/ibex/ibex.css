@@ -2,6 +2,10 @@
   .ibex_text {
     text-align: justify;
     position: relative;
-    bottom: 130px;
+    bottom: 100px;
+  }
+
+  #ibex-page .gallery__title {
+    margin-top: 0;
   }
 }
