@@ -1,5 +1,5 @@
 .marcopolo__banner {
-  min-height: 100vh;
+  min-height: 600px;
   /* background-image: url(../../assets/image\ 10.png), */
   background-image: url(../../assets/Marco_polo_argali_on_Pamir_Mountain.webp),
     linear-gradient(
@@ -9,13 +9,14 @@
     );
   background-blend-mode: multiply;
   background-size: cover;
+  background-position: center center;
   padding-top: 200px;
-  padding-inline: 85px;
+  /* padding-inline: 85px; */
   color: #fff;
 }
 
 .gradient-marcopolo {
-  height: 140px;
+  height: 400px;
   width: 100%;
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
 }
@@ -92,7 +93,7 @@
     margin-top: 20px;
   }
 
-  .marcopolo__banner > h1 {
+  .marcopolo__banner h1 {
     font-size: 50px !important;
   }
 
