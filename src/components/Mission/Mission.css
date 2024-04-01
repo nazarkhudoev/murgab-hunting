@@ -22,10 +22,11 @@
 
   .mission__text-container {
     position: relative;
-    top: 220px;
-    right: 10px;
+    top: 200px;
+    right: 16px;
     text-align: justify;
-    width: 340px;
-    max-width: 100%;
+    width: 320px;
+    /* border: 1px solid red; */
+    /* word-spacing: ; */
   }
 }
