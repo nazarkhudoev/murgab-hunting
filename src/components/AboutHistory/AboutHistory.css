@@ -17,4 +17,12 @@
   .history__text-image {
     height: 250px;
   }
+
+  .about-history-container {
+    gap: 30px;
+  }
+
+  .company__history-text {
+    line-height: normal;
+  }
 }

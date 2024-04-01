@@ -3,11 +3,11 @@ import "./Efforts.css";
 export default function Efforts() {
   return (
     <div className="w-[1200px] max-w-full mx-auto px-5 flex items-start justify-between gap-8 efforts__wrapper">
-      <div className="w-[360px] max-w-full mt-[80px]">
+      <div className="w-[360px] max-w-full mt-[100px] efforts__text-container">
         <h5 className="text-[#8E7E57] font-bold">
           Sustainable Hunting Practices
         </h5>
-        <p className="mt-3 text-white font-light">
+        <p className="mt-3 text-white font-light text-justify leading-[22px]">
           Our hunting expeditions are meticulously managed to ensure sustainable
           use of wildlife resources. By setting stringent quotas and adhering to
           strict hunting seasons, we help maintain healthy populations of Marco
@@ -16,11 +16,11 @@ export default function Efforts() {
           positively to wildlife management.
         </p>
       </div>
-      <div className="w-[360px] max-w-full mt-[80px]">
+      <div className="w-[360px] max-w-full mt-[100px] efforts__text-container">
         <h5 className="text-[#8E7E57] font-bold">
           Supporting Local Biodiversity
         </h5>
-        <p className="mt-3 text-white font-light">
+        <p className="mt-3 text-white font-light text-justify leading-[22px]">
           Our conservation efforts extend beyond hunting. We actively
           participate in wildlife monitoring and habitat conservation
           initiatives. The fees generated from hunting expeditions are
@@ -28,9 +28,9 @@ export default function Efforts() {
           restoration, anti-poaching measures, and wildlife research.
         </p>
       </div>
-      <div className="w-[360px] max-w-full mt-[80px]">
+      <div className="w-[360px] max-w-full mt-[100px] efforts__text-container">
         <h5 className="text-[#8E7E57] font-bold">Community Involvement</h5>
-        <p className="mt-3 text-white font-light">
+        <p className="mt-3 text-white font-light text-justify leading-[22px]">
           We recognize the crucial role local communities play in conservation.
           A significant portion of our revenue is channeled back into local
           communities, supporting not only conservation projects but also

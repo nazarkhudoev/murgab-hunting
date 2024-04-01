@@ -5,3 +5,21 @@
     align-items: center;
   }
 }
+
+@media (max-width: 500px) {
+  .efforts__text-container {
+    margin-top: 30px;
+  }
+
+  .efforts__text-container h5 {
+    text-align: center;
+  }
+  
+  .efforts__text-container h5 {
+    text-align: center;
+  }
+
+  .efforts__wrapper {
+    gap: 0;
+  }
+}
