@@ -50,4 +50,9 @@
   .expedition-wrapper {
     padding-inline: 16px;
   }
+
+  #essentials {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 }

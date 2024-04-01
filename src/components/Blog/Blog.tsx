@@ -1,3 +1,5 @@
+import "./Blog.css";
+
 export default function Blog() {
   return (
     <section className="mt-[200px]" id="blog">

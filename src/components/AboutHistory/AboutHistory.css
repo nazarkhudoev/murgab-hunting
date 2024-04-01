@@ -9,6 +9,9 @@
 @media (max-width: 576px) {
   #history {
     padding-inline: 16px;
+    position: relative;
+    z-index: 99;
+    padding-top: 0;
   }
 
   .history__text-image {

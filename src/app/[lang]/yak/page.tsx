@@ -13,7 +13,7 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "./yak.css"
+import "./yak.css";
 
 import { gallery } from "@/data/gallery";
 import Link from "next/link";
@@ -28,7 +28,7 @@ export default function YakPage() {
       <YakBanner />
       <section id="yak-text-wrapper" className="px-[85px] mt-10">
         <div className="yak__text-wrapper">
-          <p className="text-white font-extralight">
+          <p className="text-white font-extralight text-justify">
             Hunting yaks in the Pamir Mountains is a unique and thrilling
             adventure. The Pamir region, nestled in the highlands of Central
             Asia, is home to some of the largest and most majestic yaks in the
@@ -38,7 +38,7 @@ export default function YakPage() {
             create an environment where the hardy yaks thrive, adapted to the
             harsh climatic conditions and high altitudes.
           </p>
-          <p className="text-white font-extralight mt-5">
+          <p className="text-white font-extralight mt-5 text-justify">
             The experience of tracking these magnificent beasts is not just
             about the hunt itself; it&apos;s a journey through a rich tapestry
             of cultural heritage and natural wonders. As hunters traverse the
@@ -48,7 +48,7 @@ export default function YakPage() {
             of the mountains and the life that inhabits them, often serving as
             guides and sharing their invaluable knowledge.
           </p>
-          <p className="text-white font-extralight mt-5">
+          <p className="text-white font-extralight mt-5 text-justify">
             Participating in a yak hunt in the Pamir Mountains is also an
             opportunity to contribute to the conservation efforts in the region.
             Sustainable hunting practices help maintain the balance of the

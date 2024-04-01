@@ -55,3 +55,9 @@
 #gallerySection .swiper .swiper-slide{
   margin-right: 20px !important;
 }
+
+@media (max-width: 500px) {
+  #gallerySection {
+    margin-top: 100px;
+  }
+}

@@ -18,7 +18,7 @@ export default function AboutHistory() {
           />
         </div>
         <div className="w-[730px] max-w-full">
-          <p className="font-light">
+          <p className="font-light text-justify">
             Founded in 1989 by the visionaries Atobek Bekmurodov and Bekmurodi
             Zafar, our company has grown from a passionate team of former
             athletes, tourists, geologists, and professional hunters to a
@@ -29,12 +29,12 @@ export default function AboutHistory() {
             marked by dedication and expertise, has set a standard in the
             industry.
           </p>
-          <p className="mt-6 font-light">
+          <p className="mt-6 font-light text-justify">
             With a rich legacy spearheaded by our founders, we cater to the
             discerning hunter seeking not just a hunt, but an expedition—a story
             to be told for generations.
           </p>
-          <p className="mt-6 font-light">
+          <p className="mt-6 font-light text-justify">
             Murgab Hunting is not just about the pursuit of game; it’s about
             embracing the rugged beauty of the Pamirs, the thrill of the chase,
             and the preservation of hunting traditions. We invite you to join

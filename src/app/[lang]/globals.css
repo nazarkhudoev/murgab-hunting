@@ -85,8 +85,8 @@ html {
   }
   
   .gradient-main {
-    height: 429px;
-    bottom: -250px;
+    height: 529px;
+    bottom: -290px;
     background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 40.29%);
   }
 }
