@@ -54,6 +54,9 @@ export default function IbexPage() {
           &quot;belt,&quot; a dark stripe along the spine, is clearly visible on
           the back.
         </p>
+        <h3 className="text-white text-center text-[28px] font-medium uppercase mt-[100px] gallery__title">
+          Gallery
+        </h3>
         <Fancybox
           options={{
             Carousel: {

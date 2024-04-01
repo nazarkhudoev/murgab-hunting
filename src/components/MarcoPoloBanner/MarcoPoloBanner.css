@@ -53,11 +53,14 @@
 }
 
 @media (max-width: 500px) {
+  
+  
   .animal_statistics {
     display: grid;
     grid-template-columns: repeat(2, 200px);
     justify-items: center;
     gap: 25px;
+    align-self: center;
   }
 
   .animal_statistics div > h3 {
