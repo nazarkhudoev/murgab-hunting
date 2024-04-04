@@ -7,7 +7,7 @@ export default function WolfBanner() {
         <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px]">
           Wolf
         </h1>
-        <div className="text-[#8E7E57] mt-[160px] relative z-[999]">
+        <div className="text-[#8E7E57] mt-[160px] relative z-[999] wold-info">
           <h3 className="text-5xl font-semibold">5,000</h3>
           <p className="mt-2">Total Number</p>
         </div>

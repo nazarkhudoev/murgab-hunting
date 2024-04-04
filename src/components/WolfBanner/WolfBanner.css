@@ -23,6 +23,10 @@
     padding-inline: 16px !important;
   }
 
+  #wolf-text-wrapper {
+    margin-top: 9.5rem;
+  }
+
   .wolf__banner {
     background-image: url(../../assets/Wolf/Wolf.webp),
       linear-gradient(
@@ -30,8 +34,12 @@
         rgba(0, 0, 0, 0.43) 150%,
         rgba(217, 217, 217, 0) 10%
       );
-    background-position: -630px -100px;
+    background-position: -530px -40px;
     background-size: cover;
+  }
+
+  .wold-info {
+    margin-top: 110px;
   }
 
   .wolf__banner h1 {
@@ -49,5 +57,9 @@
     background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 40.29%);
     height: 478px;
     bottom: -7px;
+  }
+
+  #wolf-page .gallery__title {
+    margin-top: 0;
   }
 }
