@@ -28,7 +28,7 @@ export default function YakPage() {
     <main id="yak-page">
       <YakBanner />
       <section id="yak-text-wrapper" className="px-[85px] mt-10">
-        <div className="yak__text-wrapper">
+        <div className="yak__text-wrapper relative bottom-[120px]">
           <p className="text-white font-extralight text-justify">
             Hunting yaks in the Pamir Mountains is a unique and thrilling
             adventure. The Pamir region, nestled in the highlands of Central
@@ -57,47 +57,52 @@ export default function YakPage() {
             natural beauty of the Pamirs is preserved for future generations.
           </p>
         </div>
-        <Fancybox
-          options={{
-            Carousel: {
-              infinite: false,
-            },
-          }}
-        >
-          <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            pagination={{
-              clickable: true,
+        <div className="gallery__section-yak">
+          <h3 className="text-white text-center text-[28px] font-medium uppercase mt-[70px] gallery__title">
+            Gallery
+          </h3>
+          <Fancybox
+            options={{
+              Carousel: {
+                infinite: false,
+              },
             }}
-            modules={[Pagination]}
-            className="mySwiper"
           >
-            {filteredData.map((image) => {
-              return (
-                <SwiperSlide key={image.id}>
-                  <Link
-                    className="gallery_link-item"
-                    data-fancybox="gallery"
-                    href={image.fullscreen_src}
-                  >
-                    <Image
-                      // width={100}
-                      // height={100}
-                      // style={{
-                      //   width: "200px",
-                      //   height: "200px",
-                      // }}
-                      src={image.src}
-                      alt=""
-                      className="gallery_image-item rounded-lg"
-                    />
-                  </Link>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        </Fancybox>
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              {filteredData.map((image) => {
+                return (
+                  <SwiperSlide key={image.id}>
+                    <Link
+                      className="gallery_link-item"
+                      data-fancybox="gallery"
+                      href={image.fullscreen_src}
+                    >
+                      <Image
+                        // width={100}
+                        // height={100}
+                        // style={{
+                        //   width: "200px",
+                        //   height: "200px",
+                        // }}
+                        src={image.src}
+                        alt=""
+                        className="gallery_image-item rounded-lg"
+                      />
+                    </Link>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </Fancybox>
+        </div>
       </section>
       <Contact />
     </main>

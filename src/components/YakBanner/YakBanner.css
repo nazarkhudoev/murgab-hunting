@@ -4,14 +4,15 @@
   background-image: url(../../assets/Yak/Yak.webp),
     linear-gradient(91deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
   background-blend-mode: multiply;
-  background-size: cover;
+  background-size: 110%;
+  background-position: -130px top;
   padding-top: 200px;
   padding-inline: 85px;
   color: #fff;
 }
 
 .gradient-yak {
-  height: 140px;
+  height: 240px;
   width: 100%;
   background: linear-gradient(180deg, rgba(36, 31, 19, 0) 0%, #241f13 60.29%);
 }
@@ -22,8 +23,14 @@
     padding-inline: 16px !important;
   }
 
+  #yak-text-wrapper {
+    position: relative;
+    bottom: 100px !important;
+  }
+
   .yak__banner {
-    background-position: -730px -90px;
+    background-position: -760px -90px;
+    background-size: cover;
     background-image: url(../../assets/Yak/Yak.webp),
       linear-gradient(
         91deg,
@@ -44,5 +51,14 @@
 
   .yak__banner > p {
     font-size: 19px !important;
+  }
+
+  #yak-page .gallery__title {
+    margin-top: 0 !important;
+  }
+
+  .gallery__section-yak {
+    position: relative;
+    bottom: 90px;
   }
 }
