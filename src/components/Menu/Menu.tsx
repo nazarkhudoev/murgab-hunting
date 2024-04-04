@@ -129,9 +129,14 @@ export default function Menu() {
                 Yak
               </Link>
             </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
                 Wolf
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"#book"}>
+                Book
               </Link>
             </div>
           </>
@@ -161,9 +166,14 @@ export default function Menu() {
                 Yak
               </Link>
             </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
                 Wolf
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"#book"}>
+                Book
               </Link>
             </div>
           </>
@@ -193,9 +203,14 @@ export default function Menu() {
                 Yak
               </Link>
             </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
                 Wolf
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"#book"}>
+                Book
               </Link>
             </div>
           </>
@@ -225,9 +240,14 @@ export default function Menu() {
                 Yak
               </Link>
             </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
                 Wolf
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"#book"}>
+                Book
               </Link>
             </div>
           </>
@@ -257,9 +277,14 @@ export default function Menu() {
                 Yak
               </Link>
             </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
                 Wolf
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"#book"}>
+                Book
               </Link>
             </div>
           </>
