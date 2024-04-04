@@ -130,7 +130,7 @@ export default function Menu() {
               </Link>
             </div>
             <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
                 Wolf
               </Link>
             </div>
@@ -167,7 +167,7 @@ export default function Menu() {
               </Link>
             </div>
             <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
                 Wolf
               </Link>
             </div>
@@ -204,7 +204,7 @@ export default function Menu() {
               </Link>
             </div>
             <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
                 Wolf
               </Link>
             </div>
@@ -241,7 +241,7 @@ export default function Menu() {
               </Link>
             </div>
             <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
                 Wolf
               </Link>
             </div>
@@ -278,7 +278,7 @@ export default function Menu() {
               </Link>
             </div>
             <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/Wolf"}>
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
                 Wolf
               </Link>
             </div>
