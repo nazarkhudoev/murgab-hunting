@@ -26,7 +26,11 @@
   margin: 0 7px !important;
 }
 
-#wolf-page #trophies{
+#wolf-page #trophies,
+#marco-polo-page #trophies,
+#ibex-page #trophies,
+#brukey-page #trophies,
+#yak-page #trophies{
   margin-bottom: 150px;
 }
 
