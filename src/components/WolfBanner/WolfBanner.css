@@ -1,6 +1,5 @@
 .wolf__banner {
-  min-height: 100vh;
-  /* background-image: url(../../assets/image\ 10.png), */
+  min-height: 600px;
   background-image: url(../../assets/Wolf/Wolf.webp),
     linear-gradient(91deg, rgba(0, 0, 0, 0.43) 0%, rgba(217, 217, 217, 0) 100%);
   background-blend-mode: multiply;
@@ -35,14 +34,14 @@
     background-size: cover;
   }
 
-  .wolf__banner > h1 {
+  .wolf__banner h1 {
     font-size: 50px !important;
     margin-top: 150px;
     z-index: 99;
     position: relative;
   }
 
-  .wolf__banner > p {
+  .wolf__banner p {
     font-size: 19px !important;
   }
 

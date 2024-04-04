@@ -17,13 +17,18 @@
 }
 
 @media (max-width: 500px) {
+  .gradient-argali-brukey {
+    height: 500px;
+  }
+  
   .argali-brukey__banner,
   #argali-brukey-text-wrapper {
     padding-inline: 16px !important;
   }
 
   .argali-brukey__banner {
-    background-position: -800px top;
+    /* background-position: -800px top; */
+    background-position: -950px -40px;
   }
 
   .argali-brukey__banner > h1 {
@@ -42,5 +47,11 @@
 
   .argali-brukey__banner > p {
     font-size: 19px !important;
+  }
+
+  #argali-brukey-text-wrapper {
+    position: relative;
+    bottom: 200px;
+    text-align: justify;
   }
 }

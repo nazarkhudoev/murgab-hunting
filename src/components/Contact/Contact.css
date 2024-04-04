@@ -165,7 +165,7 @@
   padding-top: 50px;
   padding-bottom: 100px;
   position: relative;
-  margin-top: 200px;
+  /* margin-top: 200px; */
 }
 
 @media (max-width: 500px) {
@@ -175,3 +175,5 @@
     padding-bottom: 0 !important;
   }
 }
+
+

@@ -28,7 +28,7 @@ export default function WolfPage() {
   return (
     <main id="wolf-page">
       <WolfBanner />
-      <section id="wolf-text-wrapper" className="px-[85px] mt-10">
+      <section id="wolf-text-wrapper" className="w-[1200px] max-w-full mx-auto mt-10">
         <p className="text-white font-extralight wolf__text-container">
           Wolf hunting in the Pamirs is a complex and dangerous type of hunting
           that requires a high level of preparation and skill from the hunter.
@@ -61,6 +61,9 @@ export default function WolfPage() {
           can also be very rewarding. Trophies from wolf hunting, such as the
           pelt and head, are highly prized by hunters around the world.
         </p>
+        <h3 className="text-white text-center text-[28px] font-medium uppercase mt-[100px] gallery__title relative">
+          Gallery
+        </h3>
         <Fancybox
           options={{
             Carousel: {

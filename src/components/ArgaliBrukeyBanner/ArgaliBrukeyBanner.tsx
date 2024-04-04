@@ -3,10 +3,10 @@ import "./ArgaliBrukeyBanner.css";
 export default function ArgaliBrukeyBanner() {
   return (
     <div className="pt-[200px] pb-14 px-[85px] relative argali-brukey__banner">
-      <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px]">
+      <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] z-[99]">
         Argali
       </h1>
-      <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px]">
+      <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] z-[99]">
         Brukey
       </h1>
       {/* <div className="flex items-center gap-10">

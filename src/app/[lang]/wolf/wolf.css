@@ -9,6 +9,7 @@
     /* padding-inline: 16px !important; */
     position: relative;
     z-index: 999;
+    margin-top: 7.5rem;
   }
 
   .wolf__text-container {

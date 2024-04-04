@@ -1,7 +1,32 @@
+"use client";
 import ArgaliBrukeyBanner from "@/components/ArgaliBrukeyBanner/ArgaliBrukeyBanner";
 import Contact from "@/components/Contact/Contact";
 
+import { gallery } from "@/data/gallery";
+
+
+import Fancybox from "@/components/Fancybox/Fancybox";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+import Link from "next/link";
+import Image from "next/image";
+
 export default function ArgaliBrukeyPage() {
+  const filteredData = gallery.filter(
+    (item) =>
+      item.trophie_status === "marcopolo" ||
+      item.trophie_status === "ibex-marcopolo"
+  );
   return (
     <main id="brukey-page">
       <ArgaliBrukeyBanner />
@@ -25,6 +50,44 @@ export default function ArgaliBrukeyPage() {
           presence symbolizes the resilience and adaptability of wildlife in the
           face of ever-changing environments.
         </p>
+        <h3 className="text-white text-center text-[28px] font-medium uppercase mt-[150px] gallery__title">
+          Gallery
+        </h3>
+        <Fancybox
+          options={{
+            Carousel: {
+              infinite: false,
+            },
+          }}
+        >
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper"
+          >
+            {filteredData.map((image) => {
+              return (
+                <SwiperSlide key={image.id}>
+                  <Link
+                    className="gallery_link-item"
+                    data-fancybox="gallery"
+                    href={image.fullscreen_src}
+                  >
+                    <Image
+                      src={image.src}
+                      alt=""
+                      className="gallery_image-item rounded-lg"
+                    />
+                  </Link>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </Fancybox>
       </section>
       <section>
         <Contact />
