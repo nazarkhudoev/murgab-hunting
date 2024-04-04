@@ -3,6 +3,7 @@ import "./Menu.css";
 import { useState } from "react";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Menu() {
   const [isActive, setIsActive] = useState(false);
@@ -100,6 +101,166 @@ export default function Menu() {
               <a onClick={() => setIsActive(false)} href={"#book"}>
                 Book
               </a>
+            </div>
+          </>
+        )}
+        {pathname == "/en/marco-polo" && (
+          <>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
+                Marco Polo
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
+                Ibex Pamirian
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsActive(false)}
+                href={"/en/argali-brukey"}
+              >
+                Argali Brukey
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
+                Yak
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+                Wolf
+              </Link>
+            </div>
+          </>
+        )}
+        {pathname == "/en/ibex" && (
+          <>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
+                Marco Polo
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
+                Ibex Pamirian
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsActive(false)}
+                href={"/en/argali-brukey"}
+              >
+                Argali Brukey
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
+                Yak
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+                Wolf
+              </Link>
+            </div>
+          </>
+        )}
+        {pathname == "/en/argali-brukey" && (
+          <>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
+                Marco Polo
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
+                Ibex Pamirian
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsActive(false)}
+                href={"/en/argali-brukey"}
+              >
+                Argali Brukey
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
+                Yak
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+                Wolf
+              </Link>
+            </div>
+          </>
+        )}
+        {pathname == "/en/wolf" && (
+          <>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
+                Marco Polo
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
+                Ibex Pamirian
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsActive(false)}
+                href={"/en/argali-brukey"}
+              >
+                Argali Brukey
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
+                Yak
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+                Wolf
+              </Link>
+            </div>
+          </>
+        )}
+        {pathname == "/en/yak" && (
+          <>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
+                Marco Polo
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
+                Ibex Pamirian
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link
+                onClick={() => setIsActive(false)}
+                href={"/en/argali-brukey"}
+              >
+                Argali Brukey
+              </Link>
+            </div>
+            <div className="flex items-center gap-1">
+              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
+                Yak
+              </Link>
+            </div>
+            <div className="flex items-center gap-1 book__link">
+              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
+                Wolf
+              </Link>
             </div>
           </>
         )}

@@ -83,10 +83,121 @@ export default function NavbarLinks() {
     },
   ];
 
+  const animalLinks: ILink[] = [
+    {
+      id: "#marco-polo",
+      value: "Marco Polo",
+      path: "/marco-polo",
+    },
+    {
+      id: "#ibex",
+      value: "Ibex Pamirian",
+      path: "/ibex",
+    },
+    {
+      id: "#argali-brukey",
+      value: "Argali Brukey",
+      path: "/argali-brukey",
+    },
+    {
+      id: "#yak",
+      value: "Yak",
+      path: "/yak",
+    },
+    {
+      id: "#wolf",
+      value: "Wolf",
+      path: "/wolf",
+    },
+  ];
+
   return (
     <nav className={`${styles.navbar}`}>
       <ul className={`flex items-center gap-[38px] ${styles.navbarList}`}>
-        {pathname != "/en/about-us"
+        {pathname === "/en/about-us"
+          ? aboutLinks.map((link) => {
+              return (
+                <li key={link.id}>
+                  <a
+                    className="capitalize text-sm text-white"
+                    // href={`${link.path}/${lang}`}
+                    href={`${link.id}`}
+                  >
+                    {link.value}
+                  </a>
+                </li>
+              );
+            })
+          : pathname === "/en/yak"
+          ? animalLinks.map((link) => {
+              return (
+                <li key={link.id}>
+                  <Link
+                    className="capitalize text-sm text-white"
+                    // href={`${link.path}/${lang}`}
+                    href={`${link.path}`}
+                  >
+                    {link.value}
+                  </Link>
+                </li>
+              );
+            })
+          : pathname === "/en/marco-polo"
+          ? animalLinks.map((link) => {
+              return (
+                <li key={link.id}>
+                  <Link
+                    className="capitalize text-sm text-white"
+                    // href={`${link.path}/${lang}`}
+                    href={`${link.path}`}
+                  >
+                    {link.value}
+                  </Link>
+                </li>
+              );
+            })
+          : pathname === "/en/ibex"
+          ? animalLinks.map((link) => {
+              return (
+                <li key={link.id}>
+                  <Link
+                    className="capitalize text-sm text-white"
+                    // href={`${link.path}/${lang}`}
+                    href={`${link.path}`}
+                  >
+                    {link.value}
+                  </Link>
+                </li>
+              );
+            })
+          : pathname === "/en"
+          ? links.map((link) => {
+              return (
+                <li key={link.id}>
+                  <a
+                    className="capitalize text-sm text-white"
+                    // href={`${link.path}/${lang}`}
+                    href={`${link.id}`}
+                  >
+                    {link.value}
+                  </a>
+                </li>
+              );
+            })
+          : links.map((link) => {
+              return (
+                <li key={link.id}>
+                  <a
+                    className="capitalize text-sm text-white"
+                    // href={`${link.path}/${lang}`}
+                    href={`${link.id}`}
+                  >
+                    {link.value}
+                  </a>
+                </li>
+              );
+            })}
+        {/* {pathname != "/en/about-us"
           ? links.map((link) => {
               return (
                 <li key={link.id}>
@@ -112,7 +223,7 @@ export default function NavbarLinks() {
                   </a>
                 </li>
               );
-            })}
+            })} */}
       </ul>
     </nav>
   );
