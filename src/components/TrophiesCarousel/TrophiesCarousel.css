@@ -18,7 +18,17 @@
 #trophies-carousel .slick-slide {
   /* width: 570px; */
 }
+#marco-polo-page .slick-slide > div,
+#brukey-page .slick-slide > div,
+#ibex-page .slick-slide > div,
+#yak-page .slick-slide > div,
+#wolf-page .slick-slide > div {
+  margin: 0 7px !important;
+}
 
+#wolf-page #trophies{
+  margin-bottom: 150px;
+}
 
 @media (max-width: 940px) {
   .prev__button,

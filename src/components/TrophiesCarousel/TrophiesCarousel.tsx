@@ -10,7 +10,11 @@ import "slick-carousel/slick/slick.css";
 import "./TrophiesCarousel.css";
 import Link from "next/link";
 
-export default function TrophiesCarousel() {
+interface ITrophiesCarousel {
+  animalName: string;
+}
+
+export default function TrophiesCarousel({ animalName }: ITrophiesCarousel) {
   const settings = {
     dots: true,
     infinite: true,
@@ -34,6 +38,11 @@ export default function TrophiesCarousel() {
 
   const slider = useRef<any>(null);
 
+  const test_gallery = trophiesData.filter(
+    (animal: ITrophie) => animal.title !== animalName
+  );
+  // Marco-Polo
+
   return (
     <section
       id="trophies-carousel"
@@ -46,34 +55,92 @@ export default function TrophiesCarousel() {
         <Image src={PREV_ICON} alt="PREV_ICON" priority={true} />
       </button>
       <Slider ref={slider} {...settings} arrows={false}>
-        {trophiesData.map((person: ITrophie, index: number) => {
-          return (
-            <div
-              className="w-[150px] h-[350px] rounded-[20px] relative object-cover outline-none border border-[#8E7E57] trophie__card-item"
-              key={person.id}
-            >
-              <div className="trophie-gradient rounded-[20px]"></div>
-              <Image
-                className="rounded-[20px] absolute w-full h-full object-cover trophie__image outline-none"
-                src={person.image}
-                alt={person.title}
-                priority={true}
-              />
-              <h3 className="absolute bottom-10 left-8 text-white font-bold capitalize text-[28px] z-30">
-                {person.title}
-              </h3>
-              <Link
-                href={person.url}
-                className="absolute bottom-5 left-8 z-50 flex items-center gap-2"
+        {animalName === "All"
+          ? trophiesData.map((person: ITrophie, index: number) => {
+              return (
+                <div
+                  className="w-[150px] h-[350px] rounded-[20px] relative object-cover outline-none border border-[#8E7E57] trophie__card-item"
+                  key={person.id}
+                >
+                  <div className="trophie-gradient rounded-[20px]"></div>
+                  <Image
+                    className="rounded-[20px] absolute w-full h-full object-cover trophie__image outline-none"
+                    src={person.image}
+                    alt={person.title}
+                    priority={true}
+                  />
+                  <h3 className="absolute bottom-10 left-8 text-white font-bold capitalize text-[28px] z-30">
+                    {person.title}
+                  </h3>
+                  <Link
+                    href={person.url}
+                    className="absolute bottom-5 left-8 z-50 flex items-center gap-2"
+                  >
+                    <span className="uppercase font-bold text-[dodgerblue]">
+                      read more
+                    </span>
+                    <span className="text-[dodgerblue]">+</span>
+                  </Link>
+                </div>
+              );
+            })
+          : test_gallery.map((person: ITrophie, index: number) => {
+              return (
+                <div
+                  className="w-[150px] h-[350px] rounded-[20px] relative object-cover outline-none border border-[#8E7E57] trophie__card-item"
+                  key={person.id}
+                >
+                  <div className="trophie-gradient rounded-[20px]"></div>
+                  <Image
+                    className="rounded-[20px] absolute w-full h-full object-cover trophie__image outline-none"
+                    src={person.image}
+                    alt={person.title}
+                    priority={true}
+                  />
+                  <h3 className="absolute bottom-10 left-8 text-white font-bold capitalize text-[28px] z-30">
+                    {person.title}
+                  </h3>
+                  <Link
+                    href={person.url}
+                    className="absolute bottom-5 left-8 z-50 flex items-center gap-2"
+                  >
+                    <span className="uppercase font-bold text-[dodgerblue]">
+                      read more
+                    </span>
+                    <span className="text-[dodgerblue]">+</span>
+                  </Link>
+                </div>
+              );
+            })}
+        {/* {animalName === title &&
+          trophiesData.map((person: ITrophie, index: number) => {
+            return (
+              <div
+                className="w-[150px] h-[350px] rounded-[20px] relative object-cover outline-none border border-[#8E7E57] trophie__card-item"
+                key={person.id}
               >
-                <span className="uppercase font-bold text-[dodgerblue]">
-                  read more
-                </span>
-                <span className="text-[dodgerblue]">+</span>
-              </Link>
-            </div>
-          );
-        })}
+                <div className="trophie-gradient rounded-[20px]"></div>
+                <Image
+                  className="rounded-[20px] absolute w-full h-full object-cover trophie__image outline-none"
+                  src={person.image}
+                  alt={person.title}
+                  priority={true}
+                />
+                <h3 className="absolute bottom-10 left-8 text-white font-bold capitalize text-[28px] z-30">
+                  {person.title}
+                </h3>
+                <Link
+                  href={person.url}
+                  className="absolute bottom-5 left-8 z-50 flex items-center gap-2"
+                >
+                  <span className="uppercase font-bold text-[dodgerblue]">
+                    read more
+                  </span>
+                  <span className="text-[dodgerblue]">+</span>
+                </Link>
+              </div>
+            );
+          })} */}
       </Slider>
       <button
         className="absolute top-1/2 right-4 -translate-y-1/2 z-20 next__button"

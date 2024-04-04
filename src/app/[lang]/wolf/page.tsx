@@ -22,6 +22,7 @@ import Image from "next/image";
 
 import WolfBanner from "@/components/WolfBanner/WolfBanner";
 import Contact from "@/components/Contact/Contact";
+import Trophies from "@/components/Trophies/Trophies";
 
 export default function WolfPage() {
   const filteredData = gallery.filter((item) => item.trophie_status === "wolf");
@@ -105,6 +106,7 @@ export default function WolfPage() {
             })}
           </Swiper>
         </Fancybox>
+        <Trophies animalName="Wolf"/>
         {/* <Swiper
           slidesPerView={3}
           spaceBetween={30}

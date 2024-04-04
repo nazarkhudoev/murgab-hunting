@@ -19,6 +19,7 @@ import { gallery } from "@/data/gallery";
 import Link from "next/link";
 import Image from "next/image";
 import Contact from "@/components/Contact/Contact";
+import Trophies from "@/components/Trophies/Trophies";
 
 export default function MarcoPoloPage() {
   const filteredData = gallery.filter(
@@ -90,6 +91,7 @@ export default function MarcoPoloPage() {
             })}
           </Swiper>
         </Fancybox>
+        <Trophies animalName="Marco Polo Argali"/>
       </section>
       <Contact />
     </main>

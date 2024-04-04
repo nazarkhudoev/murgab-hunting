@@ -21,6 +21,7 @@ import Image from "next/image";
 
 import YakBanner from "@/components/YakBanner/YakBanner";
 import Contact from "@/components/Contact/Contact";
+import Trophies from "@/components/Trophies/Trophies";
 
 export default function YakPage() {
   const filteredData = gallery.filter((item) => item.trophie_status === "yak");
@@ -102,6 +103,7 @@ export default function YakPage() {
               })}
             </Swiper>
           </Fancybox>
+          <Trophies animalName="Yak"/>
         </div>
       </section>
       <Contact />

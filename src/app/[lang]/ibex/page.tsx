@@ -21,6 +21,7 @@ import Image from "next/image";
 
 import IbexBanner from "@/components/IbexBanner/IbexBanner";
 import Contact from "@/components/Contact/Contact";
+import Trophies from "@/components/Trophies/Trophies";
 
 export default function IbexPage() {
   const filteredData = gallery.filter(
@@ -99,6 +100,7 @@ export default function IbexPage() {
             })}
           </Swiper>
         </Fancybox>
+        <Trophies animalName="Ibex Pamirian"/>
       </section>
       <Contact />
     </main>

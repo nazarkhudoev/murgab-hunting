@@ -15,7 +15,7 @@ export default function Home() {
       <MainBanner />
       <Statistics />
       <Slider />
-      <Trophies />
+      <Trophies title="All"/>
       <Expedition />
       <Camps />
       <Gallery />

@@ -20,6 +20,7 @@ import "swiper/css/pagination";
 
 import Link from "next/link";
 import Image from "next/image";
+import Trophies from "@/components/Trophies/Trophies";
 
 export default function ArgaliBrukeyPage() {
   const filteredData = gallery.filter(
@@ -88,6 +89,7 @@ export default function ArgaliBrukeyPage() {
             })}
           </Swiper>
         </Fancybox>
+        <Trophies animalName="Argali Brukey"/>
       </section>
       <section>
         <Contact />
