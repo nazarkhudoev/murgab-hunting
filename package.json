@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "postbuild": "next-sitemap",
     "lint": "next lint"
   },
   "dependencies": {
@@ -13,6 +14,7 @@
     "@formatjs/intl-localematcher": "^0.5.2",
     "negotiator": "^0.6.3",
     "next": "14.0.4",
+    "next-sitemap": "^4.2.3",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.0.1",
