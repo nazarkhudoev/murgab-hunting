@@ -38,6 +38,8 @@ export async function generateMetadata({ params: { lang } }: Params): Promise<Me
         },
       ],
     },
+    robots:  "index, follow",
+    
   };
 }
 
