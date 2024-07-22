@@ -22,13 +22,23 @@ const roboto = Roboto({
 });
 
 export async function generateMetadata({ params: { lang } }: Params): Promise<Metadata> {
-
   return {
     title: "Murgab Hunting",
-    description: "Murgab Hunting",
-  }
-
-};
+    description: "Murgab Hunting offers the ultimate adventure in Tajikistan's remote wilderness (Pamir). Since 1989, we've specialized in bespoke sport hunting expeditions in the majestic Pamir Gornobadakhshan Autonomous Region.",
+    openGraph: {
+      title: "Murgab Hunting",
+      description: "Murgab Hunting offers unparalleled hunting adventures in Tajikistan's remote wilderness (Pamir). Founded in 1989, we provide bespoke expeditions in Pamir (the Gornobadakhshan Autonomous Region), led by a team of seasoned explorers and professional hunters.",
+      images: [
+        {
+          url: ogImage.src, // Replace with the actual URL of your image
+          width: 800,
+          height: 600,
+          alt: "Murgab Hunting",
+        },
+      ],
+    },
+  };
+}
 
 
 export async function generateStaticParams() {
@@ -44,14 +54,6 @@ export default function RootLayout({
 }) {
   return (
     <html className={roboto.className} lang={params.lang}>
-       <Head>
-        <title>Murgab Hunting</title>
-        <meta name="description" content="Murgab Hunting offers the ultimate adventure in Tajikistan's remote wilderness (Pamir). Since 1989, we've specialized in bespoke sport hunting expeditions in the majestic Pamir Gornobadakhshan Autonomous Region. " />
-        <meta property="og:title" content="Murgab Hunting" />
-        <meta property="og:description" content="Murgab Hunting offers unparalleled hunting adventures in Tajikistan's remote wilderness (Pamir). Founded in 1989, we provide bespoke expeditions in Pamir (the Gornobadakhshan Autonomous Region, led by a team of seasoned explorers and professional hunters.)" />
-        <meta property="og:image" content={ogImage.src} />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
       <body>
         <Header lang={params.lang} />
         {children}
