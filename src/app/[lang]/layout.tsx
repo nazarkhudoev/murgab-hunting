@@ -23,6 +23,7 @@ const roboto = Roboto({
 
 export async function generateMetadata({ params: { lang } }: Params): Promise<Metadata> {
   return {
+    metadataBase: new URL("https://www.murgabhunting.com"),
     title: "Murgab Hunting",
     description: "Murgab Hunting offers the ultimate adventure in Tajikistan's remote wilderness (Pamir). Since 1989, we've specialized in bespoke sport hunting expeditions in the majestic Pamir Gornobadakhshan Autonomous Region.",
     openGraph: {
