@@ -5,17 +5,14 @@ import MainBanner from "@/components/MainBanner/MainBanner";
 import Statistics from "@/components/Statistics/Statistics";
 import Trophies from "@/components/Trophies/Trophies";
 import Camps from "@/components/Camps/Camps";
-import Blog from "@/components/Blog/Blog";
-import Videos from "@/components/Videos/Videos";
+// import Blog from "@/components/Blog/Blog";
+// import Videos from "@/components/Videos/Videos";
 import Gallery from "@/components/Gallery/Gallery";
 import Head from "next/head";
 
 export default function Home() {
   return (
     <main>
-      <Head>
-        <meta name="robots" content="index, follow" />
-      </Head>
       <MainBanner />
       <Statistics />
       <Slider />
@@ -23,15 +20,15 @@ export default function Home() {
       <Expedition />
       <Camps />
       <Gallery />
-      <section className="w-[1290px] max-w-full mx-auto px-5 custom__container">
+      {/* <section className="w-[1290px] max-w-full mx-auto px-5 custom__container">
         <Videos />
         <Blog />
-      </section>
+      </section> */}
       <Contact />
-      <div
+      {/* <div
         className="elfsight-app-c96adae2-50f5-4276-998e-3b21d664dbe4"
         data-elfsight-app-lazy
-      ></div>
+      ></div> */}
     </main>
   );
 }
