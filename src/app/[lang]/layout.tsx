@@ -57,9 +57,6 @@ export default function RootLayout({
 }) {
   return (
     <html className={roboto.className} lang={params.lang}>
-      <Head>
-        <meta name="robots" content="index, follow" />
-      </Head>
       <body>
         <Header lang={params.lang} />
         {children}

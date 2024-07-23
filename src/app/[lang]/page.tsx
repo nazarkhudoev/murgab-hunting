@@ -8,14 +8,18 @@ import Camps from "@/components/Camps/Camps";
 import Blog from "@/components/Blog/Blog";
 import Videos from "@/components/Videos/Videos";
 import Gallery from "@/components/Gallery/Gallery";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <main>
+      <Head>
+        <meta name="robots" content="index, follow" />
+      </Head>
       <MainBanner />
       <Statistics />
       <Slider />
-      <Trophies animalName="All"/>
+      <Trophies animalName="All" />
       <Expedition />
       <Camps />
       <Gallery />
