@@ -16,10 +16,10 @@ export default function Contact() {
         </p>
 
 
-        {/* <div
+        <div
           className="elfsight-app-63fbac68-6b51-4102-ad1d-e2c4562b500f"
           data-elfsight-app-lazy
-        ></div> */}
+        ></div>
 
       </div>
       <div className="gradient absolute left-0 -bottom-[350px]"></div>
