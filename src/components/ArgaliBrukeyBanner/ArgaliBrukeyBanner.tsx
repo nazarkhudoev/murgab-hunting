@@ -5,8 +5,7 @@ export default function ArgaliBrukeyBanner() {
     <div className="pt-[200px] pb-14 px-[85px] relative argali-brukey__banner">
       <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] z-[99]">
         Argali
-      </h1>
-      <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] z-[99]">
+        <br />
         Brukey
       </h1>
       {/* <div className="flex items-center gap-10">

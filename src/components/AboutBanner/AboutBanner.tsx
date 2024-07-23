@@ -9,10 +9,7 @@ export default function AboutBanner() {
       <div className="about__banner">
         <div className="w-[1400px] max-w-full mx-auto about__text-container">
           <h1 className="text-6xl uppercase font-bold tracking-[1.5px]">
-            About
-          </h1>
-          <h1 className="text-6xl uppercase font-bold mt-2 tracking-[1.5px]">
-            Murgab
+            About Murgab Hunting
           </h1>
           <div className="mt-[140px] relative about__text z-[9999] flex items-center gap-[50px] about__banner-wrapper">
             <Image src={OldLogo} alt="OldLogo" width={161} height={160} className="" />

@@ -5,10 +5,9 @@ export default function IbexBanner() {
     <section className="pt-[200px] relative pb-14 px-[85px] ibex__banner">
       <section className="w-[1200px] mx-auto">
         <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] relative z-[93]">
-          ibex
-        </h1>
-        <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] relative z-[93]">
-          pamirian
+          Pamirian
+          <br />
+          Ibex
         </h1>
         <div className="flex items-center gap-10 relative z-[99] ibex_statistics">
           <div className="text-[#8E7E57] mt-[100px]">

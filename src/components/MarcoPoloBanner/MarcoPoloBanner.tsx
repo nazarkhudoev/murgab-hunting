@@ -4,12 +4,11 @@ export default function MarcoPoloBanner() {
   return (
     <div className="pt-[200px] pb-14 relative marcopolo__banner">
       <section className="w-[1200px] mx-auto">
-        <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] relative z-[89]">
-          Marco Polo
-        </h1>
-        <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] relative z-[89]">
+        <h1 className="flex-col text-white text-[80px] font-bold uppercase tracking-[2px] relative z-[89]">
+          Marco Polo <br/>
           Argali
         </h1>
+
         <div className="flex items-start flex-wrap gap-[40px] relative z-[99] animal_statistics">
           <div className="text-[#8E7E57] mt-[160px] relative z-[99]">
             <h3 className="text-[40px] font-bold"> +27k</h3>
