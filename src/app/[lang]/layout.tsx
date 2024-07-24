@@ -38,8 +38,8 @@ export async function generateMetadata({ params: { lang } }: Params): Promise<Me
         },
       ],
     },
-    robots:  "index, follow",
-    
+    robots: "index, follow",
+
   };
 }
 
@@ -57,6 +57,19 @@ export default function RootLayout({
 }) {
   return (
     <html className={roboto.className} lang={params.lang}>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "url": "https://www.murgabhunting.com",
+              "logo": "https://www.murgabhunting.com/logo.png"
+            })
+          }}
+        />
+      </Head>
       <body>
         <Header lang={params.lang} />
         {children}
