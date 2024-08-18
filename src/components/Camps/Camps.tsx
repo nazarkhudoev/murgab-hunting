@@ -55,7 +55,7 @@ export default function Camps() {
       className="w-[1200px] max-w-full mx-auto text-white py-6 px-5"
     >
       <h3 className="text-center font-medium mb-[50px] text-2xl tracking-[1.5px]">
-        {localeActive === "en" ? 'HOT SPRINGS CAMP' : 'Лагерь у горячих источников'}
+        {localeActive === "en" ? 'HOT SPRINGS CAMP' : 'HOT SPRINGS CAMP'}
       </h3>
       <p className="font-thin text-justify mx-10 camp__description">
         {localeActive === "en" ? `Perched amidst the high-altitude serenity of the Pamirs, the Hot Springs
