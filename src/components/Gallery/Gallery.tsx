@@ -126,7 +126,7 @@ export default function Gallery() {
               disableOnInteraction: false,
             }
             }
-            speed={1000}
+            speed={25000}
             scrollbar={{ draggable: true }}
           // className="mySwiper"
           >
