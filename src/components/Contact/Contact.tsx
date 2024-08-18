@@ -1,11 +1,12 @@
 // import Image from "next/image";
-import { useLocale } from "next-intl";
+'use client'
+import { useTranslation } from "react-i18next";
 import "./Contact.css";
 
 
 export default function Contact() {
-  const localeActive = useLocale();
-
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
   return (
     <section id="book" className="contact-section">
       <div className="contact-form-container">

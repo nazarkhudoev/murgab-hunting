@@ -1,9 +1,12 @@
-import { useLocale } from "next-intl";
+'use client'
+
 import "./IbexBanner.css";
+import { useTranslation } from "react-i18next";
 
 export default function IbexBanner() {
 
-  const localeActive = useLocale();
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
 
   return (
     <section className="pt-[200px] relative pb-14 px-[85px] ibex__banner">

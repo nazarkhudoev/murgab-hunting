@@ -1,12 +1,15 @@
+'use client'
 import Image from "next/image";
 import TabImage3 from "@/assets/images/tabs-images/Frame 1632 (2).png";
 
 import "./Conservation.css";
-import { useLocale } from "next-intl";
+import { useTranslation } from "react-i18next";
 
 export default function Conservation() {
 
-  const localeActive = useLocale();
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
+
 
   
   return (

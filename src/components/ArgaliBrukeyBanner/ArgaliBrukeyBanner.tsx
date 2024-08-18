@@ -1,8 +1,11 @@
-import { useLocale } from "next-intl";
+'use client'
+
 import "./ArgaliBrukeyBanner.css";
+import { useTranslation } from "react-i18next";
 
 export default function ArgaliBrukeyBanner() {
-  const localeActive = useLocale();
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
 
   return (
     <div className="pt-[200px] pb-14 px-[85px] relative argali-brukey__banner">

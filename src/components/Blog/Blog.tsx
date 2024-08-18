@@ -1,11 +1,11 @@
 
+'use client'
 import { useTranslation } from "react-i18next";
 import "./Blog.css";
-import { useLocale } from "next-intl";
 
 export default function Blog() {
-  const localeActive = useLocale();
-
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
 
   return (
     <section className="mt-[200px]" id="blog">

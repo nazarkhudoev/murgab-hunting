@@ -1,10 +1,11 @@
-import { useLocale } from "next-intl";
+'use client'
+import { useTranslation } from "react-i18next";
 import "./MarcoPoloBanner.css";
 
 export default function MarcoPoloBanner() {
 
-  const localeActive = useLocale();
-
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
 
   return (
     <div className="pt-[200px] pb-14 relative marcopolo__banner">
