@@ -23,47 +23,78 @@ import Image from "next/image";
 import WolfBanner from "@/components/WolfBanner/WolfBanner";
 import Contact from "@/components/Contact/Contact";
 import Trophies from "@/components/Trophies/Trophies";
+import { useLocale } from "next-intl";
 
 export default function WolfPage() {
+
+  const localeActive = useLocale();
+
+
   const filteredData = gallery.filter((item) => item.trophie_status === "wolf");
   return (
     <main id="wolf-page">
       <WolfBanner />
       <section id="wolf-text-wrapper" className="w-[1200px] max-w-full mx-auto mt-10">
         <p className="text-white font-extralight wolf__text-container">
-          Wolf hunting in the Pamirs is a complex and dangerous type of hunting
+          {
+            localeActive === 'en' ?
+              `Wolf hunting in the Pamirs is a complex and dangerous type of hunting
           that requires a high level of preparation and skill from the hunter.
           Wolves are intelligent and cautious animals that can become aggressive
           if they sense a threat. Wolf hunting in the Pamirs is usually
           conducted in the mountains, where wolves live in packs. Hunters must
           be in good physical condition to navigate the challenging mountain
           trails. They must also be armed with powerful weapons, such as a rifle
-          with a scope, to make an accurate shot.
+          with a scope, to make an accurate shot.`:
+              `Охота на волков в Памирских горах — это сложный и опасный вид охоты, который требует высокого уровня подготовки и мастерства от охотника. Волки — умные и осторожные животные, которые могут стать агрессивными, если почувствуют угрозу. Охота на волков в Памире обычно проводится в горах, где волки обитают в стаях. Охотники должны быть в хорошей физической форме, чтобы справляться с трудными горными тропами. Также необходимо иметь мощное оружие, такое как винтовка с прицелом, для точного выстрела.`
+          }
+
           <br />
           <br />
-          The hunt for wolves in the Pamirs typically begins with locating the
+          {
+            localeActive === 'en'?
+            `The hunt for wolves in the Pamirs typically begins with locating the
           pack. Hunters can use various methods to search, such as observing the
           mountains with binoculars or using tracking dogs. Once the pack is
           spotted, hunters must approach it carefully to avoid startling the
-          animals.
+          animals.`:
+            `Охота на волков в Памирских горах обычно начинается с поиска стаи. Охотники могут использовать различные методы для этого, такие как наблюдение за горами через бинокль или использование следовых собак. Как только стая обнаружена, охотники должны подойти к ней осторожно, чтобы не испугать животных.`
+          }
+          
           <br />
           <br />
-          When a hunter gets close to the pack, they must select a suitable
+          {
+            localeActive === 'en'?
+            `When a hunter gets close to the pack, they must select a suitable
           target. They should aim to shoot the animal in vital organs, such as
-          the heart or lungs, to ensure a quick and humane kill.
+          the heart or lungs, to ensure a quick and humane kill.`:
+            `Когда охотник приближается к стае, ему нужно выбрать подходящую цель. Следует прицелиться в жизненно важные органы, такие как сердце или лёгкие, чтобы обеспечить быстрый и гуманныи выстрел.`
+          }
+          
           <br />
           <br />
-          After the wolf is killed, the hunter must transport the carcass to a
+          {
+            localeActive === 'en'?
+            ` After the wolf is killed, the hunter must transport the carcass to a
           safe location. This can be challenging, as a wolfs carcass can weigh
-          up to 50 kilograms.
+          up to 50 kilograms.`:
+            `После того как волк убит, охотнику необходимо транспортировать тушу в безопасное место. Это может быть непросто, так как туша волка может весить до 50 килограммов.`
+          }
+         
           <br />
           <br />
-          Wolf hunting in the Pamirs is a complex and dangerous pursuit, but it
+          {
+            localeActive === 'en'?
+            `Wolf hunting in the Pamirs is a complex and dangerous pursuit, but it
           can also be very rewarding. Trophies from wolf hunting, such as the
-          pelt and head, are highly prized by hunters around the world.
+          pelt and head, are highly prized by hunters around the world.`:
+            `Охота на волков в Памирских горах — это сложное и опасное занятие, но оно также может быть очень вознаграждающим. Трофеи, полученные с охоты на волка, такие как шкура и голова, высоко ценятся охотниками по всему миру.`
+          }
+         
         </p>
         <h3 className="text-white text-center text-[28px] font-medium uppercase mt-[100px] gallery__title relative">
-          Gallery
+        {localeActive === 'en' ? 'Gallery' : 'Галерея'}
+
         </h3>
         <Fancybox
           options={{
@@ -106,7 +137,7 @@ export default function WolfPage() {
             })}
           </Swiper>
         </Fancybox>
-        <Trophies animalName="Wolf"/>
+        <Trophies animalName="Wolf" />
         {/* <Swiper
           slidesPerView={3}
           spaceBetween={30}

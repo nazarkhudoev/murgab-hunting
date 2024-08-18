@@ -1,3 +1,14 @@
 .yottie-widget-feed-section-inner .swiper-wrapper .swiper-slide {
   width: 100%  !important;
 }
+
+@media (max-width: 500px) {
+  #video {
+    margin-top: 100px;
+  }
+
+  #videoSectionContent{
+    padding: 0 40px!important;
+
+  }
+}

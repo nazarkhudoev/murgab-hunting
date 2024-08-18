@@ -1,0 +1,49 @@
+{
+  "units": {
+    "temperature": "fahrenheit"
+  },
+
+  "Layout": {
+    "metaData": {
+      "title": "Murgab Hunting",
+      "description": "Murgab Hunting предлагает вам уникальное приключение в отдалённой дикой природе Памира (Таджикистан). Охоната на Марко Поло, Охота на Аргали Брукей и памирский козерог. "
+    }
+  },
+  "Navlist": {
+    "about": "О нас",
+    "trophies": "Охотничьи трофеи",
+    "esseentials": "Охотничьи принадлежности",
+    "camp": "Лагерь",
+    "gallery": "Галерея",
+    "video": "Видео",
+    "blog": "Блог",
+    "book": "Забронировать"
+  },
+  "Aboutlist": {
+    "history": "История",
+    "founders": "Основатели",
+    "team": "Команда",
+    "conservation": "Охрана природы",
+    "book": "Забронировать"
+  },
+  "Header": {
+    "appTitle": "Next.js Weather",
+    "navLinks": {
+      "week": "This week",
+      "about": "About"
+    }
+  },
+  "Banner": {
+    "moto": "Присоединяйтесь к элите",
+    "action": "Забронируйте охоту на Марко Поло прямо сейчас!",
+    "book": "Забронировать",
+    "readmore": "Подробнее"
+  },
+
+  "Statistics": {
+    "species": "Доступные виды",
+    "initiatives": "Инициативы по охране природы",
+    "clients": "Довольные клиенты",
+    "land": "Территория"
+  }
+}

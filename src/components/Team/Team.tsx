@@ -10,8 +10,14 @@ import { teamData, ITeam } from "@/data/team";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { useLocale } from "next-intl";
+import { useTranslation } from "react-i18next";
 
 export default function Team() {
+
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
+
   const settings = {
     dots: true,
     infinite: true,
@@ -73,14 +79,14 @@ export default function Team() {
               <Image
                 className="rounded-lg absolute w-full h-full border-2 border-[#8E7E57] object-cover"
                 src={person.image}
-                alt={person.name}
+                alt={localeActive === 'en'?person.name.en:person.name.ru}
                 priority={true}
               />
               <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center uppercase z-30 w-[100%]">
-                {person.name}
+              {localeActive === 'en'?person.name.en:person.name.ru}
               </h3>
               <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-light capitalize text-center text-xs z-30 min-w-[250px]">
-                {person.job}
+              {localeActive === 'en'?person.job.en:person.job.ru}
               </p>
             </div>
           );

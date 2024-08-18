@@ -1,4 +1,3 @@
-import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import NavbarLinks from "../NavbarLinks/NavbarLinks";
 
@@ -8,10 +7,8 @@ interface ILink {
   path: string;
 }
 
-const Navbar = async ({ lang }: { lang: Locale }) => {
-  const { navigation } = await getDictionary(lang);
+export default function  Navbar (){
 
   return <NavbarLinks />;
 };
 
-export default Navbar;

@@ -9,16 +9,26 @@ import Fancybox from "../Fancybox/Fancybox";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import 'swiper/css/effect-fade';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
+import 'swiper/css/a11y';
+
 import { gallery } from "@/data/gallery";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Gallery() {
+
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
+
   const [data, setdata] = useState(gallery);
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -42,12 +52,12 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallerySection" className="mt-[200px]">
-      <div className="w-[1150px] max-w-full mx-auto relative px-[20px]">
+    <section id="gallerySection" className="mt-[200px] flex ">
+      <div id="gallerySection2" className=" flex-col justify-center items-stretch w-[100%] max-w-full mx-auto relative px-[85px] ">
         <h1 className="text-center mb-[50px] text-2xl tracking-[1.5px] text-white uppercase">
-          Gallery
+          {localeActive === "en" ? "Gallery" : "Галерея"}
         </h1>
-        <div className="text-[#8E7E57] flex justify-center items-center gap-8 gallery__navigation-filter">
+        <div className="text-[#8E7E57] flex justify-center items-center gap-8 gallery__navigation-filter ">
           <button
             className={`${currentSlide == 0 && "active-tab text-white"}`}
             onClick={() => {
@@ -55,7 +65,9 @@ export default function Gallery() {
               setCurrentSlide(0);
             }}
           >
-            All
+            {localeActive === "en" ? "All" : "Все"}
+
+
           </button>
           <button
             className={`${currentSlide == 1 && "active-tab text-white"}`}
@@ -64,7 +76,9 @@ export default function Gallery() {
               setCurrentSlide(1);
             }}
           >
-            Trophies
+            {localeActive === "en" ? "Trophies" : "Трофеи"}
+
+
           </button>
           <button
             className={`${currentSlide == 2 && "active-tab text-white"}`}
@@ -73,7 +87,9 @@ export default function Gallery() {
               setCurrentSlide(2);
             }}
           >
-            Wild Life
+            {localeActive === "en" ? "Wild Life" : "Дикая природа"}
+
+
           </button>
           <button
             className={`${currentSlide == 3 && "active-tab text-white"}`}
@@ -82,7 +98,9 @@ export default function Gallery() {
               setCurrentSlide(3);
             }}
           >
-            Landscape
+            {localeActive === "en" ? "Landscape" : "Пейзаж"}
+
+
           </button>
         </div>
         <Fancybox
@@ -93,13 +111,24 @@ export default function Gallery() {
           }}
         >
           <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+
+            spaceBetween={50}
             slidesPerView={3}
-            spaceBetween={30}
+            // effect="fade"
+            // allowSlidePrev={true}
+            // allowSlideNext={true}
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
-            className="mySwiper"
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }
+            }
+            speed={1000}
+            scrollbar={{ draggable: true }}
+          // className="mySwiper"
           >
             {data.map((image) => {
               return (

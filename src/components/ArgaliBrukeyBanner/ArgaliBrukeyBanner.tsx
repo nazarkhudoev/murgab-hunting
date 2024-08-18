@@ -1,12 +1,13 @@
+import { useLocale } from "next-intl";
 import "./ArgaliBrukeyBanner.css";
 
 export default function ArgaliBrukeyBanner() {
+  const localeActive = useLocale();
+
   return (
     <div className="pt-[200px] pb-14 px-[85px] relative argali-brukey__banner">
       <h1 className="text-white text-[80px] font-bold uppercase tracking-[2px] z-[99]">
-        Argali
-        <br />
-        Brukey
+        {localeActive === 'en'?'Argali Brukey':'Аргали Брукей'}
       </h1>
       {/* <div className="flex items-center gap-10">
         <div className="text-[#C5C5C5] mt-[160px]">

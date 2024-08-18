@@ -20,8 +20,12 @@ import Link from "next/link";
 import Image from "next/image";
 import Contact from "@/components/Contact/Contact";
 import Trophies from "@/components/Trophies/Trophies";
+import { useLocale } from "next-intl";
 
 export default function MarcoPoloPage() {
+
+  const localeActive = useLocale();
+
   const filteredData = gallery.filter(
     (item) =>
       item.trophie_status === "marcopolo" ||
@@ -32,7 +36,9 @@ export default function MarcoPoloPage() {
       <MarcoPoloBanner />
       <section id="marcopolo-text-wrapper" className="w-[1200px] max-w-full mx-auto mt-10">
         <p className="text-white font-extralight relative z-[99] text-justify">
-          The Marco Polo sheep, Pamir mountain sheep or Pamir argali (Ovis ammon
+          {
+            localeActive === 'en'?
+            ` The Marco Polo sheep, Pamir mountain sheep or Pamir argali (Ovis ammon
           polii) is one of the subspecies of argali. Its range includes the
           south of the Kyrgyz Republic, a narrow strip in the western Xinjiang
           Uygur Autonomous Region of the People&apos;s Republic of China, the
@@ -51,10 +57,14 @@ export default function MarcoPoloPage() {
           heads. Tajikistan bears a special responsibility for the conservation
           of this subspecies of wild sheep within the republic and since 1990,
           large-scale population censuses of this species have been conducted in
-          the country.
+          the country.`:
+            `Архар Марко Поло, или памирский архар (Ovis ammon polii), является одним из подвидов архара. Его ареал включает юг Кыргызской Республики, узкую полосу на западе Синьцзян-Уйгурского автономного района Китая, Малый и Большой Памир на северо-востоке Афганистана, а также небольшую территорию в Северных районах Пакистана. Основная часть ареала и большинство популяции архара Марко Поло находятся в Республике Таджикистан, в Памире. Архар Марко Поло внесен в Красную книгу Республики Таджикистан (1988, 2015) и в Международную Красную книгу Международного союза охраны природы (IUCN) как вид «уязвимый» (VU). С 1987 года в Таджикистане проводится трофейная охота для иностранных туристов на основании специальных разрешений CITES, основанных на рекомендациях Академии наук и межведомственной комиссии. Квота на ежегодный отстрел архаров согласно действующему законодательству утверждается правительством республики и на текущий год установлена в размере 105 особей. Таджикистан несет особую ответственность за сохранение этого подвида диких овец в республике, и с 1990 года в стране проводятся крупномасштабные переписи популяции этого вида.`
+          }
+         
         </p>
         <h3 className="text-white text-center text-[28px] font-medium uppercase mt-[150px] gallery__title">
-          Gallery
+          {localeActive === 'en'?'Gallery':'Галерея'}
+          
         </h3>
         <Fancybox
           options={{

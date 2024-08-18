@@ -1,3 +1,4 @@
+"use client"
 import Pic from "@/assets/images/expedition/image.png";
 import Image from "next/image";
 import "./Expedition.css";
@@ -12,8 +13,12 @@ import Icon7 from "@/assets/images/expedition/Frame 1713 (6).svg";
 import Icon8 from "@/assets/images/expedition/Frame 1713 (7).svg";
 import Icon9 from "@/assets/images/expedition/Frame 1713 (8).svg";
 import ExpeditionSlider from "../ExpeditionSlider/ExpeditionSlider";
+import { useTranslation } from "react-i18next";
 
 export function Expedition() {
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
+
   return (
     <section
       id="essentials"
@@ -21,13 +26,14 @@ export function Expedition() {
     >
       <div>
         <h3 className="text-center text-white text-2xl font-medium mb-[25px] mx-2 uppercase tracking-[1.5px]">
-          Your Expedition Essentials
+          {localeActive === "en"?"Your Expedition Essentials":"Для Охоты"}
         </h3>
         <p className="mb-[60px] mx-10 text-white font-thin expedition__description-text">
-          We ensure a hassle-free experience by taking care of all necessary
+        {localeActive === "en"?`We ensure a hassle-free experience by taking care of all necessary
           permits and formalities for you. Relax and focus on the adventure
           ahead, knowing that all the details are handled with precision and
-          care by our dedicated team.
+          care by our dedicated team.`:`Мы обеспечиваем вам беспроблемный опыт, беря на себя все необходимые разрешения и формальности. Расслабьтесь и сосредоточьтесь на предстоящем приключении, зная, что все детали тщательно и аккуратно организованы нашей преданной командой.`}
+          
         </p>
       </div>
       <div className="bg-[#332B18] rounded-[20px] flex items-end justify-between p-[2.25rem] expedition-wrapper">
@@ -45,7 +51,8 @@ export function Expedition() {
         {/* <ExpeditionSlider /> */}
         <section className="flex-container-1">
           <h3 className="text-center uppercase text-[#8E7E57] text-[18px] font-semibold mb-4 expedition__main-title">
-            We care of
+          {localeActive === "en"?" We care of":"Мы позаботимся о"}
+
           </h3>
           <div className="expedition__container border-2 border-[#8E7E57] h-[480px] overflow-y-scroll rounded-[10px] relative text-white w-[590px] max-w-full px-1 py-1 ml-10">
             <div className="wrapper-border flex flex-col justify-start items-start gap-10  py-[15px] px-[30px] mr-[20px]">
@@ -59,11 +66,11 @@ export function Expedition() {
                     priority={true}
                   />
                   {/* <div className="w-11 h-11 bg-slate-500 rounded-xl">I</div> */}
-                  <p>Invitation Letter</p>
+                  <p>{localeActive === "en"?'Invitation Letter':'Пригласительное письмо'}</p>
                 </div>
                 <p className="mt-3 font-extralight">
-                  Essential for travel and visa arrangements, this official
-                  letter confirms your participation in the hunting expedition
+                {localeActive === "en"?`Essential for travel and visa arrangements, this official
+                  letter confirms your participation in the hunting expedition`:`Необходимое для организации поездки и визы, это официальное письмо подтверждает ваше участие в охотничьей экспедиции.`}  
                 </p>
               </div>
               <div>
@@ -76,13 +83,15 @@ export function Expedition() {
                     height={44}
                     priority={true}
                   />
-                  <p>CITES Permits</p>
+                  <p>{localeActive === "en"?"CITES Permits":"Разрешения CITES"}</p>
                 </div>
                 <p className="mt-3 font-extralight">
-                  Necessary for international hunters, these permits ensure that
+                {localeActive === "en"?`Necessary for international hunters, these permits ensure that
                   the export of any trophies complies with the Convention on
                   International Trade in Endangered Species of Wild Fauna and
-                  Flora.
+                  Flora (CITES).`:`Необходимые для иностранных охотников, эти разрешения гарантируют, что вывоз любых трофеев соответствует Конвенции о международной торговле видами дикой фауны и флоры, находящимися под угрозой исчезновения (CITES).`}
+
+                  
                 </p>
               </div>
               <div>
@@ -94,11 +103,12 @@ export function Expedition() {
                     height={44}
                     priority={true}
                   />
-                  <p>Gun Permits</p>
+                  <p>{localeActive === "en"?"Gun Permits":"Разрешения на оружие"}</p>
                 </div>
                 <p className="mt-3 font-extralight">
-                  We handle the necessary paperwork for the legal use of
-                  firearms during the hunt.
+                  {localeActive === "en"? ` We handle the necessary paperwork for the legal use of
+                  firearms during the hunt.`:`Мы берем на себя оформление всей необходимой документации для законного использования огнестрельного оружия во время охоты.`}
+                 
                 </p>
               </div>
               <div>
@@ -110,11 +120,13 @@ export function Expedition() {
                     height={44}
                     priority={true}
                   />
-                  <p>Veterinary Certificates</p>
+                  <p>{localeActive === "en"?"Veterinary Certificates":"Ветеринарные сертификаты"}</p>
                 </div>
                 <p className="mt-3 font-extralight">
-                  Certifying the health and legal acquisition of the hunted
-                  animal, required for transport of the trophies.
+                {localeActive === "en"? ` Certifying the health and legal acquisition of the hunted
+                  animal, required for transport of the trophies.`:`Сертификат, подтверждающий здоровье и законное приобретение добытого животного, необходим для транспортировки трофеев.`}
+                 
+                  
                 </p>
               </div>
               <div>
@@ -126,11 +138,12 @@ export function Expedition() {
                     height={44}
                     priority={true}
                   />
-                  <p>Animal Permits</p>
+                  <p>{localeActive === "en"?"Animal Permits":"Разрешения на животных"}</p>
                 </div>
                 <p className="mt-3 font-extralight">
-                  Official permits for the specific species you will be hunting,
-                  ensuring compliance with wildlife regulations.
+                  {localeActive==="en"?`Official permits for the specific species you will be hunting,
+                  ensuring compliance with wildlife regulations.`:`Официальные разрешения на конкретные виды, на которых вы будете охотиться, обеспечивающие соблюдение правил охраны дикой природы.`}
+                  
                 </p>
               </div>
               <div>
@@ -142,11 +155,13 @@ export function Expedition() {
                     height={44}
                     priority={true}
                   />
-                  <p>Border Pass Permit</p>
+                  <p>{localeActive === "en"?'Border Pass Permit':'Разрешение на пограничный пропуск'}</p>
                 </div>
                 <p className="mt-3 font-extralight">
-                  For ease of access to hunting areas near borders, this permit
-                  is crucial for hassle-free movement.
+                {localeActive==="en"?`For ease of access to hunting areas near borders, this permit
+                  is crucial for hassle-free movement.`:`Для удобного доступа к охотничьим районам рядом с границами это разрешение является важным для беспроблемного передвижения.`}
+                 
+                  
                 </p>
               </div>
               <div>
@@ -158,11 +173,13 @@ export function Expedition() {
                     height={44}
                     priority={true}
                   />
-                  <p>Food and Drinks</p>
+                  <p>{localeActive === "en"?'Food and Drinks':'Питание и напитки'}</p>
                 </div>
                 <p className="mt-3 font-extralight">
-                  All meals and beverages are provided, ensuring a comfortable
-                  and well-nourished experience throughout your stay.
+                {localeActive==="en"?` All meals and beverages are provided, ensuring a comfortable
+                  and well-nourished experience throughout your stay.`:`Все питание и напитки включены, обеспечивая комфортное пребывание и хорошее питание на протяжении всего вашего пребывания.`}
+                 
+                 
                 </p>
               </div>
               <div>
@@ -174,11 +191,13 @@ export function Expedition() {
                     height={44}
                     priority={true}
                   />
-                  <p>Round Trip Transportation</p>
+                  <p>{localeActive === "en"?'Round Trip Transportation':'Транспортировка в обе стороны'}</p>
                 </div>
                 <p className="mt-3 font-extralight">
-                  From Dushanbe to the hunting camp, we ensure comfortable and
-                  reliable transportation for our clients.
+                {localeActive==="en"?`From Dushanbe to the hunting camp, we ensure comfortable and
+                  reliable transportation for our clients.`:`От Душанбе до охотничьего лагеря мы обеспечиваем комфортную и надежную транспортировку для наших клиентов.`}
+                
+                  
                 </p>
               </div>
               <div>
@@ -190,11 +209,13 @@ export function Expedition() {
                     height={44}
                     priority={true}
                   />
-                  <p>Arrival VIP Hall Access</p>
+                  <p>{localeActive === "en"?'Arrival VIP Hall Access':'Доступ в VIP-зал по прибытии'}</p>
                 </div>
                 <p className="mt-3 font-extralight">
-                  For a smooth and premium experience upon arrival at Dushanbe,
-                  ensuring a hassle-free start to your adventure.
+                {localeActive==="en"?`For a smooth and premium experience upon arrival at Dushanbe,
+                  ensuring a hassle-free start to your adventure.`:`Для плавного и премиум-класса при прибытии в Душанбе, обеспечивая беззаботное начало вашего приключения.`}
+                
+                  
                 </p>
               </div>
             </div>

@@ -8,7 +8,7 @@ import Picture5 from "@/assets/argali-new (1).png";
 export interface ITrophie {
   id: string;
   image: StaticImageData;
-  title: string;
+  title: any;
   url: string;
 }
 
@@ -16,31 +16,46 @@ export const trophiesData: ITrophie[] = [
   {
     id: "1",
     image: Picture,
-    title: "Marco Polo Argali",
+    title: {
+      en:  "Marco Polo Argali",
+      ru:  "Марко Поло Аргали"
+    },
     url: "/marco-polo",
   },
   {
     id: "2",
     image: Picture2,
-    title: "Ibex Pamirian",
+    title: {
+      en:  "Ibex Pamirian",
+      ru:  "Памирский Козерог"
+    },
     url: "/ibex",
   },
   {
     id: "5",
     image: Picture5,
-    title: "Argali Brukey",
+    title: {
+      en:  "Argali Brukey",
+      ru:  "Аргали Брукей"
+    },
     url: "/argali-brukey",
   },
   {
     id: "3",
     image: Picture4,
-    title: "Yak",
+    title: {
+      en:  "Yak",
+      ru:  "Як"
+    },
     url: "/yak",
   },
   {
     id: "4",
     image: Picture3,
-    title: "Wolf",
+    title: {
+      en:  "Wolf",
+      ru:  "Волк"
+    },
     url: "/wolf",
   },
 ];

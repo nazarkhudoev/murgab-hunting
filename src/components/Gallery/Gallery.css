@@ -48,12 +48,19 @@
 }
 
 #gallerySection .swiper {
-  padding-top: 30px !important;
-  padding-bottom: 0px !important;
+  /* padding-top: 30px !important;
+  padding-bottom: 0px !important; */
+}
+
+#gallerySection2{
+  width: var(--parent-width, 100%) !important;
+
 }
 
 #gallerySection .swiper .swiper-slide{
-  margin-right: 20px !important;
+  height: fit-content!important;
+  /* margin-right: 20px !important; */
+  /* width: calc(var(--parent-width, 100%) / 3 - 115px)!important; */
 }
 
 /* #marco-polo-page .slick-slide > div{ 
@@ -64,4 +71,9 @@
   #gallerySection {
     margin-top: 100px;
   }
+
+  #gallerySection2{
+    padding: 0 40px!important;
+  }
+
 }

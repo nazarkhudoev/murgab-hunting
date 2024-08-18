@@ -1,15 +1,20 @@
+'use client'
 import "./Statistics.css";
+import { useTranslation } from "react-i18next";
 
 export default function Statistics() {
+
+  const { t } = useTranslation();
+
   return (
     <div className="statistics-container relative bottom-[3.5rem] z-10 flex justify-center items-start flex-wrap text-center gap-[100px] text-[#8E7E57] px-[50px]">
       <div>
         <h4 className="text-[51px] font-bold mb-[3px]">5</h4>
-        <p>Available Species</p>
+        <p>{t('Statistics.species')}</p>
       </div>
       <div>
         <h4 className="text-[51px] font-bold mb-[3px]">+500</h4>
-        <p>Conservation Initiatives</p>
+        <p>{t('Statistics.initiatives')}</p>
       </div>
       <div>
         <h4 className="text-[51px] font-bold mb-[3px] statistic__item text-center">
@@ -18,7 +23,7 @@ export default function Statistics() {
             k
           </sub>
         </h4>
-        <p>Satisfied clients</p>
+        <p>{t('Statistics.clients')}</p>
       </div>
       <div>
         <h4 className="text-[51px] font-bold mb-[3px] statistic__item text-center">
@@ -27,7 +32,7 @@ export default function Statistics() {
             km<sup>2</sup>
           </sub>
         </h4>
-        <p>Managed Land</p>
+        <p>{t('Statistics.land')}</p>
       </div>
     </div>
   );

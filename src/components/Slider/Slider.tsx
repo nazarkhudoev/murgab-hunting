@@ -14,9 +14,12 @@ import Image from "next/image";
 import Founder1 from "@/assets/founder1.png";
 import Founder2 from "@/assets/founder-2.png";
 import Founder3 from "@/assets/founder-3.png";
+import { useTranslation } from "react-i18next";
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const { t } = useTranslation();
 
   const settings = {
     dots: false,
@@ -76,7 +79,7 @@ const Carousel = () => {
   return (
     <section id="about" className="pt-[100px] relative z-999">
       <h3 className="text-center text-white text-2xl font-medium uppercase tracking-[1.5px] about-header">
-        ABOUT US
+        {t('Slider.about')}
       </h3>
       <div className="carousel-container-123">
         <div className="carousel__navigation-wrapper flex items-center justify-between text-[#8E7E57] mb-5 px-10">
@@ -88,7 +91,9 @@ const Carousel = () => {
                 sliderRef.current.slickGoTo(0);
               }}
             >
-              History
+              {t('Slider.history')}
+
+              {/* {localeActive === 'en' ? 'History' : 'История'} */}
             </button>
             <button
               className={`${currentSlide == 1 && "active-tab text-white"}`}
@@ -97,7 +102,11 @@ const Carousel = () => {
                 sliderRef.current.slickGoTo(1);
               }}
             >
-              Founders
+              {t('Slider.founders')}
+
+              {/* {localeActive === 'en' ? 'Founders' : 'Основатели'} */}
+
+
             </button>
             <button
               className={`${currentSlide == 2 && "active-tab text-white"}`}
@@ -106,7 +115,9 @@ const Carousel = () => {
                 sliderRef.current.slickGoTo(2);
               }}
             >
-              Mission
+              {t('Slider.mission')}
+
+              {/* {localeActive === 'en' ? 'Mission' : 'Миссия'} */}
             </button>
             <button
               className={`${currentSlide == 3 && "active-tab text-white"}`}
@@ -115,7 +126,10 @@ const Carousel = () => {
                 sliderRef.current.slickGoTo(3);
               }}
             >
-              Conservation
+              {t('Slider.conservation')}
+
+              {/* {localeActive === 'en' ? 'Conservation' : 'Сохранение природы'} */}
+
             </button>
             <button
               className={`${currentSlide == 4 && "active-tab text-white"}`}
@@ -124,11 +138,17 @@ const Carousel = () => {
                 sliderRef.current.slickGoTo(4);
               }}
             >
-              Team
+              {t('Slider.team')}
+
+              {/* {localeActive === 'en' ? 'Team' : 'Команды'} */}
+
+
             </button>
           </div>
           <Link className="text-sm read-more text-white" href={"/about-us"}>
-            READ MORE +
+            {t('Slider.more') + '+'}
+
+            {/* {localeActive === 'en' ? 'READ MORE +' : 'ПОДРОБНЕЕ +'} */}
           </Link>
         </div>
         <Slider {...settings} arrows={false} swipe={false} ref={sliderRef}>
@@ -148,10 +168,16 @@ const Carousel = () => {
                   priority={true}
                 />
                 <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center uppercase z-30 w-[100%]">
-                  Atobek Bekmurodov
+                  {t('Founder.atobek')}
+
+                  {/* {localeActive === 'en' ? 'Atobek Bekmurodov' : 'Атобек Бекмуродов'} */}
+
                 </h3>
                 <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-light capitalize text-center text-xs z-30 min-w-[250px]">
-                  Professional Hunter
+                  {t('Founder.hunter')}
+
+                  {/* {localeActive === 'en' ? 'Professional Hunter' : 'Профессиональный Охотник'} */}
+
                 </p>
               </div>
               <div className="w-[260px] h-[340px] rounded-lg relative object-cover team__card">
@@ -163,10 +189,14 @@ const Carousel = () => {
                   priority={true}
                 />
                 <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center uppercase z-30 w-[100%]">
-                  Bekmurodi Zafar
+                  {t('Founder.zafar')}
+
+                  {/* {localeActive === 'en' ? 'BEKMURODI ZAFAR' : 'БЕКМУРОДИ ЗАФАР'} */}
                 </h3>
                 <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-light capitalize text-center text-xs z-30 min-w-[250px]">
-                  Professional Hunter
+                  {t('Founder.hunter')}
+
+                  {/* {localeActive === 'en' ? 'Professional Hunter' : 'Профессиональный Охотник'} */}
                 </p>
               </div>
               <div className="w-[260px] h-[340px] rounded-lg relative object-cover team__card">
@@ -178,10 +208,15 @@ const Carousel = () => {
                   priority={true}
                 />
                 <h3 className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center uppercase z-30 w-[100%]">
-                  BEKMURODI AYDIBEK
+                  {t('Founder.aydibek')}
+
+                  {/* {localeActive === 'en' ? 'BEKMURODI AYDIBEK' : 'БЕКМУРОДИ АЙДИБЕК'} */}
+
                 </h3>
                 <p className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white font-light capitalize text-center text-xs z-30 min-w-[250px]">
-                  Professional Hunter
+                  {t('Founder.hunter')}
+
+                  {/* {localeActive === 'en' ? 'Professional Hunter' : 'Профессиональный Охотник'} */}
                 </p>
               </div>
             </Slider>

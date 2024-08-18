@@ -1,0 +1,46 @@
+{
+    "units": {
+      "temperature": "fahrenheit"
+    },
+  
+    "Layout": {
+      "metaData": {
+        "title": "Murgab Hunting",
+        "description": "Murgab Hunting offers you a unique adventure in the remote wilderness of the Pamirs (Tajikistan). Hunting for Marco Polo sheep, Bukharan Argali, and Pamir Ibex."
+      }
+    },
+    "Header": {
+      "appTitle": "Next.js Weather",
+      "navLinks": {
+        "week": "This week",
+        "about": "About"
+      }
+    },
+  
+    "Navlist": {
+      "about": "About Us",
+      "trophies": "Hunting Trophies",
+      "esseentials": "Hunting Esseentials",
+      "camp":"Camp",
+      "gallery":"Gallery",
+      "video":"Video",
+      "blog":"Blog",
+      "book":"Book"
+    },
+  
+    "Banner": {
+      "moto": "Join the Elite",
+      "action": "Reserve Your Marco Polo Hunt Now!",
+      "book": "Book Now",
+      "readmore": "Read More"
+  
+    },
+  
+    "Statistics": {
+      "species": "Available Species",
+      "initiatives": "Conservation Initiatives",
+      "clients": "Satisfied clients",
+      "land": "Managed Land"
+    }
+  }
+  

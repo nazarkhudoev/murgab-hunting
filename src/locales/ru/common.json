@@ -1,0 +1,78 @@
+{
+  "units": {
+    "temperature": "fahrenheit"
+  },
+
+  "Layout": {
+    "metaData": {
+      "title": "Murgab Hunting",
+      "description": "Murgab Hunting offers you a unique adventure in the remote wilderness of the Pamirs (Tajikistan). Hunting for Marco Polo sheep, Bukharan Argali, and Pamir Ibex."
+    }
+  },
+  "Header": {
+    "appTitle": "Next.js Weather",
+    "navLinks": {
+      "week": "This week",
+      "about": "About"
+    }
+  },
+
+  "Navlist": {
+    "about": "О нас",
+    "trophies": "Охотничьи трофеи",
+    "esseentials": "Необходимости",
+    "camp": "Лагерь",
+    "gallery": "Галерея",
+    "video": "Видео",
+    "blog": "Блог",
+    "book": "Забронировать"
+  },
+  "Aboutlist": {
+    "history": "История",
+    "founders": "Основатели",
+    "team": "Команда",
+    "conservation": "Охрана природы",
+    "book": "Забронировать"
+  },
+
+  "Animallist": {
+    "marcopolo": "Марко Поло",
+    "ibex": "Памирский Козерог",
+    "brukey": "Аргали Брукей",
+    "yak": "Як",
+    "wolf": "Волк",
+    "book": "Забронировать"
+  },
+
+  "Banner": {
+    "moto": "Присоединяйтесь к элите",
+    "action": "Забронируйте охоту на Марко Поло прямо сейчас!",
+    "book": "Забронировать",
+    "readmore": "Подробнее"
+  },
+
+  "Statistics": {
+    "species": "Доступные виды",
+    "initiatives": "Инициативы по охране природы",
+    "clients": "Довольные клиенты",
+    "land": "Территория"
+  },
+  "Slider": {
+    "about": "О НАС",
+    "history": "История",
+    "founders": "Основатели",
+    "mission": "Миссия",
+    "conservation": "Сохранение природы",
+    "team": "Команды",
+    "more": "ПОДРОБНЕЕ"
+
+  },
+
+  "Founder": {
+    "atobek": "Атобек Бекмуродов",
+    "zafar": "БЕКМУРОДИ ЗАФАР",
+    "aydibek": "БЕКМУРОДИ АЙДИБЕК",
+    "hunter": "Профессиональный Охотник"
+
+  }
+}

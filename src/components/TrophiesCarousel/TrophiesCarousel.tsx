@@ -9,12 +9,17 @@ import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./TrophiesCarousel.css";
 import Link from "next/link";
+import { useLocale } from "next-intl";
+import { useTranslation } from "react-i18next";
 
 interface ITrophiesCarousel {
   animalName: string;
 }
 
 export default function TrophiesCarousel({ animalName }: ITrophiesCarousel) {
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -66,18 +71,19 @@ export default function TrophiesCarousel({ animalName }: ITrophiesCarousel) {
                   <Image
                     className="rounded-[20px] absolute w-full h-full object-cover trophie__image outline-none"
                     src={person.image}
-                    alt={person.title}
+                    alt={localeActive === "en"?person.title.en:person.title.ru}
                     priority={true}
                   />
                   <h3 className="absolute bottom-10 left-8 text-white font-bold capitalize text-[28px] z-30">
-                    {person.title}
+                    {localeActive === "en"?person.title.en:person.title.ru}
                   </h3>
                   <Link
                     href={person.url}
                     className="absolute bottom-5 left-8 z-50 flex items-center gap-2"
                   >
                     <span className="uppercase font-bold text-[dodgerblue]">
-                      read more
+                    {localeActive === "en"?"read more":"подробнее"}
+
                     </span>
                     <span className="text-[dodgerblue]">+</span>
                   </Link>
@@ -94,18 +100,19 @@ export default function TrophiesCarousel({ animalName }: ITrophiesCarousel) {
                   <Image
                     className="rounded-[20px] absolute w-full h-full object-cover trophie__image outline-none"
                     src={person.image}
-                    alt={person.title}
+                    alt={localeActive === "en"?person.title.en:person.title.ru}
                     priority={true}
                   />
                   <h3 className="absolute bottom-10 left-8 text-white font-bold capitalize text-[28px] z-30">
-                    {person.title}
+                    {localeActive === "en"?person.title.en:person.title.ru}
                   </h3>
                   <Link
                     href={person.url}
                     className="absolute bottom-5 left-8 z-50 flex items-center gap-2"
                   >
                     <span className="uppercase font-bold text-[dodgerblue]">
-                      read more
+                    {localeActive === "en"?"read more":"подробнее"}
+                      
                     </span>
                     <span className="text-[dodgerblue]">+</span>
                   </Link>

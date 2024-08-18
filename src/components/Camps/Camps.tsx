@@ -29,8 +29,13 @@ import Camp18 from "@/assets/photos/springscamp/transportation-01.jpg";
 
 import "./Camps.css";
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Camps() {
+
+  const { i18n } = useTranslation();
+  const localeActive = i18n.language;
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const slider = useRef<any>(null);
 
@@ -50,17 +55,18 @@ export default function Camps() {
       className="w-[1200px] max-w-full mx-auto text-white py-6 px-5"
     >
       <h3 className="text-center font-medium mb-[50px] text-2xl tracking-[1.5px]">
-        HOT SPRINGS CAMP
+        {localeActive === "en" ? 'HOT SPRINGS CAMP' : 'Лагерь у горячих источников'}
       </h3>
       <p className="font-thin text-justify mx-10 camp__description">
-        {`Perched amidst the high-altitude serenity of the Pamirs, the Hot Springs
+        {localeActive === "en" ? `Perched amidst the high-altitude serenity of the Pamirs, the Hot Springs
         Camp offers a warm haven against the crisp mountain air. Named for the
         natural thermal springs nearby, our camp provides a cozy respite where
         hunters can rejuvenate after a day in the wild. It's a place where the
         spirit of adventure meets relaxation, all set against the breathtaking
         backdrop of Tajikistan's rugged peaks. Here, warmth extends beyond the
         thermal waters, as our staff ensures a comfortable, inviting stay,
-        echoing the natural hospitality of Murgab's landscapes.`}
+        echoing the natural hospitality of Murgab's landscapes.`:
+        'Расположенный среди высокогорного спокойствия Памира, лагерь «Горячие источники» предлагает тёплое убежище от прохладного горного воздуха. Названный в честь природных термальных источников, находящихся поблизости, наш лагерь предоставляет уютное пристанище, где охотники могут отдохнуть и восстановить силы после дня, проведённого в дикой природе. Здесь дух приключений встречается с расслаблением на фоне величественных пейзажей суровых пиков Таджикистана. В лагере «Горячие источники» тепло исходит не только от термальных вод, но и от заботы и гостеприимства нашего персонала, обеспечивающего каждому гостю комфортное и уютное пребывание, отражающее природную красоту и спокойствие ландшафтов Мургаба.'}
       </p>
       <div className="bg-[#332B18] rounded-[15px] p-[40px] mt-[50px] camp_wrapper">
         <div className="flex items-center flex-wrap gap-7 mb-7 text-[#8E7E57] camps_navigation text-sm font-semibold">
@@ -71,7 +77,8 @@ export default function Camps() {
               slider.current.slickGoTo(0);
             }}
           >
-            Springs camp
+            {localeActive === "en" ? 'Springs camp' : 'Лагерь у источников'}
+
           </button>
           <button
             className={`${currentSlide == 1 && "active-tab text-white"}`}
@@ -80,7 +87,9 @@ export default function Camps() {
               slider.current.slickGoTo(1);
             }}
           >
-            VIP House
+            {localeActive === "en" ? 'VIP House' : 'VIP-дом'}
+
+
           </button>
           <button
             className={`${currentSlide == 2 && "active-tab text-white"}`}
@@ -89,7 +98,9 @@ export default function Camps() {
               slider.current.slickGoTo(2);
             }}
           >
-            Standard House
+            {localeActive === "en" ? 'Standard House' : 'Стандартный дом'}
+
+
           </button>
           <button
             className={`${currentSlide == 3 && "active-tab text-white"}`}
@@ -98,7 +109,9 @@ export default function Camps() {
               slider.current.slickGoTo(3);
             }}
           >
-            Transportation
+            {localeActive === "en" ? 'Transportation' : 'Транспортировка'}
+
+            
           </button>
         </div>
         <div>

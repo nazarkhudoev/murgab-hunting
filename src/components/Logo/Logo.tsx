@@ -6,9 +6,9 @@ import "./Logo.css"
 
 const Logo = () => {
   return (
-    <Link href={"/"}>
+    <Link href={"/"} className="w-28 inline-block">
       <Image
-        className="w-28 absolute top-[85%] -translate-y-2/4 header__logo-image"
+        className=" absolute top-[85%] -translate-y-2/4 header__logo-image"
         src={LogoIcon}
         alt="LogoIcon"
       />

@@ -9,45 +9,81 @@ import { StaticImageData } from "next/image";
 export interface ITeam {
   id: string;
   image: StaticImageData;
-  name: string;
-  job: string;
+  name: any;
+  job: any;
 }
 
 export const teamData: ITeam[] = [
   {
     id: "1",
     image: TeamImage1,
-    name: "Muhammadi Benazirov",
-    job: "Professional Guide",
+    name: {
+      en: "Muhammadi Benazirov",
+      ru: "Мухаммади Беназиров",
+    },
+    job: {
+      en: "Professional Guide",
+      ru: "Профессиональный гид",
+    },
   },
   {
     id: "1",
     image: TeamImage2,
-    name: "Rahmon Gulayozov",
-    job: "Driver",
+    name: {
+      en: "Rahmon Gulayozov",
+      ru: "Рахмон Гулайозов",
+    }, 
+    job: {
+      en: "Driver",
+      ru: "Водитель",
+    }, 
   },
   {
     id: "1",
     image: TeamImage3,
-    name: "Sodiq Bekmurodov",
-    job: "Professional Guide",
+    name: {
+      en: "Sodiq Bekmurodov",
+      ru: "Садик Бекмуродов",
+    }, 
+    job: {
+      en: "Professional Guide",
+      ru: "Профессиональный гид",
+    },
   },
   {
     id: "1",
     image: TeamImage4,
-    name: "Tolibek Gulbekov",
-    job: "Professional Guide",
+    name: {
+      en: "Tolibek Gulbekov",
+      ru: "Толибек Гулбеков",
+    }, 
+    job: {
+      en: "Professional Guide",
+      ru: "Профессиональный гид",
+    },
   },
   {
     id: "1",
     image: TeamImage5,
-    name: "Sarbaland Mubashirov",
-    job: "Professional Guide",
+    name: {
+      en: "Sarbaland Mubashirov",
+      ru: "Сарбаланд Мубаширов",
+    }, 
+    job: {
+      en: "Professional Guide",
+      ru: "Профессиональный гид",
+    },
   },
   {
     id: "1",
     image: TeamImage6,
-    name: "Shodi Afzunov",
-    job: "Professional Guide",
+    name: {
+      en: "Shodi Afzunov",
+      ru: "Шоди Афзунов",
+    }, 
+    job: {
+      en: "Professional Guide",
+      ru: "Профессиональный гид",
+    },
   },
 ];

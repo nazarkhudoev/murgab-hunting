@@ -9,25 +9,30 @@ import Blog from "@/components/Blog/Blog";
 import Videos from "@/components/Videos/Videos";
 import Gallery from "@/components/Gallery/Gallery";
 
-export default function Home() {
+
+export default async function Home() {
+
   return (
-    <main>
-      <MainBanner />
-      <Statistics />
-      <Slider />
-      <Trophies animalName="All" />
-      <Expedition />
-      <Camps />
-      <Gallery />
-      <section className="w-[1290px] max-w-full mx-auto px-5 custom__container">
-        <Videos />
-        <Blog />
-      </section>
-      <Contact />
-      <div
-        className="elfsight-app-c96adae2-50f5-4276-998e-3b21d664dbe4"
-        data-elfsight-app-lazy
-      ></div>
-    </main>
+
+      <main>
+        <MainBanner />
+        <Statistics /> 
+        <Slider />
+        <Trophies animalName="All" />
+        <Expedition />
+        <Camps />
+        <Gallery />
+        <section className="w-[1290px] max-w-full mx-auto px-5 custom__container">
+          <Videos />
+          <Blog />
+        </section>
+        <Contact />
+        <div
+          className="elfsight-app-c96adae2-50f5-4276-998e-3b21d664dbe4"
+          data-elfsight-app-lazy
+        ></div>
+      </main>
+
+
   );
 }
