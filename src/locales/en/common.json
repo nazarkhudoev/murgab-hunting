@@ -2,7 +2,6 @@
   "units": {
     "temperature": "fahrenheit"
   },
-
   "Layout": {
     "metaData": {
       "title": "Murgab Hunting",
@@ -16,16 +15,15 @@
       "about": "About"
     }
   },
-
   "Navlist": {
     "about": "About Us",
     "trophies": "Hunting Trophies",
-    "esseentials": "Hunting Esseentials",
     "camp": "Camp",
     "gallery": "Gallery",
     "video": "Video",
     "blog": "Blog",
-    "book": "Book"
+    "book": "Book",
+    "essentials": "Expedition Essentials"
   },
   "Aboutlist": {
     "history": "History",
@@ -34,7 +32,6 @@
     "conservation": "Conservation",
     "book": "Book"
   },
-
   "Animallist": {
     "marcopolo": "Marco Polo",
     "ibex": "Ibex Pamirian",
@@ -43,21 +40,18 @@
     "wolf": "Wolf",
     "book": "Book"
   },
-  
   "Banner": {
     "moto": "Join the Elite",
     "action": "Reserve Your Marco Polo Hunt Now!",
     "book": "Book Now",
     "readmore": "Read More"
   },
-
   "Statistics": {
     "species": "Available Species",
     "initiatives": "Conservation Initiatives",
     "clients": "Satisfied clients",
     "land": "Managed Land"
   },
-
   "Slider": {
     "about": "ABOUT US",
     "history": "History",
@@ -67,11 +61,227 @@
     "team": "Team",
     "more": "READ MORE"
   },
-
   "Founder": {
     "atobek": "Atobek Bekmurodov",
     "zafar": "Bekmurodi Zafar",
     "aydibek": "Bekmurodi Aydibek",
     "hunter": "Professional Hunter"
+  },
+  "Animals": {
+    "marco-polo": {
+      "paragraphs": [
+        "The Marco Polo sheep, Pamir mountain sheep or Pamir argali (Ovis ammon polii) is one of the subspecies of argali. Its range includes the south of the Kyrgyz Republic, a narrow strip in the western Xinjiang Uygur Autonomous Region of the People's Republic of China, the Little and Great Pamir in northeastern Afghanistan, and a small area in the Northern Territories of Pakistan. The main range and the majority of the Marco Polo sheep population are located in the Republic of Tajikistan, in the Pamir. The Marco Polo sheep is included in the Red Book of the Republic of Tajikistan (1988, 2015) and in the International Red Book of the IUCN as a \"vulnerable\" species (VU). Since 1987, trophy hunting for foreign tourists has been conducted in Tajikistan based on special permits from the CITES, founded on the recommendations of the Academy of Sciences and the interdepartmental commission. The quota for the annual culling of argali according to the current legislation is approved by the Government of the republic and for the current year is set at 105 heads. Tajikistan bears a special responsibility for the conservation of this subspecies of wild sheep within the republic and since 1990, large-scale population censuses of this species have been conducted in the country."
+      ]
+    },
+    "ibex": {
+      "paragraphs": [
+        "Over the last 30 years, trophy hunting for the Siberian ibex has been conducted in Tajikistan, mainly in the Pamirs. Annually, between 50 and 100 trophies are obtained. Some of these trophies have been inspected and processed, primarily the horns and skin, as well as photographs of the hunted animals. Analysis of these materials indicates that there are two forms (subspecies) of the Siberian ibex living in Tajikistan: Capra sibirica alaiana and Capra sibirica sakeen. The habitat of Capra sibirica alaiana covers the territories of Central and Northern Tajikistan and is found in the southern ridges and Badakhshan.",
+        "The second subspecies, Capra sibirica sakeen, resides exclusively in the Pamir region (map 1). The habitats of both forms are clearly divided by the geographical boundary of Badakhshan and Eastern Pamir. Morphologically, they also differ in body coloration, and the shape and size of horns. Below is a description of the coloration of the two forms of Siberian ibex in Tajikistan. The coloration of the animals depends on sex, age, and season. Young individuals up to one year old are usually light gray with a slight brownish tinge, and the tail is dark brown. Females are typically uniform in color throughout the year, light brown, sometimes with a grayish tinge. Old females, over 12 years of age, acquire a yellowish-ochre coloration. On some females, a so-called \"belt,\" a dark stripe along the spine, is clearly visible on the back."
+      ]
+    },
+    "argali-brukey": {
+      "paragraphs": [
+        "Discover the rare and majestic Argali Brukey, a creature that stands out in the wild with its distinctive morphological features. Unlike the more commonly known Marco Polo argali, the Argali Brukey boasts a unique set of horns that, while shorter, possess a broader circumference at their base, enhancing their impressive stature.",
+        "Thriving across the vast and breathtaking landscape of the historic Wakhan Corridor, their habitat extends through the rugged terrains of Southern Pamir in Tajikistan, skirting the serene northern banks of Lake Zorkul, and reaching up to the edge where the country meets Afghanistan.",
+        "Embodying the untamed spirit of the regions they inhabit, the Argali Brukey is a testament to the rich biodiversity and the intricate tapestry of life that exists within these remote ecosystems. Their presence symbolizes the resilience and adaptability of wildlife in the face of ever-changing environments."
+      ]
+    },
+    "yak": {
+      "paragraphs": [
+        "Hunting yaks in the Pamir Mountains is a unique and thrilling adventure. The Pamir region, nestled in the highlands of Central Asia, is home to some of the largest and most majestic yaks in the world. This remote and stunning landscape offers a challenging terrain that adds to the excitement of the hunt. The rugged mountain slopes, interspersed with alpine meadows and crystal-clear rivers, create an environment where the hardy yaks thrive, adapted to the harsh climatic conditions and high altitudes.",
+        "The experience of tracking these magnificent beasts is not just about the hunt itself; it's a journey through a rich tapestry of cultural heritage and natural wonders. As hunters traverse the vast expanses of the Pamirs, they encounter not only the wildlife but also the indigenous people who have lived in harmony with the land for centuries. These communities possess a deep understanding of the mountains and the life that inhabits them, often serving as guides and sharing their invaluable knowledge.",
+        "Participating in a yak hunt in the Pamir Mountains is also an opportunity to contribute to the conservation efforts in the region. Sustainable hunting practices help maintain the balance of the ecosystem, ensuring that the yak populations remain robust and the natural beauty of the Pamirs is preserved for future generations."
+      ]
+    },
+    "wolf": {
+      "paragraphs": [
+        "Wolf hunting in the Pamirs is a complex and dangerous type of hunting that requires a high level of preparation and skill from the hunter. Wolves are intelligent and cautious animals that can become aggressive if they sense a threat. Wolf hunting in the Pamirs is usually conducted in the mountains, where wolves live in packs. Hunters must be in good physical condition to navigate the challenging mountain trails. They must also be armed with powerful weapons, such as a rifle with a scope, to make an accurate shot.",
+        "The hunt for wolves in the Pamirs typically begins with locating the pack. Hunters can use various methods to search, such as observing the mountains with binoculars or using tracking dogs. Once the pack is spotted, hunters must approach it carefully to avoid startling the animals.",
+        "When a hunter gets close to the pack, they must select a suitable target. They should aim to shoot the animal in vital organs, such as the heart or lungs, to ensure a quick and humane kill.",
+        "After the wolf is killed, the hunter must transport the carcass to a safe location. This can be challenging, as a wolfs carcass can weigh up to 50 kilograms.",
+        "Wolf hunting in the Pamirs is a complex and dangerous pursuit, but it can also be very rewarding. Trophies from wolf hunting, such as the pelt and head, are highly prized by hunters around the world."
+      ]
+    }
+  },
+  "Accessibility": {
+    "menu": "Open navigation menu",
+    "navigation": "Main navigation",
+    "language": "Language",
+    "previous": "Previous slide",
+    "next": "Next slide",
+    "skip": "Skip to content"
+  },
+  "Contact": {
+    "title": "Book your hunt",
+    "intro": "Leave us a message and our manager will contact you.",
+    "fallback": "You can also contact our team directly:",
+    "email": "Email our team",
+    "phone": "Call our team"
+  },
+  "Gallery": {
+    "title": "Gallery",
+    "all": "All",
+    "trophies": "Trophies",
+    "wild": "Wildlife",
+    "landscape": "Landscape",
+    "categories": {
+      "landscape": "Landscape in the Pamir Mountains",
+      "ibex": "Pamir ibex hunting trophy",
+      "marcopolo": "Marco Polo argali hunting trophy",
+      "ibex-marcopolo": "Ibex and Marco Polo hunting trophies",
+      "wolf": "Wolf hunting trophy",
+      "yak": "Yak hunting trophy",
+      "wild": "Wildlife in the Pamir Mountains",
+      "spring-camp": "Hot Springs Camp",
+      "all": "Murgab Hunting expedition"
+    }
+  },
+  "Footer": {
+    "copyright": "Murgab Hunting. All rights reserved.",
+    "follow": "Follow us",
+    "contacts": "Contacts"
+  },
+  "Pages": {
+    "home": {
+      "title": "Hunting Expeditions in the Pamirs | Murgab Hunting",
+      "description": "Explore hunting expeditions in the pamirs with Murgab Hunting in Tajikistan’s Pamir Mountains. Learn about our team, camps and expeditions, and contact us to plan your visit."
+    },
+    "about-us": {
+      "title": "About Us | Murgab Hunting",
+      "description": "Explore about us with Murgab Hunting in Tajikistan’s Pamir Mountains. Learn about our team, camps and expeditions, and contact us to plan your visit."
+    },
+    "marco-polo": {
+      "title": "Marco Polo Argali | Murgab Hunting",
+      "description": "Explore marco polo argali with Murgab Hunting in Tajikistan’s Pamir Mountains. Learn about our team, camps and expeditions, and contact us to plan your visit."
+    },
+    "ibex": {
+      "title": "Pamir Ibex | Murgab Hunting",
+      "description": "Explore pamir ibex with Murgab Hunting in Tajikistan’s Pamir Mountains. Learn about our team, camps and expeditions, and contact us to plan your visit."
+    },
+    "argali-brukey": {
+      "title": "Argali Brukey | Murgab Hunting",
+      "description": "Explore argali brukey with Murgab Hunting in Tajikistan’s Pamir Mountains. Learn about our team, camps and expeditions, and contact us to plan your visit."
+    },
+    "yak": {
+      "title": "Yak | Murgab Hunting",
+      "description": "Explore yak with Murgab Hunting in Tajikistan’s Pamir Mountains. Learn about our team, camps and expeditions, and contact us to plan your visit."
+    },
+    "wolf": {
+      "title": "Wolf | Murgab Hunting",
+      "description": "Explore wolf with Murgab Hunting in Tajikistan’s Pamir Mountains. Learn about our team, camps and expeditions, and contact us to plan your visit."
+    }
+  },
+  "Trophies": {
+    "title": "Our Hunting Trophies"
+  },
+  "Content": {
+    "AboutBanner": {
+      "text1": "About Murgab Hunting",
+      "text2": "Welcome to Murgab Hunting, a premier destination for sport hunting tourism and expeditionary services in the heart of the Gorno-Badakhshan Autonomous Region, Tajikistan. Since our inception in 1989, we've been dedicated to providing unforgettable experiences in one of the world's most majestic natural landscapes."
+    },
+    "AboutConservation": {
+      "text1": "Wildlife Conservation Efforts",
+      "text2": "At Murgab Hunting, we firmly believe in and practice the principle that responsible hunting serves as a vital tool for wildlife conservation. Our approach harmonizes the passion for hunting with a deep commitment to preserving the natural heritage of Tajikistan’s Pamir Mountains.",
+      "text3": "In essence, at Murgab Hunting, we do more than just offer hunting expeditions; we foster a legacy of conservation, ensuring that the thrill of the hunt today leads to the preservation of wildlife for tomorrow."
+    },
+    "AboutHistory": {
+      "text1": "company history and leadership",
+      "text2": "Founded in 1989 by the visionaries Atobek Bekmurodov and Bekmurodi Zafar, our company has grown from a passionate team of former athletes, tourists, geologists, and professional hunters to a leading name in responsible hunting tourism. Our team ensures that your quest for the elusive Marco Polo sheep and the resilient mountain goats is not only successful but also sustainable and respectful to the natural splendor of the region. Our journey, marked by dedication and expertise, has set a standard in the industry.",
+      "text3": "With a rich legacy spearheaded by our founders, we cater to the discerning hunter seeking not just a hunt, but an expedition—a story to be told for generations.",
+      "text4": "Murgab Hunting is not just about the pursuit of game; it’s about embracing the rugged beauty of the Pamirs, the thrill of the chase, and the preservation of hunting traditions. We invite you to join us, where hunting is an art and every expedition is an odyssey."
+    },
+    "ArgaliBrukeyBanner": {
+      "text1": "Argali Brukey"
+    },
+    "Blog": {
+      "text1": "Blog"
+    },
+    "Camps": {
+      "text1": "HOT SPRINGS CAMP",
+      "text2": "Perched amidst the high-altitude serenity of the Pamirs, the Hot Springs Camp offers a warm haven against the crisp mountain air. Named for the natural thermal springs nearby, our camp provides a cozy respite where hunters can rejuvenate after a day in the wild. It's a place where the spirit of adventure meets relaxation, all set against the breathtaking backdrop of Tajikistan's rugged peaks. Here, warmth extends beyond the thermal waters, as our staff ensures a comfortable, inviting stay, echoing the natural hospitality of Murgab's landscapes.",
+      "text3": "Springs camp",
+      "text4": "VIP House",
+      "text5": "Standard House",
+      "text6": "Transportation"
+    },
+    "Conservation": {
+      "text1": "At Murgab Hunting, we firmly believe in and practice the principle that responsible hunting serves as a vital tool for wildlife conservation. Our approach harmonizes the passion for hunting with a deep commitment to preserving the natural heritage of Tajikistan’s Pamir Mountains.",
+      "text2": "Our hunting expeditions are meticulously managed to ensure sustainable use of wildlife resources. By setting stringent quotas and adhering to strict hunting seasons, we help maintain healthy populations of Marco Polo sheep and Pamirian Ibex. Our practices are guided by scientific data and conservation principles, ensuring that hunting contributes positively to wildlife management.",
+      "text3": "Our conservation efforts extend beyond hunting. We actively participate in wildlife monitoring and habitat conservation initiatives. The fees generated from hunting expeditions are reinvested into conservation programs, which include habitat restoration, anti-poaching measures, and wildlife research."
+    },
+    "Efforts": {
+      "text1": "Sustainable Hunting Practices",
+      "text2": "Our hunting expeditions are meticulously managed to ensure sustainable use of wildlife resources. By setting stringent quotas and adhering to strict hunting seasons, we help maintain healthy populations of Marco Polo sheep and Pamirian Ibex. Our practices are guided by scientific data and conservation principles, ensuring that hunting contributes positively to wildlife management.",
+      "text3": "Supporting Local Biodiversity",
+      "text4": "Our conservation efforts extend beyond hunting. We actively participate in wildlife monitoring and habitat conservation initiatives. The fees generated from hunting expeditions are reinvested into conservation programs, which include habitat restoration, anti-poaching measures, and wildlife research.",
+      "text5": "Community Involvement",
+      "text6": "We recognize the crucial role local communities play in conservation. A significant portion of our revenue is channeled back into local communities, supporting not only conservation projects but also community welfare. This creates a symbiotic relationship where wildlife protection and community development go hand in hand."
+    },
+    "Expedition": {
+      "text1": "Your Expedition Essentials",
+      "text2": "We ensure a hassle-free experience by taking care of all necessary permits and formalities for you. Relax and focus on the adventure ahead, knowing that all the details are handled with precision and care by our dedicated team.",
+      "text3": "We care of",
+      "text4": "Invitation Letter",
+      "text5": "Essential for travel and visa arrangements, this official letter confirms your participation in the hunting expedition",
+      "text6": "CITES Permits",
+      "text7": "Necessary for international hunters, these permits ensure that the export of any trophies complies with the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES).",
+      "text8": "Gun Permits",
+      "text9": "We handle the necessary paperwork for the legal use of firearms during the hunt.",
+      "text10": "Veterinary Certificates",
+      "text11": "Certifying the health and legal acquisition of the hunted animal, required for transport of the trophies.",
+      "text12": "Animal Permits",
+      "text13": "Official permits for the specific species you will be hunting, ensuring compliance with wildlife regulations.",
+      "text14": "Border Pass Permit",
+      "text15": "For ease of access to hunting areas near borders, this permit is crucial for hassle-free movement.",
+      "text16": "Food and Drinks",
+      "text17": "All meals and beverages are provided, ensuring a comfortable and well-nourished experience throughout your stay.",
+      "text18": "Round Trip Transportation",
+      "text19": "From Dushanbe to the hunting camp, we ensure comfortable and reliable transportation for our clients.",
+      "text20": "Arrival VIP Hall Access",
+      "text21": "For a smooth and premium experience upon arrival at Dushanbe, ensuring a hassle-free start to your adventure."
+    },
+    "History": {
+      "text1": "Murgab Hunting stands as the epitome of the ultimate hunting adventure, offering an unparalleled experience in the remote wilderness of Tajikistan which is known as Pamir. Founded in 1989, we specialize in sport hunting tourism, providing bespoke expeditionary services in the majestic Pamir (Gorno - Badakhshan Autonomous Region).",
+      "text2": "With a rich legacy spearheaded by our founders, Atobek Bekmurodov and Bekmurodi Zafar, we cater to the discerning hunter seeking not just a hunt, but an expedition—a story to be told for generations. Our core team, a cadre of former athletes, seasoned explorers, and professional hunters, ensures that your quest for the elusive Marco Polo sheep and the resilient mountain goats is not only successful but also sustainable and respectful to the natural splendor of the region. Murgab Hunting is not just about the pursuit of game; it’s about embracing the rugged beauty of the Pamirs, the thrill of the chase, and the preservation of hunting traditions. We invite you to join us, where hunting is an art and every expedition is an odyssey."
+    },
+    "IbexBanner": {
+      "text1": "Pamirian Ibex",
+      "text2": "Total Number",
+      "text3": "Trophies"
+    },
+    "MarcoPoloBanner": {
+      "text1": "Marco Polo",
+      "text2": "Total Number",
+      "text3": "Trophies",
+      "text4": "Young Animals (0-3)",
+      "text5": "Adult Males (>3)",
+      "text6": "Adult Females(>3)"
+    },
+    "Mission": {
+      "text1": "Murgab Hunting's mission is to offer ethical and sustainable hunting experiences in Tajikistan's Pamir Mountains, focusing on conservation, community engagement, and the preservation of Marco Polo sheep and Pamirian Ibex."
+    },
+    "SecondaryEfforts": {
+      "text1": "A Model for Conservation",
+      "text2": "Murgab Hunting stands as a model for how ethical, regulated hunting can be a powerful tool for conservation. Our efforts contribute to the thriving populations of Marco Polo sheep and Pamirian Ibex, ensuring that these majestic creatures continue to roam the Pamirs for generations to come.",
+      "text3": "Supporting Local Biodiversity",
+      "text4": "We take pride in educating our clients about the importance of conservation. Hunters who visit our camps leave with a deeper understanding of the ecological balance and the critical role they play as stewards of the environment."
+    },
+    "Videos": {
+      "text1": "Video"
+    },
+    "WolfBanner": {
+      "text1": "Wolf",
+      "text2": "Total Number"
+    },
+    "AboutPage": {
+      "text1": "FOUNDERS",
+      "text2": "Atobek Bekmurodov",
+      "text3": "Professional Hunter",
+      "text4": "Bekmurodi Zafar",
+      "text5": "Professional Hunter",
+      "text6": "BEKMURODI AYDIBEK",
+      "text7": "Professional Hunter",
+      "text8": "TEAM"
+    }
   }
 }

@@ -1,6 +1,6 @@
 .argali-brukey__banner {
   min-height: 100vh;
-  /* background-image: url(../../assets/image\ 10.png), */
+
   background-image: url(../../assets/Argali-Brukey_WEB.webp),
     linear-gradient(91deg, rgba(0, 0, 0, 0.43) 100%, rgba(217, 217, 217, 0) 100%);
   background-blend-mode: multiply;
@@ -20,14 +20,14 @@
   .gradient-argali-brukey {
     height: 500px;
   }
-  
+
   .argali-brukey__banner,
   #argali-brukey-text-wrapper {
     padding-inline: 16px !important;
   }
 
   .argali-brukey__banner {
-    /* background-position: -800px top; */
+
     background-position: -950px -40px;
   }
 

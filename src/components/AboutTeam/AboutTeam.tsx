@@ -6,11 +6,11 @@ import Image from "next/image";
 import PREV_ICON from "@/assets/images/icon1.svg";
 import NEXT_ICON from "@/assets/images/icon2.svg";
 
-import { teamData, ITeam } from "@/data/team";
+import { ITeam, teamData } from "@/data/team";
 
+import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import Slider from "react-slick";
 
 import "./AboutTeam.css";
 
@@ -34,7 +34,7 @@ export default function AboutTeam() {
     ],
   };
 
-  const slider = useRef<any>(null);
+  const slider = useRef<Slider | null>(null);
 
   return (
     <section className="relative w-[1150px] max-w-full m-auto px-10">
@@ -55,10 +55,10 @@ export default function AboutTeam() {
               <Image
                 className="rounded-lg absolute w-full h-full object-cover"
                 src={person.image}
-                alt={person.name}
+                alt={person.name.en}
               />
               <h3 className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white uppercase text-lg z-30">
-                {person.name} - {index + 1}
+                {person.name.en} - {index + 1}
               </h3>
             </div>
           );

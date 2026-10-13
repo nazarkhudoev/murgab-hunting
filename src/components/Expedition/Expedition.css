@@ -1,23 +1,20 @@
-/* width */
+
 .expedition__container::-webkit-scrollbar {
   width: 10px;
   right: -100px;
   border-radius: 100vmax;
 }
 
-/* Track */
 .expedition__container::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 100vmax;
 }
 
-/* Handle */
 .expedition__container::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 100vmax;
 }
 
-/* Handle on hover */
 .expedition__container::-webkit-scrollbar-thumb:hover {
   background: #555;
   border-radius: 100vmax;
@@ -34,7 +31,7 @@
 
   .expedition__container > div {
     border: none;
-    /* border-top: 1px solid #c4a174; */
+
   }
 
   .expedition__container {
@@ -65,7 +62,7 @@
     text-align: justify;
     margin-top: 50px;
     margin-bottom: 30px;
-    /* font-size: 12px; */
+
   }
 
   .expedition__main-title {

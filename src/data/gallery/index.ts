@@ -4,7 +4,6 @@ import Image2 from "../../../public/photos/trophy_yak/gallery-trophy-yak-02.jpg"
 import Image3 from "../../../public/photos/trophy_yak/gallery-trophy-yak-03.jpg";
 import Image4 from "../../../public/photos/trophy_yak/gallery-trophy-yak-04.jpg";
 
-// Ibex
 import Image5 from "../../../public/photos/trophy_ibex/gallery-trophy-ibex-01.jpg";
 import Image6 from "../../../public/photos/trophy_ibex/gallery-trophy-ibex-02.jpg";
 import Image7 from "../../../public/photos/trophy_ibex/gallery-trophy-ibex-03.jpg";
@@ -21,7 +20,6 @@ import Image17 from "../../../public/photos/trophy_ibex/gallery-trophy-ibex-13.j
 import Image18 from "../../../public/photos/trophy_ibex/gallery-trophy-ibex-14.jpg";
 import Image19 from "../../../public/photos/trophy_ibex/gallery-trophy-ibex-15.jpg";
 
-// marcopolo
 import Image20 from "../../../public/photos/trophy_marcopolo/gallery-trophy-marcopolo-01.jpg";
 import Image21 from "../../../public/photos/trophy_marcopolo/gallery-trophy-marcopolo-02.jpg";
 import Image22 from "../../../public/photos/trophy_marcopolo/gallery-trophy-marcopolo-03.jpg";
@@ -47,8 +45,6 @@ import Image41 from "../../../public/photos/trophy_marcopolo/gallery-trophy-marc
 import Image42 from "../../../public/photos/trophy_marcopolo/gallery-trophy-marcopolo-23.jpg";
 import Image43 from "../../../public/photos/trophy_marcopolo/gallery-trophy-marcopolo-24.jpg";
 
-// wild
-import Image44 from "../../../public/photos/wild/gallery-wild-30.jpg";
 import Image45 from "../../../public/photos/wild/gallery-wild-01.jpg";
 import Image46 from "../../../public/photos/wild/gallery-wild-02.jpg";
 import Image47 from "../../../public/photos/wild/gallery-wild-03.jpg";
@@ -78,20 +74,20 @@ import Image70 from "../../../public/photos/wild/gallery-wild-26.jpg";
 import Image71 from "../../../public/photos/wild/gallery-wild-27.jpg";
 import Image72 from "../../../public/photos/wild/gallery-wild-28.jpg";
 import Image73 from "../../../public/photos/wild/gallery-wild-29.jpg";
-import Image74 from "../../../public/photos/wild/gallery-wild-30.jpg";
+import {
+  default as Image44,
+  default as Image74,
+} from "../../../public/photos/wild/gallery-wild-30.jpg";
 
-// ibex & marcopolo
 import Image75 from "../../../public/photos/trophy_mp_ibx/gallery-trophy-mp-ibx-01.jpg";
 import Image76 from "../../../public/photos/trophy_mp_ibx/gallery-trophy-mp-ibx-02.jpg";
 import Image77 from "../../../public/photos/trophy_mp_ibx/gallery-trophy-mp-ibx-03.jpg";
 import Image78 from "../../../public/photos/trophy_mp_ibx/gallery-trophy-mp-ibx-04.jpg";
 
-// wolf
 import Image79 from "../../../public/photos/trophy_wolf/gallery-trophy-wolf-01.jpg";
 import Image80 from "../../../public/photos/trophy_wolf/gallery-trophy-wolf-02.jpg";
 import Image81 from "../../../public/photos/trophy_wolf/gallery-trophy-wolf-03.jpg";
 
-// landscape
 import Image82 from "../../../public/photos/lanedscape/gallery-landscape-01.jpg";
 import Image83 from "../../../public/photos/lanedscape/gallery-landscape-02.jpg";
 import Image84 from "../../../public/photos/lanedscape/gallery-landscape-03.jpg";
@@ -109,10 +105,10 @@ import Image95 from "../../../public/photos/lanedscape/gallery-landscape-14.jpg"
 import Image96 from "../../../public/photos/lanedscape/gallery-landscape-15.jpg";
 import Image97 from "../../../public/photos/lanedscape/gallery-landscape-16.jpg";
 
-interface ImageType {
+export interface ImageType {
   id: string;
-  src: StaticImageData | string;
-  fullscreen_src: any;
+  src: StaticImageData;
+  fullscreen_src: string;
   alt: string;
   trophie_status:
     | "landscape"
@@ -183,7 +179,7 @@ export const gallery: ImageType[] = [
     fullscreen_src: Image4.src,
     trophie_status: "yak",
   },
-  // ------------------------------------------------------------------------------
+
   {
     id: "5",
     alt: "Ibex Animal",
@@ -289,7 +285,7 @@ export const gallery: ImageType[] = [
     fullscreen_src: Image19.src,
     trophie_status: "ibex",
   },
-  // ------------------------------------------------------------------------------
+
   {
     id: "20",
     alt: "Marcopolo Animal",
@@ -458,7 +454,7 @@ export const gallery: ImageType[] = [
     fullscreen_src: Image43.src,
     trophie_status: "marcopolo",
   },
-  // ------------------------------------------------------------------------------
+
   {
     id: "44",
     alt: "Wild Nature",
@@ -676,7 +672,7 @@ export const gallery: ImageType[] = [
     fullscreen_src: Image74.src,
     trophie_status: "wild",
   },
-  // ------------------------------------------------------------------------------
+
   {
     id: "75",
     alt: "Ibex & Marcopolo Animals",
@@ -705,7 +701,7 @@ export const gallery: ImageType[] = [
     fullscreen_src: Image78.src,
     trophie_status: "ibex-marcopolo",
   },
-  // ------------------------------------------------------------------------------
+
   {
     id: "79",
     alt: "Wolf Animal",
@@ -727,7 +723,7 @@ export const gallery: ImageType[] = [
     fullscreen_src: Image81.src,
     trophie_status: "wolf",
   },
-  // ------------------------------------------------------------------------------
+
   {
     id: "82",
     alt: "Landscape",
@@ -770,34 +766,7 @@ export const gallery: ImageType[] = [
     fullscreen_src: Image87.src,
     trophie_status: "landscape",
   },
-  // {
-  //   id: "88",
-  //   alt: "Landscape",
-  //   src: Image88,
-  //   fullscreen_src: Image88.src,
-  //   trophie_status: "landscape",
-  // },
-  // {
-  //   id: "89",
-  //   alt: "Landscape",
-  //   src: Image89,
-  //   fullscreen_src: Image89.src,
-  //   trophie_status: "landscape",
-  // },
-  // {
-  //   id: "90",
-  //   alt: "Landscape",
-  //   src: Image90,
-  //   fullscreen_src: Image90.src,
-  //   trophie_status: "landscape",
-  // },
-  // {
-  //   id: "91",
-  //   alt: "Landscape",
-  //   src: Image91,
-  //   fullscreen_src: Image91.src,
-  //   trophie_status: "landscape",
-  // },
+
   {
     id: "92",
     alt: "Landscape",

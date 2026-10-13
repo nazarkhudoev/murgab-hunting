@@ -1,22 +1,7 @@
-/* .trophie-gradient {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 52%,
-    rgba(0, 0, 0, 0.8) 92.5%
-  ) !important;
-  position: absolute !important;
-  height: 100% !important;
-  width: 100% !important;
-  z-index: 29 !important;
-  transform: scale(1.2);
-} */
 
-/* .trophie__image {
-  transform: scale(1.2);
-} */
 
 #trophies-carousel .slick-slide {
-  /* width: 570px; */
+
 }
 #marco-polo-page .slick-slide > div,
 #brukey-page .slick-slide > div,

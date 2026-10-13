@@ -1,4 +1,4 @@
-/* 739 */
+
 @media (max-width: 739px) {
   .statistics-container {
     margin-top: 100px;
@@ -26,8 +26,5 @@
     position: relative;
     top: 0.3px;
   }
-  
-  /* .statistic__item {
-    flex-direction: column;
-  } */
+
 }

@@ -1,6 +1,6 @@
-import Image from "next/image";
-import Founder1 from "@/assets/founder1.png";
 import Founder2 from "@/assets/founder-2.png";
+import Founder1 from "@/assets/founder1.png";
+import Image from "next/image";
 
 import "./Founders.css";
 

@@ -1,15 +1,10 @@
-"use client"
-
+import initTranslations from "@/i18n";
+import type { Locale } from "@/lib/navigation";
 import Link from "next/link";
 
 import "./MainBanner.css";
-import { useTranslation } from "react-i18next";
-
-
-export default function MainBanner() {
-
-  const { t } = useTranslation();
-
+export default async function MainBanner({ locale }: { locale: Locale }) {
+  const { t } = await initTranslations({ locale, namespaces: ["common"] });
 
   return (
     <div className="relative main mb-10">
@@ -21,10 +16,10 @@ export default function MainBanner() {
 
         <div className="moto">
           <p className="text-white text-[48px] font-normal uppercase">
-            {t('Banner.moto')}
+            {t("Banner.moto")}
           </p>
           <p className="text-white text-[32px] font-thin">
-            {t('Banner.action')}
+            {t("Banner.action")}
           </p>
         </div>
 
@@ -33,19 +28,17 @@ export default function MainBanner() {
             className="flex items-center justify-center border border-white rounded-[10px] w-[280px] h-[40px] bg-[#FFFFFF] text-[#F45914] font-medium text-xl"
             href="#book"
           >
-            {t('Banner.book')}
+            {t("Banner.book")}
           </a>
           <Link
             className="flex items-center justify-center border-2 border-white rounded-[10px] w-[280px] h-[40px] text-white font-medium text-xl"
-            href={"/about-us"}
+            href={`/${locale}/about-us`}
           >
-            {t('Banner.readmore')}
+            {t("Banner.readmore")}
           </Link>
         </div>
       </div>
       <div className="gradient-main absolute left-0 -bottom-[165px]"></div>
     </div>
   );
-};
-
-
+}

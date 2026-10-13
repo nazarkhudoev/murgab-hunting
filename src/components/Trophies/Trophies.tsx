@@ -1,21 +1,15 @@
-'use client'
+"use client";
+import type { AnimalSlug } from "@/lib/navigation";
 import { useTranslation } from "react-i18next";
 import TrophiesCarousel from "../TrophiesCarousel/TrophiesCarousel";
-
-interface ITrophies {
-  animalName: string;
-}
-
-export default function Trophies({ animalName }: ITrophies) {
-  const { i18n } = useTranslation();
-  const localeActive = i18n.language;
-  
+export default function Trophies({ animal }: { animal?: AnimalSlug }) {
+  const { t } = useTranslation();
   return (
     <section id="trophies" className="mt-[150px]">
-      <h3 className="text-center text-white text-2xl font-medium mb-[50px] uppercase tracking-[1.5px]">
-        {localeActive === 'en'?'Our Hunting Trophies':'Наши охотничьи трофеи'}
-      </h3>
-      <TrophiesCarousel animalName={animalName} />
+      <h2 className="text-center text-white text-2xl font-medium mb-[50px] uppercase tracking-[1.5px]">
+        {t("Trophies.title")}
+      </h2>
+      <TrophiesCarousel animal={animal} />
     </section>
   );
 }

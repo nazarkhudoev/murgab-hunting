@@ -1,295 +1,59 @@
 "use client";
-import "./Menu.css";
-import { useState } from "react";
-
-import { usePathname } from "next/navigation";
+import { navigationLinks } from "@/lib/navigation";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import "./Menu.css";
 
 export default function Menu() {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
-
+  const { t, i18n } = useTranslation();
+  const trigger = useRef<HTMLButtonElement>(null);
+  const links = navigationLinks(pathname, i18n.language, t);
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsActive(false);
+        trigger.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, []);
   return (
     <div className="menu">
-      <div onClick={() => setIsActive(!isActive)} className="burger">
-        <span
-          className={`${isActive == true ? "line top-line" : "line"}`}
-        ></span>
-        <span
-          className={`${isActive == true ? "line middle-line" : "line"}`}
-        ></span>
-        <span
-          className={`${isActive == true ? "line bottom-line" : "line"}`}
-        ></span>
-      </div>
-      <div className={`links ${isActive == true ? "show" : ""}`}>
-        {pathname == "/en" && (
-          <>
-            <div className="flex items-center gap-1">
-              {/* <CiCircleInfo size={15} /> */}
-              <a onClick={() => setIsActive(false)} href={"#about"}>
-                About Us
-              </a>
-            </div>
-            <div className="flex items-center gap-1">
-              {/* <TfiCup size={15} /> */}
-              <a onClick={() => setIsActive(false)} href={"#trophies"}>
-                Hunting Trophies
-              </a>
-            </div>
-            <div className="flex items-center gap-1">
-              {/* <CiSquareMore size={15} /> */}
-              <a onClick={() => setIsActive(false)} href={"#essentials"}>
-                Hunting Essentials
-              </a>
-            </div>
-            <div className="flex items-center gap-1">
-              {/* <GiGoblinCamp size={15} /> */}
-              <a onClick={() => setIsActive(false)} href={"#camp"}>
-                Camp
-              </a>
-            </div>
-            <div className="flex items-center gap-1">
-              {/* <RiGalleryLine size={15} /> */}
-              <a onClick={() => setIsActive(false)} href={"#gallery"}>
-                Gallery
-              </a>
-            </div>
-            <div className="flex items-center gap-1">
-              {/* <RiGalleryLine size={15} /> */}
-              <a onClick={() => setIsActive(false)} href={"#video"}>
-                Video
-              </a>
-            </div>
-            <div className="flex items-center gap-1">
-              {/* <FaRegFolder size={15} /> */}
-              <a onClick={() => setIsActive(false)} href={"#blog"}>
-                Blog
-              </a>
-            </div>
-            <div className="flex items-center gap-1 book__link">
-              {/* <PiSignInFill /> */}
-              <a onClick={() => setIsActive(false)} href={"#book"}>
-                Book
-              </a>
-            </div>
-          </>
-        )}
-        {pathname == "/en/about-us" && (
-          <>
-            <div className="flex items-center gap-1">
-              <a onClick={() => setIsActive(false)} href={"#history"}>
-                History
-              </a>
-            </div>
-            <div className="flex items-center gap-1">
-              <a onClick={() => setIsActive(false)} href={"#founders"}>
-                Founders
-              </a>
-            </div>
-            <div className="flex items-center gap-1">
-              <a onClick={() => setIsActive(false)} href={"#team"}>
-                Team
-              </a>
-            </div>
-            <div className="flex items-center gap-1">
-              <a onClick={() => setIsActive(false)} href={"#conservation"}>
-                Conservation
-              </a>
-            </div>
-            <div className="flex items-center gap-1 book__link">
-              <a onClick={() => setIsActive(false)} href={"#book"}>
-                Book
-              </a>
-            </div>
-          </>
-        )}
-        {pathname == "/en/marco-polo" && (
-          <>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
-                Marco Polo
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
-                Ibex Pamirian
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link
-                onClick={() => setIsActive(false)}
-                href={"/en/argali-brukey"}
-              >
-                Argali Brukey
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
-                Yak
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
-                Wolf
-              </Link>
-            </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"#book"}>
-                Book
-              </Link>
-            </div>
-          </>
-        )}
-        {pathname == "/en/ibex" && (
-          <>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
-                Marco Polo
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
-                Ibex Pamirian
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link
-                onClick={() => setIsActive(false)}
-                href={"/en/argali-brukey"}
-              >
-                Argali Brukey
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
-                Yak
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
-                Wolf
-              </Link>
-            </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"#book"}>
-                Book
-              </Link>
-            </div>
-          </>
-        )}
-        {pathname == "/en/argali-brukey" && (
-          <>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
-                Marco Polo
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
-                Ibex Pamirian
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link
-                onClick={() => setIsActive(false)}
-                href={"/en/argali-brukey"}
-              >
-                Argali Brukey
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
-                Yak
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
-                Wolf
-              </Link>
-            </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"#book"}>
-                Book
-              </Link>
-            </div>
-          </>
-        )}
-        {pathname == "/en/wolf" && (
-          <>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
-                Marco Polo
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
-                Ibex Pamirian
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link
-                onClick={() => setIsActive(false)}
-                href={"/en/argali-brukey"}
-              >
-                Argali Brukey
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
-                Yak
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
-                Wolf
-              </Link>
-            </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"#book"}>
-                Book
-              </Link>
-            </div>
-          </>
-        )}
-        {pathname == "/en/yak" && (
-          <>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/marco-polo"}>
-                Marco Polo
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/ibex"}>
-                Ibex Pamirian
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link
-                onClick={() => setIsActive(false)}
-                href={"/en/argali-brukey"}
-              >
-                Argali Brukey
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/yak"}>
-                Yak
-              </Link>
-            </div>
-            <div className="flex items-center gap-1">
-              <Link onClick={() => setIsActive(false)} href={"/en/wolf"}>
-                Wolf
-              </Link>
-            </div>
-            <div className="flex items-center gap-1 book__link">
-              <Link onClick={() => setIsActive(false)} href={"#book"}>
-                Book
-              </Link>
-            </div>
-          </>
-        )}
-      </div>
+      <button
+        ref={trigger}
+        type="button"
+        onClick={() => setIsActive(!isActive)}
+        className="burger"
+        aria-label={t("Accessibility.menu")}
+        aria-expanded={isActive}
+        aria-controls="mobile-navigation"
+      >
+        <span className={isActive ? "line top-line" : "line"} />
+        <span className={isActive ? "line middle-line" : "line"} />
+        <span className={isActive ? "line bottom-line" : "line"} />
+      </button>
+      <nav
+        id="mobile-navigation"
+        aria-label={t("Accessibility.navigation")}
+        className={`links ${isActive ? "show" : ""}`}
+        style={isActive ? undefined : { display: "none" }}
+      >
+        {links.map((link) => (
+          <div
+            key={link.href}
+            className={link.href.endsWith("#book") ? "book__link" : ""}
+          >
+            <Link href={link.href} onClick={() => setIsActive(false)}>
+              {link.label}
+            </Link>
+          </div>
+        ))}
+      </nav>
     </div>
   );
 }

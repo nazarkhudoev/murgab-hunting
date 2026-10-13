@@ -1,12 +1,11 @@
 "use client";
 
-// import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import Logo from "../Logo/Logo";
 import Menu from "../Menu/Menu";
 import Navbar from "../Navbar/Navbar";
 
-import styles from "./Header.module.css";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
@@ -26,5 +25,4 @@ export default function Header() {
       </header>
     </div>
   );
-};
-
+}

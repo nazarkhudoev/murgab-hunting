@@ -1,20 +1,18 @@
-'use client'
+import initTranslations from "@/i18n";
+import type { Locale } from "@/lib/navigation";
 import "./Statistics.css";
-import { useTranslation } from "react-i18next";
-
-export default function Statistics() {
-
-  const { t } = useTranslation();
+export default async function Statistics({ locale }: { locale: Locale }) {
+  const { t } = await initTranslations({ locale, namespaces: ["common"] });
 
   return (
     <div className="statistics-container relative bottom-[3.5rem] z-10 flex justify-center items-start flex-wrap text-center gap-[100px] text-[#8E7E57] px-[50px]">
       <div>
         <h4 className="text-[51px] font-bold mb-[3px]">5</h4>
-        <p>{t('Statistics.species')}</p>
+        <p>{t("Statistics.species")}</p>
       </div>
       <div>
         <h4 className="text-[51px] font-bold mb-[3px]">+500</h4>
-        <p>{t('Statistics.initiatives')}</p>
+        <p>{t("Statistics.initiatives")}</p>
       </div>
       <div>
         <h4 className="text-[51px] font-bold mb-[3px] statistic__item text-center">
@@ -23,7 +21,7 @@ export default function Statistics() {
             k
           </sub>
         </h4>
-        <p>{t('Statistics.clients')}</p>
+        <p>{t("Statistics.clients")}</p>
       </div>
       <div>
         <h4 className="text-[51px] font-bold mb-[3px] statistic__item text-center">
@@ -32,7 +30,7 @@ export default function Statistics() {
             km<sup>2</sup>
           </sub>
         </h4>
-        <p>{t('Statistics.land')}</p>
+        <p>{t("Statistics.land")}</p>
       </div>
     </div>
   );

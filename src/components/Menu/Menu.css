@@ -26,7 +26,7 @@
 
     top: 52px;
     width: 250px;
-    /* height: 448px; */
+
     padding: 30px 15px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -51,7 +51,7 @@
     flex-direction: column;
     gap: 7px;
     cursor: pointer;
-    /* border: 1px solid red; */
+
     position: relative;
   }
 
@@ -71,8 +71,11 @@
 
     font-weight: 600;
 
-    width: 120px;
-    height: 26px;
+    width: max-content;
+    min-width: 120px;
+    max-width: 100%;
+    min-height: 36px;
+    padding: 6px 16px;
 
     display: flex;
     justify-content: center;
@@ -102,6 +105,8 @@
   }
 }
 
-/* @media (max-width: 1164px) {
-  
-} */
+.burger {
+  background: none;
+  border: 0;
+  padding: 8px;
+}

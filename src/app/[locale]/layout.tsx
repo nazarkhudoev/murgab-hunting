@@ -1,108 +1,59 @@
-
-import type { Metadata } from "next";
-
-import { Inter, Roboto } from "next/font/google";
-import Head from "next/head";
-import ogImage from "../../../public/og-image.png";
+import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/i18n";
-
+import { locales } from "@/lib/navigation";
+import { routeLocale, siteUrl, type LocaleParams } from "@/lib/seo";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
-const i18nNamesapaces = ["common"];
-
-
-const roboto = Roboto({
-  // weight: ["100", "300", "500", "700", "900"],
-  weight: ["100", "300", "500", "700", "900"],
-  subsets: ["latin"],
+const roboto = localFont({
+  src: "../../assets/fonts/Roboto-Variable.ttf",
+  weight: "100 900",
+  display: "swap",
 });
-
-export async function generateMetadata({ params: { locale } }: {
-  params: { locale: string };
-}): Promise<Metadata> {
-
-  const { t } = await initTranslations({ locale, namespaces: i18nNamesapaces });
-
-
-  return {
-    metadataBase: new URL("https://www.murgabhunting.com"),
-    title: t('Layout.metaData.title'),
-    // title: "Murgab Hunting",
-    description: t('Layout.metaData.description'),
-    openGraph: {
-      title: t('Layout.metaData.title'),
-      description: t('Layout.metaData.description'),
-      images: [
-        {
-          url: ogImage.src, // Replace with the actual URL of your image
-          width: 800,
-          height: 600,
-          alt: "Murgab Hunting",
-        },
-      ],
-    },
-    keywords: ['Marco polo', 'Марко Поло','Мургаб', 'Памир', 'Hot Springs Camp', 'Охота', 'ГБАО', 'Argali', 'Ibex','Козерог', 'Hunting', 'Pamir','Yak', 'Wolf', 'Mugab', 'conservation hunting'],
-    robots: "index, follow",
-
-  };
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  robots: { index: true, follow: true },
+};
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
 }
-
-
-
 export default async function RootLayout({
   children,
-  params: { locale },
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-
-  const { t, resources } = await initTranslations({ locale, namespaces: i18nNamesapaces });
-
+  params,
+}: LocaleParams & { children: React.ReactNode }) {
+  const locale = await routeLocale(params);
+  const { t, resources } = await initTranslations({
+    locale,
+    namespaces: ["common"],
+  });
   return (
     <html className={roboto.className} lang={locale}>
-      {/* <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "url": "https://www.murgabhunting.com",
-              "logo": "https://www.murgabhunting.com/logo.png"
-            })
-          }}
-        />
-      </Head> */}
       <body>
-        <TranslationsProvider resources={resources} locale={locale} namespaces={i18nNamesapaces}>
+        <a href="#main-content" className="skip-link">
+          {t("Accessibility.skip")}
+        </a>
+        <TranslationsProvider
+          key={locale}
+          resources={resources}
+          locale={locale}
+          namespaces={["common"]}
+        >
           <Header />
-          {children}
-          <Footer />
-
+          <div id="main-content" tabIndex={-1}>
+            {children}
+          </div>
+          <Footer locale={locale} />
         </TranslationsProvider>
-
-
-        <script
+        <Script
+          id="elfsight-platform"
           src="https://static.elfsight.com/platform/platform.js"
           data-use-service-core
-          defer
-        ></script>
-        <script
-          src="https://static.elfsight.com/platform/platform.js"
-          data-use-service-core
-          defer
-        ></script>
-        <script
-          src="https://static.elfsight.com/platform/platform.js"
-          data-use-service-core
-          defer
-        ></script>
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

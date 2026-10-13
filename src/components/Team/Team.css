@@ -47,11 +47,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: 372px !important; */
+
   }
 
   #team__container-slider .slick-slider .slick-list .slick-track .slick-slide {
-    /* width: 280px !important; */
+
     margin: 0 0px;
   }
 

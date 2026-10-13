@@ -42,14 +42,14 @@
   #camp {
     padding-inline: 6px;
   }
-  
+
   .camp_wrapper {
     padding: 1.75rem 16px;
   }
 
   .camp__description {
     margin-inline: 10px;
-    /* font-size: 12px; */
+
   }
 
   .camps_navigation {
@@ -61,27 +61,3 @@
     grid-template-columns: 130px 130px;
   }
 }
-
-/* @media (max-width: 1195px) {
-  .big-image {
-    width: 610px;
-  }
-}
-
-@media (max-width: 670px) {
-  .small__pics {
-    width: 240px;
-    height: 240px;
-    max-width: 100% !important;
-    max-height: 100% !important;
-  }
-}
-
-@media (max-width: 437px) {
-  .small__pics {
-    width: 155px;
-    height: 133px;
-    max-width: 100% !important;
-    max-height: 100% !important;
-  }
-} */

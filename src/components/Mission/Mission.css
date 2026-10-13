@@ -4,13 +4,6 @@
   background-size: cover;
   height: 367px;
 }
-/* @media (max-width: 922px) {
-  .mission-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-} */
 
 @media (max-width: 570px) {
   .mission-container {
@@ -26,7 +19,6 @@
     right: 16px;
     text-align: justify;
     width: 320px;
-    /* border: 1px solid red; */
-    /* word-spacing: ; */
+
   }
 }

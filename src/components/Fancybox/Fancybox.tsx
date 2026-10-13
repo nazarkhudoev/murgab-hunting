@@ -1,27 +1,26 @@
 "use client";
-import React, { useRef, useEffect } from "react";
-
 import { Fancybox as NativeFancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import { useEffect, useRef, type ReactNode } from "react";
 
-function Fancybox(props: any) {
-  const containerRef = useRef(null);
-
+type Options = Parameters<typeof NativeFancybox.bind>[2];
+export default function Fancybox({
+  children,
+  delegate = "[data-fancybox]",
+  options,
+}: {
+  children: ReactNode;
+  delegate?: string;
+  options?: Options;
+}) {
+  const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const container = containerRef.current;
-
-    const delegate = props.delegate || "[data-fancybox]";
-    const options = props.options || {};
-
+    if (!container) return;
     NativeFancybox.bind(container, delegate, options);
-
     return () => {
       NativeFancybox.unbind(container);
-      NativeFancybox.close();
     };
-  });
-
-  return <div ref={containerRef}>{props.children}</div>;
+  }, [delegate, options]);
+  return <div ref={containerRef}>{children}</div>;
 }
-
-export default Fancybox;

@@ -4,8 +4,6 @@
   gap: 10px;
 }
 
-
-
 .custom__overlay {
   position: absolute;
   left: 0;
@@ -48,8 +46,7 @@
 }
 
 #gallerySection .swiper {
-  /* padding-top: 30px !important;
-  padding-bottom: 0px !important; */
+
 }
 
 #gallerySection2{
@@ -59,13 +56,8 @@
 
 #gallerySection .swiper .swiper-slide{
   height: fit-content!important;
-  /* margin-right: 20px !important; */
-  /* width: calc(var(--parent-width, 100%) / 3 - 115px)!important; */
-}
 
-/* #marco-polo-page .slick-slide > div{ 
-  margin: 0 7px !important;
-} */
+}
 
 @media (max-width: 500px) {
   #gallerySection {
