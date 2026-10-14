@@ -14,6 +14,7 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.35",
     "@radix-ui/react-select": "^2.4.1",
+    "@vercel/analytics": "^2.0.1",
     "clsx": "^2.1.1",
     "i18next": "^23.13.0",
     "i18next-resources-to-backend": "^1.2.1",

@@ -4,6 +4,7 @@ import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/i18n";
 import { locales } from "@/lib/navigation";
 import { routeLocale, siteUrl, type LocaleParams } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
@@ -54,6 +55,7 @@ export default async function RootLayout({
           data-use-service-core
           strategy="afterInteractive"
         />
+        <Analytics />
       </body>
     </html>
   );
