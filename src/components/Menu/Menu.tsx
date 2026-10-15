@@ -2,17 +2,23 @@
 import { navigationLinks } from "@/lib/navigation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import "./Menu.css";
 
-export default function Menu() {
-  const [isActive, setIsActive] = useState(false);
+export default function Menu({
+  isOpen: isActive,
+  onOpenChange: setIsActive,
+}: {
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
+}) {
   const pathname = usePathname();
   const { t, i18n } = useTranslation();
   const trigger = useRef<HTMLButtonElement>(null);
   const links = navigationLinks(pathname, i18n.language, t);
   useEffect(() => {
+    if (!isActive) return;
     const closeOnEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsActive(false);
@@ -21,7 +27,7 @@ export default function Menu() {
     };
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
-  }, []);
+  }, [isActive, setIsActive]);
   return (
     <div className="menu">
       <button

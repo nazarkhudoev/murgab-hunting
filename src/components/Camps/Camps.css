@@ -10,6 +10,8 @@
 
 .camps_navigation button {
   position: relative;
+  min-height: 44px;
+  padding: 8px 4px;
 }
 
 .camps_navigation button::before {

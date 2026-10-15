@@ -67,14 +67,14 @@
 
   .book__link {
     background-color: #fff;
-    color: #f45914;
+    color: #a63305;
 
     font-weight: 600;
 
     width: max-content;
     min-width: 120px;
     max-width: 100%;
-    min-height: 36px;
+    min-height: 44px;
     padding: 6px 16px;
 
     display: flex;
@@ -109,4 +109,8 @@
   background: none;
   border: 0;
   padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
 }
+
+.links a { display: inline-block; min-height: 44px; padding-block: 8px; }

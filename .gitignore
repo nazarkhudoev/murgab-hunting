@@ -42,3 +42,8 @@ next-env.d.ts
 # Browser checks
 /playwright-report/
 /test-results/
+
+# Keep production secrets out of source control.
+.env
+.env.*
+!.env.example

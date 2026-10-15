@@ -21,7 +21,7 @@ export const trophiesData: ITrophie[] = [
       en: "Marco Polo Argali",
       ru: "Марко Поло Аргали",
     },
-    url: "/marco-polo",
+    url: "/marco-polo-sheep-hunting",
   },
   {
     id: "ibex",
@@ -30,7 +30,7 @@ export const trophiesData: ITrophie[] = [
       en: "Ibex Pamirian",
       ru: "Памирский Козерог",
     },
-    url: "/ibex",
+    url: "/pamir-ibex-hunting",
   },
   {
     id: "argali-brukey",

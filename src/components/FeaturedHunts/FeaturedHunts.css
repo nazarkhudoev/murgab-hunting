@@ -1,0 +1,257 @@
+.featured-hunts {
+  padding-block: 24px;
+}
+.featured-hunts-heading {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 72px;
+  align-items: end;
+  margin-bottom: 36px;
+}
+.featured-hunts .hunts-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8ad76;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0 0 20px;
+}
+.hunts-eyebrow > span {
+  width: 32px;
+  height: 1px;
+  background: #d8ad76;
+}
+.featured-hunts .featured-hunts-heading h2 {
+  font-size: clamp(30px, 3.3vw, 46px);
+  font-weight: 600;
+  line-height: 1.16;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.featured-hunts .hunts-intro {
+  margin: 0 0 3px;
+  color: #c8bfae;
+  font-size: 15px;
+  line-height: 1.85;
+}
+.primary-hunts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.content-shell .featured-hunts .hunt-image-card {
+  position: relative;
+  display: block;
+  height: 460px;
+  border: 1px solid #89704b;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff4de;
+  text-decoration: none;
+  isolation: isolate;
+}
+.hunt-image-card > img {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+.hunt-image-card:hover > img {
+  transform: scale(1.04);
+}
+.hunt-card-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      0deg,
+      rgba(17, 16, 10, 0.98),
+      rgba(17, 16, 10, 0.5) 32%,
+      transparent 65%
+    ),
+    linear-gradient(180deg, rgba(17, 16, 10, 0.45), transparent 30%);
+}
+.hunt-card-location {
+  position: absolute;
+  top: 24px;
+  left: 28px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #fff0d0;
+}
+.hunt-card-copy {
+  position: absolute;
+  inset: auto 28px 26px;
+}
+.hunt-card-category {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #e0b880;
+  margin-bottom: 10px;
+}
+.featured-hunts .hunt-card-copy h3 {
+  margin: 0 0 18px;
+  font-size: clamp(27px, 2.5vw, 35px);
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff6e5;
+}
+.hunt-card-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-top: 1px solid #f3d9ac33;
+  padding-top: 16px;
+  font-size: 13px;
+  color: #f0c892;
+}
+.hunt-card-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #b59361;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+.hunt-image-card:hover .hunt-card-arrow {
+  background: #d7a76522;
+}
+.other-hunts-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-block: 36px 20px;
+}
+.featured-hunts .other-hunts-heading h3 {
+  font-size: 17px;
+  font-weight: 500;
+  color: #f0e6d1;
+  margin: 0;
+}
+.other-hunts-heading p {
+  font-size: 13px;
+  color: #bfb49f;
+  margin: 0;
+}
+.secondary-hunts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.content-shell .featured-hunts .hunt-image-card--compact {
+  height: 245px;
+}
+.hunt-image-card--compact .hunt-card-copy {
+  inset: auto 22px 20px;
+}
+.featured-hunts .hunt-image-card--compact h3 {
+  font-size: 23px;
+  margin-bottom: 16px;
+}
+.hunt-image-card--compact .hunt-card-action {
+  padding-top: 13px;
+  font-size: 12px;
+}
+.hunts-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 20px 0;
+  border-bottom: 1px solid #7a654344;
+}
+.hunts-bottom > span {
+  color: #bfb49f;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.content-shell .featured-hunts .all-hunts-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 44px;
+  color: #f0c892;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+}
+.all-hunts-link svg {
+  flex-shrink: 0;
+}
+@media (max-width: 1000px) {
+  .featured-hunts-heading {
+    gap: 32px;
+  }
+  .primary-hunts,
+  .secondary-hunts {
+    gap: 18px;
+  }
+  .content-shell .featured-hunts .hunt-image-card {
+    height: 420px;
+  }
+  .content-shell .featured-hunts .hunt-image-card--compact {
+    height: 230px;
+  }
+  .hunt-card-copy {
+    inset: auto 22px 22px;
+  }
+  .hunt-card-location {
+    left: 22px;
+  }
+}
+@media (max-width: 700px) {
+  .featured-hunts-heading {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 28px;
+  }
+  .primary-hunts,
+  .secondary-hunts {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .content-shell .featured-hunts .hunt-image-card {
+    height: 410px;
+  }
+  .content-shell .featured-hunts .hunt-image-card--compact {
+    height: 235px;
+  }
+  .featured-hunts .featured-hunts-heading h2 {
+    font-size: 32px;
+  }
+  .other-hunts-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 28px;
+  }
+  .hunts-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .featured-hunts {
+    padding-block: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hunt-image-card > img,
+  .hunt-card-arrow {
+    transition: none;
+  }
+  .hunt-image-card:hover > img {
+    transform: none;
+  }
+}

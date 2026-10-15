@@ -17,7 +17,7 @@ import "./AboutTeam.css";
 export default function AboutTeam() {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -27,7 +27,7 @@ export default function AboutTeam() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true,
         },
       },

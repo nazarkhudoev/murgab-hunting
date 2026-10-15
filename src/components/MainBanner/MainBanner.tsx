@@ -1,44 +1,50 @@
-import initTranslations from "@/i18n";
-import type { Locale } from "@/lib/navigation";
+import Image from "next/image";
 import Link from "next/link";
-
-import "./MainBanner.css";
-export default async function MainBanner({ locale }: { locale: Locale }) {
-  const { t } = await initTranslations({ locale, namespaces: ["common"] });
-
+import Landscape from "@/assets/main-bg-1.webp";
+import { labels } from "@/data/site-content";
+import type { Locale } from "@/lib/navigation";
+export default function MainBanner({ locale }: { locale: Locale }) {
   return (
-    <div className="relative main mb-10">
-      <div className="custom__shadow"></div>
-      <div className="pt-[180px] w-[1200px] mx-auto relative z-50 main__banner-home">
-        <h1 className="text-[80px] font-bold text-white uppercase">
-          Murgab Hunting
+    <section className="expedition-hero">
+      <Image
+        src={Landscape}
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="hero-photograph"
+      />
+      <div className="hero-shade" />
+      <div className="content-shell hero-copy">
+        <p className="eyebrow">
+          Murgab Hunting · {locale === "en" ? "Pamir Mountains" : "Горы Памира"}
+        </p>
+        <h1>
+          {locale === "en"
+            ? "Marco Polo Sheep & Ibex Hunting in Tajikistan"
+            : "Охота на барана Марко Поло и козерога в Таджикистане"}
         </h1>
-
-        <div className="moto">
-          <p className="text-white text-[48px] font-normal uppercase">
-            {t("Banner.moto")}
-          </p>
-          <p className="text-white text-[32px] font-thin">
-            {t("Banner.action")}
-          </p>
-        </div>
-
-        <div className="flex items-center gap-7 mt-7">
-          <a
-            className="flex items-center justify-center border border-white rounded-[10px] w-[280px] h-[40px] bg-[#FFFFFF] text-[#F45914] font-medium text-xl"
-            href="#book"
-          >
-            {t("Banner.book")}
-          </a>
+        <p>
+          {locale === "en"
+            ? "Guided expeditions in the Pamir Mountains with a local team operating since 1989."
+            : "Экспедиции в горах Памира с местной командой, работающей с 1989 года."}
+        </p>
+        <div className="hero-actions">
           <Link
-            className="flex items-center justify-center border-2 border-white rounded-[10px] w-[280px] h-[40px] text-white font-medium text-xl"
-            href={`/${locale}/about-us`}
+            className="expedition-button"
+            href={`/${locale}/contact#book`}
+            data-track="plan_hunt_click"
           >
-            {t("Banner.readmore")}
+            {labels.plan[locale]}
+          </Link>
+          <Link
+            className="expedition-button secondary"
+            href={`/${locale}/hunting-packages`}
+          >
+            {labels.explore[locale]}
           </Link>
         </div>
       </div>
-      <div className="gradient-main absolute left-0 -bottom-[165px]"></div>
-    </div>
+    </section>
   );
 }

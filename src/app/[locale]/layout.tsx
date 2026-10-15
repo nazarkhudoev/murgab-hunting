@@ -4,11 +4,15 @@ import TranslationsProvider from "@/components/TranslationsProvider";
 import initTranslations from "@/i18n";
 import { locales } from "@/lib/navigation";
 import { routeLocale, siteUrl, type LocaleParams } from "@/lib/seo";
-import { Analytics } from "@vercel/analytics/next";
+import PrivacyAnalytics from "@/components/AnalyticsEvents/PrivacyAnalytics";
+import AnalyticsEvents from "@/components/AnalyticsEvents/AnalyticsEvents";
+import JsonLd from "@/components/Seo/JsonLd";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
 import "./globals.css";
+import "./expedition.css";
 
 const roboto = localFont({
   src: "../../assets/fonts/Roboto-Variable.ttf",
@@ -17,7 +21,6 @@ const roboto = localFont({
 });
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  robots: { index: true, follow: true },
 };
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -55,7 +58,10 @@ export default async function RootLayout({
           data-use-service-core
           strategy="afterInteractive"
         />
-        <Analytics />
+        <PrivacyAnalytics />
+        <AnalyticsEvents />
+        <JsonLd data={organizationSchema()} />
+        <JsonLd data={websiteSchema(locale)} />
       </body>
     </html>
   );

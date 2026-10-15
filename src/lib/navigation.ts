@@ -25,36 +25,19 @@ export function navigationLinks(
   locale: string,
   t: TFunction,
 ) {
-  const path = pathname.replace(/^\/(en|ru)(?=\/|$)/, "").replace(/\/$/, "");
-  if (path === "/about-us") {
-    return ["history", "founders", "team", "conservation", "book"].map(
-      (id) => ({
-        href: `#${id}`,
-        label: t(`Aboutlist.${id}`),
-      }),
-    );
-  }
-  if (animalSlugs.some((slug) => path === `/${slug}`)) {
-    const keys = ["marcopolo", "ibex", "brukey", "yak", "wolf"];
-    return [
-      ...animalSlugs.map((slug, index) => ({
-        href: localizedPath(locale, `/${slug}`),
-        label: t(`Animallist.${keys[index]}`),
-      })),
-      { href: "#book", label: t("Animallist.book") },
-    ];
-  }
+  void pathname;
   return [
+    ["home", "home"],
     ["about", "about"],
-    ["trophies", "trophies"],
-    ["essentials", "essentials"],
-    ["camp", "camp"],
-    ["gallerySection", "gallery"],
-    ["video", "video"],
+    ["hunting-packages", "trophies"],
+    ["hunting-permits", "essentials"],
+    ["pamir-hunting-camp", "camp"],
+    ["gallery", "gallery"],
+    ["conservation", "conservation"],
     ["blog", "blog"],
-    ["book", "book"],
-  ].map(([id, key]) => ({
-    href: path ? localizedPath(locale, `#${id}`) : `#${id}`,
-    label: t(`Navlist.${key}`),
+    ["contact#book", "book"],
+  ].map(([path, key]) => ({
+    href: localizedPath(locale, `/${path === "home" ? '' : path}`),
+    label: key,
   }));
 }

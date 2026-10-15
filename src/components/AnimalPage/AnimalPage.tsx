@@ -1,36 +1,11 @@
-import initTranslations from "@/i18n";
+import { trophiesData } from "@/data/trophies";
+import { labels } from "@/data/site-content";
 import type { AnimalSlug, Locale } from "@/lib/navigation";
+import Image from "next/image";
+import Breadcrumbs from "../Seo/Breadcrumbs";
 import AnimalGallery from "../AnimalGallery/AnimalGallery";
-import ArgaliBrukeyBanner from "../ArgaliBrukeyBanner/ArgaliBrukeyBanner";
 import Contact from "../Contact/Contact";
-import IbexBanner from "../IbexBanner/IbexBanner";
-import MarcoPoloBanner from "../MarcoPoloBanner/MarcoPoloBanner";
-import Trophies from "../Trophies/Trophies";
-import WolfBanner from "../WolfBanner/WolfBanner";
-import YakBanner from "../YakBanner/YakBanner";
-
-const banners = {
-  "marco-polo": MarcoPoloBanner,
-  ibex: IbexBanner,
-  "argali-brukey": ArgaliBrukeyBanner,
-  yak: YakBanner,
-  wolf: WolfBanner,
-};
-const pageIds = {
-  "marco-polo": "marco-polo-page",
-  ibex: "ibex-page",
-  "argali-brukey": "brukey-page",
-  yak: "yak-page",
-  wolf: "wolf-page",
-};
-const textIds = {
-  "marco-polo": "marcopolo-text-wrapper",
-  ibex: "ibex-text-wrapper",
-  "argali-brukey": "argali-brukey-text-wrapper",
-  yak: "yak-text-wrapper",
-  wolf: "wolf-text-wrapper",
-};
-
+import { HuntCards, RelatedLinks } from "../ExpeditionContent/Shared";
 export default async function AnimalPage({
   animal,
   locale,
@@ -38,28 +13,43 @@ export default async function AnimalPage({
   animal: AnimalSlug;
   locale: Locale;
 }) {
-  const { t } = await initTranslations({ locale, namespaces: ["common"] });
-  const Banner = banners[animal];
-  const paragraphs = t(`Animals.${animal}.paragraphs`, {
-    returnObjects: true,
-  }) as string[];
+  const hunt = trophiesData.find((item) => item.id === animal)!;
   return (
-    <main id={pageIds[animal]}>
-      <Banner locale={locale} />
-      <section
-        id={textIds[animal]}
-        className="w-[1200px] max-w-full mx-auto mt-10 px-5"
-      >
-        <div className="text-white font-extralight relative z-[99] text-justify">
-          {paragraphs.map((paragraph, index) => (
-            <p key={index} className="mb-6">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+    <main className="expedition-main">
+      <div className="content-shell">
+        <Breadcrumbs
+          label={locale === "en" ? "Breadcrumbs" : "Навигационная цепочка"}
+          items={[
+            { label: labels.home[locale], href: `/${locale}` },
+            {
+              label: labels.explore[locale],
+              href: `/${locale}/hunting-packages`,
+            },
+            { label: hunt.title[locale], href: `/${locale}${hunt.url}` },
+          ]}
+        />
+        <header className="page-intro">
+          <h1>{hunt.title[locale]}</h1>
+          <p>
+            {locale === "en"
+              ? "This species appears in our existing expedition collection. Contact the team to confirm current availability, permissions and trip arrangements."
+              : "Этот вид представлен в существующей коллекции экспедиций. Уточните у команды актуальную доступность, разрешения и условия поездки."}
+          </p>
+        </header>
+        <Image
+          className="page-lead-image"
+          src={hunt.image}
+          alt={hunt.title[locale]}
+          sizes="(max-width: 1200px) 95vw, 1160px"
+          priority
+        />
         <AnimalGallery animal={animal} />
-        <Trophies animal={animal} />
-      </section>
+        <section className="content-section">
+          <h2>{labels.explore[locale]}</h2>
+          <HuntCards locale={locale} exclude={animal} />
+        </section>
+        <RelatedLinks locale={locale} />
+      </div>
       <Contact locale={locale} />
     </main>
   );

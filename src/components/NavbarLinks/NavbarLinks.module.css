@@ -22,12 +22,13 @@
 
 .navbarList li:last-child > a {
   background-color: #fff;
-  color: #f45914;
+  color: #a63305;
 
   font-weight: 600;
 
-  width: 120px;
-  height: 26px;
+  width: max-content;
+  min-height: 44px;
+  padding: 8px 16px;
 
   display: flex;
   justify-content: center;

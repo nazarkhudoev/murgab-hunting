@@ -12,7 +12,7 @@ export default function FoundersCarousel() {
   const { t } = useTranslation();
   const founder_settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -22,7 +22,7 @@ export default function FoundersCarousel() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true,
         },
       },
@@ -31,7 +31,7 @@ export default function FoundersCarousel() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true,
         },
       },
@@ -40,7 +40,7 @@ export default function FoundersCarousel() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: true,
+          infinite: false,
           dots: true,
         },
       },

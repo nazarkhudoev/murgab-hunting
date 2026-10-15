@@ -1,0 +1,234 @@
+.pamir-experience {
+  overflow: hidden;
+  border: 1px solid #76603f;
+  border-radius: 14px;
+  background: #2b2519;
+}
+.pamir-hero {
+  position: relative;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  padding: 64px 48px;
+}
+.pamir-hero > img {
+  object-fit: cover;
+  object-position: center;
+}
+.pamir-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(19, 18, 12, 0.94),
+      rgba(19, 18, 12, 0.75) 42%,
+      rgba(19, 18, 12, 0.12) 100%
+    ),
+    linear-gradient(0deg, rgba(19, 18, 12, 0.45), transparent 60%);
+}
+.pamir-location {
+  position: absolute;
+  top: 26px;
+  right: 28px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 14px;
+  border: 1px solid #f8edd440;
+  border-radius: 5px;
+  background: #17160f80;
+  color: #fff1d9;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.pamir-location svg {
+  flex-shrink: 0;
+}
+.pamir-hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+}
+.pamir-experience .pamir-eyebrow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #f0c892;
+  margin: 0 0 24px;
+}
+.pamir-eyebrow > span {
+  width: 32px;
+  height: 1px;
+  background: #f0c892;
+  flex-shrink: 0;
+}
+.pamir-experience .pamir-hero-copy h2 {
+  font-size: clamp(32px, 3.6vw, 50px);
+  font-weight: 600;
+  line-height: 1.13;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  color: #fff6e5;
+  margin: 0 0 24px;
+}
+.pamir-experience .pamir-story {
+  color: #e4d9c5;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0 0 28px;
+  max-width: 460px;
+}
+.content-shell .pamir-experience .pamir-travel-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 50px;
+  padding: 13px 20px;
+  border: 1px solid #ba9765;
+  border-radius: 5px;
+  color: #ffdfb3;
+  background: #211b1280;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.pamir-travel-link:hover {
+  background: #4a3323 !important;
+}
+.pamir-travel-link svg {
+  flex-shrink: 0;
+}
+.pamir-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 28px 32px;
+  margin: 0;
+  list-style: none;
+  border-top: 1px solid #8d744744;
+}
+.pamir-features li {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 4px 20px;
+  border-right: 1px solid #8d744744;
+  min-width: 0;
+}
+.pamir-features li:last-child {
+  border-right: 0;
+}
+.pamir-feature-icon {
+  flex-shrink: 0;
+  color: #d8b078;
+}
+.pamir-experience .pamir-features h3 {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #f2e8d3;
+  margin: 0 0 6px;
+}
+.pamir-experience .pamir-features p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #bfb49f;
+  margin: 0;
+}
+@media (max-width: 1000px) {
+  .pamir-hero {
+    padding: 60px 36px;
+  }
+  .pamir-features {
+    padding: 26px 16px;
+  }
+  .pamir-features li {
+    padding-inline: 16px;
+    gap: 12px;
+  }
+}
+@media (max-width: 750px) {
+  .pamir-hero {
+    align-items: flex-end;
+    min-height: 620px;
+    padding: 120px 28px 36px;
+  }
+  .pamir-hero > img {
+    object-position: 58% center;
+  }
+  .pamir-hero-shade {
+    background: linear-gradient(
+      0deg,
+      rgba(19, 18, 12, 0.98),
+      rgba(19, 18, 12, 0.85) 48%,
+      rgba(19, 18, 12, 0.12) 100%
+    );
+  }
+  .pamir-location {
+    top: 22px;
+    left: 22px;
+    right: auto;
+  }
+  .pamir-features {
+    grid-template-columns: 1fr;
+    padding: 10px 26px;
+  }
+  .pamir-features li {
+    padding: 22px 0;
+    border-right: 0;
+    border-bottom: 1px solid #8d744744;
+    gap: 18px;
+  }
+  .pamir-features li:last-child {
+    border-bottom: 0;
+  }
+  .pamir-feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 38px;
+  }
+  .pamir-experience .pamir-features p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 450px) {
+  .pamir-hero {
+    padding-inline: 24px;
+    min-height: 650px;
+  }
+  .pamir-experience .pamir-hero-copy h2 {
+    font-size: 36px;
+  }
+  .pamir-experience .pamir-story {
+    font-size: 14px;
+  }
+  .pamir-experience .pamir-eyebrow {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    gap: 10px;
+  }
+  .pamir-eyebrow > span {
+    width: 20px;
+  }
+  .content-shell .pamir-experience .pamir-travel-link {
+    font-size: 13px;
+    gap: 16px;
+    padding-inline: 16px;
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pamir-travel-link {
+    transition: none;
+  }
+}

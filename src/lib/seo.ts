@@ -24,6 +24,16 @@ export async function pageMetadata(
   const { t } = await initTranslations({ locale, namespaces: ["common"] });
   const title = t(`Pages.${page}.title`);
   const description = t(`Pages.${page}.description`);
+  return contentMetadata(locale, title, description, path);
+}
+
+export function contentMetadata(
+  locale: Locale,
+  title: string,
+  description: string,
+  path = "",
+): Metadata {
+  title = title.includes("Murgab Hunting") ? title : `${title} | Murgab Hunting`;
   return {
     title,
     description,
@@ -44,6 +54,9 @@ export async function pageMetadata(
       description,
       url: `${siteUrl}/${locale}${path}`,
       locale: locale === "ru" ? "ru_RU" : "en_US",
+      alternateLocale: locale === "ru" ? "en_US" : "ru_RU",
+      siteName: "Murgab Hunting",
+      type: "website",
       images: [
         {
           url: "/og-image.png",
@@ -52,6 +65,12 @@ export async function pageMetadata(
           alt: "Murgab Hunting",
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og-image.png"],
     },
   };
 }

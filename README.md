@@ -66,3 +66,14 @@ npm run start
 ```
 
 Deploy on a Node-capable platform with Node.js 22.13 or newer. The build generates localized pages, sitemap.xml and robots.txt. Preview both languages and verify the Elfsight form's delivery configuration before exposing a deployment to visitors.
+# SEO and content maintenance
+
+The bilingual route catalogue and reviewed business copy live in `src/data/site-content.ts`. New public pages use the existing i18next layout and server-rendered content templates. Legacy `/marco-polo`, `/ibex` and `/about-us` URLs redirect permanently to the descriptive equivalents in both languages. The sitemap contains canonical pages only.
+
+See `docs/SEO-IMPLEMENTATION.md` for the audit and `docs/OWNER-CONTENT-REVIEW.md` for the single owner-review checklist. Unconfirmed seasons, prices, altitudes, legal requirements, facilities and impact figures are omitted from public copy.
+
+Add bilingual blog records in `src/data/blog.ts`; only records marked published and ownerReviewed, with a real author, publication date and sections, are routed and included in the sitemap. Article metadata, breadcrumbs and BlogPosting JSON-LD are generated from these records. Do not mark placeholder content published.
+
+The Elfsight inquiry widget remains the submission backend. The separate email-draft form validates inputs and opens a mail application; it does not send email or claim submission success. No new server endpoint stores inquiry data. Confirm widget validation, spam prevention and delivery in its dashboard.
+
+Vercel custom events track route/locale/species and contact-link actions without form field values. Analytics URLs have query strings and fragments removed before sending. Verify actual event delivery and privacy requirements in production. The canonical hostname remains `www.murgabhunting.com`; configure HTTPS and apex-to-www redirects in Vercel or your reverse proxy and set NEXT_PUBLIC_SITE_URL before building.
