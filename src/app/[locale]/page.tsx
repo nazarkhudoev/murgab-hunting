@@ -13,7 +13,7 @@ import PamirExperience from "@/components/PamirExperience/PamirExperience";
 import { labels } from "@/data/site-content";
 import { contentMetadata, routeLocale, type LocaleParams } from "@/lib/seo";
 
-export const revalidate = 86400;
+export const revalidate = 3600;
 export async function generateMetadata({ params }: LocaleParams) {
   const locale = await routeLocale(params);
   return contentMetadata(

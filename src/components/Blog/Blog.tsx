@@ -1,3 +1,4 @@
+import Script from "next/script";
 import initTranslations from "@/i18n";
 import type { Locale } from "@/lib/navigation";
 import "./Blog.css";
@@ -14,6 +15,12 @@ export default async function Blog({ locale }: { locale: Locale }) {
         className="elfsight-app-565e7f16-ffc5-4652-96e8-b36af930a2b9"
         data-elfsight-app-lazy
       ></div>
+      <Script
+        id="elfsight-platform"
+        src="https://static.elfsight.com/platform/platform.js"
+        data-use-service-core
+        strategy="afterInteractive"
+      />
     </section>
   );
 }

@@ -390,15 +390,6 @@ td {
 .expedition-main .contact-form-container {
   background: rgba(25, 20, 10, 0.85);
 }
-.expedition-home #video {
-  margin-top: 64px !important;
-}
-.expedition-home #video h3 {
-  margin-bottom: 24px !important;
-}
-.expedition-home #video {
-  scroll-margin-top: 110px;
-}
 .expedition-main .content-section .mySwiper {
   max-width: 100%;
 }

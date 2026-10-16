@@ -10,7 +10,6 @@ import JsonLd from "@/components/Seo/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Script from "next/script";
 import "./globals.css";
 import "./expedition.css";
 
@@ -52,12 +51,6 @@ export default async function RootLayout({
           </div>
           <Footer locale={locale} />
         </TranslationsProvider>
-        <Script
-          id="elfsight-platform"
-          src="https://static.elfsight.com/platform/platform.js"
-          data-use-service-core
-          strategy="afterInteractive"
-        />
         <PrivacyAnalytics />
         <AnalyticsEvents />
         <JsonLd data={organizationSchema()} />
