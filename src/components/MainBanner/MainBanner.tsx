@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HeroVideo from "./HeroVideo";
 import Link from "next/link";
 import Landscape from "@/assets/main-bg-1.webp";
 import { labels } from "@/data/site-content";
@@ -14,6 +15,7 @@ export default function MainBanner({ locale }: { locale: Locale }) {
         sizes="100vw"
         className="hero-photograph"
       />
+      <HeroVideo poster={Landscape.src} locale={locale} />
       <div className="hero-shade" />
       <div className="content-shell hero-copy">
         <p className="eyebrow">

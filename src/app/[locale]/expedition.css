@@ -490,3 +490,45 @@ td {
     font-size: 0.85rem;
   }
 }
+
+.hero-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+.hero-video-control {
+  position: absolute;
+  z-index: 2;
+  top: 136px;
+  right: max(24px, calc((100% - 1160px) / 2));
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #ffffff66;
+  border-radius: 999px;
+  background: #201b1599;
+  color: #fff4e3;
+  font-size: 12px;
+  backdrop-filter: blur(8px);
+}
+.hero-video-control:hover {
+  background: #201b15cc;
+}
+.hero-video-control:focus-visible {
+  outline: 3px solid #f0c892;
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .hero-video-control {
+    top: 104px;
+    right: 20px;
+    font-size: 11px;
+    padding-inline: 12px;
+  }
+}

@@ -72,7 +72,7 @@ export default function PlanningPage({
           />
         </div>
       )}
-      {page.slug === "about" && (
+      {/* {page.slug === "about" && (
         <div className="content-shell">
           <Image
             className="page-lead-image"
@@ -82,7 +82,7 @@ export default function PlanningPage({
             priority
           />
         </div>
-      )}
+      )} */}
       <div className="content-shell">
         {!["pamir-hunting-camp", "hunting-permits"].includes(page.slug) &&
           page.sections.map((section) => (
