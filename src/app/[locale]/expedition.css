@@ -73,8 +73,15 @@
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(18, 16, 10, 0.84), rgba(18, 16, 10, 0.15)),
-    linear-gradient(0deg, #241f13, transparent 45%);
+    linear-gradient(
+      0deg,
+      #241f13 0%,
+      rgba(36, 31, 19, 0.94) 10%,
+      rgba(36, 31, 19, 0.65) 25%,
+      rgba(36, 31, 19, 0.18) 43%,
+      transparent 62%
+    ),
+    linear-gradient(90deg, rgba(18, 16, 10, 0.84), rgba(18, 16, 10, 0.15));
 }
 .hero-copy {
   position: relative;
@@ -423,7 +430,13 @@ td {
     font-size: 1.05rem;
   }
   .hero-shade {
-    background: linear-gradient(0deg, #241f13, rgba(18, 16, 10, 0.58) 45%);
+    background: linear-gradient(
+      0deg,
+      #241f13 0%,
+      rgba(36, 31, 19, 0.97) 14%,
+      rgba(36, 31, 19, 0.75) 32%,
+      rgba(18, 16, 10, 0.58) 62%
+    );
   }
   .expedition-cards,
   .camp-photo-grid,
