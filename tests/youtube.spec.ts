@@ -23,7 +23,7 @@ const fixture = (
 const uploads = {
   items: [{ contentDetails: { relatedPlaylists: { uploads: "UU_uploads" } } }],
 };
-test("YouTube service requests uploads then six items with hourly caching and preferred thumbnails", async () => {
+test("YouTube service batches durations with hourly caching and preferred thumbnails", async () => {
   const requests: {
     url: URL;
     options: RequestInit;
@@ -31,6 +31,10 @@ test("YouTube service requests uploads then six items with hourly caching and pr
   const fetcher: typeof fetch = async (input, options) => {
     const url = new URL(String(input));
     requests.push({ url, options: options || {} });
+    if (url.pathname.endsWith("videos"))
+      return Response.json({
+        items: [{ id: "video000001", contentDetails: { duration: "PT8M42S" } }],
+      });
     return Response.json(
       url.pathname.endsWith("channels")
         ? uploads
@@ -56,7 +60,11 @@ test("YouTube service requests uploads then six items with hourly caching and pr
   expect(requests[0].url.searchParams.get("part")).toBe("contentDetails");
   expect(requests[0].url.searchParams.get("id")).toBe(channelId);
   expect(requests[1].url.searchParams.get("playlistId")).toBe("UU_uploads");
-  expect(requests[1].url.searchParams.get("maxResults")).toBe("6");
+  expect(requests[1].url.searchParams.get("maxResults")).toBe("20");
+  expect(requests).toHaveLength(3);
+  expect(requests[2].url.pathname).toMatch(/videos$/);
+  expect(requests[2].url.searchParams.get("part")).toBe("contentDetails");
+  expect(requests[2].url.searchParams.get("id")).toBe("video000001");
   expect(requests[1].url.searchParams.get("part")).toBe(
     "snippet,contentDetails",
   );
@@ -64,6 +72,8 @@ test("YouTube service requests uploads then six items with hourly caching and pr
     requests.every((request) => request.options.next?.revalidate === 3600),
   ).toBeTruthy();
   expect(videos[0].thumbnail).toContain("maxresdefault");
+  expect(videos[0].durationSeconds).toBe(522);
+  expect(videos[0].durationLabel).toBe("8:42");
   expect(JSON.stringify(videos)).not.toContain("test-server-secret");
 });
 test("YouTube service safely skips malformed, private, duplicate and thumbnail-less items", async () => {
@@ -83,7 +93,15 @@ test("YouTube service safely skips malformed, private, duplicate and thumbnail-l
     channelId,
     async (input) =>
       Response.json(
-        String(input).includes("/channels?") ? uploads : { items: data },
+        String(input).includes("/channels?")
+          ? uploads
+          : String(input).includes("/videos?")
+            ? {
+                items: [
+                  { id: "video000004", contentDetails: { duration: "PT2M" } },
+                ],
+              }
+            : { items: data },
       ),
   );
   expect(videos).toHaveLength(1);
@@ -135,6 +153,8 @@ const videos: YouTubeVideo[] = Array.from({ length: 6 }, (_, index) => ({
   id: `video00000${index + 1}`,
   title: `Expedition film ${index + 1}`,
   description: "Fixture only",
+  durationSeconds: 522,
+  durationLabel: "8:42",
   thumbnail: `https://i.ytimg.com/vi/video00000${index + 1}/hqdefault.jpg`,
   publishedAt: "2026-01-01T00:00:00Z",
 }));

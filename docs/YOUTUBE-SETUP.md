@@ -1,6 +1,6 @@
 # YouTube gallery setup
 
-The server-only `src/lib/youtube.ts` reads the configuration and uses `youtube-data.ts` to retrieve the channel's uploads playlist and its latest six entries. Next.js 15 fetch caching revalidates both successful requests after 3,600 seconds; the gallery waits for an incoming request with Next.js 15 `connection()` before reading runtime settings. Pages using the gallery are server-rendered, while the YouTube responses remain cached for one hour. There is no browser API call, exposed credential, or public API endpoint. No player iframe is mounted before a visitor selects a video.
+The server-only `src/lib/youtube.ts` reads the configuration and uses `youtube-data.ts` to retrieve the channel's uploads playlist and its latest six qualifying videos longer than 60 seconds. Uploads are retrieved in batches of 20 and durations are checked in one batched `videos.list` request per page. Playlist pagination continues only until six qualifying videos are found or pages run out. Next.js 15 fetch caching revalidates both successful requests after 3,600 seconds; the gallery waits for an incoming request with Next.js 15 `connection()` before reading runtime settings. Pages using the gallery are server-rendered, while the YouTube responses remain cached for one hour. There is no browser API call, exposed credential, or public API endpoint. No player iframe is mounted before a visitor selects a video.
 
 ## Google Cloud and channel ID
 
@@ -21,7 +21,7 @@ API calls follow [channels.list](https://developers.google.com/youtube/v3/docs/c
 
 ## Behaviour and limitations
 
-- Six upload entries are requested. Private/deleted entries, duplicate IDs, missing thumbnails, and malformed items are skipped, so fewer than six cards may appear. No invented videos fill empty slots.
+- Videos of 60 seconds or less are excluded. Private/deleted entries, duplicate IDs, missing or invalid durations, missing thumbnails, and malformed items are skipped. The latest six qualifying videos retain playlist order. Fewer than six cards appear only when the playlist runs out or an API request fails. Repeated page tokens are stopped defensively. `durationSeconds` and `durationLabel` are available in the typed data; the gallery design and modal are unchanged.
 - Thumbnail preference: maxres → standard → high → medium → default. Only HTTPS `i.ytimg.com/vi/` and `/vi_webp/` URLs are accepted. A failed thumbnail retains the play control and title.
 - Without credentials or during API failure, visitors see a quiet channel fallback and the existing `https://www.youtube.com/@MurgabHunting` CTA. The application still builds and renders. A network timeout is bounded per API request. The rendered fallback is not kept in the full-page cache; subsequent requests retry after a failed fetch. Successful cached data can be served by Next.js during background refresh.
 - Native modal dialogs provide focus containment and a top-layer backdrop. Escape, close button and backdrop click remove the iframe, restore body scrolling and return focus. With JavaScript disabled, server-rendered cards remain visible and link directly to the corresponding YouTube video.
