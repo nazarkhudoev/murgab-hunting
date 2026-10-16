@@ -23,8 +23,8 @@ export default function MainBanner({ locale }: { locale: Locale }) {
         </p>
         <h1>
           {locale === "en"
-            ? "Marco Polo Sheep & Ibex Hunting in Tajikistan"
-            : "Охота на барана Марко Поло и козерога в Таджикистане"}
+            ? "Marco Polo & Ibex Hunting in Tajikistan"
+            : "Охота на Марко Поло и козерога в Таджикистане"}
         </h1>
         <p>
           {locale === "en"
