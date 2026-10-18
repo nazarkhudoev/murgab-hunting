@@ -58,6 +58,10 @@ for (const locale of ["en", "ru"] as const) {
     await page.keyboard.press("Escape");
     await expect(menu).toBeFocused();
     await expect(menu).toHaveAttribute("aria-expanded", "false");
+    await menu.click();
+    await page
+      .locator(`#mobile-navigation a[href="/${locale}/contact#book"]`)
+      .click();
     await expect(
       page.locator('#book a[href="mailto:shirinbek0494@gmail.com"]'),
     ).toBeVisible();

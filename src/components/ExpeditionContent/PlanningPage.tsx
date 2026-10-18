@@ -8,6 +8,8 @@ import { publishedPosts } from "@/data/blog";
 import { business, labels, type ContentPage } from "@/data/site-content";
 import type { Locale } from "@/lib/navigation";
 import Breadcrumbs from "../Seo/Breadcrumbs";
+import JsonLd from "../Seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import Blog from "../Blog/Blog";
 import Contact from "../Contact/Contact";
 import InquiryDraft from "../InquiryDraft/InquiryDraft";
@@ -39,6 +41,16 @@ export default function PlanningPage({
       : []),
     { label: page.title[locale], href: `/${locale}/${page.slug}` },
   ];
+  if (page.slug === "gallery") {
+    return (
+      <main className="expedition-main">
+        <div className="content-shell">
+          <Gallery headingLevel={1} />
+        </div>
+        <JsonLd data={breadcrumbSchema(items)} />
+      </main>
+    );
+  }
   return (
     <main className="expedition-main">
       <div className="content-shell">
@@ -154,7 +166,6 @@ export default function PlanningPage({
             </Link>
           </>
         )}
-        {page.slug === "gallery" && <Gallery />}
         {page.animal && (
           <>
             <AnimalGallery animal={page.animal} />

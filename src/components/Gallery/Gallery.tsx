@@ -29,7 +29,14 @@ const curatedImages = Array.from(
     buckets.flatMap((bucket) => (bucket[index] ? [bucket[index]] : [])),
 ).flat();
 
-export default function Gallery({ limit }: { limit?: number }) {
+export default function Gallery({
+  limit,
+  headingLevel = 2,
+}: {
+  limit?: number;
+  headingLevel?: 1 | 2;
+}) {
+  const Heading = headingLevel === 1 ? "h1" : "h2";
   const { t, i18n } = useTranslation();
   const ru = i18n.language.startsWith("ru");
   const [filter, setFilter] = useState<Filter>("all");
@@ -65,7 +72,7 @@ export default function Gallery({ limit }: { limit?: number }) {
               <Camera size={16} aria-hidden="true" />
               {ru ? "Кадры экспедиций" : "From the field"}
             </p>
-            <h2 id="gallery-heading">{t("Gallery.title")}</h2>
+            <Heading id="gallery-heading">{t("Gallery.title")}</Heading>
           </div>
           <p className="archive-intro">
             {ru
