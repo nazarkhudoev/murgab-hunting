@@ -1,7 +1,7 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import MarcoPolo from "@/assets/cropped-marcopolo.webp";
+import MarcoPolo from "@/assets/main-bg-1.webp";
 import Ibex from "@/assets/Hunt_Cards/Ibex_Card.png";
 import Landscape from "@/assets/main-bg-1.webp";
 import { publishedPosts } from "@/data/blog";

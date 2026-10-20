@@ -10,6 +10,7 @@ import JsonLd from "@/components/Seo/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import "./expedition.css";
 
@@ -55,6 +56,7 @@ export default async function RootLayout({
         <AnalyticsEvents />
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema(locale)} />
+        <SpeedInsights />
       </body>
     </html>
   );
