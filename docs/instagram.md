@@ -17,3 +17,5 @@ Long-lived tokens expire. Refresh or replace the token before the expiry shown b
 Official references:
 - https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/
 - https://developers.facebook.com/docs/instagram-platform/instagram-api-with-instagram-login/business-login/
+
+The blog cards also request caption and timestamp fields. Captions are rendered as plain text, with expandable full text for longer posts. If Meta rejects the caption field, the feed retries without that field so photographs remain available.

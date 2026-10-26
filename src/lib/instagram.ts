@@ -6,6 +6,8 @@ export type InstagramPost = {
   imageUrl: string;
   permalink: string;
   mediaType: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
+  caption: string;
+  timestamp: string | null;
 };
 
 function httpsUrl(value: unknown, instagramOnly = false): string | undefined {
@@ -33,13 +35,36 @@ export async function getInstagramPosts(): Promise<InstagramPost[]> {
     const url = new URL("https://graph.instagram.com/v25.0/me");
     url.searchParams.set(
       "fields",
-      "username,media.limit(6){id,media_type,media_url,thumbnail_url,permalink}",
+      "username,media.limit(6){id,media_type,media_url,thumbnail_url,permalink,caption,timestamp}",
     );
-    const response = await fetch(url, {
+    const options = {
       headers: { Authorization: `Bearer ${token}` },
       next: { revalidate: 3600 },
+    };
+    let response = await fetch(url, {
+      ...options,
       signal: AbortSignal.timeout(10000),
     });
+    // Some account/API configurations do not expose captions. Keep the photos working.
+    if (response.status === 400) {
+      const error = await response
+        .clone()
+        .json()
+        .catch(() => null);
+      if (
+        typeof error?.error?.message === "string" &&
+        /caption/i.test(error.error.message)
+      ) {
+        url.searchParams.set(
+          "fields",
+          "username,media.limit(6){id,media_type,media_url,thumbnail_url,permalink,timestamp}",
+        );
+        response = await fetch(url, {
+          ...options,
+          signal: AbortSignal.timeout(10000),
+        });
+      }
+    }
     if (!response.ok) {
       console.warn(
         `Instagram feed request failed (${response.status}). Check the server token and permissions.`,
@@ -73,6 +98,13 @@ export async function getInstagramPosts(): Promise<InstagramPost[]> {
             imageUrl,
             permalink,
             mediaType: item.media_type as InstagramPost["mediaType"],
+            caption:
+              typeof item.caption === "string" ? item.caption.trim() : "",
+            timestamp:
+              typeof item.timestamp === "string" &&
+              Number.isFinite(Date.parse(item.timestamp))
+                ? new Date(item.timestamp).toISOString()
+                : null,
           },
         ];
       })

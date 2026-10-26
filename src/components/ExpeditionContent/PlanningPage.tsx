@@ -51,6 +51,66 @@ export default function PlanningPage({
       </main>
     );
   }
+  if (page.slug === "blog") {
+    const posts = publishedPosts();
+    return (
+      <main className="expedition-main journal-page">
+        <div className="content-shell">
+          <Breadcrumbs
+            label={locale === "en" ? "Breadcrumbs" : "Навигационная цепочка"}
+            items={items}
+          />
+          <header className="journal-intro">
+            <p className="eyebrow">
+              Murgab Hunting ·{" "}
+              {locale === "en" ? "Field journal" : "Дневник экспедиций"}
+            </p>
+            <h1>{page.title[locale]}</h1>
+            <p>
+              {locale === "en"
+                ? "A closer look at the Pamirs. Follow our local team through mountain landscapes, camp life and the moments that make every expedition its own story."
+                : "Памир вблизи. Горные пейзажи, жизнь лагеря и мгновения, из которых складывается история каждой экспедиции нашей команды."}
+            </p>
+            <Link className="journal-gallery-link" href={`/${locale}/gallery`}>
+              {locale === "en"
+                ? "Explore the photo gallery ↗"
+                : "Открыть фотогалерею ↗"}
+            </Link>
+          </header>
+          <Blog locale={locale} />
+          {posts.length > 0 && (
+            <section className="journal-articles">
+              <p className="eyebrow">
+                {locale === "en"
+                  ? "Expedition resources"
+                  : "Материалы об экспедициях"}
+              </p>
+              <h2>
+                {locale === "en"
+                  ? "Notes from our team"
+                  : "Заметки нашей команды"}
+              </h2>
+              <div className="journal-article-grid">
+                {posts.map((post) => (
+                  <article key={post.slug}>
+                    <p className="eyebrow">{post.category[locale]}</p>
+                    <h3>
+                      <Link href={`/${locale}/blog/${post.slug}`}>
+                        {post.title[locale]}
+                      </Link>
+                    </h3>
+                    <p>{post.description[locale]}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+        <Contact locale={locale} />
+        <JsonLd data={breadcrumbSchema(items)} />
+      </main>
+    );
+  }
   return (
     <main className="expedition-main">
       <div className="content-shell">
@@ -174,22 +234,6 @@ export default function PlanningPage({
               <h2>{labels.explore[locale]}</h2>
               <HuntCards locale={locale} exclude={page.animal} />
             </section>
-          </>
-        )}
-        {page.slug === "blog" && (
-          <>
-            <ul className="blog-list">
-              {publishedPosts().map((post) => (
-                <li key={post.slug}>
-                  <Link href={`/${locale}/blog/${post.slug}`}>
-                    {post.title[locale]}
-                  </Link>
-                  <p>{post.description[locale]}</p>
-                </li>
-              ))}
-            </ul>
-            <Link href={`/${locale}/gallery`}>{labels.gallery[locale]}</Link>
-            <Blog locale={locale} />
           </>
         )}
 
