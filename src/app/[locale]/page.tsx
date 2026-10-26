@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: LocaleParams) {
   return contentMetadata(
     locale,
     locale === "en"
-      ? "Marco Polo Sheep & Ibex Hunting in Tajikistan | Murgab Hunting"
+      ? "Marco Polo Argali & Ibex Hunting in Tajikistan | Murgab Hunting"
       : "Охота на Марко Поло и козерога в Таджикистане | Murgab Hunting",
     locale === "en"
-      ? "Plan a guided Marco Polo sheep or Pamir ibex hunt in Tajikistan. Meet Murgab Hunting’s local team, explore camp and discuss expedition logistics."
-      : "Спланируйте охоту на Марко Поло или козерога в Таджикистане. Познакомьтесь с командой Murgab Hunting, лагерем и организацией экспедиции.",
+      ? "Plan a guided Marco Polo Argali or Pamir ibex hunt in Tajikistan. Meet Murgab Hunting’s local team, explore camp and discuss hunting expedition logistics."
+      : "Спланируйте охоту на Марко Поло или козерога в Таджикистане. Познакомьтесь с командой Murgab Hunting, лагерем и организацией охоты.",
   );
 }
 export default async function Home({ params }: LocaleParams) {

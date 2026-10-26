@@ -27,7 +27,7 @@ export default function FeaturedHunts({ locale }: { locale: Locale }) {
         </div>
         <p className="hunts-intro">
           {english
-            ? "Explore Marco Polo sheep and Pamir ibex expeditions with our local team in Tajikistan’s mountain wilderness."
+            ? "Explore Marco Polo Argali and Pamir ibex expeditions with our local team in Tajikistan’s mountain wilderness."
             : "Познакомьтесь с экспедициями за бараном Марко Поло и памирским козерогом с нашей местной командой в горах Таджикистана."}
         </p>
       </div>
@@ -36,7 +36,7 @@ export default function FeaturedHunts({ locale }: { locale: Locale }) {
           const title =
             index === 0
               ? english
-                ? "Marco Polo Sheep"
+                ? "Marco Polo Argali"
                 : "Баран Марко Поло"
               : english
                 ? "Pamir Ibex"

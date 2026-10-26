@@ -49,8 +49,8 @@ export default function Heritage({ locale }: { locale: Locale }) {
           src={ExpeditionPhoto}
           alt={
             english
-              ? "Expedition member using a spotting scope beside a vehicle in snowy mountain terrain"
-              : "Участник экспедиции с наблюдательной трубой у автомобиля в заснеженных горах"
+              ? "Hunter using a spotting scope beside a vehicle in snowy mountain terrain"
+              : "Охотник с наблюдательной трубой у автомобиля в заснеженных горах"
           }
           fill
           sizes="(max-width: 800px) 92vw, (max-width: 1200px) 40vw, 440px"

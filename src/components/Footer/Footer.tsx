@@ -19,7 +19,7 @@ export default function Footer({ locale }: { locale: Locale }) {
       links: [
         [
           "marco-polo-sheep-hunting",
-          locale === "en" ? "Marco Polo Sheep" : "Баран Марко Поло",
+          locale === "en" ? "Marco Polo Argali" : "Баран Марко Поло",
         ],
         [
           "pamir-ibex-hunting",

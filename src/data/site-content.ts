@@ -122,11 +122,11 @@ export const pages: ContentPage[] = [
     slug: "marco-polo-sheep-hunting",
     animal: "marco-polo",
     title: text(
-      "Marco Polo Sheep Hunting in Tajikistan",
+      "Marco Polo Argali Hunting in Tajikistan",
       "Охота на барана Марко Поло в Таджикистане",
     ),
     description: text(
-      "Plan a Marco Polo sheep hunting expedition in Tajikistan’s Pamir Mountains. Explore our team, camp, logistics and inquiry options.",
+      "Plan a Marco Polo Argali hunting expedition in Tajikistan’s Pamir Mountains. Explore our team, camp, logistics and inquiry options.",
       "Спланируйте охоту на барана Марко Поло в горах Памира в Таджикистане. Узнайте о команде, лагере и организации экспедиции.",
     ),
     intro: text(

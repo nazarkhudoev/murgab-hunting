@@ -65,13 +65,13 @@ export default function PlanningPage({
         </p>
         <h1>{page.title[locale]}</h1>
         <p>{page.intro[locale]}</p>
-        <Link
+        {/* <Link
           className="expedition-button"
           href={`/${locale}/contact#book`}
           data-track="plan_hunt_click"
         >
           {labels.plan[locale]}
-        </Link>
+        </Link> */}
       </header>
       {page.animal && (
         <div className="content-shell">
@@ -131,7 +131,7 @@ export default function PlanningPage({
                         <th scope="row">
                           {species === "Marco Polo"
                             ? locale === "en"
-                              ? "Marco Polo Sheep"
+                              ? "Marco Polo Argali"
                               : "Баран Марко Поло"
                             : locale === "en"
                               ? "Pamir Ibex"

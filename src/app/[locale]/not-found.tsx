@@ -9,8 +9,8 @@ export default function NotFound() {
         <h1>{locale === "en" ? "Page not found" : "Страница не найдена"}</h1>
         <p>
           {locale === "en"
-            ? "Explore our expeditions or contact the team to plan your hunt."
-            : "Посмотрите наши экспедиции или свяжитесь с командой для планирования охоты."}
+            ? "Explore our hunts or contact our team to plan your hunting expedition."
+            : "Посмотрите наши охоты или свяжитесь с командой для планирования охоты."}
         </p>
       </header>
       <ul className="related-links">
@@ -22,7 +22,7 @@ export default function NotFound() {
         <li>
           <Link href={`/${locale}/marco-polo-sheep-hunting`}>
             {locale === "en"
-              ? "Marco Polo sheep hunting"
+              ? "Marco Polo Argali hunting"
               : "Охота на Марко Поло"}
           </Link>
         </li>
