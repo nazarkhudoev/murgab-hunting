@@ -15,6 +15,7 @@ import Contact from "../Contact/Contact";
 import InquiryDraft from "../InquiryDraft/InquiryDraft";
 import CampPage from "../CampPage/CampPage";
 import PermitsPage from "../PermitsPage/PermitsPage";
+import ExpeditionMap from "../ExpeditionMap/ExpeditionMap";
 import {
   Faq,
   Founders,
@@ -219,6 +220,7 @@ export default function PlanningPage({
         {page.slug === "pamir-hunting-camp" && <CampPage locale={locale} />}
         {page.slug === "about" && (
           <>
+            <ExpeditionMap locale={locale} />
             <Founders locale={locale} />
             <Guides locale={locale} />
             <Link href={`/${locale}/conservation`}>

@@ -1,0 +1,452 @@
+.expedition-map {
+  margin-block: 88px;
+}
+.expedition-map-heading {
+  max-width: 800px;
+  margin-bottom: 28px;
+}
+.expedition-map-heading h2 {
+  text-wrap: balance;
+}
+.expedition-map-heading > p:last-child {
+  color: #c7bda8;
+}
+.expedition-map-visual {
+  --flight-progress: 1;
+  --road-progress: 1;
+  --camera-scale: 1;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #101614;
+  aspect-ratio: 1604 / 981;
+}
+.expedition-map-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scale(var(--camera-scale));
+  transform-origin: 55% 55%;
+}
+.expedition-map-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.expedition-map-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  box-shadow: inset 0 0 50px 14px #241f1380;
+  background: linear-gradient(
+    0deg,
+    #241f13,
+    transparent 13%,
+    transparent 90%,
+    #241f1340
+  );
+}
+.expedition-map-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.map-route-base,
+.map-route-active {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.map-route-base {
+  stroke: #aa9878;
+  stroke-width: 3;
+  opacity: 0.2;
+}
+.map-flight-base {
+  stroke-dasharray: 8 12;
+}
+.map-route-active {
+  stroke: #e3bd85;
+  stroke-width: 3;
+  stroke-dasharray: 1;
+}
+.map-flight {
+  stroke-dashoffset: calc(1 - var(--flight-progress));
+}
+.map-road {
+  stroke-dashoffset: calc(1 - var(--road-progress));
+}
+.map-anchor {
+  stroke: #e3bd85;
+  fill: #201c12b3;
+  stroke-width: 1.5;
+}
+.map-anchor circle:last-child {
+  fill: #efd2a2;
+  stroke: none;
+}
+.map-moving-icon {
+  color: #ead3ae;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+.map-moving-icon circle {
+  fill: #1b1a14ed;
+  stroke: #b89764;
+  stroke-width: 1;
+}
+.map-plane,
+.map-truck {
+  opacity: 0;
+}
+[data-motion="playing"][data-stage="arrival"] .map-plane,
+[data-motion="playing"][data-stage="road"] .map-truck,
+[data-motion="playing"][data-stage="pamirs"] .map-truck {
+  opacity: 1;
+}
+.map-highway rect {
+  fill: #151b18d9;
+  stroke: #86775c;
+}
+.map-highway text {
+  fill: #d7c5a3;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-family: inherit;
+}
+.expedition-camp-marker {
+  position: absolute;
+  left: 81.733%;
+  top: 61.06%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: clamp(44px, 4.1vw, 58px);
+  height: clamp(44px, 4.1vw, 58px);
+  border-radius: 50%;
+  border: 1px solid #d8b57d;
+  color: #fff0d5;
+  background: #3b2e1df2;
+  cursor: pointer;
+  box-shadow: 0 0 0 5px #d8b57d15;
+  transition:
+    background 0.25s,
+    box-shadow 0.25s;
+}
+.expedition-camp-marker::before {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  border: 1px solid #d8b57d80;
+  border-radius: 50%;
+  animation: expedition-camp-pulse 4s ease-out infinite;
+}
+.expedition-camp-marker:hover {
+  background: #675033;
+  box-shadow: 0 0 0 7px #d8b57d20;
+}
+.expedition-camp-marker:focus-visible,
+.expedition-map-discover:focus-visible,
+.expedition-camp-card :focus-visible {
+  outline: 2px solid #f1c98f;
+  outline-offset: 5px;
+}
+.expedition-map-corner {
+  position: absolute;
+  bottom: 28px;
+  left: 30px;
+  z-index: 3;
+  color: #d2b88d;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 10px;
+  pointer-events: none;
+}
+.expedition-map-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid #68533266;
+}
+.expedition-map-stops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.expedition-map-stops li {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  font-size: 12px;
+  color: #e1d8c6;
+}
+.expedition-map-stops li > span {
+  font-size: 10px;
+  color: #b99a68;
+}
+.expedition-map-discover {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: #e2bb83;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.expedition-map .expedition-map-note {
+  font-size: 12px;
+  color: #a99d87;
+  max-width: none;
+}
+.expedition-camp-card {
+  position: fixed;
+  inset: 50% 5vw auto auto;
+  transform: translateY(-50%);
+  width: 390px;
+  max-width: calc(100vw - 32px);
+  max-height: 88dvh;
+  padding: 0;
+  border: 1px solid #7a6240;
+  border-radius: 18px;
+  background: #292318;
+  color: #f4efe4;
+  overflow-y: auto;
+  box-shadow: 0 24px 100px #0008;
+}
+.expedition-camp-card::backdrop {
+  background: #0b0e0b66;
+  backdrop-filter: blur(3px);
+}
+.expedition-camp-close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: #181a14e8;
+  border: 1px solid #a08760;
+  border-radius: 50%;
+  color: #fff0d5;
+}
+.expedition-camp-photo {
+  position: relative;
+  height: 180px;
+}
+.expedition-camp-photo img {
+  object-fit: cover;
+}
+.expedition-camp-copy {
+  padding: 24px;
+}
+.expedition-camp-copy .eyebrow {
+  margin: 0 0 12px;
+  font-size: 10px !important;
+}
+.expedition-camp-copy h3 {
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+.expedition-camp-copy p:not(.eyebrow) {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #d4c7b1;
+}
+.expedition-camp-copy ul {
+  margin-block: 20px 24px;
+  padding: 0;
+  list-style: none;
+}
+.expedition-camp-copy li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 13px;
+  color: #d6c29e;
+}
+.expedition-camp-copy a.expedition-camp-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid #ad8957;
+  border-radius: 6px;
+  color: #f1d1a0;
+  text-decoration: none;
+}
+@keyframes expedition-camp-pulse {
+  0%,
+  30% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.38);
+  }
+}
+@media (max-width: 1000px) {
+  .expedition-map-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .expedition-map {
+    margin-block: 56px;
+  }
+  .expedition-map-heading {
+    margin-bottom: 24px;
+  }
+  .expedition-map-visual {
+    border-radius: 10px;
+    margin-inline: -12px;
+  }
+  .expedition-map-stage {
+    transform: none;
+  }
+  .expedition-map-visual::after {
+    box-shadow: inset 0 0 12px #241f1350;
+  }
+  .map-highway,
+  .map-moving-icon,
+  .expedition-map-corner {
+    display: none;
+  }
+  .expedition-map-stops {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 16px;
+    width: 100%;
+  }
+  .expedition-map-stops li {
+    font-size: 13px;
+  }
+  .expedition-map-discover {
+    font-size: 13px;
+  }
+  .expedition-camp-marker {
+    width: 44px;
+    height: 44px;
+  }
+  .expedition-camp-marker svg {
+    width: 20px;
+  }
+  .expedition-camp-card {
+    inset: auto 0 0;
+    transform: none;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    max-height: 85dvh;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .expedition-camp-photo {
+    height: 160px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .expedition-map-stage {
+    transform: none;
+  }
+  .expedition-camp-marker::before {
+    animation: none;
+  }
+  .expedition-camp-marker {
+    transition: none;
+  }
+  .map-route-active {
+    stroke-dashoffset: 0;
+  }
+  .map-moving-icon {
+    display: none;
+  }
+}
+.expedition-map-visual[data-motion="playing"] .expedition-map-image {
+  animation: expedition-map-reveal 900ms ease-out both;
+}
+.expedition-map-visual[data-stage="arrival"] .map-anchor,
+.expedition-map-visual[data-stage="arrival"] .map-highway,
+.expedition-map-visual[data-stage="road"] .map-khorog,
+.expedition-map-visual[data-stage="road"] .map-highway {
+  opacity: 0;
+}
+.expedition-map-visual:not([data-stage="camp"])
+  .expedition-camp-marker::before {
+  animation-play-state: paused;
+  opacity: 0;
+}
+@keyframes expedition-map-reveal {
+  from {
+    opacity: 0.72;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .expedition-map-visual[data-motion="playing"] .expedition-map-image {
+    animation: none;
+  }
+  .expedition-map-visual .map-anchor,
+  .expedition-map-visual .map-highway {
+    opacity: 1;
+  }
+}
+.map-stop-label > rect {
+  fill: #101715;
+}
+.map-stop-label text {
+  fill: #f3e6d0;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 20px;
+}
+.map-stop-label .map-elevation {
+  fill: #d6bd94;
+  font-size: 17px;
+}
+.map-arrival-label {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+[data-dushanbe-arrived="true"] .map-arrival-dushanbe,
+[data-khorog-arrived="true"] .map-arrival-khorog,
+[data-camp-arrived="true"] .map-arrival-camp {
+  opacity: 1;
+}
+.expedition-map-stops li > .expedition-map-stop-copy {
+  color: #e1d8c6;
+  font-size: inherit;
+}
+.expedition-map-stop-copy small {
+  display: block;
+  margin-top: 4px;
+  color: #b99a68;
+  font-size: 11px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-arrival-label {
+    opacity: 1;
+    transition: none;
+  }
+}
