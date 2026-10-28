@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, Mountain, Plane, Tent, Truck, X } from "lucide-react";
+import { ArrowUpRight, CarIcon, Mountain, Plane, Tent, Truck, X } from "lucide-react";
 import Camp from "@/assets/photos/springscamp/spring-camp-05.jpg";
 import type { Locale } from "@/lib/navigation";
 import type { ExpeditionMapCopy } from "@/data/expedition-map";
@@ -175,7 +175,7 @@ export default function ExpeditionMapCanvas({
               transform="translate(1311 599)"
             >
               <circle r="22" />
-              <Truck x={-14} y={-14} width={28} height={28} />
+              <CarIcon x={-14} y={-14} width={28} height={28} />
             </g>
             <g className="map-highway">
               <rect x="912" y="741" width="220" height="39" rx="19" />
