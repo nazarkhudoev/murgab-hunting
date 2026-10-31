@@ -15,6 +15,15 @@ const english = {
   khorogElevation: "2,100 meters",
   campElevation: "3,734 meters",
   openCamp: "Discover Hot Springs Camp",
+  closeLocation: "Close map information",
+  dushanbeBody:
+    "Our expeditions begin in Dushanbe before continuing east into the Pamirs.",
+  khorogBody:
+    "The road journey continues through Khorog and into the Pamir Mountains.",
+  wildlifeTitle: "Hunt the Pamirs",
+  wildlifeBody: "Explore Murgab Hunting’s species and expedition options.",
+  exploreHunts: "Explore hunting options",
+  journeyDetail: "On the expedition route",
   close: "Close camp information",
   campBody: "Your base for hunting expeditions in the Eastern Pamirs.",
   features: [

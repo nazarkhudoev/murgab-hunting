@@ -19,7 +19,7 @@
   isolation: isolate;
   overflow: hidden;
   border-radius: 18px;
-  background: #101614;
+  /* background: #101614; */
   aspect-ratio: 1604 / 981;
 }
 .expedition-map-stage {
@@ -71,8 +71,8 @@
   stroke-dasharray: 8 12;
 }
 .map-route-active {
-  stroke: #e3bd85;
-  stroke-width: 3;
+  stroke: #0030b1a1;
+  stroke-width: 7;
   stroke-dasharray: 1;
 }
 .map-flight {
@@ -121,8 +121,8 @@
 }
 .expedition-camp-marker {
   position: absolute;
-  left: 81.733%;
-  top: 61.06%;
+  left: 83.604%;
+  top: 64.934%;
   z-index: 3;
   transform: translate(-50%, -50%);
   display: grid;
@@ -413,7 +413,7 @@
   }
 }
 .map-stop-label > rect {
-  fill: #101715;
+  fill: #10171569;
 }
 .map-stop-label text {
   fill: #f3e6d0;
@@ -448,5 +448,108 @@
   .map-arrival-label {
     opacity: 1;
     transition: none;
+  }
+}
+.expedition-map-object {
+  position: absolute;
+  z-index: 3;
+  min-width: 44px;
+  min-height: 44px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transition: filter 0.25s ease;
+}
+.expedition-map-object img {
+  object-fit: contain;
+}
+.expedition-map-object:hover {
+  filter: drop-shadow(0 0 7px #e4bd7aa6);
+}
+.expedition-map-object:focus-visible {
+  outline: 2px solid #f1c98f;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+.expedition-map-object-dushanbe {
+  left: 18.2%;
+  top: 37.72%;
+  width: 9.35%;
+  height: 15.29%;
+}
+.expedition-map-object-khorog {
+  left: 48.25%;
+  top: 59.33%;
+  width: 12.6%;
+  height: 10.3%;
+}
+.expedition-map-object-ram {
+  left: 75.69%;
+  top: 51.99%;
+  width: 8.79%;
+  height: 14.37%;
+}
+.expedition-map-stage .expedition-camp-marker {
+  z-index: 4;
+}
+.expedition-location-photo img {
+  object-fit: contain;
+  padding: 24px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .expedition-map-object {
+    transition: none;
+  }
+}
+/* Keep artwork proportional while giving the surrounding buttons a 44px touch target. */
+.expedition-map-stage {
+  container-type: inline-size;
+}
+.expedition-map-object {
+  transform: translate(-50%, -50%);
+}
+.expedition-map-object img {
+  inset: auto !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%);
+  max-width: none;
+}
+.expedition-map-object-dushanbe {
+  left: 22.875%;
+  top: 45.365%;
+}
+.expedition-map-object-dushanbe img {
+  width: 9.35cqw !important;
+  height: 9.35cqw !important;
+}
+.expedition-map-object-khorog {
+  left: 54.55%;
+  top: 64.48%;
+}
+.expedition-map-object-khorog img {
+  width: 12.6cqw !important;
+  height: 6.3cqw !important;
+}
+.expedition-map-object-ram {
+  left: 80.085%;
+  top: 59.175%;
+}
+.expedition-map-object-ram img {
+  width: 8.79cqw !important;
+  height: 8.79cqw !important;
+}
+@media (max-width: 600px) {
+  .expedition-map-stage .expedition-camp-marker {
+    clip-path: circle(50%);
+  }
+}
+@media (max-width: 600px) {
+  /* Divide the adjoining touch areas without moving either artwork anchor. */
+  .expedition-map-object-ram {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%);
+  }
+  .expedition-map-stage .expedition-camp-marker {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
   }
 }

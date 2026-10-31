@@ -3,16 +3,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { ArrowUpRight, CarIcon, Mountain, Plane, Tent, Truck, X } from "lucide-react";
+import {
+  ArrowUpRight,
+  CarIcon,
+  Mountain,
+  Plane,
+  Tent,
+  Truck,
+  X,
+} from "lucide-react";
 import Camp from "@/assets/photos/springscamp/spring-camp-05.jpg";
 import type { Locale } from "@/lib/navigation";
 import type { ExpeditionMapCopy } from "@/data/expedition-map";
 
 // Artwork-space pixels, traced from the supplied PNG; these are not geographic coordinates.
-const FLIGHT = "M 10 134 C 80 143 102 174 137 186 S 308 215 395 286";
-const ROAD =
-  "M 395 286 L 414 316 C 424 348 474 330 506 351 S 502 411 548 410 S 567 436 616 427 S 713 398 751 411 S 800 433 790 447 S 767 484 792 483 S 826 486 815 509 L 805 532 C 800 558 767 562 750 589 S 699 655 717 689 S 744 719 776 712 S 834 700 856 685 S 913 697 938 683 S 969 655 1001 658 S 1036 653 1072 644 S 1127 645 1163 640 S 1212 633 1240 639 S 1298 627 1311 599";
-
+const FLIGHT = "M 10 255 C 185 255 347 327 445 470";
+const ROAD_TO_KHOROG =
+  "M 445 470 C 474 478 486 490 477 510 C 459 538 502 543 535 550 C 559 556 551 574 579 583 C 609 593 647 572 678 562 C 700 554 711 548 711 531 C 711 511 750 518 786 519 C 826 520 859 526 869 543 C 880 563 841 577 826 595 C 810 612 823 622 836 632 C 851 644 826 662 815 690";
+const ROAD_AFTER_KHOROG =
+  " C 803 708 784 731 797 754 C 812 780 842 784 873 775 C 914 768 950 749 974 732 C 997 713 1036 716 1075 722 C 1118 727 1159 729 1189 713 C 1212 697 1228 680 1261 675 C 1290 671 1324 657 1341 637";
+const ROAD = ROAD_TO_KHOROG + ROAD_AFTER_KHOROG;
 export default function ExpeditionMapCanvas({
   locale,
   copy,
@@ -28,6 +38,32 @@ export default function ExpeditionMapCanvas({
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState<
+    "camp" | "dushanbe" | "khorog" | "ram"
+  >("camp");
+  const location =
+    selected === "dushanbe"
+      ? {
+          title: copy.dushanbe,
+          body: copy.dushanbeBody,
+          image: "/dushanbe.png",
+          elevation: copy.dushanbeElevation,
+        }
+      : selected === "khorog"
+        ? {
+            title: copy.khorog,
+            body: copy.khorogBody,
+            image: "/khorog.png",
+            elevation: copy.khorogElevation,
+          }
+        : selected === "ram"
+          ? {
+              title: copy.wildlifeTitle,
+              body: copy.wildlifeBody,
+              image: "/ram.png",
+              elevation: null,
+            }
+          : null;
 
   useEffect(() => {
     const element = visual.current;
@@ -37,7 +73,7 @@ export default function ExpeditionMapCanvas({
     let observer: IntersectionObserver | undefined;
     // Measure the exact Khorog waypoint on the same curve used by the vehicle.
     const khorogPath = road.current?.cloneNode() as SVGPathElement | undefined;
-    khorogPath?.setAttribute("d", ROAD.slice(0, ROAD.indexOf(" C 800")));
+    khorogPath?.setAttribute("d", ROAD_TO_KHOROG);
     const khorogProgress =
       khorogPath && road.current
         ? khorogPath.getTotalLength() / road.current.getTotalLength()
@@ -111,6 +147,12 @@ export default function ExpeditionMapCanvas({
   }, []);
 
   function openCamp() {
+    setSelected("camp");
+    dialog.current?.showModal();
+    setOpen(true);
+  }
+  function openLocation(place: "dushanbe" | "khorog" | "ram") {
+    setSelected(place);
     dialog.current?.showModal();
     setOpen(true);
   }
@@ -154,17 +196,17 @@ export default function ExpeditionMapCanvas({
               className="map-route-active map-road"
             />
             <g className="map-anchor map-dushanbe">
-              <circle cx="395" cy="286" r="17" />
-              <circle cx="395" cy="286" r="5" />
+              <circle cx="445" cy="470" r="17" />
+              <circle cx="445" cy="470" r="5" />
             </g>
             <g className="map-anchor map-khorog">
-              <circle cx="805" cy="532" r="14" />
-              <circle cx="805" cy="532" r="4" />
+              <circle cx="815" cy="690" r="14" />
+              <circle cx="815" cy="690" r="4" />
             </g>
             <g
               ref={plane}
               className="map-moving-icon map-plane"
-              transform="translate(395 286)"
+              transform="translate(445 470)"
             >
               <circle r="21" />
               <Plane x={-13} y={-13} width={26} height={26} />
@@ -172,7 +214,7 @@ export default function ExpeditionMapCanvas({
             <g
               ref={truck}
               className="map-moving-icon map-truck"
-              transform="translate(1311 599)"
+              transform="translate(1341 637)"
             >
               <circle r="22" />
               <CarIcon x={-14} y={-14} width={28} height={28} />
@@ -186,7 +228,7 @@ export default function ExpeditionMapCanvas({
             {/* Labels remain separate from the supplied terrain artwork. */}
             <g
               className="map-stop-label map-arrival-label map-arrival-dushanbe"
-              transform="translate(433 263)"
+              transform="translate(427 365)"
             >
               <rect width="205" height="69" rx="8" />
               <g>
@@ -200,7 +242,7 @@ export default function ExpeditionMapCanvas({
             </g>
             <g
               className="map-stop-label map-arrival-label map-arrival-khorog"
-              transform="translate(646 487)"
+              transform="translate(631 621)"
             >
               <rect width="145" height="69" rx="8" />
               <g>
@@ -214,7 +256,7 @@ export default function ExpeditionMapCanvas({
             </g>
             <g
               className="map-stop-label map-arrival-label map-arrival-camp"
-              transform="translate(1343 562)"
+              transform="translate(1343 553)"
             >
               <rect width="255" height="73" rx="8" />
               <g>
@@ -227,13 +269,34 @@ export default function ExpeditionMapCanvas({
               </g>
             </g>
           </svg>
+          {(["dushanbe", "khorog", "ram"] as const).map((place) => (
+            <button
+              key={place}
+              type="button"
+              className={`expedition-map-object expedition-map-object-${place}`}
+              aria-label={
+                place === "ram" ? copy.exploreHunts : `Discover ${copy[place]}`
+              }
+              aria-haspopup="dialog"
+              aria-controls="expedition-camp-dialog"
+              aria-expanded={open && selected === place}
+              onClick={() => openLocation(place)}
+            >
+              <Image
+                src={`/${place}.png`}
+                alt=""
+                fill
+                sizes="(max-width: 600px) 50px, 150px"
+              />
+            </button>
+          ))}
           <button
             ref={trigger}
             className="expedition-camp-marker"
             type="button"
             aria-label={copy.openCamp}
             aria-haspopup="dialog"
-            aria-expanded={open}
+            aria-expanded={open && selected === "camp"}
             aria-controls="expedition-camp-dialog"
             onClick={openCamp}
           >
@@ -302,39 +365,54 @@ export default function ExpeditionMapCanvas({
         <button
           type="button"
           className="expedition-camp-close"
-          aria-label={copy.close}
+          aria-label={location ? copy.closeLocation : copy.close}
           onClick={() => dialog.current?.close()}
           autoFocus
         >
           <X size={20} aria-hidden="true" />
         </button>
-        <div className="expedition-camp-photo">
+        <div
+          className={`expedition-camp-photo${location ? " expedition-location-photo" : ""}`}
+        >
           <Image
-            src={Camp}
-            alt={copy.campAlt}
+            src={location ? location.image : Camp}
+            alt={location ? location.title : copy.campAlt}
             fill
             sizes="(max-width: 600px) 100vw, 390px"
           />
         </div>
         <div className="expedition-camp-copy">
-          <p className="eyebrow">{copy.camp}</p>
-          <h3 id="expedition-camp-title">{copy.camp}</h3>
-          <p id="expedition-camp-description">{copy.campBody}</p>
-          <ul>
-            {copy.features.map((feature) => (
-              <li key={feature}>
-                <Mountain size={15} aria-hidden="true" />
-                {feature}
-              </li>
-            ))}
-          </ul>
-          <Link
-            href={`/${locale}/pamir-hunting-camp`}
-            className="expedition-camp-link"
-          >
-            {copy.explore}
-            <ArrowUpRight size={18} aria-hidden="true" />
-          </Link>
+          <p className="eyebrow">{location ? copy.journeyDetail : copy.camp}</p>
+          <h3 id="expedition-camp-title">
+            {location ? location.title : copy.camp}
+          </h3>
+          <p id="expedition-camp-description">
+            {location ? location.body : copy.campBody}
+          </p>
+          {location?.elevation && (
+            <p className="expedition-location-elevation">
+              {location.elevation}
+            </p>
+          )}
+          {!location && (
+            <ul>
+              {copy.features.map((feature) => (
+                <li key={feature}>
+                  <Mountain size={15} aria-hidden="true" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          )}
+          {(!location || selected === "ram") && (
+            <Link
+              href={`/${locale}/${selected === "ram" ? "hunting-packages" : "pamir-hunting-camp"}`}
+              className="expedition-camp-link"
+            >
+              {selected === "ram" ? copy.exploreHunts : copy.explore}
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </Link>
+          )}
         </div>
       </dialog>
     </>

@@ -7,7 +7,7 @@ test("approved map artwork is unchanged", () => {
     createHash("sha256")
       .update(readFileSync("public/tajikistan_map.png"))
       .digest("hex"),
-  ).toBe("bd622e53b4e2ac9cf8dd07e8d3e951954a009826cd7a4c4599beceaf90c04cda");
+  ).toBe("50b57c9f076bc8d6a07d54f00c7295baae44bc3d393e6fc57f5f03683447083d");
 });
 
 test("About map plays once, preserves story order and supports keyboard camp discovery", async ({
@@ -78,23 +78,27 @@ test("About map plays once, preserves story order and supports keyboard camp dis
 for (const width of [1440, 820, 390]) {
   test(`map stays aligned and usable at ${width}px with reduced motion`, async ({
     page,
-  }) => {
+  }, testInfo) => {
     await page.setViewportSize({ width, height: 950 });
     await page.emulateMedia({ reducedMotion: "reduce" });
     await page.goto("/en/about");
     await page.locator(".expedition-map").scrollIntoViewIfNeeded();
     const visual = page.locator(".expedition-map-visual");
     await expect(visual).toHaveAttribute("data-motion", "complete");
+    await page
+      .locator(".expedition-map-image")
+      .evaluate((image: HTMLImageElement) => image.decode());
+    await visual.screenshot({ path: testInfo.outputPath("map.png") });
     const image = await page.locator(".expedition-map-image").boundingBox();
     const marker = page.locator(".expedition-camp-marker");
     const box = await marker.boundingBox();
     expect(image && box).toBeTruthy();
     if (!image || !box) throw new Error("Map or marker missing");
     expect(
-      Math.abs((box.x + box.width / 2 - image.x) / image.width - 1311 / 1604),
+      Math.abs((box.x + box.width / 2 - image.x) / image.width - 1341 / 1604),
     ).toBeLessThan(0.002);
     expect(
-      Math.abs((box.y + box.height / 2 - image.y) / image.height - 599 / 981),
+      Math.abs((box.y + box.height / 2 - image.y) / image.height - 637 / 981),
     ).toBeLessThan(0.002);
     expect(box.width).toBeGreaterThanOrEqual(44);
     expect(
@@ -116,6 +120,26 @@ for (const width of [1440, 820, 390]) {
     }
     await card.getByRole("button", { name: "Close camp information" }).click();
     await expect(card).not.toBeVisible();
+    for (const [place, title] of [
+      ["dushanbe", "Dushanbe"],
+      ["khorog", "Khorog"],
+      ["ram", "Hunt the Pamirs"],
+    ]) {
+      const object = page.locator(`.expedition-map-object-${place}`);
+      const target = await object.boundingBox();
+      expect(target?.width).toBeGreaterThanOrEqual(44);
+      expect(target?.height).toBeGreaterThanOrEqual(44);
+      await object.click();
+      await expect(
+        page.getByRole("dialog", { name: title, exact: true }),
+      ).toBeVisible();
+      if (place === "ram")
+        await expect(
+          card.getByRole("link", { name: "Explore hunting options" }),
+        ).toHaveAttribute("href", "/en/hunting-packages");
+      await page.keyboard.press("Escape");
+      await expect(object).toBeFocused();
+    }
   });
 }
 
