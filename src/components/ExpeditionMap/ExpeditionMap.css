@@ -72,8 +72,8 @@
   stroke-dasharray: 8 12;
 }
 .map-route-active {
-  stroke: #0030b1a1;
-  stroke-width: 7;
+  stroke: #227aab66;
+  stroke-width: 8;
   stroke-dasharray: 1;
 }
 .map-flight {
@@ -453,7 +453,7 @@
 }
 .expedition-map-object {
   position: absolute;
-  z-index: 3;
+  z-index: 8;
   min-width: 44px;
   min-height: 44px;
   border: 0;
@@ -552,5 +552,107 @@
   }
   .expedition-map-stage .expedition-camp-marker {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 50%);
+  }
+}
+/* Warm holographic projections; only the artwork moves, never the hit targets. */
+/* .expedition-map-object-dushanbe {
+  --hologram-image: url("/dushanbe.png");
+  --hologram-width: 9.35cqw;
+  --hologram-height: 9.35cqw;
+}
+.expedition-map-object-khorog {
+  --hologram-image: url("/khorog.png");
+  --hologram-width: 12.6cqw;
+  --hologram-height: 6.3cqw;
+}
+.expedition-map-object-ram {
+  --hologram-image: url("/ram.png");
+  --hologram-width: 8.79cqw;
+  --hologram-height: 8.79cqw;
+} */
+.expedition-map-object img {
+  /* filter: saturate(1.00) brightness(1.00) drop-shadow(0 0 6px #e6bf7d88); */
+  animation: expedition-hologram-float 6s ease-in-out infinite;
+}
+.expedition-map-object::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 80%;
+  height: 16%;
+  left: 10%;
+  bottom: 0;
+  border: 1px solid #e7c48b88;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, #edc88a33, transparent 70%);
+  box-shadow: 0 0 12px #d6ad6633;
+  animation: expedition-hologram-base 6s ease-in-out infinite;
+}
+.expedition-map-object::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  left: 50%;
+  top: 50%;
+  width: var(--hologram-width);
+  height: var(--hologram-height);
+  mask-image: var(--hologram-image);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 3px,
+    #f3d5a673 3px 4px
+  );
+  opacity: 0.4;
+  animation:
+    expedition-hologram-float 6s ease-in-out infinite,
+    expedition-hologram-scan 4s linear infinite;
+}
+.expedition-map-object:hover img,
+.expedition-map-object:focus-visible img,
+.expedition-map-object:hover::after,
+.expedition-map-object:focus-visible::after {
+  animation-play-state: paused;
+}
+@keyframes expedition-hologram-float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-5px);
+  }
+}
+@keyframes expedition-hologram-base {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.04);
+  }
+}
+@keyframes expedition-hologram-scan {
+  to {
+    background-position: 0 32px;
+  }
+}
+@media (max-width: 600px) {
+  .expedition-map-object::after {
+    opacity: 0.25;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .expedition-map-object img,
+  .expedition-map-object::before,
+  .expedition-map-object::after {
+    animation: none;
+  }
+  .expedition-map-object::after {
+    transform: translate(-50%, -50%);
   }
 }

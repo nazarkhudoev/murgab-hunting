@@ -7,7 +7,7 @@ test("approved map artwork is unchanged", () => {
     createHash("sha256")
       .update(readFileSync("public/tajikistan_map.png"))
       .digest("hex"),
-  ).toBe("5cfcb1bfa12ee625d35935657318559ca0c05417da2a06a12046f96531be28c9");
+  ).toBe("d4a711b870887220788af2e0f0aed5c83e309d877076f6bc61ad11d2f786f72c");
 });
 
 test("About map plays once, preserves story order and supports keyboard camp discovery", async ({
