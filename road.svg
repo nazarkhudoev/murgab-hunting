@@ -1,0 +1,9 @@
+ <svg
+            className="expedition-map-overlay"
+            viewBox="0 0 1604 981"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path d= " C 831 718 805 734 791 749 C 774 772 812 786 845 781 C 889 776 932 755 964 739 C 994 724 1033 722 1073 726 C 1115 729 1153 727 1182 713 C 1206 695 1227 683 1260 681 C 1293 680 1323 675 1341 660" className="map-route-base map-flight-base" />
+           
+          </svg>

@@ -17,11 +17,11 @@ import type { Locale } from "@/lib/navigation";
 import type { ExpeditionMapCopy } from "@/data/expedition-map";
 
 // Artwork-space pixels, traced from the supplied PNG; these are not geographic coordinates.
-const FLIGHT = "M 10 255 C 185 255 347 327 445 470";
+const FLIGHT = "M 10 255 C 140 262 241 335 320 434";
 const ROAD_TO_KHOROG =
-  "M 445 470 C 469 480 456 495 451 511 C 439 532 483 529 521 539 C 555 548 546 565 571 574 C 597 585 640 563 674 554 C 697 549 700 541 701 523 C 700 499 747 507 785 510 C 827 512 860 519 867 538 C 877 559 837 573 823 587 C 802 606 838 630 861 650 L 891 670 C 879 681 863 691 851 701";
+  "M 320 434 C 342 443 367 443 377 460 C 386 479 420 477 435 490 C 453 507 421 526 433 541 C 443 555 482 553 514 564 C 541 572 540 590 557 600 C 581 616 618 604 649 589 C 676 580 698 580 702 558 C 704 538 718 530 749 530 C 791 528 840 535 865 548 C 888 560 889 579 866 594 C 846 607 822 615 825 631 C 829 651 878 687 911 701 C 899 712 876 708 858 723 L 833 725";
 const ROAD_AFTER_KHOROG =
-  " C 831 718 805 734 791 749 C 774 772 812 786 845 781 C 889 776 932 755 964 739 C 994 724 1033 722 1073 726 C 1115 729 1153 727 1182 713 C 1206 695 1227 683 1260 681 C 1293 680 1323 675 1341 660";
+  " C 837 740 810 759 799 780 C 781 806 800 821 827 827 C 864 838 919 814 952 799 C 981 783 1002 773 1036 768 C 1082 761 1134 770 1171 765 C 1209 763 1233 740 1254 720 C 1263 710 1268 702 1271 695";
 const ROAD = ROAD_TO_KHOROG + ROAD_AFTER_KHOROG;
 export default function ExpeditionMapCanvas({
   locale,
@@ -196,17 +196,17 @@ export default function ExpeditionMapCanvas({
               className="map-route-active map-road"
             />
             <g className="map-anchor map-dushanbe">
-              <circle cx="445" cy="470" r="17" />
-              <circle cx="445" cy="470" r="5" />
+              <circle cx="320" cy="434" r="17" />
+              <circle cx="320" cy="434" r="5" />
             </g>
             <g className="map-anchor map-khorog">
-              <circle cx="815" cy="690" r="14" />
-              <circle cx="815" cy="690" r="4" />
+              <circle cx="833" cy="725" r="14" />
+              <circle cx="833" cy="725" r="4" />
             </g>
             <g
               ref={plane}
               className="map-moving-icon map-plane"
-              transform="translate(445 470)"
+              transform="translate(320 434)"
             >
               <circle r="21" />
               <Plane x={-13} y={-13} width={26} height={26} />
@@ -214,7 +214,7 @@ export default function ExpeditionMapCanvas({
             <g
               ref={truck}
               className="map-moving-icon map-truck"
-              transform="translate(1341 637)"
+              transform="translate(1271 695)"
             >
               <circle r="22" />
               <CarIcon x={-14} y={-14} width={28} height={28} />
@@ -228,7 +228,7 @@ export default function ExpeditionMapCanvas({
             {/* Labels remain separate from the supplied terrain artwork. */}
             <g
               className="map-stop-label map-arrival-label map-arrival-dushanbe"
-              transform="translate(427 365)"
+              transform="translate(350 355)"
             >
               <rect width="205" height="69" rx="8" />
               <g>
@@ -242,7 +242,7 @@ export default function ExpeditionMapCanvas({
             </g>
             <g
               className="map-stop-label map-arrival-label map-arrival-khorog"
-              transform="translate(631 621)"
+              transform="translate(651 681)"
             >
               <rect width="145" height="69" rx="8" />
               <g>
@@ -256,7 +256,7 @@ export default function ExpeditionMapCanvas({
             </g>
             <g
               className="map-stop-label map-arrival-label map-arrival-camp"
-              transform="translate(1343 553)"
+              transform="translate(1301 623)"
             >
               <rect width="255" height="73" rx="8" />
               <g>

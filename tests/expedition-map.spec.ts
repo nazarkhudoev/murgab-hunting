@@ -7,7 +7,7 @@ test("approved map artwork is unchanged", () => {
     createHash("sha256")
       .update(readFileSync("public/tajikistan_map.png"))
       .digest("hex"),
-  ).toBe("50b57c9f076bc8d6a07d54f00c7295baae44bc3d393e6fc57f5f03683447083d");
+  ).toBe("5cfcb1bfa12ee625d35935657318559ca0c05417da2a06a12046f96531be28c9");
 });
 
 test("About map plays once, preserves story order and supports keyboard camp discovery", async ({
@@ -95,10 +95,10 @@ for (const width of [1440, 820, 390]) {
     expect(image && box).toBeTruthy();
     if (!image || !box) throw new Error("Map or marker missing");
     expect(
-      Math.abs((box.x + box.width / 2 - image.x) / image.width - 1341 / 1604),
+      Math.abs((box.x + box.width / 2 - image.x) / image.width - 1271 / 1604),
     ).toBeLessThan(0.002);
     expect(
-      Math.abs((box.y + box.height / 2 - image.y) / image.height - 637 / 981),
+      Math.abs((box.y + box.height / 2 - image.y) / image.height - 695 / 981),
     ).toBeLessThan(0.002);
     expect(box.width).toBeGreaterThanOrEqual(44);
     expect(
