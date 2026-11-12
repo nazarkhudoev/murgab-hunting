@@ -129,6 +129,7 @@ export default function Gallery({
                     src={photo.src}
                     alt={caption}
                     fill
+                    quality={90}
                     sizes={
                       index === 0
                         ? "(max-width: 700px) 100vw, (max-width: 1000px) 90vw, 800px"

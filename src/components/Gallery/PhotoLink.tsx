@@ -18,6 +18,7 @@ export default function PhotoLink({
       <Image
         src={image.src}
         alt={alt}
+        quality={90}
         sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
         className="gallery_image-item rounded-lg"
       />

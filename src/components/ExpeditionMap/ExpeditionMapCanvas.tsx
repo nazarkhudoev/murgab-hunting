@@ -290,6 +290,29 @@ export default function ExpeditionMapCanvas({
               />
             </button>
           ))}
+          <div
+            className="expedition-map-object expedition-map-object-cloud"
+            aria-hidden="true"
+          >
+            <Image
+              src="/cloud.png"
+              alt=""
+              fill
+              sizes="(max-width: 600px) 70px, 180px"
+            />
+          </div>
+
+                 <div
+            className="expedition-map-object expedition-map-object-cloud2"
+            aria-hidden="true"
+          >
+            <Image
+              src="/cloud.png"
+              alt=""
+              fill
+              sizes="(max-width: 600px) 70px, 180px"
+            />
+          </div>
           <button
             ref={trigger}
             className="expedition-camp-marker"

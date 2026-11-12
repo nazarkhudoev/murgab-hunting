@@ -8,7 +8,7 @@ import Vip1 from "@/assets/photos/springscamp/spring-camp-06.jpg";
 import Vip2 from "@/assets/photos/springscamp/spring-camp-07.jpg";
 import Vip3 from "@/assets/photos/springscamp/spring-camp-08.jpg";
 import Vip4 from "@/assets/photos/springscamp/spring-camp-10.jpg";
-import Standard1 from "@/assets/photos/springscamp/spring-camp-01.jpg";
+import Standard1 from "@/assets/photos/springscamp/spring-camp-01.webp";
 import Standard2 from "@/assets/photos/springscamp/spring-camp-02.jpg";
 import Standard3 from "@/assets/photos/springscamp/spring-camp-03.jpg";
 import Standard4 from "@/assets/photos/springscamp/spring-camp-04.jpg";
@@ -111,7 +111,7 @@ export default function CampPage({ locale }: { locale: Locale }) {
                   : "Красное здание лагеря Hot Springs в горах Памира"
               }
               fill
-              sizes="(max-width: 700px) 90vw, 55vw"
+              sizes="(max-width: 700px) 100vw, 100vw"
             />
             <span>
               {en
@@ -175,7 +175,7 @@ export default function CampPage({ locale }: { locale: Locale }) {
                       src={photo}
                       alt={caption}
                       fill
-                      sizes="(max-width: 500px) 90vw, (max-width: 1000px) 45vw, 360px"
+                      sizes="(max-width: 500px) 100vw, (max-width: 1000px) 100vw, 360px"
                     />
                     <span className="camp-photo-open" aria-hidden="true">
                       <ArrowUpRight size={18} />

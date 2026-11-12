@@ -540,6 +540,33 @@
   width: 8.79cqw !important;
   height: 8.79cqw !important;
 }
+.expedition-map-object-cloud {
+  left: 65%;
+  top: 45%;
+  width: 4%;
+  height: 10%;
+  pointer-events: none;
+}
+
+.expedition-map-object-cloud2 {
+  left: 45%;
+  top: 35%;
+  width: 4%;
+  height: 10%;
+  pointer-events: none;
+}
+
+.expedition-map-object-cloud img {
+  width: 46cqw !important;
+  height: 12.34cqw !important;
+  opacity: 0.80;
+}
+
+.expedition-map-object-cloud2 img {
+  width: 14cqw !important;
+  height: 9.34cqw !important;
+  opacity: 0.70;
+}
 @media (max-width: 600px) {
   .expedition-map-stage .expedition-camp-marker {
     clip-path: circle(50%);
