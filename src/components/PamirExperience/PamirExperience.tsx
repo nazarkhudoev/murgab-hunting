@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Compass, MapPin, Mountain } from "lucide-react";
-import Landscape from "@/assets/photos/lanedscape/gallery-landscape-08.jpg";
 import { labels } from "@/data/site-content";
 import type { Locale } from "@/lib/navigation";
 import "./PamirExperience.css";
@@ -38,7 +37,7 @@ export default function PamirExperience({ locale }: { locale: Locale }) {
     >
       <div className="pamir-hero">
         <Image
-          src={Landscape}
+          src="/photos/landscape/gallery-landscape-08.jpg"
           alt={
             english
               ? "Snow-covered mountains from the Pamir expedition photo collection"

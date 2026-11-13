@@ -45,7 +45,7 @@ export default function Heritage({ locale }: { locale: Locale }) {
     >
       <div className="heritage-photo">
         <Image
-          src="/photos/landscape/gallery-landscape-12.jpg"
+          src="/old_photo.png"
           alt={
             english
               ? "Hunter using a spotting scope beside a vehicle in snowy mountain terrain"
