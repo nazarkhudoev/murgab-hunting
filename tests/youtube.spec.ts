@@ -175,7 +175,7 @@ test("YouTube gallery modal loads only on interaction, restores focus, stops pla
     route.fulfill({
       path: join(
         process.cwd(),
-        "src/assets/photos/springscamp/spring-camp-05.jpg",
+        "/photos/springscamp/spring-camp-05.jpg",
       ),
       contentType: "image/jpeg",
     }),

@@ -3,20 +3,7 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight, House, Truck, Utensils } from "lucide-react";
 import type { Locale } from "@/lib/navigation";
 import Fancybox from "../Fancybox/Fancybox";
-import Exterior from "@/assets/photos/springscamp/spring-camp-05.jpg";
-import Vip1 from "@/assets/photos/springscamp/spring-camp-06.jpg";
-import Vip2 from "@/assets/photos/springscamp/spring-camp-07.jpg";
-import Vip3 from "@/assets/photos/springscamp/spring-camp-08.jpg";
-import Vip4 from "@/assets/photos/springscamp/spring-camp-10.jpg";
-import Standard1 from "@/assets/photos/springscamp/spring-camp-01.webp";
-import Standard2 from "@/assets/photos/springscamp/spring-camp-02.jpg";
-import Standard3 from "@/assets/photos/springscamp/spring-camp-03.jpg";
-import Standard4 from "@/assets/photos/springscamp/spring-camp-04.jpg";
-import Vehicle1 from "@/assets/photos/springscamp/transportation-01.jpg";
-import Vehicle2 from "@/assets/photos/springscamp/transportation-02.jpg";
-import Vehicle3 from "@/assets/photos/springscamp/transportation-03.jpg";
-import Vehicle4 from "@/assets/photos/springscamp/transportation-04.jpg";
-import Vehicle5 from "@/assets/photos/springscamp/transportation-05.jpg";
+
 import "./CampPage.css";
 
 export default function CampPage({ locale }: { locale: Locale }) {
@@ -28,7 +15,7 @@ export default function CampPage({ locale }: { locale: Locale }) {
       description: en
         ? "A look inside the VIP House photo collection. Confirm the rooms and facilities available for your group."
         : "Фотографии VIP House. Уточните доступные комнаты и оснащение для вашей группы.",
-      images: [Vip1, Vip2, Vip3, Vip4],
+      images: ["/photos/springscamp/spring-camp-06.jpg", "/photos/springscamp/spring-camp-07.jpg", "/photos/springscamp/spring-camp-08.jpg", "/photos/springscamp/spring-camp-10.jpg"],
     },
     {
       id: "standard-house",
@@ -36,7 +23,7 @@ export default function CampPage({ locale }: { locale: Locale }) {
       description: en
         ? "Explore the Standard House photo collection and discuss accommodation options with the team."
         : "Посмотрите фотографии Standard House и обсудите варианты проживания с командой.",
-      images: [Standard1, Standard2, Standard3, Standard4],
+      images: ["/photos/springscamp/spring-camp-01.jpg", "/photos/springscamp/spring-camp-02.jpg", "/photos/springscamp/spring-camp-03.jpg", "/photos/springscamp/spring-camp-04.jpg"],
     },
     {
       id: "camp-transport",
@@ -44,7 +31,7 @@ export default function CampPage({ locale }: { locale: Locale }) {
       description: en
         ? "Vehicles from our expedition photo collection. Confirm your route, transfers and vehicle arrangements before travel."
         : "Автомобили из коллекции фотографий экспедиций. До поездки уточните маршрут, трансферы и транспорт.",
-      images: [Vehicle5, Vehicle1, Vehicle2, Vehicle3, Vehicle4],
+      images: ["/photos/springscamp/transportation-05.jpg", "/photos/springscamp/transportation-01.jpg", "/photos/springscamp/transportation-02.jpg", "/photos/springscamp/transportation-03.jpg", "/photos/springscamp/transportation-04.jpg"],
     },
   ];
   const planning = [
@@ -95,7 +82,7 @@ export default function CampPage({ locale }: { locale: Locale }) {
         >
           <a
             className="camp-overview-photo"
-            href={Exterior.src}
+            href="/photos/springscamp/spring-camp-05.jpg"
             data-fancybox="camp-archive"
             aria-label={
               en
@@ -104,7 +91,7 @@ export default function CampPage({ locale }: { locale: Locale }) {
             }
           >
             <Image
-              src={Exterior}
+              src="/photos/springscamp/spring-camp-05.jpg"
               alt={
                 en
                   ? "Red Hot Springs Camp building in the Pamir Mountains"
@@ -165,8 +152,8 @@ export default function CampPage({ locale }: { locale: Locale }) {
                 const caption = `${collection.title} · ${en ? "Photo" : "Фото"} ${photoIndex + 1}`;
                 return (
                   <a
-                    key={photo.src}
-                    href={photo.src}
+                    key={photo}
+                    href={photo}
                     data-fancybox="camp-archive"
                     data-caption={caption}
                     aria-label={`${en ? "View" : "Посмотреть"}: ${caption}`}

@@ -12,7 +12,6 @@ import {
   Truck,
   X,
 } from "lucide-react";
-import Camp from "@/assets/photos/springscamp/spring-camp-05.jpg";
 import type { Locale } from "@/lib/navigation";
 import type { ExpeditionMapCopy } from "@/data/expedition-map";
 
@@ -398,7 +397,7 @@ export default function ExpeditionMapCanvas({
           className={`expedition-camp-photo${location ? " expedition-location-photo" : ""}`}
         >
           <Image
-            src={location ? location.image : Camp}
+            src={location ? location.image : "/photos/springscamp/spring-camp-05.jpg"}
             alt={location ? location.title : copy.campAlt}
             fill
             sizes="(max-width: 600px) 100vw, 390px"

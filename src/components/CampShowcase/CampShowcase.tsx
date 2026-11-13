@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, House, MapPin, Truck, Users } from "lucide-react";
-import Camp from "@/assets/photos/springscamp/spring-camp-05.jpg";
-import Dining from "@/assets/photos/springscamp/spring-camp-07.jpg";
-import Transport from "@/assets/photos/springscamp/transportation-05.jpg";
+
 import { labels } from "@/data/site-content";
 import type { Locale } from "@/lib/navigation";
 import "./CampShowcase.css";
@@ -12,7 +10,7 @@ export default function CampShowcase({ locale }: { locale: Locale }) {
   const en = locale === "en";
   const photographs = [
     {
-      image: Camp,
+      image: "/photos/springscamp/spring-camp-05.jpg",
       icon: House,
       title: en ? "At the camp" : "В лагере",
       detail: en ? "Hot Springs Camp" : "Лагерь Hot Springs",
@@ -21,7 +19,7 @@ export default function CampShowcase({ locale }: { locale: Locale }) {
         : "Красное здание лагеря Hot Springs с синей крышей в горах Памира",
     },
     {
-      image: Dining,
+      image: "/photos/springscamp/spring-camp-07.jpg",
       icon: Users,
       title: en ? "Shared spaces" : "Общие пространства",
       detail: en ? "Inside the camp" : "Внутри лагеря",
@@ -30,7 +28,7 @@ export default function CampShowcase({ locale }: { locale: Locale }) {
         : "Обеденная комната лагеря с большим деревянным столом, стульями и диванами",
     },
     {
-      image: Transport,
+      image: "/photos/springscamp/transportation-05.jpg",
       icon: Truck,
       title: en ? "Expedition transport" : "Транспорт экспедиции",
       detail: en ? "Vehicles at camp" : "Автомобили в лагере",

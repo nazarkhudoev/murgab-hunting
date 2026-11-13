@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Clock3, FileText, Mountain, Route } from "lucide-react";
-import ExpeditionPhoto from "@/assets/photos/lanedscape/gallery-landscape-12.jpg";
 import { business, labels } from "@/data/site-content";
 import type { Locale } from "@/lib/navigation";
 import "./Heritage.css";
@@ -46,7 +45,7 @@ export default function Heritage({ locale }: { locale: Locale }) {
     >
       <div className="heritage-photo">
         <Image
-          src={ExpeditionPhoto}
+          src="/photos/landscape/gallery-landscape-12.jpg"
           alt={
             english
               ? "Hunter using a spotting scope beside a vehicle in snowy mountain terrain"
